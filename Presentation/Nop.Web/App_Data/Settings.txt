@@ -1,0 +1,2 @@
+DataProvider: sqlserver
+DataConnectionString: Data Source=.;Initial Catalog=NOP;Persist Security Info=True;User ID=sa;Password=123456
