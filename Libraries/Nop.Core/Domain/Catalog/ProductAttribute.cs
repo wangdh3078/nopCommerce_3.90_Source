@@ -3,17 +3,17 @@ using Nop.Core.Domain.Localization;
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a product attribute
+    /// 产品属性
     /// </summary>
     public partial class ProductAttribute : BaseEntity, ILocalizedEntity
     {
         /// <summary>
-        /// Gets or sets the name
+        /// 获取或设置名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the description
+        /// 获取或设置描述
         /// </summary>
         public string Description { get; set; }
     }

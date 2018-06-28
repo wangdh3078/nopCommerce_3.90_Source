@@ -4,14 +4,14 @@ using Nop.Core.Domain.Localization;
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a product attribute mapping
+    /// 产品属性映射
     /// </summary>
     public partial class ProductAttributeMapping : BaseEntity, ILocalizedEntity
     {
         private ICollection<ProductAttributeValue> _productAttributeValues;
 
         /// <summary>
-        /// Gets or sets the product identifier
+        /// 获取或设置产品标识
         /// </summary>
         public int ProductId { get; set; }
 

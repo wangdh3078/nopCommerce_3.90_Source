@@ -1,57 +1,57 @@
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a product attribute combination
+    ///产品属性组合
     /// </summary>
     public partial class ProductAttributeCombination : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the product identifier
+        /// 获取或设置产品标识
         /// </summary>
         public int ProductId { get; set; }
 
         /// <summary>
-        /// Gets or sets the attributes
+        ///获取或设置属性
         /// </summary>
         public string AttributesXml { get; set; }
 
         /// <summary>
-        /// Gets or sets the stock quantity
+        ///获取或设置库存数量
         /// </summary>
         public int StockQuantity { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether to allow orders when out of stock
+        /// 获取或设置一个值，表示缺货时是否允许订单
         /// </summary>
         public bool AllowOutOfStockOrders { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets the SKU
+        ///获取或设置SKU
         /// </summary>
         public string Sku { get; set; }
 
         /// <summary>
-        /// Gets or sets the manufacturer part number
+        /// 获取或设置制造商部件号
         /// </summary>
         public string ManufacturerPartNumber { get; set; }
 
         /// <summary>
-        /// Gets or sets the Global Trade Item Number (GTIN). These identifiers include UPC (in North America), EAN (in Europe), JAN (in Japan), and ISBN (for books).
+        ///获取或设置全球贸易项目编号（GTIN）。 这些标识符包括UPC（北美），EAN（欧洲），JAN（日本）和ISBN（书籍）。
         /// </summary>
         public string Gtin { get; set; }
 
         /// <summary>
-        /// Gets or sets the attribute combination price. This way a store owner can override the default product price when this attribute combination is added to the cart. For example, you can give a discount this way.
+        /// 获取或设置属性组合价格。 通过这种方式，商店所有者可以在将此属性组合添加到购物车时覆盖默认商品价格。 例如，您可以通过这种方式提供折扣。
         /// </summary>
         public decimal? OverriddenPrice { get; set; }
 
         /// <summary>
-        /// Gets or sets the quantity when admin should be notified
+        /// 获取或设置应该通知管理员的数量
         /// </summary>
         public int NotifyAdminForQuantityBelow { get; set; }
 
         /// <summary>
-        /// Gets the product
+        /// 获取产品
         /// </summary>
         public virtual Product Product { get; set; }
 
