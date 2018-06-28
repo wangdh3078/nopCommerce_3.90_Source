@@ -1,12 +1,12 @@
 namespace Nop.Core.Domain.Security
 {
     /// <summary>
-    /// Represents an entity which supports ACL
+    /// 表示支持ACL的实体
     /// </summary>
     public partial interface IAclSupported
     {
         /// <summary>
-        /// Gets or sets a value indicating whether the entity is subject to ACL
+        /// 获取或设置一个值，该值指示实体是否受ACL限制
         /// </summary>
         bool SubjectToAcl { get; set; }
     }

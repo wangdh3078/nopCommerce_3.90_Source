@@ -2,7 +2,7 @@
 namespace Nop.Core.Domain.Localization
 {
     /// <summary>
-    /// Represents a localized entity
+    /// 代表一个本地化的实体
     /// </summary>
     public interface ILocalizedEntity
     {

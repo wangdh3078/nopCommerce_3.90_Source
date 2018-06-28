@@ -12,6 +12,11 @@ namespace Nop.Core
         /// </summary>
         public int Id { get; set; }
 
+        /// <summary>
+        ///  «∑Òœ‡µ»
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals(object obj)
         {
             return Equals(obj as BaseEntity);

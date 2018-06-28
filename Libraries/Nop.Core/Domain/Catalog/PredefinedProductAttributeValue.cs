@@ -3,47 +3,47 @@ using Nop.Core.Domain.Localization;
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a predefined (default) product attribute value
+    /// 预定义（默认）产品属性值
     /// </summary>
     public partial class PredefinedProductAttributeValue : BaseEntity, ILocalizedEntity
     {
         /// <summary>
-        /// Gets or sets the product attribute identifier
+        /// 获取或设置产品属性标识符
         /// </summary>
         public int ProductAttributeId { get; set; }
 
         /// <summary>
-        /// Gets or sets the product attribute name
+        /// 获取或设置产品属性名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the price adjustment
+        /// 获取或设置价格调整
         /// </summary>
         public decimal PriceAdjustment { get; set; }
 
         /// <summary>
-        /// Gets or sets the weight adjustment
+        /// 获取或设置重量调整
         /// </summary>
         public decimal WeightAdjustment { get; set; }
 
         /// <summary>
-        /// Gets or sets the attibute value cost
+        /// 获取或设置属性值成本
         /// </summary>
         public decimal Cost { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the value is pre-selected
+        /// 获取或设置一个值，该值指示是否预先选择了该值
         /// </summary>
         public bool IsPreSelected { get; set; }
 
         /// <summary>
-        /// Gets or sets the display order
+        /// 获取或设置显示顺序
         /// </summary>
         public int DisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets the product attribute
+        /// 获取产品属性
         /// </summary>
         public virtual ProductAttribute ProductAttribute { get; set; }
     }

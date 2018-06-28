@@ -1,20 +1,20 @@
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a low stock activity
+    /// 低库存活动
     /// </summary>
     public enum LowStockActivity
     {
         /// <summary>
-        /// Nothing
+        /// 没有
         /// </summary>
         Nothing = 0,
         /// <summary>
-        /// Disable buy button
+        /// 禁用购买按钮
         /// </summary>
         DisableBuyButton = 1,
         /// <summary>
-        /// Unpublish
+        /// 取消发布
         /// </summary>
         Unpublish = 2,
     }

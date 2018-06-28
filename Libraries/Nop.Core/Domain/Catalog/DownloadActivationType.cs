@@ -1,17 +1,17 @@
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a download activation type
+    /// 下载激活类型
     /// </summary>
     public enum DownloadActivationType
     {
         /// <summary>
-        /// When order is paid
+        /// 订单付款时
         /// </summary>
         WhenOrderIsPaid = 0,
 
         /// <summary>
-        /// Manually
+        /// 手动
         /// </summary>
         Manually = 10,
     }

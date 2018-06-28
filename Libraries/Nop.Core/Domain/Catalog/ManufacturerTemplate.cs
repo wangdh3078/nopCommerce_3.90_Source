@@ -2,22 +2,22 @@
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a manufacturer template
+    /// 制造商模板
     /// </summary>
     public partial class ManufacturerTemplate : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the template name
+        ///获取或设置模板名称。
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the view path
+        /// 获取或设置视图路径
         /// </summary>
         public string ViewPath { get; set; }
 
         /// <summary>
-        /// Gets or sets the display order
+        /// 获取或设置显示顺序
         /// </summary>
         public int DisplayOrder { get; set; }
     }

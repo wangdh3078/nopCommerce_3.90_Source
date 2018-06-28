@@ -5,7 +5,7 @@ using Nop.Core.Domain.Catalog;
 namespace Nop.Core.Domain.Discounts
 {
     /// <summary>
-    /// Represents a discount
+    /// 折扣
     /// </summary>
     public partial class Discount : BaseEntity
     {

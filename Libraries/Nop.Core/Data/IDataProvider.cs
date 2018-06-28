@@ -24,26 +24,26 @@ namespace Nop.Core.Data
         void InitDatabase();
 
         /// <summary>
-        /// A value indicating whether this data provider supports stored procedures
+        /// 指示此数据提供程序是否支持存储过程的值。
         /// </summary>
         bool StoredProceduredSupported { get; }
 
         /// <summary>
-        /// A value indicating whether this data provider supports backup
+        /// 指示此数据提供程序是否支持备份的值。
         /// </summary>
         bool BackupSupported { get; }
 
         /// <summary>
-        /// Gets a support database parameter object (used by stored procedures)
+        /// 获取支持数据库参数对象（由存储过程使用）
         /// </summary>
-        /// <returns>Parameter</returns>
+        /// <returns>参数</returns>
         DbParameter GetParameter();
 
         /// <summary>
-        /// Maximum length of the data for HASHBYTES functions
-        /// returns 0 if HASHBYTES function is not supported
+        /// 如果不支持哈希字节函数
+        /// 哈希字节函数的最大长度返回0。
         /// </summary>
-        /// <returns>Length of the data for HASHBYTES functions</returns>
+        /// <returns>哈希字节函数的数据长度</returns>
         int SupportedLengthOfBinaryHash();
     }
 }

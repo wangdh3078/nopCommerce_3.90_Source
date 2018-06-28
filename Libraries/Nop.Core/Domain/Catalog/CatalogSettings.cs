@@ -83,7 +83,7 @@ namespace Nop.Core.Domain.Catalog
         public bool ShowCategoryProductNumberIncludingSubcategories { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether category breadcrumb is enabled
+        ///获取或设置一个值，该值指示是否启用类别面包屑
         /// </summary>
         public bool CategoryBreadcrumbEnabled { get; set; }
 
@@ -118,243 +118,243 @@ namespace Nop.Core.Domain.Catalog
         public bool ProductReviewPossibleOnlyAfterPurchasing { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether notification of a store owner about new product reviews is enabled
+        /// 获取或设置一个值，该值指示是否启用商店所有者关于新产品评论的通知
         /// </summary>
         public bool NotifyStoreOwnerAboutNewProductReviews { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the product reviews will be filtered per store
+        /// 获取或设置一个值，指示产品评论是否会按每个商店进行过滤
         /// </summary>
         public bool ShowProductReviewsPerStore { get; set; }
 
         /// <summary>
-        /// Gets or sets a show product reviews tab on account page
+        ///获取或设置帐户页面上的显示产品评论选项卡
         /// </summary>
         public bool ShowProductReviewsTabOnAccountPage { get; set; }
 
         /// <summary>
-        /// Gets or sets the page size for product reviews in account page
+        /// 获取或设置帐户页面中产品评论的页面大小
         /// </summary>
         public int ProductReviewsPageSizeOnAccountPage { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether product 'Email a friend' feature is enabled
+        /// 获取或设置一个值，该值指示是否启用产品“通过电子邮件发送给朋友”功能
         /// </summary>
         public bool EmailAFriendEnabled { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether to allow anonymous users to email a friend.
+        /// 获取或设置一个值，该值指示是否允许匿名用户向朋友发送电子邮件。
         /// </summary>
         public bool AllowAnonymousUsersToEmailAFriend { get; set; }
 
         /// <summary>
-        /// Gets or sets a number of "Recently viewed products"
+        /// 获取或设置一些“最近查看的产品”
         /// </summary>
         public int RecentlyViewedProductsNumber { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether "Recently viewed products" feature is enabled
+        /// 获取或设置一个值，指示是否启用“最近查看的产品”功能
         /// </summary>
         public bool RecentlyViewedProductsEnabled { get; set; }
         /// <summary>
-        /// Gets or sets a number of products on the "New products" page
+        ///获取或设置“新产品”页面上的许多产品
         /// </summary>
         public int NewProductsNumber { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether "New products" page is enabled
+        ///获取或设置一个值，指示是否启用“新产品”页面
         /// </summary>
         public bool NewProductsEnabled { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether "Compare products" feature is enabled
+        ///获取或设置一个值，指示是否启用“比较产品”功能
         /// </summary>
         public bool CompareProductsEnabled { get; set; }
         /// <summary>
-        /// Gets or sets an allowed number of products to be compared
+        ///获取或设置要比较的允许数量的产品
         /// </summary>
         public int CompareProductsNumber { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether autocomplete is enabled
+        /// 获取或设置一个值，指示是否启用自动完成
         /// </summary>
         public bool ProductSearchAutoCompleteEnabled { get; set; }
         /// <summary>
-        /// Gets or sets a number of products to return when using "autocomplete" feature
+        ///获取或设置使用“自动完成”功能时返回的多个产品
         /// </summary>
         public int ProductSearchAutoCompleteNumberOfProducts { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether to show product images in the auto complete search
+        /// 获取或设置一个值，该值指示是否在自动完成搜索中显示产品图像
         /// </summary>
         public bool ShowProductImagesInSearchAutoComplete { get; set; }
         /// <summary>
-        /// Gets or sets a minimum search term length
+        ///获取或设置最小搜索词的长度
         /// </summary>
         public int ProductSearchTermMinimumLength { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets a value indicating whether to show bestsellers on home page
+        /// 获取或设置一个值，指示是否在主页上显示畅销书
         /// </summary>
         public bool ShowBestsellersOnHomepage { get; set; }
         /// <summary>
-        /// Gets or sets a number of bestsellers on home page
+        /// 获取或设置主页上的畅销书数量
         /// </summary>
         public int NumberOfBestsellersOnHomepage { get; set; }
 
         /// <summary>
-        /// Gets or sets a number of products per page on the search products page
+        /// 在搜索产品页面上获取或设置每页上的多个产品
         /// </summary>
         public int SearchPageProductsPerPage { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether customers are allowed to select page size on the search products page
+        /// 获取或设置一个值，该值指示是否允许客户在搜索产品页面上选择页面大小
         /// </summary>
         public bool SearchPageAllowCustomersToSelectPageSize { get; set; }
         /// <summary>
-        /// Gets or sets the available customer selectable page size options on the search products page
+        /// 获取或设置搜索产品页面上的可用客户可选页面大小选项
         /// </summary>
         public string SearchPagePageSizeOptions { get; set; }
 
         /// <summary>
-        /// Gets or sets "List of products purchased by other customers who purchased the above" option is enable
+        /// 获取或设置“已购买上述其他客户购买的产品清单”选项为启用
         /// </summary>
         public bool ProductsAlsoPurchasedEnabled { get; set; }
 
         /// <summary>
-        /// Gets or sets a number of products also purchased by other customers to display
+        ///获取或设置一些其他客户也购买的产品来显示
         /// </summary>
         public int ProductsAlsoPurchasedNumber { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether we should process attribute change using AJAX. It's used for dynamical attribute change, SKU/GTIN update of combinations, conditional attributes
+        /// 获取或设置一个值，指示是否应使用AJAX处理属性更改。 它用于动态属性更改，组合的SKU / GTIN更新，条件属性
         /// </summary>
         public bool AjaxProcessAttributeChange { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets a number of product tags that appear in the tag cloud
+        /// 获取或设置出现在标签云中的多个产品标签
         /// </summary>
         public int NumberOfProductTags { get; set; }
 
         /// <summary>
-        /// Gets or sets a number of products per page on 'products by tag' page
+        /// 获取或设置'按产品标签'页面的每页产品数量
         /// </summary>
         public int ProductsByTagPageSize { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether customers can select the page size for 'products by tag'
+        /// 获取或设置一个值，该值指示客户是否可以选择“标签产品”的页面大小
         /// </summary>
         public bool ProductsByTagAllowCustomersToSelectPageSize { get; set; }
 
         /// <summary>
-        /// Gets or sets the available customer selectable page size options for 'products by tag'
+        ///获取或设置“标签产品”的可用客户可选页面大小选项
         /// </summary>
         public string ProductsByTagPageSizeOptions { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether to include "Short description" in compare products
+        ///获取或设置一个值，指示是否在比较产品中包含“简短描述”
         /// </summary>
         public bool IncludeShortDescriptionInCompareProducts { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether to include "Full description" in compare products
+        /// 获取或设置一个值，该值指示是否在比较产品中包含“完整描述”
         /// </summary>
         public bool IncludeFullDescriptionInCompareProducts { get; set; }
         /// <summary>
-        /// An option indicating whether products on category and manufacturer pages should include featured products as well
+        /// 一个选项，指示类别和制造商页面上的产品是否也应包含特色产品
         /// </summary>
         public bool IncludeFeaturedProductsInNormalLists { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets a value indicating whether tier prices should be displayed with applied discounts (if available)
+        /// 获取或设置一个值，该值指示是否应使用折扣显示层级价格（如果可用）
         /// </summary>
         public bool DisplayTierPricesWithDiscounts { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets a value indicating whether to ignore discounts (side-wide). It can significantly improve performance when enabled.
+        /// 获取或设置一个值，指示是否忽略折扣（边宽）。 启用后可显着提高性能。
         /// </summary>
         public bool IgnoreDiscounts { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether to ignore featured products (side-wide). It can significantly improve performance when enabled.
+        ///获取或设置一个值，指示是否忽略特色产品（侧面）。 启用后可显着提高性能。
         /// </summary>
         public bool IgnoreFeaturedProducts { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether to ignore ACL rules (side-wide). It can significantly improve performance when enabled.
+        /// 获取或设置一个值，指示是否忽略ACL规则（侧面）。 启用后可显着提高性能。
         /// </summary>
         public bool IgnoreAcl { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether to ignore "limit per store" rules (side-wide). It can significantly improve performance when enabled.
+        /// 获取或设置一个值，该值指示是否忽略“每店限制”规则（侧面）。 启用后可显着提高性能。
         /// </summary>
         public bool IgnoreStoreLimitations { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether to cache product prices. It can significantly improve performance when enabled.
+        ///获取或设置一个值，指示是否缓存产品价格。 启用后可显着提高性能。
         /// </summary>
         public bool CacheProductPrices { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating maximum number of 'back in stock' subscription
+        /// 获取或设置一个值，该值指示“退订”订阅的最大数量
         /// </summary>
         public int MaximumBackInStockSubscriptions { get; set; }
 
         /// <summary>
-        /// Gets or sets the value indicating how many manufacturers to display in manufacturers block
+        /// 获取或设置指示制造商在制造商中显示的制造商数量的值
         /// </summary>
         public int ManufacturersBlockItemsToDisplay { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether to display information about shipping and tax in the footer (used in Germany)
+        /// 获取或设置一个值，该值指示是否在页脚中显示有关运费和税金的信息（在德国使用）
         /// </summary>
         public bool DisplayTaxShippingInfoFooter { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether to display information about shipping and tax on product details pages (used in Germany)
+        /// 获取或设置一个值，该值指示是否在产品详细信息页面上显示有关运费和税金的信息（在德国使用）
         /// </summary>
         public bool DisplayTaxShippingInfoProductDetailsPage { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether to display information about shipping and tax in product boxes (used in Germany)
+        ///获取或设置一个值，该值指示是否在产品框中显示有关运费和税金的信息（在德国使用）
         /// </summary>
         public bool DisplayTaxShippingInfoProductBoxes { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether to display information about shipping and tax on shopping cart page (used in Germany)
+        /// 获取或设置一个值，该值指示是否在购物车页面上显示有关运费和税金的信息（在德国使用）
         /// </summary>
         public bool DisplayTaxShippingInfoShoppingCart { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether to display information about shipping and tax on wishlist page (used in Germany)
+        ///获取或设置一个值，该值指示是否在愿望清单页面上显示有关装运和税收的信息（在德国使用）
         /// </summary>
         public bool DisplayTaxShippingInfoWishlist { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether to display information about shipping and tax on order details page (used in Germany)
+        ///获取或设置一个值，指示是否显示有关订单详细信息页面上的运费和税金的信息（在德国使用）
         /// </summary>
         public bool DisplayTaxShippingInfoOrderDetailsPage { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets the default value to use for Category page size options (for new categories)
+        /// 获取或设置用于类别页面大小选项的默认值（用于新类别）
         /// </summary>
         public string DefaultCategoryPageSizeOptions { get; set; }
         /// <summary>
-        /// Gets or sets the default value to use for Category page size (for new categories)
+        /// 获取或设置用于分类页面大小的默认值（用于新类别）
         /// </summary>
         public int DefaultCategoryPageSize { get; set; }
         /// <summary>
-        /// Gets or sets the default value to use for Manufacturer page size options (for new manufacturers)
+        ///获取或设置用于制造商页面大小选项的默认值（用于新制造商）
         /// </summary>
         public string DefaultManufacturerPageSizeOptions { get; set; }
         /// <summary>
-        /// Gets or sets the default value to use for Manufacturer page size (for new manufacturers)
+        /// 获取或设置用于制造商页面大小的默认值（用于新制造商）
         /// </summary>
         public int DefaultManufacturerPageSize { get; set; }
 
         /// <summary>
-        /// Gets or sets a list of disabled values of ProductSortingEnum
+        /// 获取或设置ProductSortingEnum的禁用值列表
         /// </summary>
         public List<int> ProductSortingEnumDisabled { get; set; }
 
         /// <summary>
-        /// Gets or sets a display order of ProductSortingEnum values 
+        /// 获取或设置ProductSortingEnum值的显示顺序
         /// </summary>
         public Dictionary<int, int> ProductSortingEnumDisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the products need to be exported/imported with their attributes
+        /// 获取或设置一个值，该值指示是否需要使用其属性导出/导入产品
         /// </summary>
         public bool ExportImportProductAttributes { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether need create dropdown list for export
+        ///获取或设置一个值，该值指示是否需要创建用于导出的下拉列表
         /// </summary>
         public bool ExportImportUseDropdownlistsForAssociatedEntities { get; set; }
     }

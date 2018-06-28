@@ -1,20 +1,20 @@
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a method of inventory management
+    ///库存管理方法
     /// </summary>
     public enum ManageInventoryMethod
     {
         /// <summary>
-        /// Don't track inventory for product
+        /// 不跟踪产品的库存
         /// </summary>
         DontManageStock = 0,
         /// <summary>
-        /// Track inventory for product
+        /// 跟踪产品的库存
         /// </summary>
         ManageStock = 1,
         /// <summary>
-        /// Track inventory for product by product attributes
+        /// 按产品属性跟踪产品的库存
         /// </summary>
         ManageStockByAttributes = 2,
     }

@@ -9,7 +9,7 @@ using Nop.Core.Domain.Stores;
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a product
+    /// 产品
     /// </summary>
     public partial class Product : BaseEntity, ILocalizedEntity, ISlugSupported, IAclSupported, IStoreMappingSupported
     {
@@ -27,454 +27,456 @@ namespace Nop.Core.Domain.Catalog
 
 
         /// <summary>
-        /// Gets or sets the product type identifier
+        /// 获取或设置产品类型标识符
         /// </summary>
         public int ProductTypeId { get; set; }
         /// <summary>
-        /// Gets or sets the parent product identifier. It's used to identify associated products (only with "grouped" products)
+        /// 获取或设置父级产品标识符。 它用于识别相关产品（仅适用于“分组”产品）
         /// </summary>
         public int ParentGroupedProductId { get; set; }
         /// <summary>
-        /// Gets or sets the values indicating whether this product is visible in catalog or search results.
-        /// It's used when this product is associated to some "grouped" one
-        /// This way associated products could be accessed/added/etc only from a grouped product details page
+        /// 获取或设置指示产品在产品目录或搜索结果中是否可见的值。
+        /// 当此产品与某些“分组”产品关联时，会使用此值。
+        /// 只能从分组的产品详细信息页面访问/添加此类产品
         /// </summary>
         public bool VisibleIndividually { get; set; }
 
         /// <summary>
-        /// Gets or sets the name
+        /// 获取或设置名称
         /// </summary>
         public string Name { get; set; }
         /// <summary>
-        /// Gets or sets the short description
+        ///获取或设置简短描述
         /// </summary>
         public string ShortDescription { get; set; }
         /// <summary>
-        /// Gets or sets the full description
+        /// 获取或设置完整描述
         /// </summary>
         public string FullDescription { get; set; }
 
         /// <summary>
-        /// Gets or sets the admin comment
+        /// 获取或设置管理员评论
         /// </summary>
         public string AdminComment { get; set; }
 
         /// <summary>
-        /// Gets or sets a value of used product template identifier
+        /// 获取或设置使用的产品模板标识符的值
         /// </summary>
         public int ProductTemplateId { get; set; }
 
         /// <summary>
-        /// Gets or sets a vendor identifier
+        /// 获取或设置供应商标识
         /// </summary>
         public int VendorId { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether to show the product on home page
+        /// 获取或设置一个值，指示是否在主页上显示产品
         /// </summary>
         public bool ShowOnHomePage { get; set; }
 
         /// <summary>
-        /// Gets or sets the meta keywords
+        /// 获取或设置元关键字
         /// </summary>
         public string MetaKeywords { get; set; }
         /// <summary>
-        /// Gets or sets the meta description
+        /// 获取或设置元描述
         /// </summary>
         public string MetaDescription { get; set; }
         /// <summary>
-        /// Gets or sets the meta title
+        ///获取或设置元标题
         /// </summary>
         public string MetaTitle { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the product allows customer reviews
+        ///获取或设置一个值，指示产品是否允许客户评论
         /// </summary>
         public bool AllowCustomerReviews { get; set; }
         /// <summary>
-        /// Gets or sets the rating sum (approved reviews)
+        /// 获取或设置评分总数（批准的评论）
         /// </summary>
         public int ApprovedRatingSum { get; set; }
         /// <summary>
-        /// Gets or sets the rating sum (not approved reviews)
+        /// 获取或设置评分总和（未批准评论）
         /// </summary>
         public int NotApprovedRatingSum { get; set; }
         /// <summary>
-        /// Gets or sets the total rating votes (approved reviews)
+        /// 获取或设置总评分表决（批准的评论）
         /// </summary>
         public int ApprovedTotalReviews { get; set; }
         /// <summary>
-        /// Gets or sets the total rating votes (not approved reviews)
+        /// 获取或设置总评分投票（未经批准的评论）
         /// </summary>
         public int NotApprovedTotalReviews { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the entity is subject to ACL
+        /// 获取或设置一个值，该值指示实体是否受ACL限制
         /// </summary>
         public bool SubjectToAcl { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether the entity is limited/restricted to certain stores
+        /// 获取或设置一个值，该值指示实体是限制/限制到某些商店
         /// </summary>
         public bool LimitedToStores { get; set; }
 
         /// <summary>
-        /// Gets or sets the SKU
+        ///获取或设置SKU
         /// </summary>
         public string Sku { get; set; }
         /// <summary>
-        /// Gets or sets the manufacturer part number
+        /// 获取或设置制造商部件号
         /// </summary>
         public string ManufacturerPartNumber { get; set; }
         /// <summary>
-        /// Gets or sets the Global Trade Item Number (GTIN). These identifiers include UPC (in North America), EAN (in Europe), JAN (in Japan), and ISBN (for books).
+        /// 获取或设置全球贸易项目编号（GTIN）。 这些标识符包括UPC（北美），EAN（欧洲），JAN（日本）和ISBN（书籍）。
         /// </summary>
         public string Gtin { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the product is gift card
+        /// 获取或设置一个值，指示产品是否为礼品卡
         /// </summary>
         public bool IsGiftCard { get; set; }
         /// <summary>
-        /// Gets or sets the gift card type identifier
+        /// 获取或设置礼品卡类型标识符
         /// </summary>
         public int GiftCardTypeId { get; set; }
         /// <summary>
-        /// Gets or sets gift card amount that can be used after purchase. If not specified, then product price will be used.
+        /// 获取或设置购买后可以使用的礼品卡金额。 如果未指定，则将使用产品价格。
         /// </summary>
         public decimal? OverriddenGiftCardAmount { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the product requires that other products are added to the cart (Product X requires Product Y)
+        /// 获取或设置一个值，该值指示产品是否需要将其他产品添加到购物车（产品X需要产品Y）
         /// </summary>
         public bool RequireOtherProducts { get; set; }
         /// <summary>
-        /// Gets or sets a required product identifiers (comma separated)
+        /// 获取或设置所需的产品标识符（逗号分隔）
         /// </summary>
         public string RequiredProductIds { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether required products are automatically added to the cart
+        ///获取或设置一个值，该值指示是否将所需产品自动添加到购物车
         /// </summary>
         public bool AutomaticallyAddRequiredProducts { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the product is download
+        /// 获取或设置一个值，指示是否下载产品
         /// </summary>
         public bool IsDownload { get; set; }
         /// <summary>
-        /// Gets or sets the download identifier
+        /// 获取或设置下载标识符
         /// </summary>
         public int DownloadId { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether this downloadable product can be downloaded unlimited number of times
+        /// 获取或设置一个值，该值指示此可下载产品是否可以无限次下载
         /// </summary>
         public bool UnlimitedDownloads { get; set; }
         /// <summary>
-        /// Gets or sets the maximum number of downloads
+        /// 获取或设置最大下载次数
         /// </summary>
         public int MaxNumberOfDownloads { get; set; }
         /// <summary>
-        /// Gets or sets the number of days during customers keeps access to the file.
+        /// 获取或设置客户访问文件期间的天数。
         /// </summary>
         public int? DownloadExpirationDays { get; set; }
         /// <summary>
-        /// Gets or sets the download activation type
+        ///获取或设置下载激活类型
         /// </summary>
         public int DownloadActivationTypeId { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether the product has a sample download file
+        /// 获取或设置一个值，该值指示产品是否具有样本下载文件
         /// </summary>
         public bool HasSampleDownload { get; set; }
         /// <summary>
-        /// Gets or sets the sample download identifier
+        /// 获取或设置示例下载标识符
         /// </summary>
         public int SampleDownloadId { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether the product has user agreement
+        /// 获取或设置一个值，指示产品是否具有用户协议
         /// </summary>
         public bool HasUserAgreement { get; set; }
         /// <summary>
-        /// Gets or sets the text of license agreement
+        /// 获取或设置许可协议的文本
         /// </summary>
         public string UserAgreementText { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the product is recurring
+        /// 获取或设置一个值，指示产品是否重复发生
         /// </summary>
         public bool IsRecurring { get; set; }
         /// <summary>
-        /// Gets or sets the cycle length
+        /// 获取或设置周期长度
         /// </summary>
         public int RecurringCycleLength { get; set; }
         /// <summary>
-        /// Gets or sets the cycle period
+        /// 获取或设置循环周期
         /// </summary>
         public int RecurringCyclePeriodId { get; set; }
         /// <summary>
-        /// Gets or sets the total cycles
+        /// 获取或设置总周期
         /// </summary>
         public int RecurringTotalCycles { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the product is rental
+        /// 获取或设置一个值，指示产品是否为租赁
         /// </summary>
         public bool IsRental { get; set; }
         /// <summary>
-        /// Gets or sets the rental length for some period (price for this period)
+        /// 获取或设置某段时间的租赁期限（此期间的价格）
         /// </summary>
         public int RentalPriceLength { get; set; }
         /// <summary>
-        /// Gets or sets the rental period (price for this period)
+        /// 获取或设置租期（此期间的价格）
         /// </summary>
         public int RentalPricePeriodId { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the entity is ship enabled
+        /// 获取或设置一个值，该值指示实体是否已启用
         /// </summary>
         public bool IsShipEnabled { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether the entity is free shipping
+        /// 获取或设置一个值，指示实体是否免费送货
         /// </summary>
         public bool IsFreeShipping { get; set; }
         /// <summary>
-        /// Gets or sets a value this product should be shipped separately (each item)
+        /// 获取或设置此产品应单独发货的值（每个项目）
         /// </summary>
         public bool ShipSeparately { get; set; }
         /// <summary>
-        /// Gets or sets the additional shipping charge
+        /// 获取或设置额外的运费
         /// </summary>
         public decimal AdditionalShippingCharge { get; set; }
         /// <summary>
-        /// Gets or sets a delivery date identifier
+        /// 获取或设置交付日期标识符
         /// </summary>
         public int DeliveryDateId { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the product is marked as tax exempt
+        ///获取或设置一个值，指示产品是否标记为免税
         /// </summary>
         public bool IsTaxExempt { get; set; }
         /// <summary>
-        /// Gets or sets the tax category identifier
+        /// 获取或设置税收类别标识符
         /// </summary>
         public int TaxCategoryId { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether the product is telecommunications or broadcasting or electronic services
+        ///获取或设置一个值，指示产品是电信还是广播或电子服务
         /// </summary>
         public bool IsTelecommunicationsOrBroadcastingOrElectronicServices { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating how to manage inventory
+        /// 获取或设置一个值，指示如何管理库存
         /// </summary>
         public int ManageInventoryMethodId { get; set; }
         /// <summary>
-        /// Gets or sets a product availability range identifier
+        /// 获取或设置产品可用性范围标识符
         /// </summary>
         public int ProductAvailabilityRangeId { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether multiple warehouses are used for this product
+        /// 获取或设置一个值，指示多个仓库是否用于此产品
         /// </summary>
         public bool UseMultipleWarehouses { get; set; }
         /// <summary>
-        /// Gets or sets a warehouse identifier
+        /// 获取或设置仓库标识
         /// </summary>
         public int WarehouseId { get; set; }
         /// <summary>
-        /// Gets or sets the stock quantity
+        /// 获取或设置库存数量
         /// </summary>
         public int StockQuantity { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether to display stock availability
+        /// 获取或设置一个值，指示是否显示库存可用性
         /// </summary>
         public bool DisplayStockAvailability { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether to display stock quantity
+        /// 获取或设置一个指示是否显示库存数量的值
         /// </summary>
         public bool DisplayStockQuantity { get; set; }
         /// <summary>
-        /// Gets or sets the minimum stock quantity
+        /// 获取或设置最小库存数量
         /// </summary>
         public int MinStockQuantity { get; set; }
         /// <summary>
-        /// Gets or sets the low stock activity identifier
+        /// 获取或设置低存货活动标识符
         /// </summary>
         public int LowStockActivityId { get; set; }
         /// <summary>
-        /// Gets or sets the quantity when admin should be notified
+        /// 获取或设置应该通知管理员的数量
         /// </summary>
         public int NotifyAdminForQuantityBelow { get; set; }
         /// <summary>
-        /// Gets or sets a value backorder mode identifier
+        /// 获取或设置值缺货模式标识符
         /// </summary>
         public int BackorderModeId { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether to back in stock subscriptions are allowed
+        /// 获取或设置一个值，指示是否允许备份订阅
         /// </summary>
         public bool AllowBackInStockSubscriptions { get; set; }
         /// <summary>
-        /// Gets or sets the order minimum quantity
+        /// 获取或设置订单的最小数量
         /// </summary>
         public int OrderMinimumQuantity { get; set; }
         /// <summary>
-        /// Gets or sets the order maximum quantity
+        /// 获取或设置订单最大数量
         /// </summary>
         public int OrderMaximumQuantity { get; set; }
         /// <summary>
-        /// Gets or sets the comma seperated list of allowed quantities. null or empty if any quantity is allowed
+        /// 获取或设置逗号分隔的允许数量列表。 如果允许有任何数量，则为空或空
         /// </summary>
         public string AllowedQuantities { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether we allow adding to the cart/wishlist only attribute combinations that exist and have stock greater than zero.
-        /// This option is used only when we have "manage inventory" set to "track inventory by product attributes"
+        /// 获取或设置一个值，该值指示我们是否允许将仅添加到cart / wishlist属性组合并存在大于零的属性组合。 
+        /// 只有当我们将“管理库存”设置为“按产品属性跟踪库存”时，才会使用此选项
         /// </summary>
         public bool AllowAddingOnlyExistingAttributeCombinations { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether this product is returnable (a customer is allowed to submit return request with this product)
+        ///获取或设置一个值，该值指示此产品是否可退还（客户可以使用此产品提交退货请求）
         /// </summary>
         public bool NotReturnable { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether to disable buy (Add to cart) button
+        /// 获取或设置一个值，指示是否禁用购买（添加到购物车）按钮
         /// </summary>
         public bool DisableBuyButton { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether to disable "Add to wishlist" button
+        ///获取或设置一个值，该值指示是否禁用“Add to wishlist”按钮
         /// </summary>
         public bool DisableWishlistButton { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether this item is available for Pre-Order
+        /// 获取或设置一个值，该值指示此项目是否可用于预订
         /// </summary>
         public bool AvailableForPreOrder { get; set; }
         /// <summary>
-        /// Gets or sets the start date and time of the product availability (for pre-order products)
+        /// 获取或设置产品可用性的开始日期和时间（对于预订产品）
         /// </summary>
         public DateTime? PreOrderAvailabilityStartDateTimeUtc { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether to show "Call for Pricing" or "Call for quote" instead of price
+        /// 获取或设置一个值，该值指示是否显示“要求定价”或“请求报价”而不是价格
         /// </summary>
         public bool CallForPrice { get; set; }
         /// <summary>
-        /// Gets or sets the price
+        /// 获取或设置价格
         /// </summary>
         public decimal Price { get; set; }
         /// <summary>
-        /// Gets or sets the old price
+        /// 获取或设置旧价格
         /// </summary>
         public decimal OldPrice { get; set; }
         /// <summary>
-        /// Gets or sets the product cost
+        /// 获取或设置产品成本
         /// </summary>
         public decimal ProductCost { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether a customer enters price
+        /// 获取或设置一个值，指示客户是否输入价格
         /// </summary>
         public bool CustomerEntersPrice { get; set; }
         /// <summary>
-        /// Gets or sets the minimum price entered by a customer
+        /// 获取或设置客户输入的最低价格
         /// </summary>
         public decimal MinimumCustomerEnteredPrice { get; set; }
         /// <summary>
-        /// Gets or sets the maximum price entered by a customer
+        /// 获取或设置客户输入的最高价格
         /// </summary>
         public decimal MaximumCustomerEnteredPrice { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether base price (PAngV) is enabled. Used by German users.
+        /// 获取或设置一个值，指示是否启用基准价格（PAngV）。 德国用户使用。
         /// </summary>
         public bool BasepriceEnabled { get; set; }
         /// <summary>
-        /// Gets or sets an amount in product for PAngV
+        /// 获取或设置PAngV的产品数量
         /// </summary>
         public decimal BasepriceAmount { get; set; }
         /// <summary>
-        /// Gets or sets a unit of product for PAngV (MeasureWeight entity)
+        /// 获取或设置PAngV（MeasureWeight实体）的产品单位
         /// </summary>
         public int BasepriceUnitId { get; set; }
         /// <summary>
-        /// Gets or sets a reference amount for PAngV
+        /// 获取或设置PAngV的参考量
         /// </summary>
         public decimal BasepriceBaseAmount { get; set; }
         /// <summary>
-        /// Gets or sets a reference unit for PAngV (MeasureWeight entity)
+        /// 获取或设置PAngV（MeasureWeight实体）的参考单位
         /// </summary>
         public int BasepriceBaseUnitId { get; set; }
 
 
         /// <summary>
-        /// Gets or sets a value indicating whether this product is marked as new
+        /// 获取或设置一个值，该值指示此产品是否标记为新的
         /// </summary>
         public bool MarkAsNew { get; set; }
         /// <summary>
-        /// Gets or sets the start date and time of the new product (set product as "New" from date). Leave empty to ignore this property
+        /// 获取或设置新产品的开始日期和时间（从日期开始将产品设置为“新建”）。 留空以忽略此属性
         /// </summary>
         public DateTime? MarkAsNewStartDateTimeUtc { get; set; }
         /// <summary>
-        /// Gets or sets the end date and time of the new product (set product as "New" to date). Leave empty to ignore this property
+        /// 获取或设置新产品的结束日期和时间（迄今为止将产品设置为“新”）。 留空以忽略此属性
         /// </summary>
         public DateTime? MarkAsNewEndDateTimeUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this product has tier prices configured
-        /// <remarks>The same as if we run this.TierPrices.Count > 0
-        /// We use this property for performance optimization:
-        /// if this property is set to false, then we do not need to load tier prices navigation property
+        /// 获取或设置一个值，该值指示此产品是否配置了层级价格
+        /// <remarks>
+        /// 与我们运行this.TierPrices.Count> 0相同。
+        /// 我们使用此属性进行性能优化：
+        /// 如果此属性设置为false，那么我们不需要加载层级导航属性
         /// </remarks>
         /// </summary>
         public bool HasTierPrices { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether this product has discounts applied
-        /// <remarks>The same as if we run this.AppliedDiscounts.Count > 0
-        /// We use this property for performance optimization:
-        /// if this property is set to false, then we do not need to load Applied Discounts navigation property
+        /// 获取或设置一个值，该值指示此产品是否应用了折扣
+        /// <remarks>
+        /// 就像我们运行this.AppliedDiscounts.Count> 0一样
+        ///我们使用这个属性来优化性能：
+        ///如果此属性设置为false，那么我们不需要加载应用折扣导航属性
         /// </remarks>
         /// </summary>
         public bool HasDiscountsApplied { get; set; }
 
         /// <summary>
-        /// Gets or sets the weight
+        /// 获取或设置重量
         /// </summary>
         public decimal Weight { get; set; }
         /// <summary>
-        /// Gets or sets the length
+        ///获取或设置长度
         /// </summary>
         public decimal Length { get; set; }
         /// <summary>
-        /// Gets or sets the width
+        /// 获取或设置宽度
         /// </summary>
         public decimal Width { get; set; }
         /// <summary>
-        /// Gets or sets the height
+        ///获取或设置高度
         /// </summary>
         public decimal Height { get; set; }
 
         /// <summary>
-        /// Gets or sets the available start date and time
+        /// 获取或设置可用的开始日期和时间
         /// </summary>
         public DateTime? AvailableStartDateTimeUtc { get; set; }
         /// <summary>
-        /// Gets or sets the available end date and time
+        /// 获取或设置可用的结束日期和时间
         /// </summary>
         public DateTime? AvailableEndDateTimeUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets a display order.
-        /// This value is used when sorting associated products (used with "grouped" products)
-        /// This value is used when sorting home page products
+        /// 获取或设置显示顺序。
+        /// 排序关联产品时使用此值（与“分组”产品一起使用）
+        /// 此值在分拣主页产品时使用
         /// </summary>
         public int DisplayOrder { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether the entity is published
+        /// 获取或设置一个值，指示实体是否已发布
         /// </summary>
         public bool Published { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether the entity has been deleted
+        /// 获取或设置一个值，该值指示实体是否已被删除
         /// </summary>
         public bool Deleted { get; set; }
 
         /// <summary>
-        /// Gets or sets the date and time of product creation
+        /// 获取或设置产品创建的日期和时间
         /// </summary>
         public DateTime CreatedOnUtc { get; set; }
         /// <summary>
-        /// Gets or sets the date and time of product update
+        /// 获取或设置产品更新的日期和时间
         /// </summary>
         public DateTime UpdatedOnUtc { get; set; }
 
@@ -484,7 +486,7 @@ namespace Nop.Core.Domain.Catalog
 
 
         /// <summary>
-        /// Gets or sets the product type
+        /// 获取或设置产品类型
         /// </summary>
         public ProductType ProductType
         {
@@ -499,7 +501,7 @@ namespace Nop.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the backorder mode
+        /// 获取或设置订货模式
         /// </summary>
         public BackorderMode BackorderMode
         {
@@ -514,7 +516,7 @@ namespace Nop.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the download activation type
+        /// 获取或设置下载激活类型
         /// </summary>
         public DownloadActivationType DownloadActivationType
         {
@@ -529,7 +531,7 @@ namespace Nop.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the gift card type
+        /// 获取或设置礼品卡类型
         /// </summary>
         public GiftCardType GiftCardType
         {
@@ -544,7 +546,7 @@ namespace Nop.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the low stock activity
+        /// 获取或设置低库存活动
         /// </summary>
         public LowStockActivity LowStockActivity
         {
@@ -559,7 +561,7 @@ namespace Nop.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the value indicating how to manage inventory
+        /// 获取或设置指示如何管理库存的值
         /// </summary>
         public ManageInventoryMethod ManageInventoryMethod
         {
@@ -574,7 +576,7 @@ namespace Nop.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the cycle period for recurring products
+        /// 获取或设置重复产品的周期
         /// </summary>
         public RecurringProductCyclePeriod RecurringCyclePeriod
         {
@@ -589,7 +591,7 @@ namespace Nop.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the period for rental products
+        /// 获取或设置出租产品的期限
         /// </summary>
         public RentalPricePeriod RentalPricePeriod
         {
@@ -609,7 +611,7 @@ namespace Nop.Core.Domain.Catalog
 
 
         /// <summary>
-        /// Gets or sets the collection of ProductCategory
+        /// 获取或设置产品类别的集合
         /// </summary>
         public virtual ICollection<ProductCategory> ProductCategories
         {
@@ -618,7 +620,7 @@ namespace Nop.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the collection of ProductManufacturer
+        /// 获取或设置产品制造商的集合
         /// </summary>
         public virtual ICollection<ProductManufacturer> ProductManufacturers
         {
@@ -627,7 +629,7 @@ namespace Nop.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the collection of ProductPicture
+        /// 获取或设置产品图片的集合
         /// </summary>
         public virtual ICollection<ProductPicture> ProductPictures
         {
@@ -636,7 +638,7 @@ namespace Nop.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the collection of product reviews
+        /// 获取或设置产品评论的集合
         /// </summary>
         public virtual ICollection<ProductReview> ProductReviews
         {
@@ -645,7 +647,7 @@ namespace Nop.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the product specification attribute
+        /// 获取或设置产品规格属性
         /// </summary>
         public virtual ICollection<ProductSpecificationAttribute> ProductSpecificationAttributes
         {
@@ -654,7 +656,7 @@ namespace Nop.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the product tags
+        /// 获取或设置产品标签
         /// </summary>
         public virtual ICollection<ProductTag> ProductTags
         {
@@ -663,7 +665,7 @@ namespace Nop.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the product attribute mappings
+        /// 获取或设置产品属性映射
         /// </summary>
         public virtual ICollection<ProductAttributeMapping> ProductAttributeMappings
         {
@@ -672,7 +674,7 @@ namespace Nop.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the product attribute combinations
+        /// 获取或设置产品属性组合
         /// </summary>
         public virtual ICollection<ProductAttributeCombination> ProductAttributeCombinations
         {
@@ -681,7 +683,7 @@ namespace Nop.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the tier prices
+        /// 获取或设置分层价格
         /// </summary>
         public virtual ICollection<TierPrice> TierPrices
         {
@@ -690,16 +692,16 @@ namespace Nop.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the collection of applied discounts
+        /// 获取或设置应用折扣的集合
         /// </summary>
         public virtual ICollection<Discount> AppliedDiscounts
         {
             get { return _appliedDiscounts ?? (_appliedDiscounts = new List<Discount>()); }
             protected set { _appliedDiscounts = value; }
         }
-        
+
         /// <summary>
-        /// Gets or sets the collection of "ProductWarehouseInventory" records. We use it only when "UseMultipleWarehouses" is set to "true" and ManageInventoryMethod" to "ManageStock"
+        /// 获取或设置“ProductWarehouseInventory”记录的集合。 我们只有在“UseMultipleWarehouses”设置为“true”并将ManageInventoryMethod设置为“ManageStock”时才使用它。
         /// </summary>
         public virtual ICollection<ProductWarehouseInventory> ProductWarehouseInventory
         {

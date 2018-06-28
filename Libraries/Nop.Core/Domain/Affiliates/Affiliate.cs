@@ -3,7 +3,7 @@ using Nop.Core.Domain.Common;
 namespace Nop.Core.Domain.Affiliates
 {
     /// <summary>
-    /// 会员
+    /// 附属信息
     /// </summary>
     public partial class Affiliate : BaseEntity
     {
