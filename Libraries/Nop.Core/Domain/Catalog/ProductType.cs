@@ -1,16 +1,16 @@
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a product type
+    /// 产品类型
     /// </summary>
     public enum ProductType
     {
         /// <summary>
-        /// Simple
+        /// 简单
         /// </summary>
         SimpleProduct = 5,
         /// <summary>
-        /// Grouped (product with variants)
+        /// 分组（具有变体的产品）
         /// </summary>
         GroupedProduct = 10,
     }

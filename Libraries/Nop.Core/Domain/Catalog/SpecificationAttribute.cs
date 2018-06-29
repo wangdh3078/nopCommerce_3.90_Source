@@ -4,24 +4,24 @@ using Nop.Core.Domain.Localization;
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a specification attribute
+    /// 规格属性
     /// </summary>
     public partial class SpecificationAttribute : BaseEntity, ILocalizedEntity
     {
         private ICollection<SpecificationAttributeOption> _specificationAttributeOptions;
 
         /// <summary>
-        /// Gets or sets the name
+        /// 获取或设置名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the display order
+        /// 获取或设置显示顺序
         /// </summary>
         public int DisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or sets the specification attribute options
+        /// 获取或设置规范属性选项
         /// </summary>
         public virtual ICollection<SpecificationAttributeOption> SpecificationAttributeOptions
         {

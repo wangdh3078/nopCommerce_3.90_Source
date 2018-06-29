@@ -4,32 +4,32 @@ using Nop.Core.Domain.Media;
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a product picture mapping
+    /// 产品图片映射
     /// </summary>
     public partial class ProductPicture : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the product identifier
+        /// 获取或设置产品标识
         /// </summary>
         public int ProductId { get; set; }
 
         /// <summary>
-        /// Gets or sets the picture identifier
+        /// 获取或设置图片标识
         /// </summary>
         public int PictureId { get; set; }
 
         /// <summary>
-        /// Gets or sets the display order
+        /// 获取或设置显示顺序
         /// </summary>
         public int DisplayOrder { get; set; }
-        
+
         /// <summary>
-        /// Gets the picture
+        ///获取图片
         /// </summary>
         public virtual Picture Picture { get; set; }
 
         /// <summary>
-        /// Gets the product
+        ///获取产品
         /// </summary>
         public virtual Product Product { get; set; }
     }

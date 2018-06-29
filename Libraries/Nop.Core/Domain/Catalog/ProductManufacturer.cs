@@ -1,37 +1,37 @@
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a product manufacturer mapping
+    /// 产品制造商映射
     /// </summary>
     public partial class ProductManufacturer : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the product identifier
+        /// 获取或设置产品标识
         /// </summary>
         public int ProductId { get; set; }
 
         /// <summary>
-        /// Gets or sets the manufacturer identifier
+        /// 获取或设置制造商标识
         /// </summary>
         public int ManufacturerId { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the product is featured
+        ///获取或设置一个值，指示产品是否具有特色
         /// </summary>
         public bool IsFeaturedProduct { get; set; }
 
         /// <summary>
-        /// Gets or sets the display order
+        ///获取或设置显示顺序
         /// </summary>
         public int DisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or sets the manufacturer
+        /// 获取或设置制造商
         /// </summary>
         public virtual Manufacturer Manufacturer { get; set; }
 
         /// <summary>
-        /// Gets or sets the product
+        /// 获取或设置产品
         /// </summary>
         public virtual Product Product { get; set; }
     }

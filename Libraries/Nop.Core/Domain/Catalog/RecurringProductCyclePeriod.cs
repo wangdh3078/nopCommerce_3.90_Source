@@ -1,24 +1,24 @@
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a recurring product cycle period
+    ///周期性产品周期
     /// </summary>
     public enum RecurringProductCyclePeriod
     {
         /// <summary>
-        /// Days
+        /// 天
         /// </summary>
         Days = 0,
         /// <summary>
-        /// Weeks
+        /// 周
         /// </summary>
         Weeks = 10,
         /// <summary>
-        /// Months
+        /// 月
         /// </summary>
         Months = 20,
         /// <summary>
-        /// Years
+        /// 年
         /// </summary>
         Years = 30,
     }

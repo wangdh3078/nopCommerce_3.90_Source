@@ -3,27 +3,27 @@
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a product review helpfulness
+    /// 产品评审帮助
     /// </summary>
     public partial class ProductReviewHelpfulness : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the product review identifier
+        /// 获取或设置产品评论标识符
         /// </summary>
         public int ProductReviewId { get; set; }
 
         /// <summary>
-        /// A value indicating whether a review a helpful
+        /// 指示评论是否有帮助的值
         /// </summary>
         public bool WasHelpful { get; set; }
 
         /// <summary>
-        /// Gets or sets the customer identifier
+        /// 获取或设置客户标识
         /// </summary>
         public int CustomerId { get; set; }
 
         /// <summary>
-        /// Gets the product
+        /// 获取产品
         /// </summary>
         public virtual ProductReview ProductReview { get; set; }
     }

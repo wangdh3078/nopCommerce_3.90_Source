@@ -3,22 +3,22 @@ using System;
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a stock quantity change entry
+    /// 库存数量更改条目
     /// </summary>
     public partial class StockQuantityHistory : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the stock quantity adjustment
+        /// 获取或设置库存数量调整
         /// </summary>
         public int QuantityAdjustment { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets current stock quantity
+        /// 获取或设置当前库存数量
         /// </summary>
         public int StockQuantity { get; set; }
 
         /// <summary>
-        /// Gets or sets the message
+        ///获取或设置消息
         /// </summary>
         public string Message { get; set; }
 
@@ -28,22 +28,22 @@ namespace Nop.Core.Domain.Catalog
         public DateTime CreatedOnUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the product identifier
+        /// 获取或设置产品标识
         /// </summary>
         public int ProductId { get; set; }
 
         /// <summary>
-        /// Gets or sets the product attribute combination identifier
+        /// 获取或设置产品属性组合标识符
         /// </summary>
         public int? CombinationId { get; set; }
 
         /// <summary>
-        /// Gets or sets the warehouse identifier
+        /// 获取或设置仓库标识
         /// </summary>
         public int? WarehouseId { get; set; }
 
         /// <summary>
-        /// Gets the product
+        ///获取产品
         /// </summary>
         public virtual Product Product { get; set; }
     }

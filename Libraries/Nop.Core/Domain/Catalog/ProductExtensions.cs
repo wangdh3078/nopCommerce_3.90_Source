@@ -5,15 +5,15 @@ using System.Linq;
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Product extensions
+    /// 产品扩展
     /// </summary>
     public static class ProductExtensions
     {
         /// <summary>
-        /// Parse "required product Ids" property
+        /// 解析“所需产品ID”属性
         /// </summary>
-        /// <param name="product">Product</param>
-        /// <returns>A list of required product IDs</returns>
+        /// <param name="product">产品</param>
+        /// <returns>所需产品ID的列表</returns>
         public static int[] ParseRequiredProductIds(this Product product)
         {
             if (product == null)
@@ -37,21 +37,21 @@ namespace Nop.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Get a value indicating whether a product is available now (availability dates)
+        /// 获取指示产品是否现在可用的值（可用日期）
         /// </summary>
-        /// <param name="product">Product</param>
-        /// <returns>Result</returns>
+        /// <param name="product">产品</param>
+        /// <returns></returns>
         public static bool IsAvailable(this Product product)
         {
             return IsAvailable(product, DateTime.UtcNow);
         }
 
         /// <summary>
-        /// Get a value indicating whether a product is available now (availability dates)
+        ///获取指示产品是否现在可用的值（可用日期）
         /// </summary>
-        /// <param name="product">Product</param>
-        /// <param name="dateTime">Datetime to check</param>
-        /// <returns>Result</returns>
+        /// <param name="product">产品</param>
+        /// <param name="dateTime">日期</param>
+        /// <returns></returns>
         public static bool IsAvailable(this Product product, DateTime dateTime)
         {
             if (product == null)

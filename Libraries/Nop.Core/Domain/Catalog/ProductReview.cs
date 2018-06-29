@@ -6,59 +6,59 @@ using Nop.Core.Domain.Stores;
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a product review
+    /// 产品评论
     /// </summary>
     public partial class ProductReview : BaseEntity
     {
         private ICollection<ProductReviewHelpfulness> _productReviewHelpfulnessEntries;
 
         /// <summary>
-        /// Gets or sets the customer identifier
+        /// 获取或设置客户标识
         /// </summary>
         public int CustomerId { get; set; }
 
         /// <summary>
-        /// Gets or sets the product identifier
+        /// 获取或设置产品标识
         /// </summary>
         public int ProductId { get; set; }
 
         /// <summary>
-        /// Gets or sets the store identifier
+        /// 获取或设置商店标识
         /// </summary>
         public int StoreId { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the content is approved
+        /// 获取或设置一个值，指示内容是否被批准
         /// </summary>
         public bool IsApproved { get; set; }
 
         /// <summary>
-        /// Gets or sets the title
+        ///获取或设置标题
         /// </summary>
         public string Title { get; set; }
 
         /// <summary>
-        /// Gets or sets the review text
+        /// 获取或设置评论文本
         /// </summary>
         public string ReviewText { get; set; }
 
         /// <summary>
-        /// Gets or sets the reply text
+        /// 获取或设置回复文本
         /// </summary>
         public string ReplyText { get; set; }
 
         /// <summary>
-        /// Review rating
+        /// 评论评级
         /// </summary>
         public int Rating { get; set; }
 
         /// <summary>
-        /// Review helpful votes total
+        /// 查看有用的投票总数
         /// </summary>
         public int HelpfulYesTotal { get; set; }
 
         /// <summary>
-        /// Review not helpful votes total
+        /// 审查没有帮助的总票数
         /// </summary>
         public int HelpfulNoTotal { get; set; }
 
@@ -68,22 +68,22 @@ namespace Nop.Core.Domain.Catalog
         public DateTime CreatedOnUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the customer
+        ///获取或设置客户
         /// </summary>
         public virtual Customer Customer { get; set; }
 
         /// <summary>
-        /// Gets the product
+        /// 获取产品
         /// </summary>
         public virtual Product Product { get; set; }
 
         /// <summary>
-        /// Gets or sets the store
+        /// 获取或设置商店
         /// </summary>
         public virtual Store Store { get; set; }
 
         /// <summary>
-        /// Gets the entries of product review helpfulness
+        /// 获取产品评论有用的条目
         /// </summary>
         public virtual ICollection<ProductReviewHelpfulness> ProductReviewHelpfulnessEntries
         {

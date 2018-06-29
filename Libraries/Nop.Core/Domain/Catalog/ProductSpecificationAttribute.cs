@@ -1,57 +1,57 @@
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a product specification attribute
+    /// 产品规格属性
     /// </summary>
     public partial class ProductSpecificationAttribute : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the product identifier
+        /// 获取或设置产品标识
         /// </summary>
         public int ProductId { get; set; }
 
         /// <summary>
-        /// Gets or sets the attribute type ID
+        /// 获取或设置属性类型ID
         /// </summary>
         public int AttributeTypeId { get; set; }
 
         /// <summary>
-        /// Gets or sets the specification attribute identifier
+        /// 获取或设置规范属性标识符
         /// </summary>
         public int SpecificationAttributeOptionId { get; set; }
 
         /// <summary>
-        /// Gets or sets the custom value
+        /// 获取或设置自定义值
         /// </summary>
         public string CustomValue { get; set; }
 
         /// <summary>
-        /// Gets or sets whether the attribute can be filtered by
+        /// 获取或设置属性是否可以被过滤
         /// </summary>
         public bool AllowFiltering { get; set; }
 
         /// <summary>
-        /// Gets or sets whether the attribute will be shown on the product page
+        ///获取或设置属性是否显示在产品页面上
         /// </summary>
         public bool ShowOnProductPage { get; set; }
 
         /// <summary>
-        /// Gets or sets the display order
+        ///获取或设置显示顺序
         /// </summary>
         public int DisplayOrder { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets the product
+        /// 获取或设置产品
         /// </summary>
         public virtual Product Product { get; set; }
 
         /// <summary>
-        /// Gets or sets the specification attribute option
+        /// 获取或设置规范属性选项
         /// </summary>
         public virtual SpecificationAttributeOption SpecificationAttributeOption { get; set; }
 
         /// <summary>
-        /// Gets the attribute control type
+        /// 获取属性控件类型
         /// </summary>
         public SpecificationAttributeType AttributeType
         {

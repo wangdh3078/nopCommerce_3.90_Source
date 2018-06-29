@@ -1,24 +1,24 @@
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a specification attribute type
+    /// 规格属性类型
     /// </summary>
     public enum SpecificationAttributeType
     {
         /// <summary>
-        /// Option
+        /// 选项
         /// </summary>
         Option = 0,
         /// <summary>
-        /// Custom text
+        /// 自定义文本
         /// </summary>
         CustomText = 10,
         /// <summary>
-        /// Custom HTML text
+        ///自定义HTML文本
         /// </summary>
         CustomHtmlText = 20,
         /// <summary>
-        /// Hyperlink
+        /// 超链接
         /// </summary>
         Hyperlink = 30
     }

@@ -3,32 +3,32 @@
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a specification attribute option
+    ///规格属性选项
     /// </summary>
     public partial class SpecificationAttributeOption : BaseEntity, ILocalizedEntity
     {
         /// <summary>
-        /// Gets or sets the specification attribute identifier
+        /// 获取或设置规范属性标识符
         /// </summary>
         public int SpecificationAttributeId { get; set; }
 
         /// <summary>
-        /// Gets or sets the name
+        /// 获取或设置名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the color RGB value (used when you want to display "Color squares" instead of text)
+        /// 获取或设置颜色RGB值（当您想显示“颜色方块”而不是文本时使用）
         /// </summary>
         public string ColorSquaresRgb { get; set; }
 
         /// <summary>
-        /// Gets or sets the display order
+        /// 获取或设置显示顺序
         /// </summary>
         public int DisplayOrder { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets the specification attribute
+        ///获取或设置规范属性
         /// </summary>
         public virtual SpecificationAttribute SpecificationAttribute { get; set; }
     }

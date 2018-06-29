@@ -3,346 +3,349 @@ using Nop.Core.Configuration;
 
 namespace Nop.Core.Domain.Catalog
 {
+    /// <summary>
+    /// 产品编辑设置
+    /// </summary>
     public class ProductEditorSettings : ISettings
     {
         /// <summary>
-        /// Gets or sets a value indicating whether 'ID' field is shown
+        /// 获取或设置一个值，指示是否显示“ID”字段
         /// </summary>
         public bool Id { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Product type' field is shown
+        /// 获取或设置一个值，指示是否显示“产品类型”字段
         /// </summary>
         public bool ProductType { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Visible individually' field is shown
+        /// 获取或设置一个值，指示是否显示“可单独显示”字段
         /// </summary>
         public bool VisibleIndividually { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Product template' field is shown
+        /// 获取或设置一个值，指示是否显示“产品模板”字段
         /// </summary>
         public bool ProductTemplate { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Admin comment' feild is shown
+        /// 获取或设置一个值，指示是否显示“管理注释”字段
         /// </summary>
         public bool AdminComment { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Vendor' field is shown
+        /// 获取或设置一个值，指示是否显示“供应商”字段
         /// </summary>
         public bool Vendor { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Stores' field is shown
+        /// 获取或设置一个值，指示是否显示“Stores”字段
         /// </summary>
         public bool Stores { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'ACL' field is shown
+        ///获取或设置一个值，指示是否显示“ACL”字段
         /// </summary>
         public bool ACL { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Show on home page' field is shown
+        /// 获取或设置一个值，指示是否显示“在主页上显示”字段
         /// </summary>
         public bool ShowOnHomePage { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Display order 'field is shown
+        /// 获取或设置一个值，该值指示是否显示“显示顺序”字段
         /// </summary>
         public bool DisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Allow customer reviews' field is shown
+        /// 获取或设置一个值，指示是否显示“允许客户评论”字段
         /// </summary>
         public bool AllowCustomerReviews { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Product tags' field is shown
+        ///获取或设置一个值，指示是否显示“产品标签”字段
         /// </summary>
         public bool ProductTags { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Manufacturer part number' field is shown
+        ///获取或设置一个值，指示是否显示“制造商部件号”字段
         /// </summary>
         public bool ManufacturerPartNumber { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'GTIN' field is shown
+        /// 获取或设置一个值，指示是否显示“GTIN”字段
         /// </summary>
         public bool GTIN { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Product cost' field is shown
+        ///获取或设置一个值，指示是否显示“产品成本”字段
         /// </summary>
         public bool ProductCost { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Tier prices' field is shown
+        ///获取或设置一个值，指示是否显示“层级价格”字段
         /// </summary>
         public bool TierPrices { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Discounts' field is shown
+        /// 获取或设置一个值，指示是否显示“折扣”字段
         /// </summary>
         public bool Discounts { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Disable buy button' field is shown
+        ///获取或设置一个值，指示是否显示“禁用购买按钮”字段
         /// </summary>
         public bool DisableBuyButton { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Disable wishlist button' field is shown
+        ///获取或设置一个值，指示是否显示“禁用愿望列表按钮”字段
         /// </summary>
         public bool DisableWishlistButton { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Available for pre-order' field is shown
+        /// 获取或设置一个值，指示是否显示“预订可用”字段
         /// </summary>
         public bool AvailableForPreOrder { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Call for price' field is shown
+        ///获取或设置一个值，指示是否显示“要求价格”字段
         /// </summary>
         public bool CallForPrice { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Old price' field is shown
+        ///获取或设置一个值，指示是否显示“旧价格”字段
         /// </summary>
         public bool OldPrice { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Customer enters price' field is shown
+        /// 获取或设置一个值，指示是否显示“客户输入价格”字段
         /// </summary>
         public bool CustomerEntersPrice { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'PAngV' field is shown
+        /// 获取或设置一个值，指示是否显示'PAngV'字段
         /// </summary>
         public bool PAngV { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Require other products added to the cart' field is shown
+        /// 获取或设置一个值，指示是否显示“需要添加到购物车的其他产品”字段
         /// </summary>
         public bool RequireOtherProductsAddedToTheCart { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Is gift card' field is shown
+        /// 获取或设置一个值，指示是否显示“是礼品卡”字段
         /// </summary>
         public bool IsGiftCard { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Downloadable product' field is shown
+        /// 获取或设置一个值，指示是否显示“可下载的产品”字段
         /// </summary>
         public bool DownloadableProduct { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Recurring product' field is shown
+        ///获取或设置一个值，指示是否显示“重复产品”字段
         /// </summary>
         public bool RecurringProduct { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Is rental' field is shown
+        ///获取或设置一个值，指示是否显示'是否出租'字段
         /// </summary>
         public bool IsRental { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Free shipping' field is shown
+        /// 获取或设置一个值，指示是否显示“免费送货”字段
         /// </summary>
         public bool FreeShipping { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Ship separately' field is shown
+        /// 获取或设置一个值，指示是否显示“另行发货”字段
         /// </summary>
         public bool ShipSeparately { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Additional shipping charge' field is shown
+        /// 获取或设置一个值，指示是否显示“附加运费”字段
         /// </summary>
         public bool AdditionalShippingCharge { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Delivery date' field is shown
+        /// 获取或设置一个值，指示是否显示“交货日期”字段
         /// </summary>
         public bool DeliveryDate { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Telecommunications, broadcasting and electronic services' field is shown
+        /// 获取或设置一个值，指示是否显示“电信，广播和电子服务”字段
         /// </summary>
         public bool TelecommunicationsBroadcastingElectronicServices { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Product availability range' field is shown
+        /// 获取或设置一个值，该值指示是否显示“产品可用性范围”字段
         /// </summary>
         public bool ProductAvailabilityRange { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Use multiple warehouses' field is shown
+        ///获取或设置一个值，指示是否显示“使用多个仓库”字段
         /// </summary>
         public bool UseMultipleWarehouses { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Warehouse' field is shown
+        ///获取或设置一个值，指示是否显示“仓库”字段
         /// </summary>
         public bool Warehouse { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Display stock availability' field is shown
+        /// 获取或设置一个值，该值指示是否显示“显示库存可用性”字段
         /// </summary>
         public bool DisplayStockAvailability { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Display stock quantity' field is shown
+        /// 获取或设置一个值，指示是否显示“显示库存数量”字段
         /// </summary>
         public bool DisplayStockQuantity { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Minimum stock quantity' field is shown
+        ///获取或设置一个值，指示是否显示“最小库存数量”字段
         /// </summary>
         public bool MinimumStockQuantity { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Low stock activity' field is shown
+        /// 获取或设置一个值，指示是否显示“低库存活动”字段
         /// </summary>
         public bool LowStockActivity { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Notify admin for quantity below' field is shown
+        /// 获取或设置一个值，指示是否显示'通知管理数量低于'字段
         /// </summary>
         public bool NotifyAdminForQuantityBelow { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Backorders' field is shown
+        /// 获取或设置一个值，指示是否显示“延期交货”字段
         /// </summary>
         public bool Backorders { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Allow back in stock subscriptions' field is shown
+        /// 获取或设置一个值，指示是否显示“允许备份订阅”字段
         /// </summary>
         public bool AllowBackInStockSubscriptions { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Minimum cart quantity' field is shown
+        ///获取或设置一个值，指示是否显示“最小购物车数量”字段
         /// </summary>
         public bool MinimumCartQuantity { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Maximum cart quantity' field is shown
+        ///获取或设置一个值，指示是否显示“最大购物车数量”字段
         /// </summary>
         public bool MaximumCartQuantity { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Allowed quantities' field is shown
+        ///获取或设置一个值，该值指示是否显示“允许的数量”字段
         /// </summary>
         public bool AllowedQuantities { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Allow only existing attribute combinations' field is shown
+        /// 获取或设置一个值，该值指示是否显示“仅允许现有属性组合”字段
         /// </summary>
         public bool AllowAddingOnlyExistingAttributeCombinations { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Not returnable' field is shown
+        /// 获取或设置一个值，指示是否显示“不可返回”字段
         /// </summary>
         public bool NotReturnable { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Weight' field is shown
+        /// 获取或设置一个值，指示是否显示“重量”字段
         /// </summary>
         public bool Weight { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Dimension' fields (height, length, width) are shown
+        /// 获取或设置一个值，指示是否显示'尺寸'字段（高度，长度，宽度）
         /// </summary>
         public bool Dimensions { get; set; }
 
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Available start date' field is shown
+        /// 获取或设置一个值，该值指示是否显示“可用开始日期”字段
         /// </summary>
         public bool AvailableStartDate { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Available end date' field is shown
+        /// 获取或设置一个值，指示是否显示“可用结束日期”字段
         /// </summary>
         public bool AvailableEndDate { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Mark as new' field is shown
+        /// 获取或设置一个值，指示是否显示“标记为新的”字段
         /// </summary>
         public bool MarkAsNew { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Mark as new. Start date' field is shown
+        /// 获取或设置一个值，指示是否标记为新。 显示“开始日期”字段
         /// </summary>
         public bool MarkAsNewStartDate { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Mark as new. End date' field is shown
+        /// 获取或设置一个值，指示是否标记为新。 显示结束日期字段
         /// </summary>
         public bool MarkAsNewEndDate { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Published' field is shown
+        /// 获取或设置一个值，指示是否显示“发布”字段
         /// </summary>
         public bool Published { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Created on' field is shown
+        ///获取或设置一个值，指示是否显示“创建于”字段
         /// </summary>
         public bool CreatedOn { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Updated on' field is shown
+        /// 获取或设置一个值，指示是否显示'已更新'字段
         /// </summary>
         public bool UpdatedOn { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Related products' block is shown
+        /// 获取或设置一个值，指示是否显示“相关产品”块
         /// </summary>
         public bool RelatedProducts { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Cross-sells products' block is shown
+        /// 获取或设置一个值，指示是否显示“交叉销售产品”块
         /// </summary>
         public bool CrossSellsProducts { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'SEO' tab is shown
+        /// 获取或设置一个值，指示是否显示“SEO”选项卡
         /// </summary>
         public bool Seo { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Purchased with orders' tab is shown
+        /// 获取或设置一个值，该值指示是否显示“通过订单购买”选项卡
         /// </summary>
         public bool PurchasedWithOrders { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether one column is used on the product details page
+        /// 获取或设置一个值，该值指示产品详细信息页面上是否使用了一列
         /// </summary>
         public bool OneColumnProductPage { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Product attributes' tab is shown
+        /// 获取或设置一个值，该值指示是否显示“产品属性”选项卡
         /// </summary>
         public bool ProductAttributes { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Specification attributes' tab is shown
+        /// 获取或设置一个值，该值指示是否显示“规范属性”选项卡
         /// </summary>
         public bool SpecificationAttributes { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Manufacturers' field is shown
+        /// 获取或设置一个值，指示是否显示“制造商”字段
         /// </summary>
         public bool Manufacturers { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Stock quantity history' tab is shown
+        /// 获取或设置一个值，该值指示是否显示“库存数量历史记录”选项卡
         /// </summary>
         public bool StockQuantityHistory { get; set; }
     }

@@ -4,19 +4,19 @@ using Nop.Core.Domain.Localization;
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a product tag
+    /// 产品标签
     /// </summary>
     public partial class ProductTag : BaseEntity, ILocalizedEntity
     {
         private ICollection<Product> _products;
 
         /// <summary>
-        /// Gets or sets the name
+        ///获取或设置名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the products
+        /// 获取或设置产品
         /// </summary>
         public virtual ICollection<Product> Products
         {

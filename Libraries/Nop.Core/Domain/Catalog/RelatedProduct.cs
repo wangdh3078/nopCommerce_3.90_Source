@@ -1,22 +1,22 @@
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a related product
+    /// 相关产品
     /// </summary>
     public partial class RelatedProduct : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the first product identifier
+        /// 获取或设置第一个产品标识
         /// </summary>
         public int ProductId1 { get; set; }
 
         /// <summary>
-        /// Gets or sets the second product identifier
+        /// 获取或设置第二个产品标识
         /// </summary>
         public int ProductId2 { get; set; }
 
         /// <summary>
-        /// Gets or sets the display order
+        /// 获取或设置显示顺序
         /// </summary>
         public int DisplayOrder { get; set; }
     }

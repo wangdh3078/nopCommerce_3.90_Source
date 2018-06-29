@@ -3,37 +3,37 @@ using Nop.Core.Domain.Shipping;
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a record to manage product inventory per warehouse
+    ///管理每个仓库的产品库存的记录
     /// </summary>
     public partial class ProductWarehouseInventory : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the product identifier
+        ///获取或设置产品标识
         /// </summary>
         public int ProductId { get; set; }
 
         /// <summary>
-        /// Gets or sets the warehouse identifier
+        ///获取或设置仓库标识
         /// </summary>
         public int WarehouseId { get; set; }
 
         /// <summary>
-        /// Gets or sets the stock quantity
+        /// 获取或设置库存数量
         /// </summary>
         public int StockQuantity { get; set; }
 
         /// <summary>
-        /// Gets or sets the reserved quantity (ordered but not shipped yet)
+        /// 获取或设置保留数量（已订购但尚未发货）
         /// </summary>
         public int ReservedQuantity { get; set; }
 
         /// <summary>
-        /// Gets the product
+        /// 获取产品
         /// </summary>
         public virtual Product Product { get; set; }
 
         /// <summary>
-        /// Gets the warehouse
+        /// 获取仓库
         /// </summary>
         public virtual Warehouse Warehouse { get; set; }
     }

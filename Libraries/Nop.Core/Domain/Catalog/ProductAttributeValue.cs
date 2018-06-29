@@ -3,87 +3,87 @@ using Nop.Core.Domain.Localization;
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a product attribute value
+    ///产品属性值
     /// </summary>
     public partial class ProductAttributeValue : BaseEntity, ILocalizedEntity
     {
         /// <summary>
-        /// Gets or sets the product attribute mapping identifier
+        /// 获取或设置产品属性映射标识符
         /// </summary>
         public int ProductAttributeMappingId { get; set; }
 
         /// <summary>
-        /// Gets or sets the attribute value type identifier
+        /// 获取或设置属性值类型标识符
         /// </summary>
         public int AttributeValueTypeId { get; set; }
 
         /// <summary>
-        /// Gets or sets the associated product identifier (used only with AttributeValueType.AssociatedToProduct)
+        ///获取或设置关联的产品标识符（仅与AttributeValueType.AssociatedToProduct一起使用）
         /// </summary>
         public int AssociatedProductId { get; set; }
 
         /// <summary>
-        /// Gets or sets the product attribute name
+        /// 获取或设置产品属性名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the color RGB value (used with "Color squares" attribute type)
+        /// 获取或设置颜色RGB值（与“颜色方块”属性类型一起使用）
         /// </summary>
         public string ColorSquaresRgb { get; set; }
 
         /// <summary>
-        /// Gets or sets the picture ID for image square (used with "Image squares" attribute type)
+        /// 获取或设置图像平方的图片ID（与“图片方块”属性类型一起使用）
         /// </summary>
         public int ImageSquaresPictureId { get; set; }
 
         /// <summary>
-        /// Gets or sets the price adjustment (used only with AttributeValueType.Simple)
+        /// 获取或设置价格调整（仅用于AttributeValueType.Simple）
         /// </summary>
         public decimal PriceAdjustment { get; set; }
 
         /// <summary>
-        /// Gets or sets the weight adjustment (used only with AttributeValueType.Simple)
+        /// 获取或设置权重调整（仅与Attribute Value Type.Simple一起使用）
         /// </summary>
         public decimal WeightAdjustment { get; set; }
 
         /// <summary>
-        /// Gets or sets the attibute value cost (used only with AttributeValueType.Simple)
+        /// 获取或设置属性值成本（仅与AttributeValue Type.Simple一起使用）
         /// </summary>
         public decimal Cost { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the customer can enter the quantity of associated product (used only with AttributeValueType.AssociatedToProduct)
+        /// 获取或设置一个值，该值指示客户是否可以输入关联产品的数量（仅与AttributeValueType.AssociatedToProduct一起使用）
         /// </summary>
         public bool CustomerEntersQty { get; set; }
 
         /// <summary>
-        /// Gets or sets the quantity of associated product (used only with AttributeValueType.AssociatedToProduct)
+        /// 获取或设置关联产品的数量（仅与AttributeValueType.AssociatedToProduct一起使用）
         /// </summary>
         public int Quantity { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the value is pre-selected
+        ///获取或设置一个值，该值指示是否预先选择了该值
         /// </summary>
         public bool IsPreSelected { get; set; }
 
         /// <summary>
-        /// Gets or sets the display order
+        ///获取或设置显示顺序
         /// </summary>
         public int DisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or sets the picture (identifier) associated with this value. This picture should replace a product main picture once clicked (selected).
+        /// 获取或设置与此值关联的图片（标识符）。 这张照片应该替代一次点击（选择）的产品主图片。
         /// </summary>
         public int PictureId { get; set; }
 
         /// <summary>
-        /// Gets the product attribute mapping
+        /// 获取产品属性映射
         /// </summary>
         public virtual ProductAttributeMapping ProductAttributeMapping { get; set; }
 
         /// <summary>
-        /// Gets or sets the attribute value type
+        ///获取或设置属性值类型
         /// </summary>
         public AttributeValueType AttributeValueType
         {

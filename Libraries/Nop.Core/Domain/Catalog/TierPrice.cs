@@ -4,52 +4,52 @@ using Nop.Core.Domain.Customers;
 namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents a tier price
+    /// 一个等级价格
     /// </summary>
     public partial class TierPrice : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the product identifier
+        /// 获取或设置产品标识
         /// </summary>
         public int ProductId { get; set; }
 
         /// <summary>
-        /// Gets or sets the store identifier (0 - all stores)
+        /// 获取或设置商店标识符（0 - 所有商店）
         /// </summary>
         public int StoreId { get; set; }
 
         /// <summary>
-        /// Gets or sets the customer role identifier
+        /// 获取或设置客户角色标识
         /// </summary>
         public int? CustomerRoleId { get; set; }
 
         /// <summary>
-        /// Gets or sets the quantity
+        /// 获取或设置数量
         /// </summary>
         public int Quantity { get; set; }
 
         /// <summary>
-        /// Gets or sets the price
+        /// 获取或设置价格
         /// </summary>
         public decimal Price { get; set; }
 
         /// <summary>
-        /// Gets or sets the start date and time in UTC
+        /// 获取或设置UTC中的开始日期和时间
         /// </summary>
         public DateTime? StartDateTimeUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the end date and time in UTC
+        /// 获取或设置UTC的结束日期和时间
         /// </summary>
         public DateTime? EndDateTimeUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the product
+        ///获取或设置产品
         /// </summary>
         public virtual Product Product { get; set; }
 
         /// <summary>
-        /// Gets or sets the customer role
+        ///获取或设置客户角色
         /// </summary>
         public virtual CustomerRole CustomerRole { get; set; }
     }

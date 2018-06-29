@@ -1,32 +1,32 @@
 ﻿namespace Nop.Core.Domain.Catalog
 {
     /// <summary>
-    /// Represents the product sorting
+    /// 产品分拣
     /// </summary>
     public enum ProductSortingEnum
     {
         /// <summary>
-        /// Position (display order)
+        /// 位置（显示顺序）
         /// </summary>
         Position = 0,
         /// <summary>
-        /// Name: A to Z
+        ///名称：A到Z
         /// </summary>
         NameAsc = 5,
         /// <summary>
-        /// Name: Z to A
+        ///名称：Z到A
         /// </summary>
         NameDesc = 6,
         /// <summary>
-        /// Price: Low to High
+        /// 价格：从低到高
         /// </summary>
         PriceAsc = 10,
         /// <summary>
-        /// Price: High to Low
+        /// 价格：从高到低
         /// </summary>
         PriceDesc = 11,
         /// <summary>
-        /// Product creation date
+        /// 产品创建日期
         /// </summary>
         CreatedOn = 15,
     }
