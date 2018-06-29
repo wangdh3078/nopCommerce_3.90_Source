@@ -11,7 +11,7 @@ namespace Nop.Core.Domain.Topics
     public partial class Topic : BaseEntity, ILocalizedEntity, ISlugSupported, IStoreMappingSupported, IAclSupported
     {
         /// <summary>
-        /// Gets or sets the name
+        ///获取或设置名称
         /// </summary>
         public string SystemName { get; set; }
 
@@ -38,7 +38,7 @@ namespace Nop.Core.Domain.Topics
         public bool IncludeInFooterColumn3 { get; set; }
 
         /// <summary>
-        /// Gets or sets the display order
+        /// 获取或设置显示顺序
         /// </summary>
         public int DisplayOrder { get; set; }
 
@@ -67,7 +67,7 @@ namespace Nop.Core.Domain.Topics
         public string Body { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the entity is published
+        /// 获取或设置一个值，指示实体是否已发布
         /// </summary>
         public bool Published { get; set; }
 

@@ -3,39 +3,39 @@
 namespace Nop.Core.Domain.Discounts
 {
     /// <summary>
-    /// Represents a discount requirement
+    /// 折扣要求
     /// </summary>
     public partial class DiscountRequirement : BaseEntity
     {
         private ICollection<DiscountRequirement> _childRequirements;
 
         /// <summary>
-        /// Gets or sets the discount identifier
+        ///获取或设置折扣标识符
         /// </summary>
         public int DiscountId { get; set; }
 
         /// <summary>
-        /// Gets or sets the discount requirement rule system name
+        /// 获取或设置折扣需求规则系统名称
         /// </summary>
         public string DiscountRequirementRuleSystemName { get; set; }
 
         /// <summary>
-        /// Gets or sets the parent requirement identifier
+        /// 获取或设置父级需求标识符
         /// </summary>
         public int? ParentId { get; set; }
 
         /// <summary>
-        /// Gets or sets an interaction type identifier (has a value for the group and null for the child requirements)
+        /// 获取或设置交互类型标识符（具有组的值，对于子需求为null）
         /// </summary>
         public int? InteractionTypeId { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this requirement has any child requirements
+        /// 获取或设置一个值，该值指示此需求是否有任何子需求
         /// </summary>
         public bool IsGroup { get; set; }
 
         /// <summary>
-        /// Gets or sets an interaction type
+        /// 获取或设置交互类型
         /// </summary>
         public RequirementGroupInteractionType? InteractionType
         {
@@ -44,12 +44,12 @@ namespace Nop.Core.Domain.Discounts
         }
 
         /// <summary>
-        /// Gets or sets the discount
+        /// 获取或设置折扣
         /// </summary>
         public virtual Discount Discount { get; set; }
 
         /// <summary>
-        /// Gets or sets the child discount requirements
+        ///获取或设置子类折扣要求
         /// </summary>
         public virtual ICollection<DiscountRequirement> ChildRequirements
         {

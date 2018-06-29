@@ -7,12 +7,12 @@ namespace Nop.Core.Domain.Tax
     public partial class TaxCategory : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the name
+        ///获取或设置名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the display order
+        /// 获取或设置显示顺序
         /// </summary>
         public int DisplayOrder { get; set; }
     }

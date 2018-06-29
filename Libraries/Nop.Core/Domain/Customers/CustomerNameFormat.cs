@@ -1,24 +1,24 @@
 namespace Nop.Core.Domain.Customers
 {
     /// <summary>
-    /// Represents the customer name formatting enumeration
+    /// 客户名称格式化枚举
     /// </summary>
     public enum CustomerNameFormat
     {
         /// <summary>
-        /// Show emails
+        ///显示电子邮件
         /// </summary>
         ShowEmails = 1,
         /// <summary>
-        /// Show usernames
+        /// 显示用户名
         /// </summary>
         ShowUsernames = 2,
         /// <summary>
-        /// Show full names
+        /// 显示全名
         /// </summary>
         ShowFullNames = 3,
         /// <summary>
-        /// Show first name
+        /// 显示名字
         /// </summary>
         ShowFirstName = 10
     }

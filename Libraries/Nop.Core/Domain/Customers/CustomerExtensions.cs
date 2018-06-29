@@ -4,17 +4,20 @@ using Nop.Core.Domain.Common;
 
 namespace Nop.Core.Domain.Customers
 {
+    /// <summary>
+    /// 客户扩展
+    /// </summary>
     public static class CustomerExtensions
     {
-        #region Customer role
+        #region 客户角色
 
         /// <summary>
-        /// Gets a value indicating whether customer is in a certain customer role
+        ///获取一个值，指示客户是否处于某个客户角色
         /// </summary>
-        /// <param name="customer">Customer</param>
-        /// <param name="customerRoleSystemName">Customer role system name</param>
-        /// <param name="onlyActiveCustomerRoles">A value indicating whether we should look only in active customer roles</param>
-        /// <returns>Result</returns>
+        /// <param name="customer">客户</param>
+        /// <param name="customerRoleSystemName">客户角色系统名称</param>
+        /// <param name="onlyActiveCustomerRoles">是否应该只看待活跃的客户角色</param>
+        /// <returns></returns>
         public static bool IsInCustomerRole(this Customer customer,
             string customerRoleSystemName, bool onlyActiveCustomerRoles = true)
         {
@@ -30,10 +33,10 @@ namespace Nop.Core.Domain.Customers
         }
 
         /// <summary>
-        /// Gets a value indicating whether customer a search engine
+        ///客户是否有搜索引擎
         /// </summary>
-        /// <param name="customer">Customer</param>
-        /// <returns>Result</returns>
+        /// <param name="customer">客户</param>
+        /// <returns></returns>
         public static bool IsSearchEngineAccount(this Customer customer)
         {
             if (customer == null)
@@ -47,10 +50,10 @@ namespace Nop.Core.Domain.Customers
         }
 
         /// <summary>
-        /// Gets a value indicating whether the customer is a built-in record for background tasks
+        /// 客户是否是后台任务的内置记录
         /// </summary>
-        /// <param name="customer">Customer</param>
-        /// <returns>Result</returns>
+        /// <param name="customer">客户</param>
+        /// <returns></returns>
         public static bool IsBackgroundTaskAccount(this Customer customer)
         {
             if (customer == null)
@@ -64,44 +67,44 @@ namespace Nop.Core.Domain.Customers
         }
 
         /// <summary>
-        /// Gets a value indicating whether customer is administrator
+        /// 客户是否是管理员
         /// </summary>
-        /// <param name="customer">Customer</param>
-        /// <param name="onlyActiveCustomerRoles">A value indicating whether we should look only in active customer roles</param>
-        /// <returns>Result</returns>
+        /// <param name="customer">客户</param>
+        /// <param name="onlyActiveCustomerRoles">是否应该只看待活跃的客户角色</param>
+        /// <returns></returns>
         public static bool IsAdmin(this Customer customer, bool onlyActiveCustomerRoles = true)
         {
             return IsInCustomerRole(customer, SystemCustomerRoleNames.Administrators, onlyActiveCustomerRoles);
         }
 
         /// <summary>
-        /// Gets a value indicating whether customer is a forum moderator
+        /// 客户是否是论坛版主
         /// </summary>
-        /// <param name="customer">Customer</param>
-        /// <param name="onlyActiveCustomerRoles">A value indicating whether we should look only in active customer roles</param>
-        /// <returns>Result</returns>
+        /// <param name="customer">客户</param>
+        /// <param name="onlyActiveCustomerRoles">是否应该只看待活跃的客户角色</param>
+        /// <returns></returns>
         public static bool IsForumModerator(this Customer customer, bool onlyActiveCustomerRoles = true)
         {
             return IsInCustomerRole(customer, SystemCustomerRoleNames.ForumModerators, onlyActiveCustomerRoles);
         }
 
         /// <summary>
-        /// Gets a value indicating whether customer is registered
+        /// 客户是否已注册
         /// </summary>
-        /// <param name="customer">Customer</param>
-        /// <param name="onlyActiveCustomerRoles">A value indicating whether we should look only in active customer roles</param>
-        /// <returns>Result</returns>
+        /// <param name="customer">客户</param>
+        /// <param name="onlyActiveCustomerRoles">是否应该只看待活跃的客户角色</param>
+        /// <returns></returns>
         public static bool IsRegistered(this Customer customer, bool onlyActiveCustomerRoles = true)
         {
             return IsInCustomerRole(customer, SystemCustomerRoleNames.Registered, onlyActiveCustomerRoles);
         }
 
         /// <summary>
-        /// Gets a value indicating whether customer is guest
+        /// 客户是否是客人
         /// </summary>
-        /// <param name="customer">Customer</param>
-        /// <param name="onlyActiveCustomerRoles">A value indicating whether we should look only in active customer roles</param>
-        /// <returns>Result</returns>
+        /// <param name="customer">客户</param>
+        /// <param name="onlyActiveCustomerRoles">是否应该只看待活跃的客户角色</param>
+        /// <returns></returns>
         public static bool IsGuest(this Customer customer, bool onlyActiveCustomerRoles = true)
         {
             return IsInCustomerRole(customer, SystemCustomerRoleNames.Guests, onlyActiveCustomerRoles);
@@ -119,8 +122,12 @@ namespace Nop.Core.Domain.Customers
         }
         #endregion
 
-        #region Addresses
-
+        #region 地址
+        /// <summary>
+        /// 删除地址
+        /// </summary>
+        /// <param name="customer">客户</param>
+        /// <param name="address">地址</param>
         public static void RemoveAddress(this Customer customer, Address address)
         {
             if (customer.Addresses.Contains(address))

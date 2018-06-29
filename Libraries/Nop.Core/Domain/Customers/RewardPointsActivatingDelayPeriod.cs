@@ -3,31 +3,31 @@
 namespace Nop.Core.Domain.Customers
 {
     /// <summary>
-    /// Represents the period of delay
+    /// 奖励积分激活延迟期
     /// </summary>
     public enum RewardPointsActivatingDelayPeriod
     {
         /// <summary>
-        /// Hours
+        /// 小时
         /// </summary>
         Hours = 0,
         /// <summary>
-        /// Days
+        /// 天
         /// </summary>
         Days = 1
     }
 
     /// <summary>
-    /// RewardPointsActivatingDelayPeriod Extensions
+    /// 奖励积分激活延迟期扩展
     /// </summary>
     public static class RewardPointsActivatingDelayPeriodExtensions
     {
         /// <summary>
-        /// Returns a delay period before activating points in hours
+        /// 在以小时为单位激活点之前返回延迟时间
         /// </summary>
-        /// <param name="period">Reward points activating delay period</param>
-        /// <param name="value">Value of delay</param>
-        /// <returns>Value of delay in hours</returns>
+        /// <param name="period">奖励积分激活延迟期</param>
+        /// <param name="value">延迟值</param>
+        /// <returns>延迟时间的值</returns>
         public static int ToHours(this RewardPointsActivatingDelayPeriod period, int value)
         {
             switch (period)

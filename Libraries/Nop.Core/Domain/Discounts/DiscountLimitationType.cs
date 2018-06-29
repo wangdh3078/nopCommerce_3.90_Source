@@ -1,20 +1,20 @@
 namespace Nop.Core.Domain.Discounts
 {
     /// <summary>
-    /// Represents a discount limitation type
+    ///折扣限制类型
     /// </summary>
     public enum DiscountLimitationType
     {
         /// <summary>
-        /// None
+        /// 没有
         /// </summary>
         Unlimited = 0,
         /// <summary>
-        /// N Times Only
+        /// 只有N次
         /// </summary>
         NTimesOnly = 15,
         /// <summary>
-        /// N Times Per Customer
+        /// 每位客户N次
         /// </summary>
         NTimesPerCustomer = 25,
     }

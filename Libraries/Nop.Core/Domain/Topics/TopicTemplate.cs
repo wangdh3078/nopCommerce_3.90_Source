@@ -17,7 +17,7 @@ namespace Nop.Core.Domain.Topics
         public string ViewPath { get; set; }
 
         /// <summary>
-        /// Gets or sets the display order
+        /// 获取或设置显示顺序
         /// </summary>
         public int DisplayOrder { get; set; }
     }

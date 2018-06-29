@@ -4,37 +4,37 @@ using Nop.Core.Domain.Orders;
 namespace Nop.Core.Domain.Customers
 {
     /// <summary>
-    /// Represents a reward point history entry
+    /// 奖励积分记录
     /// </summary>
     public partial class RewardPointsHistory : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the customer identifier
+        /// 获取或设置客户标识
         /// </summary>
         public int CustomerId { get; set; }
 
         /// <summary>
-        /// Gets or sets the store identifier in which these reward points were awarded or redeemed
+        /// 获取或设置这些奖励积分奖励或兑换的商店标识符
         /// </summary>
         public int StoreId { get; set; }
 
         /// <summary>
-        /// Gets or sets the points redeemed/added
+        /// 获取或设置已兑换/添加的点数
         /// </summary>
         public int Points { get; set; }
 
         /// <summary>
-        /// Gets or sets the points balance
+        /// 获取或设置积分余额
         /// </summary>
         public int? PointsBalance { get; set; }
 
         /// <summary>
-        /// Gets or sets the used amount
+        /// 获取或设置使用的金额
         /// </summary>
         public decimal UsedAmount { get; set; }
 
         /// <summary>
-        /// Gets or sets the message
+        ///获取或设置消息
         /// </summary>
         public string Message { get; set; }
 
@@ -44,12 +44,12 @@ namespace Nop.Core.Domain.Customers
         public DateTime CreatedOnUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the order for which points were redeemed as a payment (spent by a customer when placing this order)
+        /// 获取或设置点数兑换为付款的订单（客户在下订单时花费）
         /// </summary>
         public virtual Order UsedWithOrder { get; set; }
 
         /// <summary>
-        /// Gets or sets the customer
+        /// 获取或设置客户
         /// </summary>
         public virtual Customer Customer { get; set; }
     }

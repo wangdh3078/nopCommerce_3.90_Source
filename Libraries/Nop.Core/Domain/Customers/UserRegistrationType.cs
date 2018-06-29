@@ -1,24 +1,24 @@
 namespace Nop.Core.Domain.Customers
 {
     /// <summary>
-    /// Represents the customer registration type formatting enumeration
+    /// 客户注册类型格式化枚举
     /// </summary>
     public enum UserRegistrationType
     {
         /// <summary>
-        /// Standard account creation
+        /// 标准账户创建
         /// </summary>
         Standard = 1,
         /// <summary>
-        /// Email validation is required after registration
+        /// 邮件验证
         /// </summary>
         EmailValidation = 2,
         /// <summary>
-        /// A customer should be approved by administrator
+        /// 管理员批准
         /// </summary>
         AdminApproval = 3,
         /// <summary>
-        /// Registration is disabled
+        /// 注册已禁用
         /// </summary>
         Disabled = 4,
     }

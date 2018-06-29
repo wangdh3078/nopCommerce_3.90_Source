@@ -5,29 +5,29 @@ using Nop.Core.Domain.Localization;
 namespace Nop.Core.Domain.Customers
 {
     /// <summary>
-    /// Represents a customer attribute
+    /// 客户属性
     /// </summary>
     public partial class CustomerAttribute : BaseEntity, ILocalizedEntity
     {
         private ICollection<CustomerAttributeValue> _customerAttributeValues;
 
         /// <summary>
-        /// Gets or sets the name
+        /// 获取或设置名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the attribute is required
+        ///获取或设置一个值，该值指示是否需要该属性
         /// </summary>
         public bool IsRequired { get; set; }
 
         /// <summary>
-        /// Gets or sets the attribute control type identifier
+        /// 获取或设置属性控件类型标识符
         /// </summary>
         public int AttributeControlTypeId { get; set; }
 
         /// <summary>
-        /// Gets or sets the display order
+        /// 获取或设置显示顺序
         /// </summary>
         public int DisplayOrder { get; set; }
 
@@ -35,7 +35,7 @@ namespace Nop.Core.Domain.Customers
 
 
         /// <summary>
-        /// Gets the attribute control type
+        /// 获取属性控件类型
         /// </summary>
         public AttributeControlType AttributeControlType
         {
@@ -49,7 +49,7 @@ namespace Nop.Core.Domain.Customers
             }
         }
         /// <summary>
-        /// Gets the customer attribute values
+        /// 获取客户属性值
         /// </summary>
         public virtual ICollection<CustomerAttributeValue> CustomerAttributeValues
         {

@@ -6,7 +6,7 @@ using Nop.Core.Domain.Stores;
 namespace Nop.Core.Domain.Directory
 {
     /// <summary>
-    /// Represents a country
+    /// 国家
     /// </summary>
     public partial class Country : BaseEntity, ILocalizedEntity, IStoreMappingSupported
     {
@@ -15,57 +15,57 @@ namespace Nop.Core.Domain.Directory
 
 
         /// <summary>
-        /// Gets or sets the name
+        /// 获取或设置名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether billing is allowed to this country
+        /// 获取或设置一个值，该值指示是否允许对该国家/地区进行结算
         /// </summary>
         public bool AllowsBilling { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether shipping is allowed to this country
+        /// 获取或设置一个值，指示是否允许向此国家/地区发货
         /// </summary>
         public bool AllowsShipping { get; set; }
 
         /// <summary>
-        /// Gets or sets the two letter ISO code
+        /// 获取或设置两个字母的ISO代码
         /// </summary>
         public string TwoLetterIsoCode { get; set; }
 
         /// <summary>
-        /// Gets or sets the three letter ISO code
+        /// 获取或设置三字母ISO代码
         /// </summary>
         public string ThreeLetterIsoCode { get; set; }
 
         /// <summary>
-        /// Gets or sets the numeric ISO code
+        /// 获取或设置数字ISO代码
         /// </summary>
         public int NumericIsoCode { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether customers in this country must be charged EU VAT
+        /// 获取或设置一个值，指示该国的客户是否必须收取欧盟增值税
         /// </summary>
         public bool SubjectToVat { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the entity is published
+        ///获取或设置一个值，指示实体是否已发布
         /// </summary>
         public bool Published { get; set; }
 
         /// <summary>
-        /// Gets or sets the display order
+        /// 获取或设置显示顺序
         /// </summary>
         public int DisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the entity is limited/restricted to certain stores
+        ///获取或设置一个值，该值指示实体是限制/限制到某些商店
         /// </summary>
         public bool LimitedToStores { get; set; }
-       
+
         /// <summary>
-        /// Gets or sets the state/provinces
+        /// 获取或设置州/省
         /// </summary>
         public virtual ICollection<StateProvince> StateProvinces
         {
@@ -74,7 +74,7 @@ namespace Nop.Core.Domain.Directory
         }
 
         /// <summary>
-        /// Gets or sets the restricted shipping methods
+        /// 获取或设置受限制的运输方法
         /// </summary>
         public virtual ICollection<ShippingMethod> RestrictedShippingMethods
         {

@@ -4,55 +4,55 @@ using Nop.Core.Domain.Security;
 namespace Nop.Core.Domain.Customers
 {
     /// <summary>
-    /// Represents a customer role
+    /// 客户角色
     /// </summary>
     public partial class CustomerRole : BaseEntity
     {
         private ICollection<PermissionRecord> _permissionRecords;
 
         /// <summary>
-        /// Gets or sets the customer role name
+        /// 获取或设置客户角色名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the customer role is marked as free shiping
+        /// 获取或设置一个值，该值指示客户角色是否标记为免费装运
         /// </summary>
         public bool FreeShipping { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the customer role is marked as tax exempt
+        /// 获取或设置一个值，该值指示客户角色是否标记为免税
         /// </summary>
         public bool TaxExempt { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the customer role is active
+        ///获取或设置一个值，该值指示客户角色是否处于活动状态
         /// </summary>
         public bool Active { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the customer role is system
+        /// 获取或设置一个值，指示客户角色是否是系统
         /// </summary>
         public bool IsSystemRole { get; set; }
 
         /// <summary>
-        /// Gets or sets the customer role system name
+        /// 获取或设置客户角色系统名称
         /// </summary>
         public string SystemName { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the customers must change passwords after a specified time
+        /// 获取或设置一个值，指示客户是否必须在指定时间后更改密码
         /// </summary>
         public bool EnablePasswordLifetime { get; set; }
 
         /// <summary>
-        /// Gets or sets a product identifier that is required by this customer role. 
-        /// A customer is added to this customer role once a specified product is purchased.
+        /// 获取或设置此客户角色所需的产品标识。
+        /// 一旦购买指定的产品，就会将客户添加到该客户角色中。
         /// </summary>
         public int PurchasedWithProductId { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets the permission records
+        ///获取或设置权限记录
         /// </summary>
         public virtual ICollection<PermissionRecord> PermissionRecords
         {

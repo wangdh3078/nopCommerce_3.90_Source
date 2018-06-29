@@ -15,84 +15,82 @@ namespace Nop.Core.Domain.Discounts
         private ICollection<Product> _appliedToProducts;
 
         /// <summary>
-        /// Gets or sets the name
+        ///获取或设置名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the discount type identifier
+        ///获取或设置折扣类型标识符
         /// </summary>
         public int DiscountTypeId { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets a value indicating whether to use percentage
+        /// 获取或设置一个值，指示是否使用百分比
         /// </summary>
         public bool UsePercentage { get; set; }
 
         /// <summary>
-        /// Gets or sets the discount percentage
+        /// 获取或设置折扣百分比
         /// </summary>
         public decimal DiscountPercentage { get; set; }
 
         /// <summary>
-        /// Gets or sets the discount amount
+        /// 获取或设置折扣金额
         /// </summary>
         public decimal DiscountAmount { get; set; }
 
         /// <summary>
-        /// Gets or sets the maximum discount amount (used with "UsePercentage")
+        /// 获取或设置最大折扣金额（与“UsePercentage”一起使用）
         /// </summary>
         public decimal? MaximumDiscountAmount { get; set; }
 
         /// <summary>
-        /// Gets or sets the discount start date and time
+        /// 获取或设置折扣开始日期和时间
         /// </summary>
         public DateTime? StartDateUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the discount end date and time
+        /// 获取或设置折扣结束日期和时间
         /// </summary>
         public DateTime? EndDateUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether discount requires coupon code
+        /// 获取或设置一个值，指示折扣是否需要优惠券代码
         /// </summary>
         public bool RequiresCouponCode { get; set; }
 
         /// <summary>
-        /// Gets or sets the coupon code
+        /// 获取或设置优惠券代码
         /// </summary>
         public string CouponCode { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether discount can be used simultaneously with other discounts (with the same discount type)
+        /// 获取或设置一个值，该值指示是否可以与其他折扣同时使用折扣（具有相同的折扣类型）
         /// </summary>
         public bool IsCumulative { get; set; }
 
         /// <summary>
-        /// Gets or sets the discount limitation identifier
+        ///获取或设置折扣限制标识符
         /// </summary>
         public int DiscountLimitationId { get; set; }
 
         /// <summary>
-        /// Gets or sets the discount limitation times (used when Limitation is set to "N Times Only" or "N Times Per Customer")
+        /// 获取或设置折扣限制时间（限制设置为“仅限N次”或“每客户N次”时使用）
         /// </summary>
         public int LimitationTimes { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets the maximum product quantity which could be discounted
-        /// Used with "Assigned to products" or "Assigned to categories" type
+        /// 获取或设置可打折的最大产品数量与“分配给产品”或“分配给类别”类型一起使用
         /// </summary>
         public int? MaximumDiscountedQuantity { get; set; }
 
         /// <summary>
-        /// Gets or sets value indicating whether it should be applied to all subcategories or the selected one
-        /// Used with "Assigned to categories" type only.
+        /// 获取或设置值，该值指示是将其应用于所有子类别还是所选的仅与“分配给类别”类型一起使用的值。
         /// </summary>
         public bool AppliedToSubCategories { get; set; }
 
         /// <summary>
-        /// Gets or sets the discount type
+        /// 获取或设置折扣类型
         /// </summary>
         public DiscountType DiscountType
         {
@@ -107,7 +105,7 @@ namespace Nop.Core.Domain.Discounts
         }
 
         /// <summary>
-        /// Gets or sets the discount limitation
+        /// 获取或设置折扣限制
         /// </summary>
         public DiscountLimitationType DiscountLimitation
         {
@@ -122,7 +120,7 @@ namespace Nop.Core.Domain.Discounts
         }
 
         /// <summary>
-        /// Gets or sets the discount requirement
+        /// 获取或设置折扣要求
         /// </summary>
         public virtual ICollection<DiscountRequirement> DiscountRequirements
         {
@@ -130,7 +128,7 @@ namespace Nop.Core.Domain.Discounts
             protected set { _discountRequirements = value; }
         }
         /// <summary>
-        /// Gets or sets the categories
+        /// 获取或设置类别
         /// </summary>
         public virtual ICollection<Category> AppliedToCategories
         {
@@ -138,7 +136,7 @@ namespace Nop.Core.Domain.Discounts
             protected set { _appliedToCategories = value; }
         }
         /// <summary>
-        /// Gets or sets the categories
+        /// 获取或设置类别
         /// </summary>
         public virtual ICollection<Manufacturer> AppliedToManufacturers
         {
@@ -146,7 +144,7 @@ namespace Nop.Core.Domain.Discounts
             protected set { _appliedToManufacturers = value; }
         }
         /// <summary>
-        /// Gets or sets the products 
+        /// 获取或设置产品
         /// </summary>
         public virtual ICollection<Product> AppliedToProducts
         {

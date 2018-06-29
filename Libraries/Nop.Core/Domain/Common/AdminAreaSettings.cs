@@ -3,50 +3,53 @@ using Nop.Core.Configuration;
 
 namespace Nop.Core.Domain.Common
 {
+    /// <summary>
+    /// Admin域设置
+    /// </summary>
     public class AdminAreaSettings : ISettings
     {
         /// <summary>
-        /// Default grid page size
+        /// 默认的网格页面大小
         /// </summary>
         public int DefaultGridPageSize { get; set; }
 
         /// <summary>
-        /// Popup grid page size (for popup pages)
+        /// 弹出网格页面大小（用于弹出页面）
         /// </summary>
         public int PopupGridPageSize { get; set; }
 
         /// <summary>
-        /// A comma-separated list of available grid page sizes
+        ///逗号分隔的可用网格页面大小列表
         /// </summary>
         public string GridPageSizes { get; set; }
 
         /// <summary>
-        /// Additional settings for rich editor
+        ///富文本编辑器的其他设置
         /// </summary>
         public string RichEditorAdditionalSettings { get; set; }
 
         /// <summary>
-        ///A value indicating whether to javascript is supported in rich editor
+        ///富文本编辑器支持指示是否支持javascript的值
         /// </summary>
         public bool RichEditorAllowJavaScript { get; set; }
 
         /// <summary>
-        ///A value indicating whether to use rich editor on message templates and campaigns details pages
+        ///指示是否在消息模板和广告系列详细信息页面上使用富文本编辑器的值
         /// </summary>
         public bool UseRichEditorInMessageTemplates { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether advertisements (news) should be hidden
+        /// 获取或设置一个值，指示是否应隐藏广告（新闻）
         /// </summary>
         public bool HideAdvertisementsOnAdminArea { get; set; }
 
         /// <summary>
-        /// Gets or sets title of last news (admin area)
+        ///获取或设置最新消息的标题（管理区域）
         /// </summary>
         public string LastNewsTitleAdminArea { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether to use IsoDateTimeConverter in Json results (used for avoiding issue with dates in KendoUI grids)
+        ///获取或设置一个值，该值指示是否在Json结果中使用IsoDateTimeConverter（用于避免KendoUI网格中的日期问题）
         /// </summary>
         public bool UseIsoDateTimeConverterInJson { get; set; }
     }

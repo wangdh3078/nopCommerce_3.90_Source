@@ -1,5 +1,8 @@
 ﻿namespace Nop.Core.Domain.Directory
 {
+    /// <summary>
+    /// 舍入类型
+    /// </summary>
     public enum RoundingType
     {
         /// <summary>

@@ -8,7 +8,7 @@ namespace Nop.Core.Domain.Tasks
     public partial class ScheduleTask : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the name
+        ///获取或设置名称
         /// </summary>
         public string Name { get; set; }
 

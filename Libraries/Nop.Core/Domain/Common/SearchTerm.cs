@@ -1,22 +1,22 @@
 ﻿namespace Nop.Core.Domain.Common
 {
     /// <summary>
-    /// Search term record (for statistics)
+    /// 搜索词记录（用于统计）
     /// </summary>
     public partial class SearchTerm : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the keyword
+        /// 获取或设置关键字
         /// </summary>
         public string Keyword { get; set; }
 
         /// <summary>
-        /// Gets or sets the store identifier
+        /// 获取或设置商店标识
         /// </summary>
         public int StoreId { get; set; }
 
         /// <summary>
-        /// Gets or sets search count
+        /// 获取或设置搜索计数
         /// </summary>
         public int Count { get; set; }
     }

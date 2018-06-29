@@ -1,32 +1,32 @@
 namespace Nop.Core.Domain.Common
 {
     /// <summary>
-    /// Represents a generic attribute
+    /// 通用属性
     /// </summary>
     public partial class GenericAttribute : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the entity identifier
+        /// 获取或设置实体标识符
         /// </summary>
         public int EntityId { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets the key group
+        /// 获取或设置键组
         /// </summary>
         public string KeyGroup { get; set; }
 
         /// <summary>
-        /// Gets or sets the key
+        /// 获取或设置键
         /// </summary>
         public string Key { get; set; }
 
         /// <summary>
-        /// Gets or sets the value
+        /// 获取或设置值
         /// </summary>
         public string Value { get; set; }
 
         /// <summary>
-        /// Gets or sets the store identifier
+        /// 获取或设置商店标识
         /// </summary>
         public int StoreId { get; set; }
         

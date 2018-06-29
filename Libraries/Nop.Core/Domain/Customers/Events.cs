@@ -1,7 +1,7 @@
 namespace Nop.Core.Domain.Customers
 {
     /// <summary>
-    /// Customer logged-in event
+    /// 客户登录事件
     /// </summary>
     public class CustomerLoggedinEvent
     {
@@ -11,7 +11,7 @@ namespace Nop.Core.Domain.Customers
         }
 
         /// <summary>
-        /// Customer
+        /// 客户
         /// </summary>
         public Customer Customer
         {
@@ -19,7 +19,7 @@ namespace Nop.Core.Domain.Customers
         }
     }
     /// <summary>
-    /// "Customer is logged out" event
+    /// 客户退出事件
     /// </summary>
     public class CustomerLoggedOutEvent
     {
@@ -29,13 +29,13 @@ namespace Nop.Core.Domain.Customers
         }
 
         /// <summary>
-        /// Get or set the customer
+        /// 获取或设置客户
         /// </summary>
         public Customer Customer { get; private set; }
     }
 
     /// <summary>
-    /// Customer registered event
+    /// 客户注册事件
     /// </summary>
     public class CustomerRegisteredEvent
     {
@@ -45,7 +45,7 @@ namespace Nop.Core.Domain.Customers
         }
 
         /// <summary>
-        /// Customer
+        /// 客户
         /// </summary>
         public Customer Customer
         {
@@ -54,7 +54,7 @@ namespace Nop.Core.Domain.Customers
     }
 
     /// <summary>
-    /// Customer password changed event
+    /// 客户密码更改事件
     /// </summary>
     public class CustomerPasswordChangedEvent
     {
@@ -64,7 +64,7 @@ namespace Nop.Core.Domain.Customers
         }
 
         /// <summary>
-        /// Customer password
+        /// 客户密码
         /// </summary>
         public CustomerPassword Password { get; private set; }
     }

@@ -1,17 +1,17 @@
 namespace Nop.Core.Domain.Discounts
 {
     /// <summary>
-    /// Represents an interaction type within the group of requirements
+    /// 需求中的交互类型
     /// </summary>
     public enum RequirementGroupInteractionType
     {
         /// <summary>
-        /// All requirements within the group must be met
+        /// 必须符合组内的所有要求
         /// </summary>
         And = 0,
 
         /// <summary>
-        /// At least one of the requirements within the group must be met 
+        ///必须满足组中至少一项要求
         /// </summary>
         Or = 2,
     }

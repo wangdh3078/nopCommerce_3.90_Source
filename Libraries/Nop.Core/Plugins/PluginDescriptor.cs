@@ -80,7 +80,7 @@ namespace Nop.Core.Plugins
         public virtual string Description { get; set; }
 
         /// <summary>
-        /// Gets or sets the display order
+        /// 获取或设置显示顺序
         /// </summary>
         public virtual int DisplayOrder { get; set; }
 

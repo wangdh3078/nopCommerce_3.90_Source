@@ -1,16 +1,16 @@
 ﻿namespace Nop.Core.Domain.Forums
 {
     /// <summary>
-    /// Represents an editor type
+    /// 编辑器类型
     /// </summary>
     public enum EditorType
     {
         /// <summary>
-        /// Simple text box
+        /// 简单的文本框
         /// </summary>
         SimpleTextBox = 10,
         /// <summary>
-        /// BB code editor
+        /// BB代码编辑器
         /// </summary>
         BBCodeEditor = 20
     }

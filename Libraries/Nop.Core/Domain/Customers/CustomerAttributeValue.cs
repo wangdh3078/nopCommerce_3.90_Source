@@ -4,32 +4,32 @@ using Nop.Core.Domain.Localization;
 namespace Nop.Core.Domain.Customers
 {
     /// <summary>
-    /// Represents a customer attribute value
+    /// 客户属性值
     /// </summary>
     public partial class CustomerAttributeValue : BaseEntity, ILocalizedEntity
     {
         /// <summary>
-        /// Gets or sets the customer attribute identifier
+        /// 获取或设置客户属性标识
         /// </summary>
         public int CustomerAttributeId { get; set; }
 
         /// <summary>
-        /// Gets or sets the checkout attribute name
+        /// 获取或设置结帐属性名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the value is pre-selected
+        ///获取或设置一个值，该值指示是否预先选择了该值
         /// </summary>
         public bool IsPreSelected { get; set; }
 
         /// <summary>
-        /// Gets or sets the display order
+        ///获取或设置显示顺序
         /// </summary>
         public int DisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or sets the customer attribute
+        /// 获取或设置客户属性
         /// </summary>
         public virtual CustomerAttribute CustomerAttribute { get; set; }
     }

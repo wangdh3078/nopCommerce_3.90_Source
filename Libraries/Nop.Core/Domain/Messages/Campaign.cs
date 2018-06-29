@@ -8,7 +8,7 @@ namespace Nop.Core.Domain.Messages
     public partial class Campaign : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the name
+        ///获取或设置名称
         /// </summary>
         public string Name { get; set; }
 

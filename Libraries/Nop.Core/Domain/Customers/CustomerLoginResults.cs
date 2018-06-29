@@ -1,36 +1,36 @@
 namespace Nop.Core.Domain.Customers
 {
     /// <summary>
-    /// Represents the customer login result enumeration
+    /// 客户登录结果枚举
     /// </summary>
     public enum CustomerLoginResults
     {
         /// <summary>
-        /// Login successful
+        /// 登陆成功
         /// </summary>
         Successful = 1,
         /// <summary>
-        /// Customer does not exist (email or username)
+        ///客户不存在（电子邮件或用户名）
         /// </summary>
         CustomerNotExist = 2,
         /// <summary>
-        /// Wrong password
+        /// 密码错误
         /// </summary>
         WrongPassword = 3,
         /// <summary>
-        /// Account have not been activated
+        /// 帐户尚未激活
         /// </summary>
         NotActive = 4,
         /// <summary>
-        /// Customer has been deleted 
+        /// 客户已被删除
         /// </summary>
         Deleted = 5,
         /// <summary>
-        /// Customer not registered 
+        ///客户未注册
         /// </summary>
         NotRegistered = 6,
         /// <summary>
-        /// Locked out
+        /// 锁定
         /// </summary>
         LockedOut = 7,
     }

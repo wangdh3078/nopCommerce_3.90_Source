@@ -3,32 +3,32 @@ using Nop.Core.Domain.Localization;
 namespace Nop.Core.Domain.Common
 {
     /// <summary>
-    /// Represents an address attribute value
+    /// 地址属性值
     /// </summary>
     public partial class AddressAttributeValue : BaseEntity, ILocalizedEntity
     {
         /// <summary>
-        /// Gets or sets the address attribute identifier
+        /// 获取或设置地址属性标识符
         /// </summary>
         public int AddressAttributeId { get; set; }
 
         /// <summary>
-        /// Gets or sets the checkout attribute name
+        ///获取或设置结帐属性名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the value is pre-selected
+        /// 获取或设置一个值，该值指示是否预先选择了该值
         /// </summary>
         public bool IsPreSelected { get; set; }
 
         /// <summary>
-        /// Gets or sets the display order
+        /// 获取或设置显示顺序
         /// </summary>
         public int DisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or sets the address attribute
+        /// 获取或设置地址属性
         /// </summary>
         public virtual AddressAttribute AddressAttribute { get; set; }
     }

@@ -3,22 +3,22 @@ namespace Nop.Core.Domain.Customers
 {
 
     /// <summary>
-    /// Represents a best customer report line
+    /// 最佳客户报告
     /// </summary>
     public partial class BestCustomerReportLine
     {
         /// <summary>
-        /// Gets or sets the customer identifier
+        /// 获取或设置客户标识
         /// </summary>
         public int CustomerId { get; set; }
 
         /// <summary>
-        /// Gets or sets the order total
+        ///获取或设置订单总额
         /// </summary>
         public decimal OrderTotal { get; set; }
 
         /// <summary>
-        /// Gets or sets the order count
+        /// 获取或设置订单计数
         /// </summary>
         public int OrderCount { get; set; }
     }

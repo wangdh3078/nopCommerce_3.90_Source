@@ -3,6 +3,9 @@ using Nop.Core.Configuration;
 
 namespace Nop.Core.Domain.Cms
 {
+    /// <summary>
+    /// 小部件设置
+    /// </summary>
     public class WidgetSettings : ISettings
     {
         public WidgetSettings()
@@ -11,7 +14,7 @@ namespace Nop.Core.Domain.Cms
         }
 
         /// <summary>
-        /// Gets or sets a system names of active widgets
+        /// 获取或设置活动小部件的系统名称
         /// </summary>
         public List<string> ActiveWidgetSystemNames { get; set; }
     }

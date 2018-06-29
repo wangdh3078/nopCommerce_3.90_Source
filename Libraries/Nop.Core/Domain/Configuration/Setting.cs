@@ -3,7 +3,7 @@ using Nop.Core.Domain.Localization;
 namespace Nop.Core.Domain.Configuration
 {
     /// <summary>
-    /// Represents a setting
+    /// 设置
     /// </summary>
     public partial class Setting : BaseEntity, ILocalizedEntity
     {
@@ -14,19 +14,19 @@ namespace Nop.Core.Domain.Configuration
             this.Value = value;
             this.StoreId = storeId;
         }
-        
+
         /// <summary>
-        /// Gets or sets the name
+        /// 获取或设置名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the value
+        /// 获取或设置值
         /// </summary>
         public string Value { get; set; }
 
         /// <summary>
-        /// Gets or sets the store for which this setting is valid. 0 is set when the setting is for all stores
+        /// 获取或设置此设置有效的商店。 设置为所有商店时设置为0
         /// </summary>
         public int StoreId { get; set; }
 
