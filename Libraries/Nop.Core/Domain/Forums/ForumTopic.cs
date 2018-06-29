@@ -4,52 +4,52 @@ using Nop.Core.Domain.Customers;
 namespace Nop.Core.Domain.Forums
 {
     /// <summary>
-    /// Represents a forum topic
+    /// 论坛主题
     /// </summary>
     public partial class ForumTopic : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the forum identifier
+        /// 获取或设置论坛标识符
         /// </summary>
         public int ForumId { get; set; }
 
         /// <summary>
-        /// Gets or sets the customer identifier
+        /// 获取或设置客户标识
         /// </summary>
         public int CustomerId { get; set; }
 
         /// <summary>
-        /// Gets or sets the topic type identifier
+        /// 获取或设置主题类型标识符
         /// </summary>
         public int TopicTypeId { get; set; }
 
         /// <summary>
-        /// Gets or sets the subject
+        /// 获取或设置主题
         /// </summary>
         public string Subject { get; set; }
 
         /// <summary>
-        /// Gets or sets the number of posts
+        ///获取或设置帖子的数量
         /// </summary>
         public int NumPosts { get; set; }
 
         /// <summary>
-        /// Gets or sets the number of views
+        /// 获取或设置视图的数量
         /// </summary>
         public int Views { get; set; }
 
         /// <summary>
-        /// Gets or sets the last post identifier
+        /// 获取或设置最后的帖子标识符
         /// </summary>
         public int LastPostId { get; set; }
 
         /// <summary>
-        /// Gets or sets the last post customer identifier
+        /// 获取或设置最后的帖子客户标识符
         /// </summary>
         public int LastPostCustomerId { get; set; }
 
         /// <summary>
-        /// Gets or sets the last post date and time
+        /// 获取或设置最后的发布日期和时间
         /// </summary>
         public DateTime? LastPostTime { get; set; }
 
@@ -59,12 +59,12 @@ namespace Nop.Core.Domain.Forums
         public DateTime CreatedOnUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the date and time of instance update
+        /// 获取或设置实例更新的日期和时间
         /// </summary>
         public DateTime UpdatedOnUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the forum topic type
+        /// 获取或设置论坛主题类型
         /// </summary>
         public ForumTopicType ForumTopicType
         {
@@ -79,17 +79,17 @@ namespace Nop.Core.Domain.Forums
         }
 
         /// <summary>
-        /// Gets the forum
+        /// 获取论坛
         /// </summary>
         public virtual Forum Forum { get; set; }
 
         /// <summary>
-        /// Gets the customer
+        /// 获取客户
         /// </summary>
         public virtual Customer Customer { get; set; }
 
         /// <summary>
-        /// Gets the number of replies
+        /// 获取答复的数量
         /// </summary>
         public int NumReplies
         {

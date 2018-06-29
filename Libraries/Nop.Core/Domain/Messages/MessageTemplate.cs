@@ -4,7 +4,7 @@ using Nop.Core.Domain.Stores;
 namespace Nop.Core.Domain.Messages
 {
     /// <summary>
-    /// Represents a message template
+    /// 消息模板
     /// </summary>
     public partial class MessageTemplate : BaseEntity, ILocalizedEntity, IStoreMappingSupported
     {
@@ -14,52 +14,52 @@ namespace Nop.Core.Domain.Messages
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the BCC Email addresses
+        /// 获取或设置密件抄送电子邮件地址
         /// </summary>
         public string BccEmailAddresses { get; set; }
 
         /// <summary>
-        /// Gets or sets the subject
+        /// 获取或设置主题
         /// </summary>
         public string Subject { get; set; }
 
         /// <summary>
-        /// Gets or sets the body
+        /// 获取或设置正文
         /// </summary>
         public string Body { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the template is active
+        /// 获取或设置一个值，指示模板是否处于活动状态
         /// </summary>
         public bool IsActive { get; set; }
 
         /// <summary>
-        /// Gets or sets the delay before sending message
+        /// 在发送消息之前获取或设置延迟
         /// </summary>
         public int? DelayBeforeSend { get; set; }
 
         /// <summary>
-        /// Gets or sets the period of message delay 
+        /// 获取或设置消息延迟的时间
         /// </summary>
         public int DelayPeriodId { get; set; }
 
         /// <summary>
-        /// Gets or sets the download identifier of attached file
+        /// 获取或设置附加文件的下载标识符
         /// </summary>
         public int AttachedDownloadId { get; set; }
 
         /// <summary>
-        /// Gets or sets the used email account identifier
+        /// 获取或设置使用的电子邮件帐户标识符
         /// </summary>
         public int EmailAccountId { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the entity is limited/restricted to certain stores
+        /// 获取或设置一个值，该值指示实体是限制/限制到某些商店
         /// </summary>
         public bool LimitedToStores { get; set; }
 
         /// <summary>
-        /// Gets or sets the period of message delay
+        /// 获取或设置消息延迟的时间
         /// </summary>
         public MessageDelayPeriod DelayPeriod
         {

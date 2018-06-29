@@ -3,7 +3,7 @@
 namespace Nop.Core.Domain.Messages
 {
     /// <summary>
-    /// Represents a campaign
+    /// 广告
     /// </summary>
     public partial class Campaign : BaseEntity
     {
@@ -13,22 +13,22 @@ namespace Nop.Core.Domain.Messages
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the subject
+        ///获取或设置主题
         /// </summary>
         public string Subject { get; set; }
 
         /// <summary>
-        /// Gets or sets the body
+        /// 获取或设置正文
         /// </summary>
         public string Body { get; set; }
 
         /// <summary>
-        /// Gets or sets the store identifier  which subscribers it will be sent to; set 0 for all newsletter subscribers
+        /// 获取或设置将发送给其的订户的商店标识符; 为所有简报订阅者设置0
         /// </summary>
         public int StoreId { get; set; }
 
         /// <summary>
-        /// Gets or sets the customer role identifier  which subscribers it will be sent to; set 0 for all newsletter subscribers
+        /// 获取或设置将发送给其的订户的客户角色标识符; 为所有简报订阅者设置0
         /// </summary>
         public int CustomerRoleId { get; set; }
 
@@ -38,7 +38,7 @@ namespace Nop.Core.Domain.Messages
         public DateTime CreatedOnUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the date and time in UTC before which this email should not be sent
+        /// 获取或设置不应发送此电子邮件的UTC日期和时间
         /// </summary>
         public DateTime? DontSendBeforeDateUtc { get; set; }
     }

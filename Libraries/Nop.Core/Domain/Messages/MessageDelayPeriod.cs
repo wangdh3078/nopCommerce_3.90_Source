@@ -3,31 +3,31 @@
 namespace Nop.Core.Domain.Messages
 {
     /// <summary>
-    /// Represents the period of message delay
+    /// 消息延迟的时间段
     /// </summary>
     public enum MessageDelayPeriod
     {
         /// <summary>
-        /// Hours
+        /// 小时
         /// </summary>
         Hours = 0,
         /// <summary>
-        /// Days
+        /// 天
         /// </summary>
         Days = 1
     }
 
     /// <summary>
-    /// MessageDelayPeriod Extensions
+    /// 消息延迟的时间段扩展
     /// </summary>
     public static class MessageDelayPeriodExtensions
     {
         /// <summary>
-        /// Returns message delay in hours
+        /// 以小时数返回消息延迟
         /// </summary>
-        /// <param name="period">Message delay period</param>
-        /// <param name="value">Value of delay send</param>
-        /// <returns>Value of message delay in hours</returns>
+        /// <param name="period">消息延迟期</param>
+        /// <param name="value">延迟发送的值</param>
+        /// <returns>消息延迟的值以小时计</returns>
         public static int ToHours(this MessageDelayPeriod period, int value)
         {
             switch (period)

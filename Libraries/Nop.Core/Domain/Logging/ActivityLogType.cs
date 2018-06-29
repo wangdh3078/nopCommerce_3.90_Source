@@ -1,22 +1,22 @@
 ﻿namespace Nop.Core.Domain.Logging
 {
     /// <summary>
-    /// Represents an activity log type record
+    /// 活动日志类型记录
     /// </summary>
     public partial class ActivityLogType : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the system keyword
+        /// 获取或设置系统关键字
         /// </summary>
         public string SystemKeyword { get; set; }
 
         /// <summary>
-        /// Gets or sets the display name
+        /// 获取或设置显示名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the activity log type is enabled
+        /// 获取或设置一个值，该值指示是否启用活动日志类型
         /// </summary>
         public bool Enabled { get; set; }
     }

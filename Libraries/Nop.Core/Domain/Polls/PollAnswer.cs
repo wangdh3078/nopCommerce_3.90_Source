@@ -3,24 +3,24 @@ using System.Collections.Generic;
 namespace Nop.Core.Domain.Polls
 {
     /// <summary>
-    /// Represents a poll answer
+    /// 投票答案
     /// </summary>
     public partial class PollAnswer : BaseEntity
     {
         private ICollection<PollVotingRecord> _pollVotingRecords;
 
         /// <summary>
-        /// Gets or sets the poll identifier
+        /// 获取或设置投票标识符
         /// </summary>
         public int PollId { get; set; }
 
         /// <summary>
-        /// Gets or sets the poll answer name
+        /// 获取或设置投票答案的名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the current number of votes
+        /// 获取或设置当前的投票数
         /// </summary>
         public int NumberOfVotes { get; set; }
 
@@ -28,14 +28,14 @@ namespace Nop.Core.Domain.Polls
         /// 获取或设置显示顺序
         /// </summary>
         public int DisplayOrder { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets the poll
+        /// 获取或设置投票
         /// </summary>
         public virtual Poll Poll { get; set; }
 
         /// <summary>
-        /// Gets or sets the poll voting records
+        /// 获取或设置投票投票记录
         /// </summary>
         public virtual ICollection<PollVotingRecord> PollVotingRecords
         {

@@ -1,62 +1,62 @@
 namespace Nop.Core.Domain.Orders
 {
     /// <summary>
-    /// Represents an order average report line summary
+    /// 订单平均报表项摘要
     /// </summary>
     public partial class OrderAverageReportLineSummary
     {
         /// <summary>
-        /// Gets or sets the order status
+        /// 获取或设置订单状态
         /// </summary>
         public OrderStatus OrderStatus { get; set; }
 
         /// <summary>
-        /// Gets or sets the sum today total
+        /// 获取或设置今天的总和
         /// </summary>
         public decimal SumTodayOrders { get; set; }
 
         /// <summary>
-        /// Gets or sets the today count
+        /// 获取或设置今天的计数
         /// </summary>
         public int CountTodayOrders { get; set; }
 
         /// <summary>
-        /// Gets or sets the sum this week total
+        /// 获取或设置本周的总和
         /// </summary>
         public decimal SumThisWeekOrders { get; set; }
 
         /// <summary>
-        /// Gets or sets the this week count
+        /// 获取或设置本周的计数
         /// </summary>
         public int CountThisWeekOrders { get; set; }
 
         /// <summary>
-        /// Gets or sets the sum this month total
+        /// 获取或设置本月的总和
         /// </summary>
         public decimal SumThisMonthOrders { get; set; }
 
         /// <summary>
-        /// Gets or sets the this month count
+        /// 获取或设置本月计数
         /// </summary>
         public int CountThisMonthOrders { get; set; }
 
         /// <summary>
-        /// Gets or sets the sum this year total
+        /// 获取或设置今年的总和
         /// </summary>
         public decimal SumThisYearOrders { get; set; }
 
         /// <summary>
-        /// Gets or sets the this year count
+        /// 获取或设置今年的计数
         /// </summary>
         public int CountThisYearOrders { get; set; }
 
         /// <summary>
-        /// Gets or sets the sum all time total
+        /// 获取或设置总时间总数
         /// </summary>
         public decimal SumAllTimeOrders { get; set; }
 
         /// <summary>
-        /// Gets or sets the all time count
+        /// 获取或设置所有时间计数
         /// </summary>
         public int CountAllTimeOrders { get; set; }
     }

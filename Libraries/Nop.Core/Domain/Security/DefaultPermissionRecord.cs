@@ -3,7 +3,7 @@
 namespace Nop.Core.Domain.Security
 {
     /// <summary>
-    /// Represents a default permission record
+    ///默认权限记录
     /// </summary>
     public class DefaultPermissionRecord
     {
@@ -13,12 +13,12 @@ namespace Nop.Core.Domain.Security
         }
 
         /// <summary>
-        /// Gets or sets the customer role system name
+        /// 获取或设置客户角色系统名称
         /// </summary>
         public string CustomerRoleSystemName { get; set; }
 
         /// <summary>
-        /// Gets or sets the permissions
+        /// 获取或设置权限
         /// </summary>
         public IEnumerable<PermissionRecord> PermissionRecords { get; set; }
     }

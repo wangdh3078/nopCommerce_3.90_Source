@@ -2,14 +2,14 @@
 namespace Nop.Core.Domain.Orders
 {
     /// <summary>
-    /// Extensions
+    /// 礼品卡扩展
     /// </summary>
     public static class GiftCardExtensions
     {
         /// <summary>
-        /// Gets a gift card remaining amount
+        /// 获取礼品卡剩余金额
         /// </summary>
-        /// <returns>Gift card remaining amount</returns>
+        /// <returns>礼品卡剩余金额</returns>
         public static decimal GetGiftCardRemainingAmount(this GiftCard giftCard)
         {
             decimal result = giftCard.Amount;
@@ -24,10 +24,10 @@ namespace Nop.Core.Domain.Orders
         }
 
         /// <summary>
-        /// Is gift card valid
+        /// 礼品卡是否有效
         /// </summary>
-        /// <param name="giftCard">Gift card</param>
-        /// <returns>Result</returns>
+        /// <param name="giftCard">礼物卡</param>
+        /// <returns></returns>
         public static bool IsGiftCardValid(this GiftCard giftCard)
         {
             if (!giftCard.IsGiftCardActivated)

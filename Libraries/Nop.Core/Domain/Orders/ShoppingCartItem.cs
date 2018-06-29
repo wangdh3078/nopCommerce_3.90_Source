@@ -5,52 +5,52 @@ using Nop.Core.Domain.Customers;
 namespace Nop.Core.Domain.Orders
 {
     /// <summary>
-    /// Represents a shopping cart item
+    /// 购物车
     /// </summary>
     public partial class ShoppingCartItem : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the store identifier
+        /// 获取或设置商店标识
         /// </summary>
         public int StoreId { get; set; }
 
         /// <summary>
-        /// Gets or sets the shopping cart type identifier
+        /// 获取或设置购物车类型标识符
         /// </summary>
         public int ShoppingCartTypeId { get; set; }
 
         /// <summary>
-        /// Gets or sets the customer identifier
+        /// 获取或设置客户标识
         /// </summary>
         public int CustomerId { get; set; }
 
         /// <summary>
-        /// Gets or sets the product identifier
+        /// 获取或设置产品标识
         /// </summary>
         public int ProductId { get; set; }
 
         /// <summary>
-        /// Gets or sets the product attributes in XML format
+        /// 获取或设置XML格式的产品属性
         /// </summary>
         public string AttributesXml { get; set; }
 
         /// <summary>
-        /// Gets or sets the price enter by a customer
+        /// 获取或设置客户输入的价格
         /// </summary>
         public decimal CustomerEnteredPrice { get; set; }
 
         /// <summary>
-        /// Gets or sets the quantity
+        /// 获取或设置数量
         /// </summary>
         public int Quantity { get; set; }
 
         /// <summary>
-        /// Gets or sets the rental product start date (null if it's not a rental product)
+        /// 获取或设置租赁产品的开始日期（如果它不是租赁产品，则为null）
         /// </summary>
         public DateTime? RentalStartDateUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the rental product end date (null if it's not a rental product)
+        /// 获取或设置租赁产品的结束日期（如果它不是租赁产品，则为null）
         /// </summary>
         public DateTime? RentalEndDateUtc { get; set; }
 
@@ -60,12 +60,12 @@ namespace Nop.Core.Domain.Orders
         public DateTime CreatedOnUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the date and time of instance update
+        /// 获取或设置实例更新的日期和时间
         /// </summary>
         public DateTime UpdatedOnUtc { get; set; }
-        
+
         /// <summary>
-        /// Gets the log type
+        /// 获取日志类型
         /// </summary>
         public ShoppingCartType ShoppingCartType
         {
@@ -80,17 +80,17 @@ namespace Nop.Core.Domain.Orders
         }
 
         /// <summary>
-        /// Gets or sets the product
+        ///获取或设置产品
         /// </summary>
         public virtual Product Product { get; set; }
 
         /// <summary>
-        /// Gets or sets the customer
+        /// 获取或设置客户
         /// </summary>
         public virtual Customer Customer { get; set; }
 
         /// <summary>
-        /// Gets a value indicating whether the shopping cart item is free shipping
+        /// 获取一个值，该值指示购物车项目是否免费送货
         /// </summary>
         public bool IsFreeShipping
         {
@@ -104,7 +104,7 @@ namespace Nop.Core.Domain.Orders
         }
 
         /// <summary>
-        /// Gets a value indicating whether the shopping cart item is ship enabled
+        /// 获取一个值，该值指示购物车项目是否已启用
         /// </summary>
         public bool IsShipEnabled
         {
@@ -118,7 +118,7 @@ namespace Nop.Core.Domain.Orders
         }
 
         /// <summary>
-        /// Gets the additional shipping charge
+        /// 获取额外的运费
         /// </summary> 
         public decimal AdditionalShippingCharge
         {
@@ -133,7 +133,7 @@ namespace Nop.Core.Domain.Orders
         }
 
         /// <summary>
-        /// Gets a value indicating whether the shopping cart item is tax exempt
+        /// 获取一个值，该值指示购物车项目是否免税
         /// </summary>
         public bool IsTaxExempt
         {

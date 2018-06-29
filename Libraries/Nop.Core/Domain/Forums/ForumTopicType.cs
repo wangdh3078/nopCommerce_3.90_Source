@@ -1,12 +1,12 @@
 ﻿namespace Nop.Core.Domain.Forums
 {
     /// <summary>
-    /// Represents a forum topic type
+    /// 论坛主题类型
     /// </summary>
     public enum ForumTopicType
     {
         /// <summary>
-        /// Normal
+        /// 正常
         /// </summary>
         Normal = 10,
         /// <summary>
@@ -14,7 +14,7 @@
         /// </summary>
         Sticky = 15,
         /// <summary>
-        /// Announcement
+        /// 公告
         /// </summary>
         Announcement = 20,
     }

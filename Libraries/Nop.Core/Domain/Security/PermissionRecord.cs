@@ -4,29 +4,29 @@ using Nop.Core.Domain.Customers;
 namespace Nop.Core.Domain.Security
 {
     /// <summary>
-    /// Represents a permission record
+    /// 许可记录
     /// </summary>
     public partial class PermissionRecord : BaseEntity
     {
         private ICollection<CustomerRole> _customerRoles;
 
         /// <summary>
-        /// Gets or sets the permission name
+        /// 获取或设置权限名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the permission system name
+        /// 获取或设置权限系统名称
         /// </summary>
         public string SystemName { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets the permission category
+        /// 获取或设置权限类别
         /// </summary>
         public string Category { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets discount usage history
+        /// 获取或设置折扣使用历史
         /// </summary>
         public virtual ICollection<CustomerRole> CustomerRoles
         {

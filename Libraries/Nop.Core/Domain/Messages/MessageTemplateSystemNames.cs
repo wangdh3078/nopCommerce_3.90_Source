@@ -1,247 +1,247 @@
 namespace Nop.Core.Domain.Messages
 {
     /// <summary>
-    /// Represents message template system names
+    /// 消息模板系统名称
     /// </summary>
     public static partial class MessageTemplateSystemNames
     {
-        #region Customer
+        #region 客户
 
         /// <summary>
-        /// Represents system name of notification about new registration
+        /// 代表关于新注册的通知的系统名称
         /// </summary>
         public const string CustomerRegisteredNotification = "NewCustomer.Notification";
 
         /// <summary>
-        /// Represents system name of customer welcome message
+        /// 表示客户欢迎消息的系统名称
         /// </summary>
         public const string CustomerWelcomeMessage = "Customer.WelcomeMessage";
 
         /// <summary>
-        /// Represents system name of email validation message
+        /// 代表电子邮件验证消息的系统名称
         /// </summary>
         public const string CustomerEmailValidationMessage = "Customer.EmailValidationMessage";
 
         /// <summary>
-        /// Represents system name of email revalidation message
+        /// 代表电子邮件重新验证消息的系统名称
         /// </summary>
         public const string CustomerEmailRevalidationMessage = "Customer.EmailRevalidationMessage";
 
         /// <summary>
-        /// Represents system name of password recovery message
+        /// 代表密码恢复消息的系统名称
         /// </summary>
         public const string CustomerPasswordRecoveryMessage = "Customer.PasswordRecovery";
 
         #endregion
 
-        #region Order
+        #region 订单
 
         /// <summary>
-        /// Represents system name of notification vendor about placed order
+        /// 代表通知供应商关于下订单的系统名称
         /// </summary>
         public const string OrderPlacedVendorNotification = "OrderPlaced.VendorNotification";
 
         /// <summary>
-        /// Represents system name of notification store owner about placed order
+        /// 代表通知商店所有者关于下达订单的系统名称
         /// </summary>
         public const string OrderPlacedStoreOwnerNotification = "OrderPlaced.StoreOwnerNotification";
 
         /// <summary>
-        /// Represents system name of notification store owner about paid order
+        /// 代表通知商店所有者关于付费订单的系统名称
         /// </summary>
         public const string OrderPaidStoreOwnerNotification = "OrderPaid.StoreOwnerNotification";
 
         /// <summary>
-        /// Represents system name of notification custoemer about paid order
+        /// 代表通知客户有关付费订单的系统名称
         /// </summary>
         public const string OrderPaidCustomerNotification = "OrderPaid.CustomerNotification";
 
         /// <summary>
-        /// Represents system name of notification vendor about paid order
+        /// 代表通知供应商有关付费订单的系统名称
         /// </summary>
         public const string OrderPaidVendorNotification = "OrderPaid.VendorNotification";
 
         /// <summary>
-        /// Represents system name of notification customer about placed order
+        /// 代表通知客户关于下订单的系统名称
         /// </summary>
         public const string OrderPlacedCustomerNotification = "OrderPlaced.CustomerNotification";
 
         /// <summary>
-        /// Represents system name of notification customer about sent shipment
+        /// 代表通知客户关于已发货的系统名称
         /// </summary>
         public const string ShipmentSentCustomerNotification = "ShipmentSent.CustomerNotification";
 
         /// <summary>
-        /// Represents system name of notification customer about delivered shipment
+        /// 代表通知客户关于交付货件的系统名称
         /// </summary>
         public const string ShipmentDeliveredCustomerNotification = "ShipmentDelivered.CustomerNotification";
 
         /// <summary>
-        /// Represents system name of notification customer about completed order
+        /// 代表通知客户关于完成订单的系统名称
         /// </summary>
         public const string OrderCompletedCustomerNotification = "OrderCompleted.CustomerNotification";
 
         /// <summary>
-        /// Represents system name of notification customer about cancelled order
+        /// 代表通知客户关于取消订单的系统名称
         /// </summary>
         public const string OrderCancelledCustomerNotification = "OrderCancelled.CustomerNotification";
 
         /// <summary>
-        /// Represents system name of notification store owner about refunded order
+        /// 代表通知商店所有者关于退款订单的系统名称
         /// </summary>
         public const string OrderRefundedStoreOwnerNotification = "OrderRefunded.StoreOwnerNotification";
 
         /// <summary>
-        /// Represents system name of notification customer about refunded order
+        /// 代表通知客户关于退款订单的系统名称
         /// </summary>
         public const string OrderRefundedCustomerNotification = "OrderRefunded.CustomerNotification";
 
         /// <summary>
-        /// Represents system name of notification customer about new order note
+        /// 代表通知客户关于新订单票据的系统名称
         /// </summary>
         public const string NewOrderNoteAddedCustomerNotification = "Customer.NewOrderNote";
 
         /// <summary>
-        /// Represents system name of notification store owner about cancelled recurring order
+        ///代表通知商店所有者关于取消的定期订单的系统名称
         /// </summary>
         public const string RecurringPaymentCancelledStoreOwnerNotification = "RecurringPaymentCancelled.StoreOwnerNotification";
 
         /// <summary>
-        /// Represents system name of notification customer about cancelled recurring order
+        ///代表通知客户关于取消定期订单的系统名称
         /// </summary>
         public const string RecurringPaymentCancelledCustomerNotification = "RecurringPaymentCancelled.CustomerNotification";
 
         /// <summary>
-        /// Represents system name of notification customer about failed payment for the recurring payments
+        /// 代表通知客户关于定期付款失败付款的系统名称
         /// </summary>
         public const string RecurringPaymentFailedCustomerNotification = "RecurringPaymentFailed.CustomerNotification";
 
         #endregion
 
-        #region Newsletter
+        #region 通讯
 
         /// <summary>
-        /// Represents system name of subscription activation message
+        /// 代表订阅激活消息的系统名称
         /// </summary>
         public const string NewsletterSubscriptionActivationMessage = "NewsLetterSubscription.ActivationMessage";
 
         /// <summary>
-        /// Represents system name of subscription deactivation message
+        /// 代表订阅停用消息的系统名称
         /// </summary>
         public const string NewsletterSubscriptionDeactivationMessage = "NewsLetterSubscription.DeactivationMessage";
 
         #endregion
 
-        #region To friend
+        #region 发送给朋友
 
         /// <summary>
-        /// Represents system name of 'Email a friend' message
+        /// 表示“通过电子邮件发送朋友”消息的系统名称
         /// </summary>
         public const string EmailAFriendMessage = "Service.EmailAFriend";
 
         /// <summary>
-        /// Represents system name of 'Email a friend' message with wishlist
+        /// 用愿望清单表示“给朋友发送电子邮件”的系统名称
         /// </summary>
         public const string WishlistToFriendMessage = "Wishlist.EmailAFriend";
 
         #endregion
 
-        #region Return requests
+        #region 退货请求
 
         /// <summary>
-        /// Represents system name of notification store owner about new return request
+        ///代表通知商店所有者关于新退货请求的系统名称
         /// </summary>
         public const string NewReturnRequestStoreOwnerNotification = "NewReturnRequest.StoreOwnerNotification";
 
         /// <summary>
-        /// Represents system name of notification customer about new return request
+        /// 代表通知客户关于新退货请求的系统名称
         /// </summary>
         public const string NewReturnRequestCustomerNotification = "NewReturnRequest.CustomerNotification";
 
         /// <summary>
-        /// Represents system name of notification customer about changing return request status
+        ///代表通知客户有关更改退货请求状态的系统名称
         /// </summary>
         public const string ReturnRequestStatusChangedCustomerNotification = "ReturnRequestStatusChanged.CustomerNotification";
 
         #endregion
 
-        #region Forum
+        #region 论坛
 
         /// <summary>
-        /// Represents system name of notification about new forum topic
+        /// 代表关于新论坛主题的通知的系统名称
         /// </summary>
         public const string NewForumTopicMessage = "Forums.NewForumTopic";
 
         /// <summary>
-        /// Represents system name of notification about new forum post
+        /// 代表关于新论坛帖子的通知的系统名称
         /// </summary>
         public const string NewForumPostMessage = "Forums.NewForumPost";
 
         /// <summary>
-        /// Represents system name of notification about new private message
+        ///代表关于新私人消息的通知的系统名称
         /// </summary>
         public const string PrivateMessageNotification = "Customer.NewPM";
 
         #endregion
 
-        #region Misc
+        #region 杂项
 
         /// <summary>
-        /// Represents system name of notification store owner about applying new vendor account
+        ///代表通知商店所有者应用新供应商帐户的系统名称
         /// </summary>
         public const string NewVendorAccountApplyStoreOwnerNotification = "VendorAccountApply.StoreOwnerNotification";
 
         /// <summary>
-        /// Represents system name of notification vendor about changing information
+        /// 代表通知供应商有关更改信息的系统名称
         /// </summary>
         public const string VendorInformationChangeNotification = "VendorInformationChange.StoreOwnerNotification";
 
         /// <summary>
-        /// Represents system name of notification about gift card
+        /// 代表关于礼品卡的通知的系统名称
         /// </summary>
         public const string GiftCardNotification = "GiftCard.Notification";
 
         /// <summary>
-        /// Represents system name of notification store owner about new product review
+        /// 代表通知商店所有者关于新产品评论的系统名称
         /// </summary>
         public const string ProductReviewNotification = "Product.ProductReview";
 
         /// <summary>
-        /// Represents system name of notification store owner about below quantity of product
+        /// 代表通知商店所有者关于产品数量的系统名称
         /// </summary>
         public const string QuantityBelowStoreOwnerNotification = "QuantityBelow.StoreOwnerNotification";
 
         /// <summary>
-        /// Represents system name of notification store owner about below quantity of product attribute combination
+        /// 代表产品属性组合的数量下的通知店主的系统名称
         /// </summary>
         public const string QuantityBelowAttributeCombinationStoreOwnerNotification = "QuantityBelow.AttributeCombination.StoreOwnerNotification";
 
         /// <summary>
-        /// Represents system name of notification store owner about submitting new VAT
+        /// 代表通知商店所有者提交新增值税的系统名称
         /// </summary>
         public const string NewVatSubmittedStoreOwnerNotification = "NewVATSubmitted.StoreOwnerNotification";
 
         /// <summary>
-        /// Represents system name of notification store owner about new blog comment
+        /// 代表通知商店所有者关于新博客评论的系统名称
         /// </summary>
         public const string BlogCommentNotification = "Blog.BlogComment";
 
         /// <summary>
-        /// Represents system name of notification store owner about new news comment
+        ///代表通知店主对新消息评论的系统名称
         /// </summary>
         public const string NewsCommentNotification = "News.NewsComment";
 
         /// <summary>
-        /// Represents system name of notification customer about product receipt
+        /// 代表通知客户关于产品收据的系统名称
         /// </summary>
         public const string BackInStockNotification = "Customer.BackInStock";
 
         /// <summary>
-        /// Represents system name of 'Contact us' message
+        ///代表“联系我们”消息的系统名称
         /// </summary>
         public const string ContactUsMessage = "Service.ContactUs";
         /// <summary>
-        /// Represents system name of 'Contact vendor' message
+        /// 表示“联系供应商”消息的系统名称
         /// </summary>
         public const string ContactVendorMessage = "Service.ContactVendor";
 

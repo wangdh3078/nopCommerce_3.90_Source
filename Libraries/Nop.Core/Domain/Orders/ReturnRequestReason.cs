@@ -3,7 +3,7 @@
 namespace Nop.Core.Domain.Orders
 {
     /// <summary>
-    /// Represents a return request reason
+    /// 退货请求原因
     /// </summary>
     public partial class ReturnRequestReason : BaseEntity, ILocalizedEntity
     {

@@ -3,38 +3,41 @@ using Nop.Core.Configuration;
 
 namespace Nop.Core.Domain.Security
 {
+    /// <summary>
+    /// 安全设置
+    /// </summary>
     public class SecuritySettings : ISettings
     {
         /// <summary>
-        /// Gets or sets a value indicating whether all pages will be forced to use SSL (no matter of a specified [NopHttpsRequirementAttribute] attribute)
+        /// 获取或设置一个值，该值指示是否所有页面都将被强制使用SSL（无论指定了[NopHttpsRequirementAttribute]属性）
         /// </summary>
         public bool ForceSslForAllPages { get; set; }
 
         /// <summary>
-        /// Gets or sets an encryption key
+        /// 获取或设置加密键
         /// </summary>
         public string EncryptionKey { get; set; }
 
         /// <summary>
-        /// Gets or sets a list of admin area allowed IP addresses
+        /// 获取或设置管理区允许的IP地址列表
         /// </summary>
         public List<string> AdminAreaAllowedIpAddresses { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether XSRF protection for admin area should be enabled
+        /// 获取或设置一个值，指示是否应启用管理区域的XSRF保护
         /// </summary>
         public bool EnableXsrfProtectionForAdminArea { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether XSRF protection for public store should be enabled
+        /// 获取或设置一个值，该值指示是否应启用公用存储的XSRF保护
         /// </summary>
         public bool EnableXsrfProtectionForPublicStore { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether honeypot is enabled on the registration page
+        /// 获取或设置一个值，该值指示注册页面上是否启用了蜜罐
         /// </summary>
         public bool HoneypotEnabled { get; set; }
         /// <summary>
-        /// Gets or sets a honeypot input name
+        ///获取或设置蜜罐输入名称
         /// </summary>
         public string HoneypotInputName { get; set; }
     }

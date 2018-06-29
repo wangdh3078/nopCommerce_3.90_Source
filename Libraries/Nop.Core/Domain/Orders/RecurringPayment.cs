@@ -6,59 +6,59 @@ using Nop.Core.Domain.Catalog;
 namespace Nop.Core.Domain.Orders
 {
     /// <summary>
-    /// Represents a recurring payment
+    /// 定期付款
     /// </summary>
     public partial class RecurringPayment : BaseEntity
     {
         private ICollection<RecurringPaymentHistory> _recurringPaymentHistory;
 
         /// <summary>
-        /// Gets or sets the cycle length
+        /// 获取或设置周期长度
         /// </summary>
         public int CycleLength { get; set; }
 
         /// <summary>
-        /// Gets or sets the cycle period identifier
+        /// 获取或设置循环周期标识符
         /// </summary>
         public int CyclePeriodId { get; set; }
 
         /// <summary>
-        /// Gets or sets the total cycles
+        /// 获取或设置总周期
         /// </summary>
         public int TotalCycles { get; set; }
 
         /// <summary>
-        /// Gets or sets the start date
+        ///获取或设置开始日期
         /// </summary>
         public DateTime StartDateUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the payment is active
+        /// 获取或设置一个值，该值指示付款是否处于活动状态
         /// </summary>
         public bool IsActive { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the last payment failed
+        /// 获取或设置一个值，指示上次付款是否失败
         /// </summary>
         public bool LastPaymentFailed { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the entity has been deleted
+        /// 获取或设置一个值，该值指示实体是否已被删除
         /// </summary>
         public bool Deleted { get; set; }
 
         /// <summary>
-        /// Gets or sets the initial order identifier
+        /// 获取或设置初始订单标识符
         /// </summary>
         public int InitialOrderId { get; set; }
 
         /// <summary>
-        /// Gets or sets the date and time of payment creation
+        /// 获取或设置创建付款的日期和时间
         /// </summary>
         public DateTime CreatedOnUtc { get; set; }
-        
+
         /// <summary>
-        /// Gets the next payment date
+        ///获取下一个付款日期
         /// </summary>
         public DateTime? NextPaymentDate
         {
@@ -159,7 +159,7 @@ namespace Nop.Core.Domain.Orders
         }
 
         /// <summary>
-        /// Gets the cycles remaining
+        /// 获取剩余的周期
         /// </summary>
         public int CyclesRemaining
         {
@@ -176,7 +176,7 @@ namespace Nop.Core.Domain.Orders
         }
 
         /// <summary>
-        /// Gets or sets the payment status
+        ///获取或设置付款状态
         /// </summary>
         public RecurringProductCyclePeriod CyclePeriod
         {
@@ -189,21 +189,21 @@ namespace Nop.Core.Domain.Orders
                 this.CyclePeriodId = (int)value;
             }
         }
-        
+
 
 
 
         /// <summary>
-        /// Gets or sets the recurring payment history
+        /// 获取或设置定期付款历史记录
         /// </summary>
         public virtual ICollection<RecurringPaymentHistory> RecurringPaymentHistory
         {
             get { return _recurringPaymentHistory ?? (_recurringPaymentHistory = new List<RecurringPaymentHistory>()); }
             protected set { _recurringPaymentHistory = value; }
-        }        
+        }
 
         /// <summary>
-        /// Gets the initial order
+        /// 获取最初的订单
         /// </summary>
         public virtual Order InitialOrder { get; set; }
     }

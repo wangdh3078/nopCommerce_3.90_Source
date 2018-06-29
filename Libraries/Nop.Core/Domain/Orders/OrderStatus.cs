@@ -1,24 +1,24 @@
 namespace Nop.Core.Domain.Orders
 {
     /// <summary>
-    /// Represents an order status enumeration
+    /// 订单状态枚举
     /// </summary>
     public enum OrderStatus
     {
         /// <summary>
-        /// Pending
+        /// 待处理
         /// </summary>
         Pending = 10,
         /// <summary>
-        /// Processing
+        /// 已处理
         /// </summary>
         Processing = 20,
         /// <summary>
-        /// Complete
+        /// 已完成
         /// </summary>
         Complete = 30,
         /// <summary>
-        /// Cancelled
+        /// 已取消
         /// </summary>
         Cancelled = 40
     }

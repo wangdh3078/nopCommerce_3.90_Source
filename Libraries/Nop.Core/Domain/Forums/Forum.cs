@@ -8,7 +8,7 @@ namespace Nop.Core.Domain.Forums
     public partial class Forum : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the forum group identifier
+        /// 获取或设置论坛组标识符
         /// </summary>
         public int ForumGroupId { get; set; }
 
@@ -18,37 +18,37 @@ namespace Nop.Core.Domain.Forums
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the description
+        /// 获取或设置描述
         /// </summary>
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or sets the number of topics
+        /// 获取或设置主题的数量
         /// </summary>
         public int NumTopics { get; set; }
 
         /// <summary>
-        /// Gets or sets the number of posts
+        /// 获取或设置帖子的数量
         /// </summary>
         public int NumPosts { get; set; }
 
         /// <summary>
-        /// Gets or sets the last topic identifier
+        /// 获取或设置最后一个主题标识符
         /// </summary>
         public int LastTopicId { get; set; }
 
         /// <summary>
-        /// Gets or sets the last post identifier
+        /// 获取或设置最后的帖子标识符
         /// </summary>
         public int LastPostId { get; set; }
 
         /// <summary>
-        /// Gets or sets the last post customer identifier
+        /// 获取或设置最后的帖子客户标识符
         /// </summary>
         public int LastPostCustomerId { get; set; }
 
         /// <summary>
-        /// Gets or sets the last post date and time
+        ///获取或设置最后的发布日期和时间
         /// </summary>
         public DateTime? LastPostTime { get; set; }
 
@@ -63,12 +63,12 @@ namespace Nop.Core.Domain.Forums
         public DateTime CreatedOnUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the date and time of instance update
+        /// 获取或设置实例更新的日期和时间
         /// </summary>
         public DateTime UpdatedOnUtc { get; set; }
 
         /// <summary>
-        /// Gets the ForumGroup
+        /// 获取论坛组
         /// </summary>
         public virtual ForumGroup ForumGroup { get; set; }
     }

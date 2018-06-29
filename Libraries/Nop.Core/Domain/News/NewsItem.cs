@@ -7,88 +7,88 @@ using Nop.Core.Domain.Stores;
 namespace Nop.Core.Domain.News
 {
     /// <summary>
-    /// Represents a news item
+    /// 新闻项目
     /// </summary>
     public partial class NewsItem : BaseEntity, ISlugSupported, IStoreMappingSupported
     {
         private ICollection<NewsComment> _newsComments;
 
         /// <summary>
-        /// Gets or sets the language identifier
+        /// 获取或设置语言标识
         /// </summary>
         public int LanguageId { get; set; }
 
         /// <summary>
-        /// Gets or sets the news title
+        /// 获取或设置新闻标题
         /// </summary>
         public string Title { get; set; }
 
         /// <summary>
-        /// Gets or sets the short text
+        /// 获取或设置短文本
         /// </summary>
         public string Short { get; set; }
 
         /// <summary>
-        /// Gets or sets the full text
+        /// 获取或设置全文
         /// </summary>
         public string Full { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the news item is published
+        /// 获取或设置一个值，指示新闻项是否已发布
         /// </summary>
         public bool Published { get; set; }
 
         /// <summary>
-        /// Gets or sets the news item start date and time
+        /// 获取或设置新闻项目的开始日期和时间
         /// </summary>
         public DateTime? StartDateUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the news item end date and time
+        /// 获取或设置新闻项目结束日期和时间
         /// </summary>
         public DateTime? EndDateUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the news post comments are allowed 
+        /// 获取或设置一个值，指示是否允许新闻帖子评论
         /// </summary>
         public bool AllowComments { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the entity is limited/restricted to certain stores
+        /// 获取或设置一个值，该值指示实体是限制/限制到某些商店
         /// </summary>
         public bool LimitedToStores { get; set; }
 
         /// <summary>
-        /// Gets or sets the meta keywords
+        /// 获取或设置元关键字
         /// </summary>
         public string MetaKeywords { get; set; }
 
         /// <summary>
-        /// Gets or sets the meta description
+        /// 获取或设置元描述
         /// </summary>
         public string MetaDescription { get; set; }
 
         /// <summary>
-        /// Gets or sets the meta title
+        /// 获取或设置元标题
         /// </summary>
         public string MetaTitle { get; set; }
 
         /// <summary>
-        /// Gets or sets the date and time of entity creation
+        ///获取或设置实体创建的日期和时间
         /// </summary>
         public DateTime CreatedOnUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the news comments
+        /// 获取或设置新闻评论
         /// </summary>
         public virtual ICollection<NewsComment> NewsComments
         {
             get { return _newsComments ?? (_newsComments = new List<NewsComment>()); }
             protected set { _newsComments = value; }
         }
-        
+
         /// <summary>
-        /// Gets or sets the language
+        /// 获取或设置语言
         /// </summary>
         public virtual Language Language { get; set; }
     }

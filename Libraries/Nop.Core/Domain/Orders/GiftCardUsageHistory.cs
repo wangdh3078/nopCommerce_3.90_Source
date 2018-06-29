@@ -3,22 +3,22 @@ using System;
 namespace Nop.Core.Domain.Orders
 {
     /// <summary>
-    /// Represents a gift card usage history entry
+    /// 礼品卡使用历史记录条目
     /// </summary>
     public partial class GiftCardUsageHistory : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the gift card identifier
+        /// 获取或设置礼品卡标识符
         /// </summary>
         public int GiftCardId { get; set; }
 
         /// <summary>
-        /// Gets or sets the order identifier
+        /// 获取或设置订单标识符
         /// </summary>
         public int UsedWithOrderId { get; set; }
 
         /// <summary>
-        /// Gets or sets the used value (amount)
+        /// 获取或设置使用的值（金额）
         /// </summary>
         public decimal UsedValue { get; set; }
 
@@ -26,14 +26,14 @@ namespace Nop.Core.Domain.Orders
         /// 获取或设置实例创建的日期和时间
         /// </summary>
         public DateTime CreatedOnUtc { get; set; }
-        
+
         /// <summary>
-        /// Gets the gift card
+        /// 获取礼品卡
         /// </summary>
         public virtual GiftCard GiftCard { get; set; }
 
         /// <summary>
-        /// Gets the gift card
+        ///获取用户订单
         /// </summary>
         public virtual Order UsedWithOrder { get; set; }
     }

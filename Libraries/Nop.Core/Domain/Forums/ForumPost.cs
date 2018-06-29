@@ -4,27 +4,27 @@ using Nop.Core.Domain.Customers;
 namespace Nop.Core.Domain.Forums
 {
     /// <summary>
-    /// Represents a forum post
+    /// 论坛帖子
     /// </summary>
     public partial class ForumPost : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the forum topic identifier
+        /// 获取或设置论坛主题标识
         /// </summary>
         public int TopicId { get; set; }
 
         /// <summary>
-        /// Gets or sets the customer identifier
+        /// 获取或设置客户标识
         /// </summary>
         public int CustomerId { get; set; }
 
         /// <summary>
-        /// Gets or sets the text
+        /// 获取或设置文本
         /// </summary>
         public string Text { get; set; }
 
         /// <summary>
-        /// Gets or sets the IP address
+        /// 获取或设置IP地址
         /// </summary>
         public string IPAddress { get; set; }
 
@@ -34,22 +34,22 @@ namespace Nop.Core.Domain.Forums
         public DateTime CreatedOnUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the date and time of instance update
+        /// 获取或设置实例更新的日期和时间
         /// </summary>
         public DateTime UpdatedOnUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the count of votes
+        /// 获取或设置选票数量
         /// </summary>
         public int VoteCount { get; set; }
 
         /// <summary>
-        /// Gets the topic
+        /// 获取主题
         /// </summary>
         public virtual ForumTopic ForumTopic { get; set; }
 
         /// <summary>
-        /// Gets the customer
+        ///获取客户
         /// </summary>
         public virtual Customer Customer { get; set; }
 

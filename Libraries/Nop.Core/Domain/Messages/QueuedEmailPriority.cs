@@ -1,16 +1,16 @@
 namespace Nop.Core.Domain.Messages
 {
     /// <summary>
-    /// Represents priority of queued email
+    /// 排队电子邮件的优先级
     /// </summary>
     public enum QueuedEmailPriority
     {
         /// <summary>
-        /// Low
+        /// 低
         /// </summary>
         Low = 0,
         /// <summary>
-        /// High
+        /// 高
         /// </summary>
         High = 5
     }

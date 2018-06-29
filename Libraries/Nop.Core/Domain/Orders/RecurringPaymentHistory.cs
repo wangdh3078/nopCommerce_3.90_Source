@@ -3,27 +3,27 @@ using System;
 namespace Nop.Core.Domain.Orders
 {
     /// <summary>
-    /// Represents a recurring payment history
+    ///代表定期付款记录
     /// </summary>
     public partial class RecurringPaymentHistory : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the recurring payment identifier
+        /// 获取或设置定期付款标识符
         /// </summary>
         public int RecurringPaymentId { get; set; }
 
         /// <summary>
-        /// Gets or sets the order identifier
+        /// 获取或设置订单标识符
         /// </summary>
         public int OrderId { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets the date and time of entity creation
+        /// 获取或设置实体创建的日期和时间
         /// </summary>
         public DateTime CreatedOnUtc { get; set; }
-        
+
         /// <summary>
-        /// Gets the recurring payment
+        /// 获取定期付款
         /// </summary>
         public virtual RecurringPayment RecurringPayment { get; set; }
 

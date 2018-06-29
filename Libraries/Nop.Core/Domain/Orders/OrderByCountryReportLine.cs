@@ -1,22 +1,22 @@
 namespace Nop.Core.Domain.Orders
 {
     /// <summary>
-    /// Represents an "order by country" report line
+    /// “按国家排序”报告
     /// </summary>
     public partial class OrderByCountryReportLine
     {
         /// <summary>
-        /// Country identifier; null for unknow country
+        /// 国家标识符; null为未知的国家
         /// </summary>
         public int? CountryId { get; set; }
 
         /// <summary>
-        /// Gets or sets the number of orders
+        /// 获取或设置订单数量
         /// </summary>
         public int TotalOrders { get; set; }
 
         /// <summary>
-        /// Gets or sets the order total summary
+        /// 获取或设置订单总计摘要
         /// </summary>
         public decimal SumOrders { get; set; }
     }

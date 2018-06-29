@@ -2,170 +2,173 @@
 
 namespace Nop.Core.Domain.Forums
 {
+    /// <summary>
+    /// 论坛设置
+    /// </summary>
     public class ForumSettings : ISettings
     {
         /// <summary>
-        /// Gets or sets a value indicating whether forums are enabled
+        /// 获取或设置一个值，指示是否启用论坛
         /// </summary>
         public bool ForumsEnabled { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether relative date and time formatting is enabled (e.g. 2 hours ago, a month ago)
+        /// 获取或设置一个值，该值指示是否启用相对日期和时间格式化（例如2个小时前，一个月前）
         /// </summary>
         public bool RelativeDateTimeFormattingEnabled { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether customers are allowed to edit posts that they created
+        ///获取或设置一个值，该值指示是否允许客户编辑他们创建的帖子
         /// </summary>
         public bool AllowCustomersToEditPosts { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether customers are allowed to manage their subscriptions
+        /// 获取或设置一个值，指示是否允许客户管理其订阅
         /// </summary>
         public bool AllowCustomersToManageSubscriptions { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether guests are allowed to create posts
+        /// 获取或设置一个值，指示是否允许访客创建帖子
         /// </summary>
         public bool AllowGuestsToCreatePosts { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether guests are allowed to create topics
+        ///获取或设置一个值，指示是否允许访客创建主题
         /// </summary>
         public bool AllowGuestsToCreateTopics { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether customers are allowed to delete posts that they created
+        ///获取或设置一个值，该值指示是否允许客户删除他们创建的帖子
         /// </summary>
         public bool AllowCustomersToDeletePosts { get; set; }
 
         /// <summary>
-        /// Gets or sets the whether users can vote for posts
+        /// 获取或设置用户是否可以投票发帖
         /// </summary>
         public bool AllowPostVoting { get; set; }
 
         /// <summary>
-        /// Gets or sets the maximum number of votes for user per day
+        /// 获取或设置每天用户的最大投票数
         /// </summary>
         public int MaxVotesPerDay { get; set; }
 
         /// <summary>
-        /// Gets or sets maximum length of topic subject
+        /// 获取或设置主题主题的最大长度
         /// </summary>
         public int TopicSubjectMaxLength { get; set; }
 
         /// <summary>
-        /// Gets or sets the maximum length for stripped forum topic names
+        ///获取或设置删除的论坛主题名称的最大长度
         /// </summary>
         public int StrippedTopicMaxLength { get; set; }
 
         /// <summary>
-        /// Gets or sets maximum length of post
+        /// 获取或设置帖子的最大长度
         /// </summary>
         public int PostMaxLength { get; set; }
 
         /// <summary>
-        /// Gets or sets the page size for topics in forums
+        /// 获取或设置论坛中主题的页面大小
         /// </summary>
         public int TopicsPageSize { get; set; }
 
         /// <summary>
-        /// Gets or sets the page size for posts in topics
+        /// 获取或设置主题中帖子的页面大小
         /// </summary>
         public int PostsPageSize { get; set; }
 
         /// <summary>
-        /// Gets or sets the page size for search result
+        /// 获取或设置搜索结果的页面大小
         /// </summary>
         public int SearchResultsPageSize { get; set; }
 
         /// <summary>
-        /// Gets or sets the page size for the Active Discussions page
+        /// 获取或设置活动讨论页面的页面大小
         /// </summary>
         public int ActiveDiscussionsPageSize { get; set; }
 
         /// <summary>
-        /// Gets or sets the page size for latest customer posts
+        /// 获取或设置最新客户帖子的页面大小
         /// </summary>
         public int LatestCustomerPostsPageSize { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether to show customers forum post count
+        /// 获取或设置一个值，指示是否显示客户论坛帖子数
         /// </summary>
         public bool ShowCustomersPostCount { get; set; }
 
         /// <summary>
-        /// Gets or sets a forum editor type
+        /// 获取或设置论坛编辑器类型
         /// </summary>
         public EditorType ForumEditor { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether customers are allowed to specify a signature
+        /// 获取或设置一个值，指示是否允许客户指定签名
         /// </summary>
         public bool SignaturesEnabled { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether private messages are allowed
+        /// 获取或设置一个值，指示是否允许私人消息
         /// </summary>
         public bool AllowPrivateMessages { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether an alert should be shown for new private messages
+        ///获取或设置一个值，该值指示是否应为新的私人消息显示警报
         /// </summary>
         public bool ShowAlertForPM { get; set; }
 
         /// <summary>
-        /// Gets or sets the page size for private messages
+        ///获取或设置私人消息的页面大小
         /// </summary>
         public int PrivateMessagesPageSize { get; set; }
 
         /// <summary>
-        /// Gets or sets the page size for (My Account) Forum Subscriptions
+        /// 获取或设置（我的帐户）论坛订阅的页面大小
         /// </summary>
         public int ForumSubscriptionsPageSize { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether a customer should be notified about new private messages
+        /// 获取或设置一个值，指示是否应该通知客户有关新的私人消息
         /// </summary>
         public bool NotifyAboutPrivateMessages { get; set; }
 
         /// <summary>
-        /// Gets or sets maximum length of pm subject
+        /// 获取或设置pm主题的最大长度
         /// </summary>
         public int PMSubjectMaxLength { get; set; }
 
         /// <summary>
-        /// Gets or sets maximum length of pm message
+        /// 获取或设置pm消息的最大长度
         /// </summary>
         public int PMTextMaxLength { get; set; }
 
         /// <summary>
-        /// Gets or sets the number of items to display for Active Discussions on forums home page
+        /// 获取或设置要在论坛主页上显示的活动讨论的项目数
         /// </summary>
         public int HomePageActiveDiscussionsTopicCount { get; set; }
 
         /// <summary>
-        /// Gets or sets the number of items to display for Active Discussions RSS Feed
+        /// 获取或设置要为活动讨论RSS源显示的项目数
         /// </summary>
         public int ActiveDiscussionsFeedCount { get; set; }
 
         /// <summary>
-        /// Gets or sets the whether the Active Discussions RSS Feed is enabled
+        ///获取或设置是否启用活动讨论RSS源
         /// </summary>
         public bool ActiveDiscussionsFeedEnabled { get; set; }
 
         /// <summary>
-        /// Gets or sets the whether Forums have an RSS Feed enabled
+        /// 获取或设置论坛是否启用RSS源
         /// </summary>
         public bool ForumFeedsEnabled { get; set; }
 
         /// <summary>
-        /// Gets or sets the number of items to display for Forum RSS Feed
+        /// 获取或设置要显示的论坛RSS源的项目数
         /// </summary>
         public int ForumFeedCount { get; set; }
 
         /// <summary>
-        /// Gets or sets the minimum length for search term
+        /// 获取或设置搜索词的最小长度
         /// </summary>
         public int ForumSearchTermMinimumLength { get; set; }
     }

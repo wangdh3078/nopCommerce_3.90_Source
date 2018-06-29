@@ -1,7 +1,7 @@
 namespace Nop.Core.Domain.News
 {
     /// <summary>
-    /// News comment approved event
+    ///新闻评论批准的事件
     /// </summary>
     public class NewsCommentApprovedEvent
     {
@@ -11,7 +11,7 @@ namespace Nop.Core.Domain.News
         }
 
         /// <summary>
-        /// News comment
+        /// 新闻评论
         /// </summary>
         public NewsComment NewsComment { get; private set; }
     }

@@ -3,113 +3,113 @@
 namespace Nop.Core.Domain.Messages
 {
     /// <summary>
-    /// Represents an email item
+    ///电子邮件项目
     /// </summary>
     public partial class QueuedEmail : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the priority
+        ///获取或设置优先级
         /// </summary>
         public int PriorityId { get; set; }
 
         /// <summary>
-        /// Gets or sets the From property (email address)
+        /// 获取或设置From属性（电子邮件地址）
         /// </summary>
         public string From { get; set; }
 
         /// <summary>
-        /// Gets or sets the FromName property
+        /// 获取或设置FromName属性
         /// </summary>
         public string FromName { get; set; }
 
         /// <summary>
-        /// Gets or sets the To property (email address)
+        /// 获取或设置To属性（电子邮件地址）
         /// </summary>
         public string To { get; set; }
 
         /// <summary>
-        /// Gets or sets the ToName property
+        /// 获取或设置ToName属性
         /// </summary>
         public string ToName { get; set; }
 
         /// <summary>
-        /// Gets or sets the ReplyTo property (email address)
+        /// 获取或设置ReplyTo属性（电子邮件地址）
         /// </summary>
         public string ReplyTo { get; set; }
 
         /// <summary>
-        /// Gets or sets the ReplyToName property
+        /// 获取或设置ReplyToName属性
         /// </summary>
         public string ReplyToName { get; set; }
 
         /// <summary>
-        /// Gets or sets the CC
+        /// 获取或设置CC
         /// </summary>
         public string CC { get; set; }
 
         /// <summary>
-        /// Gets or sets the Bcc
+        /// 获取或设置密件抄送
         /// </summary>
         public string Bcc { get; set; }
 
         /// <summary>
-        /// Gets or sets the subject
+        ///获取或设置主题
         /// </summary>
         public string Subject { get; set; }
 
         /// <summary>
-        /// Gets or sets the body
+        ///获取或设置正文
         /// </summary>
         public string Body { get; set; }
 
         /// <summary>
-        /// Gets or sets the attachment file path (full file path)
+        /// 获取或设置附件文件路径（完整文件路径）
         /// </summary>
         public string AttachmentFilePath { get; set; }
 
         /// <summary>
-        /// Gets or sets the attachment file name. If specified, then this file name will be sent to a recipient. Otherwise, "AttachmentFilePath" name will be used.
+        ///获取或设置附件文件名称。 如果指定，则该文件名将被发送给收件人。 否则，将使用“AttachmentFilePath”名称。
         /// </summary>
         public string AttachmentFileName { get; set; }
 
         /// <summary>
-        /// Gets or sets the download identifier of attached file
+        /// 获取或设置附加文件的下载标识符
         /// </summary>
         public int AttachedDownloadId { get; set; }
 
         /// <summary>
-        /// Gets or sets the date and time of item creation in UTC
+        /// 获取或设置以UTC形式创建的项目的日期和时间
         /// </summary>
         public DateTime CreatedOnUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the date and time in UTC before which this email should not be sent
+        /// 获取或设置UTC之前的日期和时间，在此之前不应发送此电子邮件
         /// </summary>
         public DateTime? DontSendBeforeDateUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the send tries
+        /// 获取或设置发送尝试
         /// </summary>
         public int SentTries { get; set; }
 
         /// <summary>
-        /// Gets or sets the sent date and time
+        /// 获取或设置发送的日期和时间
         /// </summary>
         public DateTime? SentOnUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the used email account identifier
+        /// 获取或设置使用的电子邮件帐户标识符
         /// </summary>
         public int EmailAccountId { get; set; }
 
         /// <summary>
-        /// Gets the email account
+        /// 获取电子邮件帐户
         /// </summary>
         public virtual EmailAccount EmailAccount { get; set; }
 
 
         /// <summary>
-        /// Gets or sets the priority
+        /// 获取或设置优先级
         /// </summary>
         public QueuedEmailPriority Priority
         {

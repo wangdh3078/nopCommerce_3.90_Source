@@ -3,79 +3,82 @@ using Nop.Core.Configuration;
 
 namespace Nop.Core.Domain.Media
 {
+    /// <summary>
+    /// 媒体设置
+    /// </summary>
     public class MediaSettings : ISettings
     {
         /// <summary>
-        /// Picture size of customer avatars (if enabled)
+        /// 客户头像的图片大小（如果启用）
         /// </summary>
         public int AvatarPictureSize { get; set; }
         /// <summary>
-        /// Picture size of product picture thumbs displayed on catalog pages (e.g. category details page)
+        ///目录页面上显示的产品图片缩略图的图片大小（例如，类别详细信息页面）
         /// </summary>
         public int ProductThumbPictureSize { get; set; }
         /// <summary>
-        /// Picture size of the main product picture displayed on the product details page
+        ///产品详细信息页面上显示的主要产品图片的图片尺寸
         /// </summary>
         public int ProductDetailsPictureSize { get; set; }
         /// <summary>
-        /// Picture size of the product picture thumbs displayed on the product details page
+        /// 产品详细信息页面上显示的产品图片缩略图的图片大小
         /// </summary>
         public int ProductThumbPictureSizeOnProductDetailsPage { get; set; }
         /// <summary>
-        /// 
+        /// 相关产品图片大小
         /// </summary>
         public int AssociatedProductPictureSize { get; set; }
         /// <summary>
-        /// Picture size of category pictures
+        /// 类别图片的图片大小
         /// </summary>
         public int CategoryThumbPictureSize { get; set; }
         /// <summary>
-        /// Picture size of manufacturer pictures
+        /// 制造商图片的图片尺寸
         /// </summary>
         public int ManufacturerThumbPictureSize { get; set; }
         /// <summary>
-        /// Picture size of vendor pictures
+        /// 供应商图片的图片尺寸
         /// </summary>
         public int VendorThumbPictureSize { get; set; }
         /// <summary>
-        /// Picture size of product pictures on the shopping cart page
+        /// 购物车页面上产品图片的图片尺寸
         /// </summary>
         public int CartThumbPictureSize { get; set; }
         /// <summary>
-        /// Picture size of product pictures for minishipping cart box
+        /// 迷你运输车箱的产品图片的图片尺寸
         /// </summary>
         public int MiniCartThumbPictureSize { get; set; }
         /// <summary>
-        /// Picture size of product pictures for autocomplete search box
+        /// 自动填充搜索框的产品图片的图片大小
         /// </summary>
         public int AutoCompleteSearchThumbPictureSize { get; set; }
         /// <summary>
-        /// Picture size of image squares on a product details page (used with "image squares" attribute type
+        ///产品详细信息页面上的图像正方形的图片大小（与“图片正方形”属性类型一起使用
         /// </summary>
         public int ImageSquarePictureSize { get; set; }
         /// <summary>
-        /// A value indicating whether picture zoom is enabled
+        /// 指示是否启用图片缩放的值
         /// </summary>
         public bool DefaultPictureZoomEnabled { get; set; }
         /// <summary>
-        /// Maximum allowed picture size. If a larger picture is uploaded, then it'll be resized
+        /// 允许的最大图片大小。 如果上传更大的图片，则会调整大小
         /// </summary>
         public int MaximumImageSize { get; set; }
         /// <summary>
-        /// Gets or sets a default quality used for image generation
+        /// 获取或设置用于图像生成的默认质量
         /// </summary>
         public int DefaultImageQuality { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether single (/content/images/thumbs/) or multiple (/content/images/thumbs/001/ and /content/images/thumbs/002/) directories will used for picture thumbs
+        /// 获取或设置一个值，指示单张（/ content / images / thumbs /）或多个（/ content / images / thumbs / 001 /和/ content / images / thumbs / 002 /）目录是否将用于图片缩略图
         /// </summary>
         public bool MultipleThumbDirectories { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether we should use fast HASHBYTES (hash sum) database function to compare pictures when importing products
+        /// 获取或设置一个值，该值指示在导入产品时是否应使用快速HASHBYTES（哈希总和）数据库函数来比较图片
         /// </summary>
         public bool ImportProductImagesUsingHash { get; set; }
 
         /// <summary>
-        /// Gets or sets Azure CacheControl header (e.g. "max-age=3600, public")
+        ///获取或设置Azure CacheControl标题（例如“max-age = 3600，public”）
         /// </summary>
         /// <remarks>
         ///max-age=[seconds]     — specifies the maximum amount of time that a representation will be considered fresh. Similar to Expires, this directive is relative to the time of the request, rather than absolute. [seconds] is the number of seconds from the time of the request you wish the representation to be fresh for.

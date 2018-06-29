@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Nop.Core.Domain.Forums
 {
     /// <summary>
-    /// Represents a forum group
+    /// 论坛组
     /// </summary>
     public partial class ForumGroup : BaseEntity
     {
@@ -26,12 +26,12 @@ namespace Nop.Core.Domain.Forums
         public DateTime CreatedOnUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the date and time of instance update
+        ///获取或设置实例更新的日期和时间
         /// </summary>
         public DateTime UpdatedOnUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the collection of Forums
+        /// 获取或设置论坛的集合
         /// </summary>
         public virtual ICollection<Forum> Forums
         {

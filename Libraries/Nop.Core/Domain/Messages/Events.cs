@@ -2,8 +2,14 @@ using System.Collections.Generic;
 
 namespace Nop.Core.Domain.Messages
 {
+    /// <summary>
+    /// 电子邮件订阅事件
+    /// </summary>
     public class EmailSubscribedEvent
     {
+        /// <summary>
+        /// 订阅
+        /// </summary>
         private readonly NewsLetterSubscription _subscription;
 
         public EmailSubscribedEvent(NewsLetterSubscription subscription)
@@ -37,6 +43,9 @@ namespace Nop.Core.Domain.Messages
         }
     }
 
+    /// <summary>
+    /// 电子邮件退订事件
+    /// </summary>
     public class EmailUnsubscribedEvent
     {
         private readonly NewsLetterSubscription _subscription;
@@ -73,9 +82,9 @@ namespace Nop.Core.Domain.Messages
     }
 
     /// <summary>
-    /// A container for tokens that are added.
+    /// 用于添加令牌的容器。
     /// </summary>
-    /// <typeparam name="T">Entity type</typeparam>
+    /// <typeparam name="T">实体类型</typeparam>
     /// <typeparam name="U"></typeparam>
     public class EntityTokensAddedEvent<T, U> where T : BaseEntity
     {
@@ -93,7 +102,7 @@ namespace Nop.Core.Domain.Messages
     }
 
     /// <summary>
-    /// A container for tokens that are added.
+    /// 用于添加令牌的容器。
     /// </summary>
     /// <typeparam name="U"></typeparam>
     public class MessageTokensAddedEvent<U>

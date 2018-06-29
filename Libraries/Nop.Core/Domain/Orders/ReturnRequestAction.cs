@@ -3,7 +3,7 @@
 namespace Nop.Core.Domain.Orders
 {
     /// <summary>
-    /// Represents a return request action
+    ///退货请求操作
     /// </summary>
     public partial class ReturnRequestAction : BaseEntity, ILocalizedEntity
     {

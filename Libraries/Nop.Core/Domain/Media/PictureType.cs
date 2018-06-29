@@ -1,12 +1,12 @@
 namespace Nop.Core.Domain.Media
 {
     /// <summary>
-    /// Represents a picture item type
+    /// 图片类型
     /// </summary>
     public enum PictureType
     {
         /// <summary>
-        /// Entities (products, categories, manufacturers)
+        /// 实体（产品，类别，制造商）
         /// </summary>
         Entity = 1,
         /// <summary>

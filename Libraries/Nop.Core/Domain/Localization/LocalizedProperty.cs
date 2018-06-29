@@ -1,37 +1,37 @@
 namespace Nop.Core.Domain.Localization
 {
     /// <summary>
-    /// Represents a localized property
+    /// 本地化的属性
     /// </summary>
     public partial class LocalizedProperty : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the entity identifier
+        ///获取或设置实体标识符
         /// </summary>
         public int EntityId { get; set; }
 
         /// <summary>
-        /// Gets or sets the language identifier
+        /// 获取或设置语言标识
         /// </summary>
         public int LanguageId { get; set; }
 
         /// <summary>
-        /// Gets or sets the locale key group
+        /// 获取或设置区域设置密钥组
         /// </summary>
         public string LocaleKeyGroup { get; set; }
 
         /// <summary>
-        /// Gets or sets the locale key
+        /// 获取或设置区域设置键
         /// </summary>
         public string LocaleKey { get; set; }
 
         /// <summary>
-        /// Gets or sets the locale value
+        /// 获取或设置区域设置值
         /// </summary>
         public string LocaleValue { get; set; }
-        
+
         /// <summary>
-        /// Gets the language
+        /// 获取语言
         /// </summary>
         public virtual Language Language { get; set; }
     }

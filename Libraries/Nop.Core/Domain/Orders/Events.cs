@@ -1,7 +1,7 @@
 namespace Nop.Core.Domain.Orders
 {
     /// <summary>
-    /// Order paid event
+    /// 订单付费事件
     /// </summary>
     public class OrderPaidEvent
     {
@@ -11,13 +11,13 @@ namespace Nop.Core.Domain.Orders
         }
 
         /// <summary>
-        /// Order
+        /// 订单
         /// </summary>
         public Order Order { get; private set; }
     }
 
     /// <summary>
-    /// Order placed event
+    /// 订购事件
     /// </summary>
     public class OrderPlacedEvent
     {
@@ -27,13 +27,13 @@ namespace Nop.Core.Domain.Orders
         }
 
         /// <summary>
-        /// Order
+        /// 订单
         /// </summary>
         public Order Order { get; private set; }
     }
 
     /// <summary>
-    /// Order cancelled event
+    /// 订单取消事件
     /// </summary>
     public class OrderCancelledEvent
     {
@@ -43,13 +43,13 @@ namespace Nop.Core.Domain.Orders
         }
 
         /// <summary>
-        /// Order
+        /// 订单
         /// </summary>
         public Order Order { get; private set; }
     }
 
     /// <summary>
-    /// Order refunded event
+    /// 订单退还事件
     /// </summary>
     public class OrderRefundedEvent
     {
@@ -60,12 +60,12 @@ namespace Nop.Core.Domain.Orders
         }
 
         /// <summary>
-        /// Order
+        /// 订单
         /// </summary>
         public Order Order { get; private set; }
 
         /// <summary>
-        /// Amount
+        /// 总价
         /// </summary>
         public decimal Amount { get; private set; }
     }

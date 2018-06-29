@@ -3,32 +3,32 @@
 namespace Nop.Core.Domain.Messages
 {
     /// <summary>
-    /// Represents NewsLetterSubscription entity
+    /// 新闻订阅实体
     /// </summary>
     public partial class NewsLetterSubscription : BaseEntity
-    {       
+    {
         /// <summary>
-        /// Gets or sets the newsletter subscription GUID
+        /// 获取或设置新闻订阅GUID
         /// </summary>
         public Guid NewsLetterSubscriptionGuid { get; set; }
 
         /// <summary>
-        /// Gets or sets the subcriber email
+        /// 获取或设置订户电子邮件
         /// </summary>
         public string Email { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether subscription is active
+        ///获取或设置一个值，该值指示预订是否处于活动状态
         /// </summary>
         public bool Active { get; set; }
 
         /// <summary>
-        /// Gets or sets the store identifier in which a customer has subscribed to newsletter
+        /// 获取或设置客户订阅时事通讯的商店标识符
         /// </summary>
         public int StoreId { get; set; }
 
         /// <summary>
-        /// Gets or sets the date and time when subscription was created
+        /// 获取或设置创建订阅的日期和时间
         /// </summary>
         public DateTime CreatedOnUtc { get; set; }
     }

@@ -3,22 +3,22 @@
 namespace Nop.Core.Domain.Forums
 {
     /// <summary>
-    /// Represents a forum post vote
+    ///论坛投票
     /// </summary>
     public partial class ForumPostVote : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the forum post identifier
+        /// 获取或设置论坛帖子标识符
         /// </summary>
         public int ForumPostId { get; set; }
 
         /// <summary>
-        /// Gets or sets the customer identifier
+        /// 获取或设置客户标识
         /// </summary>
         public int CustomerId { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this vote is up or is down
+        /// 获取或设置一个值，指示此投票是否已启动或停止
         /// </summary>
         public bool IsUp { get; set; }
 
@@ -28,7 +28,7 @@ namespace Nop.Core.Domain.Forums
         public DateTime CreatedOnUtc { get; set; }
 
         /// <summary>
-        /// Gets the post
+        /// 获取帖子
         /// </summary>
         public virtual ForumPost ForumPost { get; set; }
     }

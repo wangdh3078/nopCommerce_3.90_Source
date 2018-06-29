@@ -2,32 +2,32 @@
 namespace Nop.Core.Domain.Payments
 {
     /// <summary>
-    /// Represents a payment status enumeration
+    /// 付款状态枚举
     /// </summary>
     public enum PaymentStatus
     {
         /// <summary>
-        /// Pending
+        /// 待处理
         /// </summary>
         Pending = 10,
         /// <summary>
-        /// Authorized
+        /// 经授权的
         /// </summary>
         Authorized = 20,
         /// <summary>
-        /// Paid
+        /// 付费
         /// </summary>
         Paid = 30,
         /// <summary>
-        /// Partially Refunded
+        /// 部分退款
         /// </summary>
         PartiallyRefunded = 35,
         /// <summary>
-        /// Refunded
+        /// 退款
         /// </summary>
         Refunded = 40,
         /// <summary>
-        /// Voided
+        /// 作废
         /// </summary>
         Voided = 50,
     }

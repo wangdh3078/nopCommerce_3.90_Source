@@ -4,27 +4,27 @@ using Nop.Core.Domain.Customers;
 namespace Nop.Core.Domain.Forums
 {
     /// <summary>
-    /// Represents a forum subscription item
+    ///论坛订阅项目
     /// </summary>
     public partial class ForumSubscription : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the forum subscription identifier
+        /// 获取或设置论坛订阅标识符
         /// </summary>
         public Guid SubscriptionGuid { get; set; }
 
         /// <summary>
-        /// Gets or sets the customer identifier
+        /// 获取或设置客户标识
         /// </summary>
         public int CustomerId { get; set; }
 
         /// <summary>
-        /// Gets or sets the forum identifier
+        ///获取或设置论坛标识符
         /// </summary>
         public int ForumId { get; set; }
 
         /// <summary>
-        /// Gets or sets the topic identifier
+        /// 获取或设置主题标识
         /// </summary>
         public int TopicId { get; set; }
 
@@ -34,7 +34,7 @@ namespace Nop.Core.Domain.Forums
         public DateTime CreatedOnUtc { get; set; }
 
         /// <summary>
-        /// Gets the customer
+        /// 获取客户
         /// </summary>
         public virtual Customer Customer { get; set; }
     }

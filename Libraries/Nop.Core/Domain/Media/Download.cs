@@ -3,47 +3,47 @@ using System;
 namespace Nop.Core.Domain.Media
 {
     /// <summary>
-    /// Represents a download
+    /// 下载
     /// </summary>
     public partial class Download : BaseEntity
     {
         /// <summary>
-        /// Gets or sets a GUID
+        /// 获取或设置一个GUID
         /// </summary>
         public Guid DownloadGuid { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether DownloadUrl property should be used
+        /// 获取或设置一个值，指示是否应使用DownloadUrl属性
         /// </summary>
         public bool UseDownloadUrl { get; set; }
 
         /// <summary>
-        /// Gets or sets a download URL
+        /// 获取或设置一个下载URL
         /// </summary>
         public string DownloadUrl { get; set; }
 
         /// <summary>
-        /// Gets or sets the download binary
+        /// 获取或设置下载二进制文件
         /// </summary>
         public byte[] DownloadBinary { get; set; }
 
         /// <summary>
-        /// The mime-type of the download
+        /// 下载的MIME类型
         /// </summary>
         public string ContentType { get; set; }
 
         /// <summary>
-        /// The filename of the download
+        /// 下载的文件名
         /// </summary>
         public string Filename { get; set; }
 
         /// <summary>
-        /// Gets or sets the extension
+        /// 获取或设置扩展
         /// </summary>
         public string Extension { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the download is new
+        /// 获取或设置一个值，指示下载是否是新的
         /// </summary>
         public bool IsNew { get; set; }
     }

@@ -4,22 +4,22 @@ using Nop.Core.Domain.Customers;
 namespace Nop.Core.Domain.Logging
 {
     /// <summary>
-    /// Represents an activity log record
+    /// 活动日志记录
     /// </summary>
     public partial class ActivityLog : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the activity log type identifier
+        /// 获取或设置活动日志类型标识符
         /// </summary>
         public int ActivityLogTypeId { get; set; }
 
         /// <summary>
-        /// Gets or sets the customer identifier
+        /// 获取或设置客户标识
         /// </summary>
         public int CustomerId { get; set; }
 
         /// <summary>
-        /// Gets or sets the activity comment
+        /// 获取或设置活动评论
         /// </summary>
         public string Comment { get; set; }
 
@@ -29,17 +29,17 @@ namespace Nop.Core.Domain.Logging
         public DateTime CreatedOnUtc { get; set; }
 
         /// <summary>
-        /// Gets the activity log type
+        /// 获取活动日志类型
         /// </summary>
         public virtual ActivityLogType ActivityLogType { get; set; }
 
         /// <summary>
-        /// Gets the customer
+        ///获取客户
         /// </summary>
         public virtual Customer Customer { get; set; }
 
         /// <summary>
-        /// Gets or sets the ip address
+        /// 获取或设置IP地址
         /// </summary>
         public virtual string IpAddress { get; set; }
     }

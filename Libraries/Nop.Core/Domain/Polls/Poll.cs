@@ -5,14 +5,14 @@ using Nop.Core.Domain.Localization;
 namespace Nop.Core.Domain.Polls
 {
     /// <summary>
-    /// Represents a poll
+    /// 投票
     /// </summary>
     public partial class Poll : BaseEntity
     {
         private ICollection<PollAnswer> _pollAnswers;
 
         /// <summary>
-        /// Gets or sets the language identifier
+        /// 获取或设置语言标识
         /// </summary>
         public int LanguageId { get; set; }
 
@@ -22,7 +22,7 @@ namespace Nop.Core.Domain.Polls
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the system keyword
+        /// 获取或设置系统关键字
         /// </summary>
         public string SystemKeyword { get; set; }
 
@@ -32,12 +32,12 @@ namespace Nop.Core.Domain.Polls
         public bool Published { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the entity should be shown on home page
+        /// 获取或设置一个值，该值指示实体是否应显示在主页上
         /// </summary>
         public bool ShowOnHomePage { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the anonymous votes are allowed
+        /// 获取或设置一个值，指示是否允许匿名投票
         /// </summary>
         public bool AllowGuestsToVote { get; set; }
 
@@ -47,26 +47,26 @@ namespace Nop.Core.Domain.Polls
         public int DisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or sets the poll start date and time
+        /// 获取或设置轮询开始日期和时间
         /// </summary>
         public DateTime? StartDateUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the poll end date and time
+        /// 获取或设置投票结束日期和时间
         /// </summary>
         public DateTime? EndDateUtc { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets the news comments
+        /// 获取或设置新闻评论
         /// </summary>
         public virtual ICollection<PollAnswer> PollAnswers
         {
             get { return _pollAnswers ?? (_pollAnswers = new List<PollAnswer>()); }
             protected set { _pollAnswers = value; }
         }
-        
+
         /// <summary>
-        /// Gets or sets the language
+        ///获取或设置语言
         /// </summary>
         public virtual Language Language { get; set; }
     }

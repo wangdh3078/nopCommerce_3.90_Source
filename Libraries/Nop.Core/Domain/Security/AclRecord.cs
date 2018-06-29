@@ -3,27 +3,27 @@ using Nop.Core.Domain.Customers;
 namespace Nop.Core.Domain.Security
 {
     /// <summary>
-    /// Represents an ACL record
+    /// ACL记录
     /// </summary>
     public partial class AclRecord : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the entity identifier
+        /// 获取或设置实体标识符
         /// </summary>
         public int EntityId { get; set; }
 
         /// <summary>
-        /// Gets or sets the entity name
+        ///获取或设置实体名称
         /// </summary>
         public string EntityName { get; set; }
 
         /// <summary>
-        /// Gets or sets the customer role identifier
+        /// 获取或设置客户角色标识
         /// </summary>
         public int CustomerRoleId { get; set; }
 
         /// <summary>
-        /// Gets or sets the customer role
+        /// 获取或设置客户角色
         /// </summary>
         public virtual CustomerRole CustomerRole { get; set; }
     }

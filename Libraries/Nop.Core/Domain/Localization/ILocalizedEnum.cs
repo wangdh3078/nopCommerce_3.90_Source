@@ -2,7 +2,7 @@
 namespace Nop.Core.Domain.Localization
 {
     /// <summary>
-    /// Represents a localized enum
+    /// 本地化的枚举
     /// </summary>
     public interface ILocalizedEnum
     {

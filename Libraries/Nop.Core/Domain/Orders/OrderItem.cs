@@ -5,120 +5,120 @@ using Nop.Core.Domain.Catalog;
 namespace Nop.Core.Domain.Orders
 {
     /// <summary>
-    /// Represents an order item
+    /// 订单商品
     /// </summary>
     public partial class OrderItem : BaseEntity
     {
         private ICollection<GiftCard> _associatedGiftCards;
 
         /// <summary>
-        /// Gets or sets the order item identifier
+        /// 获取或设置订单商品标识
         /// </summary>
         public Guid OrderItemGuid { get; set; }
 
         /// <summary>
-        /// Gets or sets the order identifier
+        ///获取或设置订单标识符
         /// </summary>
         public int OrderId { get; set; }
 
         /// <summary>
-        /// Gets or sets the product identifier
+        ///获取或设置产品标识
         /// </summary>
         public int ProductId { get; set; }
 
         /// <summary>
-        /// Gets or sets the quantity
+        /// 获取或设置数量
         /// </summary>
         public int Quantity { get; set; }
 
         /// <summary>
-        /// Gets or sets the unit price in primary store currency (incl tax)
+        /// 获取或设置主店面货币单位价格（含税）
         /// </summary>
         public decimal UnitPriceInclTax { get; set; }
 
         /// <summary>
-        /// Gets or sets the unit price in primary store currency (excl tax)
+        /// 获取或设置主店面货币单位价格（不含税）
         /// </summary>
         public decimal UnitPriceExclTax { get; set; }
 
         /// <summary>
-        /// Gets or sets the price in primary store currency (incl tax)
+        ///获取或设置主要商店货币的价格（含税）
         /// </summary>
         public decimal PriceInclTax { get; set; }
 
         /// <summary>
-        /// Gets or sets the price in primary store currency (excl tax)
+        /// 获取或设置主商店货币的价格（不含税）
         /// </summary>
         public decimal PriceExclTax { get; set; }
 
         /// <summary>
-        /// Gets or sets the discount amount (incl tax)
+        /// 获取或设置折扣金额（含税）
         /// </summary>
         public decimal DiscountAmountInclTax { get; set; }
 
         /// <summary>
-        /// Gets or sets the discount amount (excl tax)
+        /// 获取或设置折扣金额（不含税）
         /// </summary>
         public decimal DiscountAmountExclTax { get; set; }
 
         /// <summary>
-        /// Gets or sets the original cost of this order item (when an order was placed), qty 1
+        /// 获取或设置此订单项目的原始成本（订购时），数量1
         /// </summary>
         public decimal OriginalProductCost { get; set; }
 
         /// <summary>
-        /// Gets or sets the attribute description
+        /// 获取或设置属性描述
         /// </summary>
         public string AttributeDescription { get; set; }
 
         /// <summary>
-        /// Gets or sets the product attributes in XML format
+        ///获取或设置XML格式的产品属性
         /// </summary>
         public string AttributesXml { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets the download count
+        /// 获取或设置下载计数
         /// </summary>
         public int DownloadCount { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether download is activated
+        /// 获取或设置一个值，指示下载是否已激活
         /// </summary>
         public bool IsDownloadActivated { get; set; }
 
         /// <summary>
-        /// Gets or sets a license download identifier (in case this is a downloadable product)
+        /// 获取或设置许可证下载标识符（如果这是可下载的产品）
         /// </summary>
         public int? LicenseDownloadId { get; set; }
 
         /// <summary>
-        /// Gets or sets the total weight of one item
-        /// It's nullable for compatibility with the previous version of nopCommerce where was no such property
+        /// 获取或设置一个项目的总重量
+        ///它与nopCommerce以前版本的兼容性是可以空的，其中没有这样的属性
         /// </summary>
         public decimal? ItemWeight { get; set; }
 
         /// <summary>
-        /// Gets or sets the rental product start date (null if it's not a rental product)
+        /// 获取或设置租赁产品的开始日期（如果它不是租赁产品，则为null）
         /// </summary>
         public DateTime? RentalStartDateUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the rental product end date (null if it's not a rental product)
+        /// 获取或设置租赁产品的结束日期（如果它不是租赁产品，则为null）
         /// </summary>
         public DateTime? RentalEndDateUtc { get; set; }
 
         /// <summary>
-        /// Gets the order
+        ///获取订单
         /// </summary>
         public virtual Order Order { get; set; }
 
         /// <summary>
-        /// Gets the product
+        /// 获取产品
         /// </summary>
         public virtual Product Product { get; set; }
 
         /// <summary>
-        /// Gets or sets the associated gift card
+        ///获取或设置关联的礼品卡
         /// </summary>
         public virtual ICollection<GiftCard> AssociatedGiftCards
         {

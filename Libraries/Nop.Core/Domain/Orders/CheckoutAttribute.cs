@@ -6,7 +6,7 @@ using Nop.Core.Domain.Stores;
 namespace Nop.Core.Domain.Orders
 {
     /// <summary>
-    /// Represents a checkout attribute
+    /// 结帐属性
     /// </summary>
     public partial class CheckoutAttribute : BaseEntity, ILocalizedEntity, IStoreMappingSupported
     {
@@ -18,32 +18,32 @@ namespace Nop.Core.Domain.Orders
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the text prompt
+        /// 获取或设置文本提示
         /// </summary>
         public string TextPrompt { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the entity is required
+        /// 获取或设置一个值，指示实体是否是必需的
         /// </summary>
         public bool IsRequired { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether shippable products are required in order to display this attribute
+        ///获取或设置一个值，该值指示是否需要可发运产品才能显示此属性
         /// </summary>
         public bool ShippableProductRequired { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the attribute is marked as tax exempt
+        /// 获取或设置一个值，该值指示属性是否标记为免税
         /// </summary>
         public bool IsTaxExempt { get; set; }
 
         /// <summary>
-        /// Gets or sets the tax category identifier
+        /// 获取或设置税收类别标识符
         /// </summary>
         public int TaxCategoryId { get; set; }
 
         /// <summary>
-        /// Gets or sets the attribute control type identifier
+        /// 获取或设置属性控件类型标识符
         /// </summary>
         public int AttributeControlTypeId { get; set; }
 
@@ -53,46 +53,46 @@ namespace Nop.Core.Domain.Orders
         public int DisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the entity is limited/restricted to certain stores
+        /// 获取或设置一个值，该值指示实体是限制/限制到某些商店
         /// </summary>
         public bool LimitedToStores { get; set; }
 
 
 
-        //validation fields
+        //验证字段
 
         /// <summary>
-        /// Gets or sets the validation rule for minimum length (for textbox and multiline textbox)
+        /// 获取或设置最小长度的验证规则（用于文本框和多行文本框）
         /// </summary>
         public int? ValidationMinLength { get; set; }
 
         /// <summary>
-        /// Gets or sets the validation rule for maximum length (for textbox and multiline textbox)
+        /// 获取或设置最大长度的验证规则（用于文本框和多行文本框）
         /// </summary>
         public int? ValidationMaxLength { get; set; }
 
         /// <summary>
-        /// Gets or sets the validation rule for file allowed extensions (for file upload)
+        /// 获取或设置文件允许扩展的验证规则（用于文件上传）
         /// </summary>
         public string ValidationFileAllowedExtensions { get; set; }
 
         /// <summary>
-        /// Gets or sets the validation rule for file maximum size in kilobytes (for file upload)
+        /// 获取或设置文件最大大小的验证规则（千字节）（用于文件上载）
         /// </summary>
         public int? ValidationFileMaximumSize { get; set; }
 
         /// <summary>
-        /// Gets or sets the default value (for textbox and multiline textbox)
+        /// 获取或设置默认值（用于文本框和多行文本框）
         /// </summary>
         public string DefaultValue { get; set; }
 
         /// <summary>
-        /// Gets or sets a condition (depending on other attribute) when this attribute should be enabled (visible).
+        /// 获取或设置条件（取决于其他属性）何时启用此属性（可见）。
         /// </summary>
         public string ConditionAttributeXml { get; set; }
 
         /// <summary>
-        /// Gets the attribute control type
+        /// 获取属性控件类型
         /// </summary>
         public AttributeControlType AttributeControlType
         {
@@ -106,7 +106,7 @@ namespace Nop.Core.Domain.Orders
             }
         }
         /// <summary>
-        /// Gets the checkout attribute values
+        /// 获取结帐属性值
         /// </summary>
         public virtual ICollection<CheckoutAttributeValue> CheckoutAttributeValues
         {

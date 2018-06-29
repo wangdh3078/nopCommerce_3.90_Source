@@ -1,20 +1,20 @@
 ﻿namespace Nop.Core.Domain.Forums
 {
     /// <summary>
-    /// Represents a forum search type
+    /// 论坛搜索类型
     /// </summary>
     public enum ForumSearchType
     {
         /// <summary>
-        /// Topic titles and post text
+        /// 标题和内容
         /// </summary>
         All = 0,
         /// <summary>
-        /// Topic titles only
+        ///只有主题
         /// </summary>
         TopicTitlesOnly = 10,
         /// <summary>
-        /// Post text only
+        /// 只有内容
         /// </summary>
         PostTextOnly = 20,
     }

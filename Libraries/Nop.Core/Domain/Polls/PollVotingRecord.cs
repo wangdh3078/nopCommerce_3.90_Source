@@ -4,17 +4,17 @@ using Nop.Core.Domain.Customers;
 namespace Nop.Core.Domain.Polls
 {
     /// <summary>
-    /// Represents a poll voting record
+    /// 投票记录
     /// </summary>
     public partial class PollVotingRecord : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the poll answer identifier
+        /// 获取或设置投票答案标识符
         /// </summary>
         public int PollAnswerId { get; set; }
 
         /// <summary>
-        /// Gets or sets the customer identifier
+        /// 获取或设置客户标识
         /// </summary>
         public int CustomerId { get; set; }
 
@@ -24,12 +24,12 @@ namespace Nop.Core.Domain.Polls
         public DateTime CreatedOnUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the customer
+        /// 获取或设置客户
         /// </summary>
         public virtual Customer Customer { get; set; }
 
         /// <summary>
-        /// Gets or sets the poll answer
+        /// 获取或设置投票答案
         /// </summary>
         public virtual PollAnswer PollAnswer { get; set; }
     }
