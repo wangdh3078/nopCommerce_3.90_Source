@@ -1,27 +1,27 @@
 namespace Nop.Core.Domain.Stores
 {
     /// <summary>
-    /// Represents a store mapping record
+    ///商店映射记录
     /// </summary>
     public partial class StoreMapping : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the entity identifier
+        /// 获取或设置实体标识符
         /// </summary>
         public int EntityId { get; set; }
 
         /// <summary>
-        /// Gets or sets the entity name
+        ///获取或设置实体名称
         /// </summary>
         public string EntityName { get; set; }
 
         /// <summary>
-        /// Gets or sets the store identifier
+        /// 获取或设置商店标识
         /// </summary>
         public int StoreId { get; set; }
 
         /// <summary>
-        /// Gets or sets the store
+        ///获取或设置商店
         /// </summary>
         public virtual Store Store { get; set; }
     }

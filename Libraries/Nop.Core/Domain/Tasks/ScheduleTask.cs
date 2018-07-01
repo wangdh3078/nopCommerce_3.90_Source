@@ -3,7 +3,7 @@
 namespace Nop.Core.Domain.Tasks
 {
     /// <summary>
-    /// Schedule task
+    /// 计划任务
     /// </summary>
     public partial class ScheduleTask : BaseEntity
     {
@@ -13,45 +13,45 @@ namespace Nop.Core.Domain.Tasks
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the run period (in seconds)
+        /// 获取或设置运行周期（以秒为单位）
         /// </summary>
         public int Seconds { get; set; }
 
         /// <summary>
-        /// Gets or sets the type of appropriate ITask class
+        ///获取或设置适当的ITask类的类型
         /// </summary>
         public string Type { get; set; }
 
         /// <summary>
-        /// Gets or sets the value indicating whether a task is enabled
+        ///获取或设置指示任务是否已启用的值
         /// </summary>
         public bool Enabled { get; set; }
 
         /// <summary>
-        /// Gets or sets the value indicating whether a task should be stopped on some error
+        ///获取或设置一个值，该值指示是否应该在发生某种错误时停止任务
         /// </summary>
         public bool StopOnError { get; set; }
 
 
         /// <summary>
-        /// Gets or sets the machine name (instance) that leased this task. It's used when running in web farm (ensure that a task in run only on one machine). It could be null when not running in web farm.
+        ///获取或设置租借此任务的计算机名称（实例）。 在Web场中运行时使用它（确保仅在一台计算机上运行任务）。 未在Web场中运行时可能为空。
         /// </summary>
         public string LeasedByMachineName { get; set; }
         /// <summary>
-        /// Gets or sets the datetime until the task is leased by some machine (instance). It's used when running in web farm (ensure that a task in run only on one machine).
+        ///获取或设置日期时间，直到某个机器（实例）租用任务。 在Web场中运行时使用它（确保仅在一台计算机上运行任务）。
         /// </summary>
         public DateTime? LeasedUntilUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the datetime when it was started last time
+        /// 获取或设置上次启动的日期时间
         /// </summary>
         public DateTime? LastStartUtc { get; set; }
         /// <summary>
-        /// Gets or sets the datetime when it was finished last time (no matter failed ir success)
+        /// 获取或设置上次完成时的日期时间（无论成功失败）
         /// </summary>
         public DateTime? LastEndUtc { get; set; }
         /// <summary>
-        /// Gets or sets the datetime when it was sucessfully finished last time
+        /// 获取或设置上次成功完成时的日期时间
         /// </summary>
         public DateTime? LastSuccessUtc { get; set; }
     }

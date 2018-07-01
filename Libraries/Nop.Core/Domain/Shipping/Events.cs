@@ -1,7 +1,7 @@
 namespace Nop.Core.Domain.Shipping
 {
     /// <summary>
-    /// Shipment sent event
+    /// 货件发送事件
     /// </summary>
     public class ShipmentSentEvent
     {
@@ -17,7 +17,7 @@ namespace Nop.Core.Domain.Shipping
     }
 
     /// <summary>
-    /// Shipment delivered event
+    /// 装运交付事件
     /// </summary>
     public class ShipmentDeliveredEvent
     {

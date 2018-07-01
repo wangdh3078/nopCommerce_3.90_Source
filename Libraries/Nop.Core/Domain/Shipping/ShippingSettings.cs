@@ -3,6 +3,9 @@ using Nop.Core.Configuration;
 
 namespace Nop.Core.Domain.Shipping
 {
+    /// <summary>
+    /// 送货设置
+    /// </summary>
     public class ShippingSettings : ISettings
     {
         public ShippingSettings()
@@ -12,104 +15,104 @@ namespace Nop.Core.Domain.Shipping
         }
 
         /// <summary>
-        /// Gets or sets system names of active shipping rate computation methods
+        /// 获取或设置活动运费计算方法的系统名称
         /// </summary>
         public List<string> ActiveShippingRateComputationMethodSystemNames { get; set; }
 
         /// <summary>
-        /// Gets or sets system names of active pickup point providers
+        /// 获取或设置活动拾取点提供程序的系统名称
         /// </summary>
         public List<string> ActivePickupPointProviderSystemNames { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating "Ship to the same address" option is enabled
+        /// 获取或设置一个值，指示“发送到相同地址”选项已启用
         /// </summary>
         public bool ShipToSameAddress { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether customers can choose "Pick Up in Store" option during checkout (displayed on the "billing address" checkout step)
+        /// 获取或设置一个值，该值指示客户是否可以在结帐时选择“在店内提货”选项（显示在“帐单地址”结帐步骤中）
         /// </summary>
         public bool AllowPickUpInStore { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether display a pickup points in the map
+        /// 获取或设置一个值，该值指示是否在地图中显示拾取点
         /// </summary>
         public bool DisplayPickupPointsOnMap { get; set; }
 
         /// <summary>
-        /// Gets or sets Google map API key
+        /// 获取或设置Google地图API密钥
         /// </summary>
         public string GoogleMapsApiKey { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets a value indicating whether the system should use warehouse location when requesting shipping rates
-        /// This is useful when you ship from multiple warehouses
+        /// 获取或设置一个值，该值指示系统在请求运费时是否应使用仓库位置
+        ///当您从多个仓库发货时，这非常有用
         /// </summary>
         public bool UseWarehouseLocation { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether customers should be notified when shipping is made from multiple locations (warehouses)
+        /// 获取或设置一个值，该值指示在从多个地点（仓库）进行装运时是否应通知客户
         /// </summary>
         public bool NotifyCustomerAboutShippingFromMultipleLocations { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Free shipping over X' is enabled
+        /// 获取或设置一个值，指示是否启用“X免费送货”
         /// </summary>
         public bool FreeShippingOverXEnabled { get; set; }
 
         /// <summary>
-        /// Gets or sets a value of 'Free shipping over X' option
+        /// 获取或设置“通过X免费送货”选项
         /// </summary>
         public decimal FreeShippingOverXValue { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Free shipping over X' option
-        /// should be evaluated over 'X' value including tax or not
+        /// 获取或设置一个值，该值指示“免费送货超过X”选项
+       /// 应根据“X”值进行评估，包括是否含税
         /// </summary>
         public bool FreeShippingOverXIncludingTax { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether 'Estimate shipping' option is enabled
+        /// 获取或设置一个值，该值指示是否启用“Estimate shipping”选项
         /// </summary>
         public bool EstimateShippingEnabled { get; set; }
 
         /// <summary>
-        /// A value indicating whether customers should see shipment events on their order details pages
+        /// 指示客户是否应在其订单详细信息页面上查看装运事件的值
         /// </summary>
         public bool DisplayShipmentEventsToCustomers { get; set; }
 
         /// <summary>
-        /// A value indicating whether store owner should see shipment events on the shipment details pages
+        ///指示商店所有者是否应在货件详细信息页面上查看装运事件的值
         /// </summary>
         public bool DisplayShipmentEventsToStoreOwner { get; set; }
 
         /// <summary>
-        /// A value indicating whether should hide "Shipping total" label if shipping not required
+        ///指示是否应该隐藏“运送总计”标签的值（如果不需要运送）
         /// </summary>
         public bool HideShippingTotal { get; set; }
 
         /// <summary>
-        /// Gets or sets shipping origin address
+        /// 获取或设置送货起始地址
         /// </summary>
         public int ShippingOriginAddressId { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether we should return valid options if there are any (no matter of the errors returned by other shipping rate compuation methods).
+        /// 获取或设置一个值，指示是否应返回有效选项（无论其他运费计算方法返回的错误）。
         /// </summary>
         public bool ReturnValidOptionsIfThereAreAny { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether we should bypass 'select shipping method' page if we have only one shipping method
+        /// 获取或设置一个值，指示我们是否应该绕过“选择送货方式”页面（如果我们只有一种送货方式）
         /// </summary>
         public bool BypassShippingMethodSelectionIfOnlyOne { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether dimensions are calculated based on cube root of volume
+        /// 获取或设置一个值，该值指示是否根据体积的多维数据集计算维度。
         /// </summary>
         public bool UseCubeRootMethod { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether to consider associated products dimensions and weight on shipping, false if main product includes them
+        ///获取或设置一个值，指示是否考虑关联产品的尺寸和运输重量，如果主要产品包含它们则为false
         /// </summary>
         public bool ConsiderAssociatedProductsDimensions { get; set; }
     }

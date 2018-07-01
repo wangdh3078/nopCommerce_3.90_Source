@@ -7,10 +7,10 @@ namespace Nop.Core.Domain.Stores
     public static class StoreExtensions
     {
         /// <summary>
-        /// Parse comma-separated Hosts
+        /// 解析逗号分隔的主机
         /// </summary>
-        /// <param name="store">Store</param>
-        /// <returns>Comma-separated hosts</returns>
+        /// <param name="store">商店</param>
+        /// <returns>逗号分隔的主机</returns>
         public static string[] ParseHostValues(this Store store)
         {
             if (store == null)
@@ -31,9 +31,9 @@ namespace Nop.Core.Domain.Stores
         }
 
         /// <summary>
-        /// Indicates whether a store contains a specified host
+        /// 指示商店是否包含指定的主机
         /// </summary>
-        /// <param name="store">Store</param>
+        /// <param name="store">商店</param>
         /// <param name="host">Host</param>
         /// <returns>true - contains, false - no</returns>
         public static bool ContainsHostValue(this Store store, string host)

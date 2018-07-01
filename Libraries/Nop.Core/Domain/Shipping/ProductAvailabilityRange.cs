@@ -3,7 +3,7 @@ using Nop.Core.Domain.Localization;
 namespace Nop.Core.Domain.Shipping
 {
     /// <summary>
-    /// Represents a product availability range
+    /// 产品可用性范围
     /// </summary>
     public partial class ProductAvailabilityRange : BaseEntity, ILocalizedEntity
     {

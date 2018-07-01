@@ -3,7 +3,7 @@ using Nop.Core.Domain.Localization;
 namespace Nop.Core.Domain.Shipping
 {
     /// <summary>
-    /// Represents a delivery date 
+    /// 交货日期
     /// </summary>
     public partial class DeliveryDate : BaseEntity, ILocalizedEntity
     {

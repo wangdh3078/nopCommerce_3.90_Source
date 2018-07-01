@@ -2,7 +2,7 @@
 namespace Nop.Core.Domain.Tax
 {
     /// <summary>
-    /// Represents a tax category
+    /// À∞÷÷
     /// </summary>
     public partial class TaxCategory : BaseEntity
     {

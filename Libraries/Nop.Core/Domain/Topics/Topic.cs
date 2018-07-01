@@ -6,7 +6,7 @@ using Nop.Core.Domain.Stores;
 namespace Nop.Core.Domain.Topics
 {
     /// <summary>
-    /// Represents a topic
+    /// 主题
     /// </summary>
     public partial class Topic : BaseEntity, ILocalizedEntity, ISlugSupported, IStoreMappingSupported, IAclSupported
     {
@@ -16,24 +16,24 @@ namespace Nop.Core.Domain.Topics
         public string SystemName { get; set; }
 
         /// <summary>
-        /// Gets or sets the value indicating whether this topic should be included in sitemap
+        /// 获取或设置指示该主题是否应包含在站点地图中的值
         /// </summary>
         public bool IncludeInSitemap { get; set; }
         /// <summary>
-        /// Gets or sets the value indicating whether this topic should be included in top menu
+        /// 获取或设置指示此主题是否应包含在顶层菜单中的值
         /// </summary>
         public bool IncludeInTopMenu { get; set; }
 
         /// <summary>
-        /// Gets or sets the value indicating whether this topic should be included in footer (column 1)
+        /// 获取或设置指示此主题是否应包含在页脚中的值（第1列）
         /// </summary>
         public bool IncludeInFooterColumn1 { get; set; }
         /// <summary>
-        /// Gets or sets the value indicating whether this topic should be included in footer (column 1)
+        /// 获取或设置指示此主题是否应包含在页脚中的值（第1列）
         /// </summary>
         public bool IncludeInFooterColumn2 { get; set; }
         /// <summary>
-        /// Gets or sets the value indicating whether this topic should be included in footer (column 1)
+        /// 获取或设置指示此主题是否应包含在页脚中的值（第1列）
         /// </summary>
         public bool IncludeInFooterColumn3 { get; set; }
 
@@ -43,26 +43,26 @@ namespace Nop.Core.Domain.Topics
         public int DisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or sets the value indicating whether this topic is accessible when a store is closed
+        /// 获取或设置指示在商店关闭时是否可访问此主题的值
         /// </summary>
         public bool AccessibleWhenStoreClosed { get; set; }
 
         /// <summary>
-        /// Gets or sets the value indicating whether this topic is password protected
+        ///获取或设置指示此主题是否受密码保护的值
         /// </summary>
         public bool IsPasswordProtected { get; set; }
         /// <summary>
-        /// Gets or sets the password
+        /// 获取或设置密码
         /// </summary>
         public string Password { get; set; }
 
         /// <summary>
-        /// Gets or sets the title
+        /// 获取或设置标题
         /// </summary>
         public string Title { get; set; }
 
         /// <summary>
-        /// Gets or sets the body
+        /// 获取或设置正文
         /// </summary>
         public string Body { get; set; }
 
@@ -72,32 +72,32 @@ namespace Nop.Core.Domain.Topics
         public bool Published { get; set; }
 
         /// <summary>
-        /// Gets or sets a value of used topic template identifier
+        /// 获取或设置使用的主题模板标识符的值
         /// </summary>
         public int TopicTemplateId { get; set; }
 
         /// <summary>
-        /// Gets or sets the meta keywords
+        /// 获取或设置元关键字
         /// </summary>
         public string MetaKeywords { get; set; }
 
         /// <summary>
-        /// Gets or sets the meta description
+        ///获取或设置元描述
         /// </summary>
         public string MetaDescription { get; set; }
 
         /// <summary>
-        /// Gets or sets the meta title
+        /// 获取或设置元标题
         /// </summary>
         public string MetaTitle { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the entity is subject to ACL
+        /// 获取或设置一个值，该值指示实体是否受ACL限制
         /// </summary>
         public bool SubjectToAcl { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the entity is limited/restricted to certain stores
+        /// 获取或设置一个值，该值指示实体是限制/限制到某些商店
         /// </summary>
         public bool LimitedToStores { get; set; }
     }

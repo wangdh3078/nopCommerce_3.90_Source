@@ -2,32 +2,32 @@
 namespace Nop.Core.Domain.Shipping
 {
     /// <summary>
-    /// Represents a shipment item
+    /// 装运项目
     /// </summary>
     public partial class ShipmentItem : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the shipment identifier
+        ///获取或设置货件标识符
         /// </summary>
         public int ShipmentId { get; set; }
 
         /// <summary>
-        /// Gets or sets the order item identifier
+        /// 获取或设置订单商品标识
         /// </summary>
         public int OrderItemId { get; set; }
 
         /// <summary>
-        /// Gets or sets the quantity
+        ///获取或设置数量
         /// </summary>
         public int Quantity { get; set; }
 
         /// <summary>
-        /// Gets or sets the warehouse identifier
+        /// 获取或设置仓库标识
         /// </summary>
         public int WarehouseId { get; set; }
 
         /// <summary>
-        /// Gets the shipment
+        /// 获取货件
         /// </summary>
         public virtual Shipment Shipment { get; set; }
     }

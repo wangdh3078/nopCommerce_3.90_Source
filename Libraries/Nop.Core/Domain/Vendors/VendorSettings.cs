@@ -3,27 +3,27 @@
 namespace Nop.Core.Domain.Vendors
 {
     /// <summary>
-    /// Vendor settings
+    /// 供应商设置
     /// </summary>
     public class VendorSettings : ISettings
     {
         /// <summary>
-        /// Gets or sets the default value to use for Vendor page size options (for new vendors)
+        /// 获取或设置供应商页面大小选项使用的默认值（适用于新供应商）
         /// </summary>
         public string DefaultVendorPageSizeOptions { get; set; }
 
         /// <summary>
-        /// Gets or sets the value indicating how many vendors to display in vendors block
+        /// 获取或设置指示要在供应商中显示的供应商数量的值
         /// </summary>
         public int VendorsBlockItemsToDisplay { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether to display vendor name on the product details page
+        ///获取或设置一个值，该值指示是否在产品详细信息页面上显示供应商名称
         /// </summary>
         public bool ShowVendorOnProductDetailsPage { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether customers can contact vendors
+        ///获取或设置一个值，指示客户是否可以联系供应商
         /// </summary>
         public bool AllowCustomersToContactVendors { get; set; }
 

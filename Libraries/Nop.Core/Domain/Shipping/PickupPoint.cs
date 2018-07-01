@@ -7,74 +7,79 @@ using System.Xml.Serialization;
 
 namespace Nop.Core.Domain.Shipping
 {
+    /// <summary>
+    /// 接送点
+    /// </summary>
     public partial class PickupPoint
     {
         /// <summary>
-        /// Gets or sets an identifier
+        /// 获取或设置一个标识符
         /// </summary>
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or sets a name
+        /// 获取或设置一个名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets a description
+        /// 获取或设置描述
         /// </summary>
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or sets a system name of the pickup point provider
+        /// 获取或设置拾取点提供程序的系统名称
         /// </summary>
         public string ProviderSystemName { get; set; }
 
         /// <summary>
-        /// Gets or sets an address
+        ///获取或设置地址
         /// </summary>
         public string Address { get; set; }
 
         /// <summary>
-        /// Gets or sets a city
+        ///获取或设置城市
         /// </summary>
         public string City { get; set; }
 
         /// <summary>
-        /// Gets or sets a state abbreviation
+        /// 获取或设置状态缩写
         /// </summary>
         public string StateAbbreviation { get; set; }
 
         /// <summary>
-        /// Gets or sets a two-letter ISO country code
+        ///获取或设置两个字母的ISO国家/地区代码
         /// </summary>
         public string CountryCode { get; set; }
 
         /// <summary>
-        /// Gets or sets a zip postal code
+        /// 获取或设置邮政编码
         /// </summary>
         public string ZipPostalCode { get; set; }
 
         /// <summary>
-        /// Gets or sets a latitude
+        /// 获取或设置纬度
         /// </summary>
         public decimal? Latitude { get; set; }
 
         /// <summary>
-        /// Gets or sets a longitude
+        /// 获取或设置经度
         /// </summary>
         public decimal? Longitude { get; set; }
 
         /// <summary>
-        /// Gets or sets a fee for the pickup
+        ///获取或设置取件费用
         /// </summary>
         public decimal PickupFee { get; set; }
 
         /// <summary>
-        /// Gets or sets an oppening hours
+        /// 获取或设置一个开放时间
         /// </summary>
         public string OpeningHours { get; set; }
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     public class PickupPointTypeConverter : TypeConverter
     {
         public override bool CanConvertFrom(ITypeDescriptorContext context, Type sourceType)

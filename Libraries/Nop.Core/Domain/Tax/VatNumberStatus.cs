@@ -2,24 +2,24 @@
 namespace Nop.Core.Domain.Tax
 {
     /// <summary>
-    /// Represents the VAT number status enumeration
+    ///增值税号状态枚举
     /// </summary>
     public enum VatNumberStatus
     {
         /// <summary>
-        /// Unknown
+        /// 未知
         /// </summary>
         Unknown = 0,
         /// <summary>
-        /// Empty
+        /// 空的
         /// </summary>
         Empty = 10,
         /// <summary>
-        /// Valid
+        /// 有效
         /// </summary>
         Valid = 20,
         /// <summary>
-        /// Invalid
+        /// 无效
         /// </summary>
         Invalid = 30
     }

@@ -1,28 +1,28 @@
 namespace Nop.Core.Domain.Shipping
 {
     /// <summary>
-    /// Represents the shipping status enumeration
+    /// 运输状态枚举
     /// </summary>
     public enum ShippingStatus
     {
         /// <summary>
-        /// Shipping not required
+        /// 不需要运输
         /// </summary>
         ShippingNotRequired = 10,
         /// <summary>
-        /// Not yet shipped
+        /// 还没寄出
         /// </summary>
         NotYetShipped = 20,
         /// <summary>
-        /// Partially shipped
+        /// 部分发货
         /// </summary>
         PartiallyShipped = 25,
         /// <summary>
-        /// Shipped
+        /// 运输中
         /// </summary>
         Shipped = 30,
         /// <summary>
-        /// Delivered
+        /// 交付
         /// </summary>
         Delivered = 40,
     }

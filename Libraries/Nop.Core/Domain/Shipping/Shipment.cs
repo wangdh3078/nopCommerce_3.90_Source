@@ -12,48 +12,48 @@ namespace Nop.Core.Domain.Shipping
         private ICollection<ShipmentItem> _shipmentItems;
 
         /// <summary>
-        /// Gets or sets the order identifier
+        /// 获取或设置订单标识符
         /// </summary>
         public int OrderId { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets the tracking number of this shipment
+        /// 获取或设置此货件的跟踪编号
         /// </summary>
         public string TrackingNumber { get; set; }
 
         /// <summary>
-        /// Gets or sets the total weight of this shipment
-        /// It's nullable for compatibility with the previous version of nopCommerce where was no such property
+        ///获取或设置此货件的总重量
+       /// 它与nopCommerce以前版本的兼容性是可以空的，其中没有这样的属性
         /// </summary>
         public decimal? TotalWeight { get; set; }
 
         /// <summary>
-        /// Gets or sets the shipped date and time
+        /// 获取或设置发货日期和时间
         /// </summary>
         public DateTime? ShippedDateUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the delivery date and time
+        /// 获取或设置交付日期和时间
         /// </summary>
         public DateTime? DeliveryDateUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the admin comment
+        /// 获取或设置管理员评论
         /// </summary>
         public string AdminComment { get; set; }
 
         /// <summary>
-        /// Gets or sets the entity creation date
+        /// 获取或设置实体创建日期
         /// </summary>
         public DateTime CreatedOnUtc { get; set; }
 
         /// <summary>
-        /// Gets the order
+        /// 获取订单
         /// </summary>
         public virtual Order Order { get; set; }
 
         /// <summary>
-        /// Gets or sets the shipment items
+        /// 获取或设置装运项目
         /// </summary>
         public virtual ICollection<ShipmentItem> ShipmentItems
         {

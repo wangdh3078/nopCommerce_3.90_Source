@@ -5,7 +5,7 @@ using Nop.Core.Domain.Localization;
 namespace Nop.Core.Domain.Shipping
 {
     /// <summary>
-    /// Represents a shipping method (used by offline shipping rate computation methods)
+    /// 送货方式（由离线运费计算方法使用）
     /// </summary>
     public partial class ShippingMethod : BaseEntity, ILocalizedEntity
     {
@@ -17,7 +17,7 @@ namespace Nop.Core.Domain.Shipping
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the description
+        /// 获取或设置描述
         /// </summary>
         public string Description { get; set; }
 
@@ -27,7 +27,7 @@ namespace Nop.Core.Domain.Shipping
         public int DisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or sets the restricted countries
+        /// 获取或设置受限制的国家/地区
         /// </summary>
         public virtual ICollection<Country> RestrictedCountries
         {

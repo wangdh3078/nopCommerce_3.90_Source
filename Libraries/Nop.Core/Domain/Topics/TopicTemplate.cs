@@ -2,17 +2,17 @@
 namespace Nop.Core.Domain.Topics
 {
     /// <summary>
-    /// Represents a topic template
+    ///主题模板
     /// </summary>
     public partial class TopicTemplate : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the template name
+        /// 获取或设置模板名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the view path
+        /// 获取或设置视图路径
         /// </summary>
         public string ViewPath { get; set; }
 

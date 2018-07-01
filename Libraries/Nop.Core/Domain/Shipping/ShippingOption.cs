@@ -9,27 +9,27 @@ using System.Xml.Serialization;
 namespace Nop.Core.Domain.Shipping
 {
     /// <summary>
-    /// Represents a shipping option
+    /// 运送选项
     /// </summary>
     public partial class ShippingOption
     {
         /// <summary>
-        /// Gets or sets the system name of shipping rate computation method
+        /// 获取或设置运费计算方法的系统名称
         /// </summary>
         public string ShippingRateComputationMethodSystemName { get; set; }
 
         /// <summary>
-        /// Gets or sets a shipping rate (without discounts, additional shipping charges, etc)
+        /// 获取或设置运费（不含折扣，额外运费等）
         /// </summary>
         public decimal Rate { get; set; }
 
         /// <summary>
-        /// Gets or sets a shipping option name
+        /// 获取或设置装运选项名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets a shipping option description
+        /// 获取或设置送货选项说明
         /// </summary>
         public string Description { get; set; }
     }

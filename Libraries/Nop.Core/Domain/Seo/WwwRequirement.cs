@@ -1,20 +1,20 @@
 ﻿namespace Nop.Core.Domain.Seo
 {
     /// <summary>
-    /// Represents WWW requirement
+    /// WWW要求
     /// </summary>
     public enum WwwRequirement
     {
         /// <summary>
-        /// Doesn't matter (do nothing)
+        ///无所谓（什么都不做）
         /// </summary>
         NoMatter = 0,
         /// <summary>
-        /// Pages should have WWW prefix
+        ///页面应该有WWW前缀
         /// </summary>
         WithWww = 10,
         /// <summary>
-        /// Pages should not have WWW prefix
+        /// 页面不应该有WWW前缀
         /// </summary>
         WithoutWww = 20,
     }

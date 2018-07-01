@@ -2,20 +2,20 @@
 namespace Nop.Core.Domain.Tax
 {
     /// <summary>
-    /// Represents the tax based on
+    ///基于的税收
     /// </summary>
     public enum TaxBasedOn
     {
         /// <summary>
-        /// Billing address
+        ///帐单地址
         /// </summary>
         BillingAddress = 1,
         /// <summary>
-        /// Shipping address
+        /// 邮寄地址
         /// </summary>
         ShippingAddress = 2,
         /// <summary>
-        /// Default address
+        /// 默认地址
         /// </summary>
         DefaultAddress = 3,
     }
