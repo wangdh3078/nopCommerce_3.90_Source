@@ -2,7 +2,7 @@
 namespace Nop.Core.Events
 {
     /// <summary>
-    /// A container for entities that have been inserted.
+    /// 已插入实体的容器。
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class EntityInserted<T> where T : BaseEntity

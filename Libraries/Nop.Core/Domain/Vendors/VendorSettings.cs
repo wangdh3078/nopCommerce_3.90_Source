@@ -28,32 +28,32 @@ namespace Nop.Core.Domain.Vendors
         public bool AllowCustomersToContactVendors { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether users can fill a form to become a new vendor
+        ///获取或设置一个值，该值指示用户是否可以填写表单以成为新供应商
         /// </summary>
         public bool AllowCustomersToApplyForVendorAccount { get; set; }
 
         /// <summary>
-        /// Gets or sets a value that indicates whether it is possible to carry out advanced search in the store by vendor
+        /// 获取或设置一个值，该值指示供应商是否可以在商店中执行高级搜索
         /// </summary>
         public bool AllowSearchByVendor { get; set; }
 
         /// <summary>
-        /// Get or sets a value indicating whether vendor can edit information about itself (public store)
+        /// 获取或设置一个值，指示供应商是否可以编辑有关其自身的信息（公共存储）
         /// </summary>
         public bool AllowVendorsToEditInfo { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the store owner is notified that the vendor information has been changed
+        /// 获取或设置一个值，该值指示是否向商店所有者通知供应商信息已更改
         /// </summary>
         public bool NotifyStoreOwnerAboutVendorInformationChange { get; set; }
 
         /// <summary>
-        /// Gets or sets a maximum number of products per vendor
+        /// 获取或设置每个供应商的最大产品数
         /// </summary>
         public int MaximumProductNumber { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether vendors are allowed to import products
+        /// 获取或设置一个值，该值指示是否允许供应商导入产品
         /// </summary>
         public bool AllowVendorsToImportProducts { get; set; }
     }
