@@ -9,7 +9,7 @@ using Nop.Core.Data;
 namespace Nop.Data
 {
     /// <summary>
-    /// Entity Framework repository
+    /// EF仓储
     /// </summary>
     public partial class EfRepository<T> : IRepository<T> where T : BaseEntity
     {
@@ -23,9 +23,9 @@ namespace Nop.Data
         #region Ctor
 
         /// <summary>
-        /// Ctor
+        /// 构造函数
         /// </summary>
-        /// <param name="context">Object context</param>
+        /// <param name="context">对象上下文</param>
         public EfRepository(IDbContext context)
         {
             this._context = context;
@@ -36,10 +36,10 @@ namespace Nop.Data
         #region Utilities
 
         /// <summary>
-        /// Get full error
+        /// 获取完整错误
         /// </summary>
-        /// <param name="exc">Exception</param>
-        /// <returns>Error</returns>
+        /// <param name="exc">异常</param>
+        /// <returns>错误信息</returns>
         protected string GetFullErrorText(DbEntityValidationException exc)
         {
             var msg = string.Empty;

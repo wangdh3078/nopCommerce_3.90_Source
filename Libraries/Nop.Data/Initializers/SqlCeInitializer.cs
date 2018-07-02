@@ -5,14 +5,22 @@ using System.IO;
 
 namespace Nop.Data.Initializers
 {
+    /// <summary>
+    /// SqlCe初始化
+    /// </summary>
+    /// <typeparam name="T">类型</typeparam>
     public abstract class SqlCeInitializer<T> : IDatabaseInitializer<T> where T : DbContext
     {
+        /// <summary>
+        /// 初始化数据库
+        /// </summary>
+        /// <param name="context"></param>
         public abstract void InitializeDatabase(T context);
 
         #region Helpers
 
         /// <summary>
-        /// Returns a new DbContext with the same SqlCe connection string, but with the |DataDirectory| expanded
+        /// 使用相同的SqlCe连接字符串返回一个新的DbContext，但使用| DataDirectory |扩大
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>

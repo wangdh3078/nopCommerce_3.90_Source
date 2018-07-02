@@ -2,6 +2,9 @@ using Nop.Core.Domain.Affiliates;
 
 namespace Nop.Data.Mapping.Affiliates
 {
+    /// <summary>
+    /// ∏Ω Ù–≈œ¢”≥…‰
+    /// </summary>
     public partial class AffiliateMap : NopEntityTypeConfiguration<Affiliate>
     {
         public AffiliateMap()

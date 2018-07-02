@@ -7,22 +7,24 @@ using System.Reflection;
 
 namespace Nop.Data
 {
+    /// <summary>
+    /// DataReader扩展
+    /// </summary>
     public static class DataReaderExtensions
     {
         /// <summary>
-        /// Creates a list of a given type from all the rows in a DataReader.
+        /// 从DataReader中的所有行创建给定类型的列表。
         /// 
-        /// Note this method uses Reflection so this isn't a high performance
-        /// operation, but it can be useful for generic data reader to entity
-        /// conversions on the fly and with anonymous types.
+        /// 请注意，此方法使用反射，因此这不是一个高性能操作，
+        /// 但它对通用数据读取器实时转换和使用匿名类型非常有用。
         /// </summary>
-        /// <typeparam name="TType"></typeparam>
-        /// <param name="reader">An open DataReader that's in position to read</param>
-        /// <param name="fieldsToSkip">Optional - comma delimited list of fields that you don't want to update</param>
+        /// <typeparam name="TType">类型</typeparam>
+        /// <param name="reader">一个可读取的开放式DataReader</param>
+        /// <param name="fieldsToSkip">可选 - 您不想更新的字段的逗号分隔列表</param>
         /// <param name="piList">
-        /// Optional - Cached PropertyInfo dictionary that holds property info data for this object.
-        /// Can be used for caching hte PropertyInfo structure for multiple operations to speed up
-        /// translation. If not passed automatically created.
+        /// 可选 - 缓存的PropertyInfo字典，用于保存此对象的属性信息数据。
+        ///可用于缓存hte PropertyInfo结构，用于多个操作以加快翻译速度。 
+        ///如果不通过自动创建。
         /// </param>
         /// <returns></returns>
         public static List<TType> DataReaderToObjectList<TType>(this IDataReader reader, string fieldsToSkip = null, Dictionary<string, PropertyInfo> piList = null)
@@ -53,21 +55,18 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Populates the properties of an object from a single DataReader row using
-        /// Reflection by matching the DataReader fields to a public property on
-        /// the object passed in. Unmatched properties are left unchanged.
+        /// 通过将DataReader字段与传入的对象上的公共属性匹配，
+        /// 使用反射从单个DataReader行填充对象的属性。不匹配的属性保持不变。
         /// 
-        /// You need to pass in a data reader located on the active row you want
-        /// to serialize.
+        /// 您需要传入位于要序列化的活动行上的数据读取器。
         /// 
-        /// This routine works best for matching pure data entities and should
-        /// be used only in low volume environments where retrieval speed is not
-        /// critical due to its use of Reflection.
+        /// 此例程最适合用于匹配纯数据实体，
+        /// 并且应仅用于由于其使用反射而在检索速度不重要的低量环境中。
         /// </summary>
-        /// <param name="reader">Instance of the DataReader to read data from. Should be located on the correct record (Read() should have been called on it before calling this method)</param>
-        /// <param name="instance">Instance of the object to populate properties on</param>
-        /// <param name="fieldsToSkip">Optional - A comma delimited list of object properties that should not be updated</param>
-        /// <param name="piList">Optional - Cached PropertyInfo dictionary that holds property info data for this object</param>
+        /// <param name="reader">DataReader的实例，用于从中读取数据。 应该位于正确的记录上（在调用此方法之前应调用Read（））</param>
+        /// <param name="instance">要在其上填充属性的对象的实例</param>
+        /// <param name="fieldsToSkip">可选 - 不应更新的以逗号分隔的对象属性列表</param>
+        /// <param name="piList">可选 - 缓存的PropertyInfo字典，用于保存此对象的属性信息数据</param>
         public static void DataReaderToObject(this IDataReader reader, object instance, string fieldsToSkip = null, Dictionary<string, PropertyInfo> piList = null)
         {
             if (reader.IsClosed)

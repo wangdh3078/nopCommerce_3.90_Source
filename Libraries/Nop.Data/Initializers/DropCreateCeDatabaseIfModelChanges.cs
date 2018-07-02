@@ -6,20 +6,16 @@ namespace Nop.Data.Initializers
 {
 
     /// <summary>
-    /// An implementation of IDatabaseInitializer that will <b>DELETE</b>, recreate, and optionally re-seed the
-    /// database only if the model has changed since the database was created.  This is achieved by writing a
-    /// hash of the store model to the database when it is created and then comparing that hash with one
-    /// generated from the current model.
-    /// To seed the database, create a derived class and override the Seed method.
+    /// 数据库更改就重新创建数据库
     /// </summary>
     public class DropCreateCeDatabaseIfModelChanges<TContext> : SqlCeInitializer<TContext> where TContext : DbContext
     {
         #region Strategy implementation
 
         /// <summary>
-        /// Executes the strategy to initialize the database for the given context.
+        /// 初始化数据库
         /// </summary>
-        /// <param name="context">The context.</param>
+        /// <param name="context">上下文</param>
         public override void InitializeDatabase(TContext context)
         {
             if (context == null)
@@ -57,10 +53,9 @@ namespace Nop.Data.Initializers
         #region Seeding methods
 
         /// <summary>
-        /// A that should be overridden to actually add data to the context for seeding. 
-        /// The default implementation does nothing.
+        ///种子填充
         /// </summary>
-        /// <param name="context">The context to seed.</param>
+        /// <param name="context">种子的上下文。</param>
         protected virtual void Seed(TContext context)
         {
         }

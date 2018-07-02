@@ -4,19 +4,19 @@ using System.Data.Entity;
 namespace Nop.Data.Initializers
 {
     /// <summary>
-    /// An implementation of IDatabaseInitializer that will always recreate and optionally re-seed the
-    /// database the first time that a context is used in the app domain.
-    /// To seed the database, create a derived class and override the Seed method.
+    /// 始终重新创建数据库
+    /// IDatabaseInitializer的实现将始终在应用程序域中首次使用上下文时重新创建数据库并重新种子数据库。
+    /// 要为数据库创建种子，请创建派生类并重写Seed方法。
     /// </summary>
-    /// <typeparam name="TContext">The type of the context.</typeparam>
+    /// <typeparam name="TContext">上下文的类型。</typeparam>
     public class DropCreateCeDatabaseAlways<TContext> : SqlCeInitializer<TContext> where TContext : DbContext
     {
         #region Strategy implementation
 
         /// <summary>
-        /// Executes the strategy to initialize the database for the given context.
+        /// 初始化数据库
         /// </summary>
-        /// <param name="context">The context.</param>
+        /// <param name="context">上下文</param>
         public override void InitializeDatabase(TContext context)
         {
             if (context == null)
@@ -39,10 +39,9 @@ namespace Nop.Data.Initializers
         #region Seeding methods
 
         /// <summary>
-        /// A that should be overridden to actually add data to the context for seeding. 
-        /// The default implementation does nothing.
+        /// 填充种子
         /// </summary>
-        /// <param name="context">The context to seed.</param>
+        /// <param name="context">种子的上下文。</param>
         protected virtual void Seed(TContext context)
         {
         }

@@ -4,12 +4,23 @@ using Nop.Core.Data;
 
 namespace Nop.Data
 {
+    /// <summary>
+    /// EF数据驱动管理
+    /// </summary>
     public partial class EfDataProviderManager : BaseDataProviderManager
     {
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="settings"></param>
         public EfDataProviderManager(DataSettings settings):base(settings)
         {
         }
 
+        /// <summary>
+        /// 加载数据驱动
+        /// </summary>
+        /// <returns></returns>
         public override IDataProvider LoadDataProvider()
         {
 

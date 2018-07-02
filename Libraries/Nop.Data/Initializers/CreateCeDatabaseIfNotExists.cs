@@ -5,11 +5,10 @@ using System.Transactions;
 namespace Nop.Data.Initializers
 {
     /// <summary>
-    /// An implementation of IDatabaseInitializer that will recreate and optionally re-seed the
-    /// database only if the database does not exist.
-    /// To seed the database, create a derived class and override the Seed method.
+    /// IDatabaseInitializer的实现，只有在数据库不存在的情况下，才会重新创建数据库，并可选择重新生成数据库。
+    /// 要为数据库创建种子，请创建派生类并重写Seed方法。
     /// </summary>
-    /// <typeparam name="TContext">The type of the context.</typeparam>
+    /// <typeparam name="TContext">上下文的类型。</typeparam>
     public class CreateCeDatabaseIfNotExists<TContext> : SqlCeInitializer<TContext> where TContext : DbContext
     {
         #region Strategy implementation
@@ -51,10 +50,10 @@ namespace Nop.Data.Initializers
         #region Seeding methods
 
         /// <summary>
-        /// A that should be overridden to actually add data to the context for seeding. 
-        /// The default implementation does nothing.
+        /// 一个应该被重写的实际上将数据添加到上下文以进行种子播种。
+        /// 默认实现什么都不做。
         /// </summary>
-        /// <param name="context">The context to seed.</param>
+        /// <param name="context">种子的上下文。</param>
         protected virtual void Seed(TContext context)
         {
         }

@@ -7,21 +7,29 @@ using System.Transactions;
 
 namespace Nop.Data.Initializers
 {
+    /// <summary>
+    /// 数据库不存在，创建数据库
+    /// </summary>
+    /// <typeparam name="TContext"></typeparam>
     public class CreateTablesIfNotExist<TContext> : IDatabaseInitializer<TContext> where TContext : DbContext
     {
         private readonly string[] _tablesToValidate;
         private readonly string[] _customCommands;
 
         /// <summary>
-        /// Ctor
+        /// 构造函数
         /// </summary>
-        /// <param name="tablesToValidate">A list of existing table names to validate; null to don't validate table names</param>
-        /// <param name="customCommands">A list of custom commands to execute</param>
+        /// <param name="tablesToValidate">要验证的现有表名称的列表; null不验证表名</param>
+        /// <param name="customCommands">A要执行的自定义命令列表</param>
         public CreateTablesIfNotExist(string[] tablesToValidate, string [] customCommands)
         {
             this._tablesToValidate = tablesToValidate;
             this._customCommands = customCommands;
         }
+        /// <summary>
+        /// 初始化数据库
+        /// </summary>
+        /// <param name="context"></param>
         public void InitializeDatabase(TContext context)
         {
             bool dbExists;

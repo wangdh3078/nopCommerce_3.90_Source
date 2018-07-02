@@ -38,11 +38,11 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Gets the entity or return null.
+        ///获取实体或返回null。
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="currentCopy">The current copy.</param>
-        /// <param name="dbContext">The db context.</param>
+        /// <typeparam name="T">类型</typeparam>
+        /// <param name="currentCopy">目前的副本。</param>
+        /// <param name="dbContext">数据库上下文。</param>
         /// <returns></returns>
         private static DbEntityEntry<T> GetEntityOrReturnNull<T>(T currentCopy, DbContext dbContext) where T : BaseEntity
         {
@@ -66,11 +66,11 @@ namespace Nop.Data
         #region Methods
 
         /// <summary>
-        /// Loads the original copy.
+        /// 载入原始副本。
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="context">The context.</param>
-        /// <param name="currentCopy">The current copy.</param>
+        /// <param name="context">上下文。</param>
+        /// <param name="currentCopy">目前的副本。</param>
         /// <returns></returns>
         public static T LoadOriginalCopy<T>(this IDbContext context, T currentCopy) where T : BaseEntity
         {
@@ -78,11 +78,11 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Loads the database copy.
+        /// 加载数据库副本。
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="context">The context.</param>
-        /// <param name="currentCopy">The current copy.</param>
+        /// <param name="context">上下文</param>
+        /// <param name="currentCopy">目前的副本</param>
         /// <returns></returns>
         public static T LoadDatabaseCopy<T>(this IDbContext context, T currentCopy) where T : BaseEntity
         {
@@ -90,10 +90,10 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Drop a plugin table
+        /// 删除一个插件表
         /// </summary>
-        /// <param name="context">Context</param>
-        /// <param name="tableName">Table name</param>
+        /// <param name="context">上下文</param>
+        /// <param name="tableName">表名</param>
         public static void DropPluginTable(this DbContext context, string tableName)
         {
             if (context == null)
@@ -112,11 +112,11 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Get table name of entity
+        /// 获取实体的表名
         /// </summary>
-        /// <typeparam name="T">Entity type</typeparam>
-        /// <param name="context">Context</param>
-        /// <returns>Table name</returns>
+        /// <typeparam name="T">实体类型</typeparam>
+        /// <param name="context">上下文</param>
+        /// <returns>表名</returns>
         public static string GetTableName<T>(this IDbContext context) where T : BaseEntity
         {
             //var tableName = typeof(T).Name;
@@ -137,12 +137,12 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Get column maximum length
+        /// 获取列的最大长度
         /// </summary>
-        /// <param name="context">Context</param>
-        /// <param name="entityTypeName">Entity type name</param>
-        /// <param name="columnName">Column name</param>
-        /// <returns>Maximum length. Null if such rule does not exist</returns>
+        /// <param name="context">上下文</param>
+        /// <param name="entityTypeName">实体类型名称</param>
+        /// <param name="columnName">列名</param>
+        /// <returns>最大长度。 如果这样的规则不存在，则为空</returns>
         public static int? GetColumnMaxLength(this IDbContext context, string entityTypeName, string columnName)
         {
             var rez = GetColumnsMaxLength(context, entityTypeName, columnName);
@@ -150,11 +150,11 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Get columns maximum length
+        /// 获取列的最大长度
         /// </summary>
-        /// <param name="context">Context</param>
-        /// <param name="entityTypeName">Entity type name</param>
-        /// <param name="columnNames">Column names</param>
+        /// <param name="context">上下文</param>
+        /// <param name="entityTypeName">实体类型名称</param>
+        /// <param name="columnNames">列名称</param>
         /// <returns></returns>
         public static IDictionary<string, int> GetColumnsMaxLength(this IDbContext context, string entityTypeName, params string[] columnNames)
         {
@@ -172,11 +172,11 @@ namespace Nop.Data
 
 
         /// <summary>
-        /// Get maximum decimal values
+        /// 获取最大十进制值
         /// </summary>
-        /// <param name="context">Context</param>
-        /// <param name="entityTypeName">Entity type name</param>
-        /// <param name="columnNames">Column names</param>
+        /// <param name="context">上下文</param>
+        /// <param name="entityTypeName">实体类型名称</param>
+        /// <param name="columnNames">列名称</param>
         /// <returns></returns>
         public static IDictionary<string, decimal> GetDecimalMaxValue(this IDbContext context, string entityTypeName, params string[] columnNames)
         {
@@ -213,7 +213,11 @@ namespace Nop.Data
 
             return queryResult;
         }
-
+        /// <summary>
+        /// 数据库名称
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public static string DbName(this IDbContext context)
         {
             var connection = ((IObjectContextAdapter)context).ObjectContext.Connection as EntityConnection;
