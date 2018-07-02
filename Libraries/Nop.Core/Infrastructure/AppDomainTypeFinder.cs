@@ -8,54 +8,81 @@ using System.Text.RegularExpressions;
 namespace Nop.Core.Infrastructure
 {
     /// <summary>
-    /// A class that finds types needed by Nop by looping assemblies in the 
-    /// currently executing AppDomain. Only assemblies whose names matches
-    /// certain patterns are investigated and an optional list of assemblies
-    /// referenced by <see cref="AssemblyNames"/> are always investigated.
+    /// 通过循环当前正在执行的AppDomain中的程序集来查找Nop所需的类型的类。 
+    /// 只调查名称与特定模式匹配的程序集，
+    /// 并始终调查由<see cref ="AssemblyNames"/>引用的可选组件列表。
     /// </summary>
     public class AppDomainTypeFinder : ITypeFinder
     {
-        #region Fields
-
+        #region 字段
+        /// <summary>
+        /// 忽略反射错误
+        /// </summary>
         private bool ignoreReflectionErrors = true;
+        /// <summary>
+        /// 加载AppDomain程序集
+        /// </summary>
         private bool loadAppDomainAssemblies = true;
+        /// <summary>
+        /// 程序集跳过加载模式
+        /// </summary>
         private string assemblySkipLoadingPattern = "^System|^mscorlib|^Microsoft|^AjaxControlToolkit|^Antlr3|^Autofac|^AutoMapper|^Castle|^ComponentArt|^CppCodeProvider|^DotNetOpenAuth|^EntityFramework|^EPPlus|^FluentValidation|^ImageResizer|^itextsharp|^log4net|^MaxMind|^MbUnit|^MiniProfiler|^Mono.Math|^MvcContrib|^Newtonsoft|^NHibernate|^nunit|^Org.Mentalis|^PerlRegex|^QuickGraph|^Recaptcha|^Remotion|^RestSharp|^Rhino|^Telerik|^Iesi|^TestDriven|^TestFu|^UserAgentStringLibrary|^VJSharpCodeProvider|^WebActivator|^WebDev|^WebGrease";
+        /// <summary>
+        /// 程序及限制加载模式
+        /// </summary>
         private string assemblyRestrictToLoadingPattern = ".*";
+        /// <summary>
+        /// 程序集名称集合
+        /// </summary>
         private IList<string> assemblyNames = new List<string>();
 
         #endregion
 
-        #region Properties
+        #region 属性
 
-        /// <summary>The app domain to look for types in.</summary>
+        /// <summary>
+        /// 要在其中查找类型的应用程序域
+        /// </summary>
         public virtual AppDomain App
         {
             get { return AppDomain.CurrentDomain; }
         }
 
-        /// <summary>Gets or sets whether Nop should iterate assemblies in the app domain when loading Nop types. Loading patterns are applied when loading these assemblies.</summary>
+        /// <summary>
+        /// 获取或设置Nop是否应在加载Nop类型时迭代应用程序域中的程序集。 加载这些组件时会应用加载模式。
+        /// </summary>
         public bool LoadAppDomainAssemblies
         {
             get { return loadAppDomainAssemblies; }
             set { loadAppDomainAssemblies = value; }
         }
 
-        /// <summary>Gets or sets assemblies loaded a startup in addition to those loaded in the AppDomain.</summary>
+        /// <summary>
+        /// 获取或设置程序集加载的启动程序以及在AppDomain中加载的程序集。
+        /// </summary>
         public IList<string> AssemblyNames
         {
             get { return assemblyNames; }
             set { assemblyNames = value; }
         }
 
-        /// <summary>Gets the pattern for dlls that we know don't need to be investigated.</summary>
+        /// <summary>
+        /// 获取我们知道不需要调查的dll的模式。
+        /// </summary>
         public string AssemblySkipLoadingPattern
         {
             get { return assemblySkipLoadingPattern; }
             set { assemblySkipLoadingPattern = value; }
         }
 
-        /// <summary>Gets or sets the pattern for dll that will be investigated. For ease of use this defaults to match all but to increase performance you might want to configure a pattern that includes assemblies and your own.</summary>
-        /// <remarks>If you change this so that Nop assemblies arn't investigated (e.g. by not including something like "^Nop|..." you may break core functionality.</remarks>
+        /// <summary>
+        /// 获取或设置将要调查的dll模式。 为了便于使用，默认情况下，所有默认值都匹配，
+        /// 但为了提高性能，您可能需要配置包含程序集和您自己的程序集的模式。
+        /// </summary>
+        /// <remarks>
+        /// 如果你改变这个以便Nop程序集未被调查
+        /// （例如，通过不包括“^ Nop | ...”之类的东西，你可能会破坏核心功能。
+        /// </remarks>
         public string AssemblyRestrictToLoadingPattern
         {
             get { return assemblyRestrictToLoadingPattern; }
@@ -64,23 +91,45 @@ namespace Nop.Core.Infrastructure
 
         #endregion
 
-        #region Methods
-
+        #region 方法
+        /// <summary>
+        /// 查找类型类别
+        /// </summary>
+        /// <typeparam name="T">查找类型</typeparam>
+        /// <param name="onlyConcreteClasses">只有具体的类</param>
+        /// <returns></returns>
         public IEnumerable<Type> FindClassesOfType<T>(bool onlyConcreteClasses = true)
         {
             return FindClassesOfType(typeof(T), onlyConcreteClasses);
         }
-
+        /// <summary>
+        /// 查找类型类别
+        /// </summary>
+        /// <param name="assignTypeFrom">查找类型</param>
+        /// <param name="onlyConcreteClasses">只有具体的类</param>
+        /// <returns></returns>
         public IEnumerable<Type> FindClassesOfType(Type assignTypeFrom, bool onlyConcreteClasses = true)
         {
             return FindClassesOfType(assignTypeFrom, GetAssemblies(), onlyConcreteClasses);
         }
-
+        /// <summary>
+        /// 查找类型类别
+        /// </summary>
+        /// <typeparam name="T">查找类型</typeparam>
+        /// <param name="assemblies">程序集</param>
+        /// <param name="onlyConcreteClasses">只有具体的类</param>
+        /// <returns></returns>
         public IEnumerable<Type> FindClassesOfType<T>(IEnumerable<Assembly> assemblies, bool onlyConcreteClasses = true)
         {
             return FindClassesOfType(typeof (T), assemblies, onlyConcreteClasses);
         }
-
+        /// <summary>
+        /// 查找类型类别
+        /// </summary>
+        /// <param name="assignTypeFrom">查找类型</param>
+        /// <param name="assemblies">程序集</param>
+        /// <param name="onlyConcreteClasses">只有具体的类</param>
+        /// <returns></returns>
         public IEnumerable<Type> FindClassesOfType(Type assignTypeFrom, IEnumerable<Assembly> assemblies, bool onlyConcreteClasses = true)
         {
             var result = new List<Type>();
@@ -140,8 +189,12 @@ namespace Nop.Core.Infrastructure
             return result;
         }
 
-        /// <summary>Gets the assemblies related to the current implementation.</summary>
-        /// <returns>A list of assemblies that should be loaded by the Nop factory.</returns>
+        /// <summary>
+        /// 获取与当前实现相关的程序集。
+        /// </summary>
+        /// <returns>
+        /// 应该由Nop工厂加载的程序集列表。
+        /// </returns>
         public virtual IList<Assembly> GetAssemblies()
         {
             var addedAssemblyNames = new List<string>();
@@ -159,10 +212,10 @@ namespace Nop.Core.Infrastructure
         #region Utilities
 
         /// <summary>
-        /// Iterates all assemblies in the AppDomain and if it's name matches the configured patterns add it to our list.
+        /// 迭代AppDomain中的所有程序集，如果它的名称与配置的模式相匹配，则将其添加到我们的列表中。
         /// </summary>
-        /// <param name="addedAssemblyNames"></param>
-        /// <param name="assemblies"></param>
+        /// <param name="addedAssemblyNames">已添加的程序集名称</param>
+        /// <param name="assemblies">程序集</param>
         private void AddAssembliesInAppDomain(List<string> addedAssemblyNames, List<Assembly> assemblies)
         {
             foreach (Assembly assembly in AppDomain.CurrentDomain.GetAssemblies())
@@ -179,10 +232,10 @@ namespace Nop.Core.Infrastructure
         }
 
         /// <summary>
-        /// Adds specifically configured assemblies.
+        /// 添加专门配置的程序集。
         /// </summary>
-        /// <param name="addedAssemblyNames"></param>
-        /// <param name="assemblies"></param>
+        /// <param name="addedAssemblyNames">程序集名称</param>
+        /// <param name="assemblies">程序集</param>
         protected virtual void AddConfiguredAssemblies(List<string> addedAssemblyNames, List<Assembly> assemblies)
         {
             foreach (string assemblyName in AssemblyNames)
@@ -197,13 +250,13 @@ namespace Nop.Core.Infrastructure
         }
 
         /// <summary>
-        /// Check if a dll is one of the shipped dlls that we know don't need to be investigated.
+        /// 检查DLL是否是不需要调查的DLL之一。
         /// </summary>
         /// <param name="assemblyFullName">
-        /// The name of the assembly to check.
+        /// 要检查的程序集的名称。
         /// </param>
         /// <returns>
-        /// True if the assembly should be loaded into Nop.
+        /// 如果应该将程序集加载到Nop中，则为true。
         /// </returns>
         public virtual bool Matches(string assemblyFullName)
         {
@@ -212,16 +265,16 @@ namespace Nop.Core.Infrastructure
         }
 
         /// <summary>
-        /// Check if a dll is one of the shipped dlls that we know don't need to be investigated.
+        /// 检查DLL是否是不需要调查的DLL之一。
         /// </summary>
         /// <param name="assemblyFullName">
-        /// The assembly name to match.
+        /// 要匹配的程序集名称。
         /// </param>
         /// <param name="pattern">
-        /// The regular expression pattern to match against the assembly name.
+        /// 要与程序集名称匹配的正则表达式模式。
         /// </param>
         /// <returns>
-        /// True if the pattern matches the assembly name.
+        /// 如果模式与程序集名称匹配，则为真。
         /// </returns>
         protected virtual bool Matches(string assemblyFullName, string pattern)
         {
@@ -229,10 +282,10 @@ namespace Nop.Core.Infrastructure
         }
 
         /// <summary>
-        /// Makes sure matching assemblies in the supplied folder are loaded in the app domain.
+        ///确保提供的文件夹中的匹配程序集已加载到应用程序域中。
         /// </summary>
         /// <param name="directoryPath">
-        /// The physical path to a directory containing dlls to load in the app domain.
+        /// 包含dll以加载到应用程序域中的目录的物理路径。
         /// </param>
         protected virtual void LoadMatchingAssemblies(string directoryPath)
         {
@@ -272,7 +325,7 @@ namespace Nop.Core.Infrastructure
         }
 
         /// <summary>
-        /// Does type implement generic?
+        /// 类型实现是否通用？
         /// </summary>
         /// <param name="type"></param>
         /// <param name="openGeneric"></param>

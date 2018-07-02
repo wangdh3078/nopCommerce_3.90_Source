@@ -7,37 +7,43 @@ using System.Web.Hosting;
 namespace Nop.Core.Infrastructure
 {
     /// <summary>
-    /// Provides information about types in the current web application. 
-    /// Optionally this class can look at all assemblies in the bin folder.
+    /// 提供有关当前Web应用程序中的类型的信息。
+    ///或者，该类可以查看bin文件夹中的所有程序集。
     /// </summary>
     public class WebAppTypeFinder : AppDomainTypeFinder
     {
-        #region Fields
-
+        #region 字段
+        /// <summary>
+        /// 确保加载Bin文件夹程序集
+        /// </summary>
         private bool _ensureBinFolderAssembliesLoaded = true;
+        /// <summary>
+        /// bin文件夹程序集已加载
+        /// </summary>
         private bool _binFolderAssembliesLoaded;
 
         #endregion
 
-        #region Properties
+        #region 属性
 
         /// <summary>
-        /// Gets or sets whether assemblies in the bin folder of the web application should be specifically checked for being loaded on application load. This is need in situations where plugins need to be loaded in the AppDomain after the application been reloaded.
+        /// 获取或设置是否应特别检查Web应用程序的bin文件夹中的程序集是否在应用程序加载时加载。 
+        /// 在重新加载应用程序后需要在AppDomain中加载插件的情况下需要这样做。
         /// </summary>
         public bool EnsureBinFolderAssembliesLoaded
         {
             get { return _ensureBinFolderAssembliesLoaded; }
             set { _ensureBinFolderAssembliesLoaded = value; }
         }
-        
+
         #endregion
 
-        #region Methods
+        #region 方法
 
         /// <summary>
-        /// Gets a physical disk path of \Bin directory
+        ///获取\Bin目录的物理磁盘路径
         /// </summary>
-        /// <returns>The physical path. E.g. "c:\inetpub\wwwroot\bin"</returns>
+        /// <returns>物理路径。 例如。“C\的Inetpub\wwwroot的\BIN”</returns>
         public virtual string GetBinDirectory()
         {
             if (HostingEnvironment.IsHosted)

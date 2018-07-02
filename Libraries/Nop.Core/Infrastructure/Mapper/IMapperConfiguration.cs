@@ -4,18 +4,18 @@ using AutoMapper;
 namespace Nop.Core.Infrastructure.Mapper
 {
     /// <summary>
-    /// Mapper configuration registrar interface
+    /// Mapper配置注册器接口
     /// </summary>
     public interface IMapperConfiguration
     {
         /// <summary>
-        /// Get configuration
+        /// 获取配置
         /// </summary>
-        /// <returns>Mapper configuration action</returns>
+        /// <returns>映射器配置操作</returns>
         Action<IMapperConfigurationExpression> GetConfiguration();
 
         /// <summary>
-        /// Order of this mapper implementation
+        /// 映射器实现的顺序
         /// </summary>
         int Order { get; }
     }

@@ -6,6 +6,9 @@ using Nop.Core.Infrastructure;
 
 namespace Nop.Core.Plugins
 {
+    /// <summary>
+    /// 插件描述
+    /// </summary>
     public class PluginDescriptor : IComparable<PluginDescriptor>
     {
         public PluginDescriptor()
@@ -25,57 +28,57 @@ namespace Nop.Core.Plugins
             this.PluginType = pluginType;
         }
         /// <summary>
-        /// Plugin type
+        /// 插件文件名
         /// </summary>
         public virtual string PluginFileName { get; set; }
 
         /// <summary>
-        /// Plugin type
+        /// 插件类型
         /// </summary>
         public virtual Type PluginType { get; set; }
 
         /// <summary>
-        /// The assembly that has been shadow copied that is active in the application
+        /// 已在应用程序中处于活动状态的已被复制的程序集
         /// </summary>
         public virtual Assembly ReferencedAssembly { get; internal set; }
 
         /// <summary>
-        /// The original assembly file that a shadow copy was made from it
+        /// 原始程序集文件是由它制作的副本
         /// </summary>
         public virtual FileInfo OriginalAssemblyFile { get; internal set; }
 
         /// <summary>
-        /// Gets or sets the plugin group
+        /// 获取或设置插件组
         /// </summary>
         public virtual string Group { get; set; }
 
         /// <summary>
-        /// Gets or sets the friendly name
+        /// 获取或设置友好名称
         /// </summary>
         public virtual string FriendlyName { get; set; }
 
         /// <summary>
-        /// Gets or sets the system name
+        /// 获取或设置系统名称
         /// </summary>
         public virtual string SystemName { get; set; }
 
         /// <summary>
-        /// Gets or sets the version
+        /// 获取或设置版本
         /// </summary>
         public virtual string Version { get; set; }
 
         /// <summary>
-        /// Gets or sets the supported versions of nopCommerce
+        /// 获取或设置受支持的nopCommerce版本
         /// </summary>
         public virtual IList<string> SupportedVersions { get; set; }
 
         /// <summary>
-        /// Gets or sets the author
+        ///获取或设置作者
         /// </summary>
         public virtual string Author { get; set; }
 
         /// <summary>
-        /// Gets or sets the description
+        /// 获取或设置描
         /// </summary>
         public virtual string Description { get; set; }
 
@@ -85,17 +88,17 @@ namespace Nop.Core.Plugins
         public virtual int DisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or sets the list of store identifiers in which this plugin is available. If empty, then this plugin is available in all stores
+        /// 获取或设置此插件可用的商店标识符列表。 如果是空的，那么这个插件在所有商店都可用
         /// </summary>
         public virtual IList<int> LimitedToStores { get; set; }
 
         /// <summary>
-        /// Gets or sets the list of customer role identifiers for which this plugin is available. If empty, then this plugin is available for all ones.
+        /// 获取或设置此插件可用的客户角色标识符列表。 如果为空，则该插件适用于所有的插件。
         /// </summary>
         public virtual IList<int> LimitedToCustomerRoles { get; set; }
 
         /// <summary>
-        /// Gets or sets the value indicating whether plugin is installed
+        ///获取或设置指示是否安装插件的值
         /// </summary>
         public virtual bool Installed { get; set; }
 

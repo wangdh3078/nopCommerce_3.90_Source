@@ -1,4 +1,4 @@
-#region Copyright © 2001-2003 Jean-Claude Manoli [jc@manoli.net]
+#region Copyright ?2001-2003 Jean-Claude Manoli [jc@manoli.net]
 /*
  * This software is provided 'as-is', without any express or implied warranty.
  * In no event will the author(s) be held liable for any damages arising from
@@ -26,63 +26,57 @@ using System.Text.RegularExpressions;
 
 namespace Nop.Core.Html.CodeFormatter
 {
-	/// <summary>
-	/// Provides a base class for formatting most programming languages.
-	/// </summary>
+    /// <summary>
+    /// Ìá¹©¸ñÊ½»¯´ó¶àÊı±à³ÌÓïÑÔµÄ»ùÀà¡£
+    /// </summary>
     public abstract partial class CodeFormat : SourceFormat
 	{
-		/// <summary>
-		/// Must be overridden to provide a list of keywords defined in 
-		/// each language.
-		/// </summary>
-		/// <remarks>
-		/// Keywords must be separated with spaces.
-		/// </remarks>
-		protected abstract string Keywords 
+        /// <summary>
+        /// ±ØĞë±»¸²¸ÇÒÔÌá¹©Ã¿ÖÖÓïÑÔÖĞ¶¨ÒåµÄ¹Ø¼ü×ÖÁĞ±í¡£
+        /// </summary>
+        /// <remarks>
+        /// ¹Ø¼ü×Ö±ØĞëÓÃ¿Õ¸ñ·Ö¸ô¡£
+        /// </remarks>
+        protected abstract string Keywords 
 		{
 			get;
 		}
 
-		/// <summary>
-		/// Can be overridden to provide a list of preprocessors defined in 
-		/// each language.
-		/// </summary>
-		/// <remarks>
-		/// Preprocessors must be separated with spaces.
-		/// </remarks>
-		protected virtual string Preprocessors
+        /// <summary>
+        /// ¿ÉÒÔÖØĞ´Ìá¹©Ã¿ÖÖÓïÑÔÖĞ¶¨ÒåµÄÔ¤´¦ÀíÆ÷ÁĞ±í¡£
+        /// </summary>
+        /// <remarks>
+        ///Ô¤´¦ÀíÆ÷±ØĞëÓÃ¿Õ¸ñ·Ö¸ô¡£
+        /// </remarks>
+        protected virtual string Preprocessors
 		{
 			get { return ""; }
 		}
 
-		/// <summary>
-		/// Must be overridden to provide a regular expression string
-		/// to match strings literals. 
-		/// </summary>
-		protected abstract string StringRegex
+        /// <summary>
+        ///±ØĞëÖØĞ´ÒÔÌá¹©ÕıÔò±í´ïÊ½×Ö·û´®ÒÔÆ¥Åä×Ö·û´®ÎÄ×Ö¡£
+        /// </summary>
+        protected abstract string StringRegex
 		{
 			get;
 		}
 
-		/// <summary>
-		/// Must be overridden to provide a regular expression string
-		/// to match comments. 
-		/// </summary>
-		protected abstract string CommentRegex
+        /// <summary>
+        ///±ØĞëÖØĞ´ÒÔÌá¹©ÕıÔò±í´ïÊ½×Ö·û´®ÒÔÆ¥Åä×¢ÊÍ¡£
+        /// </summary>
+        protected abstract string CommentRegex
 		{
 			get;
 		}
 
-		/// <summary>
-		/// Determines if the language is case sensitive.
-		/// </summary>
-		/// <value><b>true</b> if the language is case sensitive, <b>false</b> 
-		/// otherwise. The default is true.</value>
-		/// <remarks>
-		/// A case-insensitive language formatter must override this 
-		/// property to return false.
-		/// </remarks>
-		public virtual bool CaseSensitive
+        /// <summary>
+        ///È·¶¨ÓïÑÔÊÇ·ñÇø·Ö´óĞ¡Ğ´¡£
+        /// </summary>
+        /// <value>Èç¹ûÓïÑÔÇø·Ö´óĞ¡Ğ´£¬ÔòÎª<b> true </b>£¬·ñÔòÎª<b> false </b>¡£ Ä¬ÈÏÖµÎªtrue¡£</value>
+        /// <remarks>
+        ///²»Çø·Ö´óĞ¡Ğ´µÄÓïÑÔ¸ñÊ½»¯³ÌĞò±ØĞëÖØĞ´´ËÊôĞÔÒÔ·µ»Øfalse¡£
+        /// </remarks>
+        public virtual bool CaseSensitive
 		{
 			get { return true; }
 		}
@@ -90,8 +84,8 @@ namespace Nop.Core.Html.CodeFormatter
 		/// <summary/>
 		protected CodeFormat()
 		{
-			//generate the keyword and preprocessor regexes from the keyword lists
-			var r = new Regex(@"\w+|-\w+|#\w+|@@\w+|#(?:\\(?:s|w)(?:\*|\+)?\w+)+|@\\w\*+");
+            //´Ó¹Ø¼ü×ÖÁĞ±íÖĞÉú³É¹Ø¼ü×ÖºÍÔ¤´¦ÀíÆ÷ÕıÔò±í´ïÊ½
+            var r = new Regex(@"\w+|-\w+|#\w+|@@\w+|#(?:\\(?:s|w)(?:\*|\+)?\w+)+|@\\w\*+");
 			string regKeyword = r.Replace(Keywords, @"(?<=^|\W)$0(?=\W)");
 			string regPreproc = r.Replace(Preprocessors, @"(?<=^|\s)$0(?=\s|$)");
 			r = new Regex(@" +");
@@ -122,14 +116,12 @@ namespace Nop.Core.Html.CodeFormatter
 			CodeRegex = new Regex(regAll.ToString(), RegexOptions.Singleline | caseInsensitive);
 		}
 
-		/// <summary>
-		/// Called to evaluate the HTML fragment corresponding to each 
-		/// matching token in the code.
-		/// </summary>
-		/// <param name="match">The <see cref="Match"/> resulting from a 
-		/// single regular expression match.</param>
-		/// <returns>A string containing the HTML code fragment.</returns>
-		protected override string MatchEval(Match match)
+        /// <summary>
+        /// ±»µ÷ÓÃÒÔÆÀ¹À´úÂëÖĞÓëÃ¿¸öÆ¥Åä±ê¼Ç¶ÔÓ¦µÄHTMLÆ¬¶Î¡£
+        /// </summary>
+        /// <param name="match">see cref ="Match"/>ÓÉµ¥¸öÕıÔò±í´ïÊ½Æ¥Åä²úÉú¡£</param>
+        /// <returns>°üº¬HTML´úÂëÆ¬¶ÎµÄ×Ö·û´®¡£</returns>
+        protected override string MatchEval(Match match)
 		{
 			if(match.Groups[1].Success) //comment
 			{

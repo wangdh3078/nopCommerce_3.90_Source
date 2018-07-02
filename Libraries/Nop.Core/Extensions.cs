@@ -3,13 +3,27 @@
 
 namespace Nop.Core
 {
+    /// <summary>
+    /// 扩展
+    /// </summary>
     public static class Extensions
     {
+        /// <summary>
+        /// 是null或者默认值
+        /// </summary>
+        /// <typeparam name="T">类型</typeparam>
+        /// <param name="value">值</param>
+        /// <returns></returns>
         public static bool IsNullOrDefault<T>(this T? value) where T : struct
         {
             return default(T).Equals(value.GetValueOrDefault());
         }  
-
+        /// <summary>
+        /// XML节点值
+        /// </summary>
+        /// <param name="node">接点</param>
+        /// <param name="elName">接点名称</param>
+        /// <returns></returns>
         public static string ElText(this XmlNode node, string elName)
         {
             return node.SelectSingleNode(elName).InnerText;

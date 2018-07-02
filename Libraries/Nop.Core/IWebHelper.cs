@@ -3,7 +3,7 @@ using System.Web;
 namespace Nop.Core
 {
     /// <summary>
-    /// Represents a common helper
+    /// 通用帮助接口
     /// </summary>
     public partial interface IWebHelper
     {
@@ -68,13 +68,12 @@ namespace Nop.Core
         string GetStoreLocation(bool useSsl);
 
         /// <summary>
-        /// Returns true if the requested resource is one of the typical resources that needn't be processed by the cms engine.
         /// 请求目标是静态资源文件
         /// </summary>
         /// <param name="request">HTTP Request</param>
         /// <returns>True为请求目标是静态资源文件.</returns>
         /// <remarks>
-        /// These are the file extensions considered to be static resources:
+        /// 这些是被认为是静态资源的文件扩展名
         /// .css
         ///	.gif
         /// .png 

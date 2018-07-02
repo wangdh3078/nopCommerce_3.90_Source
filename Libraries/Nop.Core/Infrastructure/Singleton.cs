@@ -4,17 +4,18 @@ using System.Collections.Generic;
 namespace Nop.Core.Infrastructure
 {
     /// <summary>
-    /// A statically compiled "singleton" used to store objects throughout the 
-    /// lifetime of the app domain. Not so much singleton in the pattern's 
-    /// sense of the word as a standardized way to store single instances.
+    /// 静态编译的“单例”，用于在应用程序域的整个生命周期中存储对象。 
+    /// 在模式的意义上，并非单独存储单个实例的标准化方式。
     /// </summary>
-    /// <typeparam name="T">The type of object to store.</typeparam>
-    /// <remarks>Access to the instance is not synchrnoized.</remarks>
+    /// <typeparam name="T">要存储的对象的类型。</typeparam>
+    /// <remarks>对实例的访问不同步。</remarks>
     public class Singleton<T> : Singleton
     {
         static T instance;
 
-        /// <summary>The singleton instance for the specified type T. Only one instance (at the time) of this object for each type of T.</summary>
+        /// <summary>
+        /// 指定类型T的单例实例。对于每种类型的T，此对象只有一个实例（当时）。
+        /// </summary>
         public static T Instance
         {
             get { return instance; }
@@ -27,9 +28,9 @@ namespace Nop.Core.Infrastructure
     }
 
     /// <summary>
-    /// Provides a singleton list for a certain type.
+    /// 为特定类型提供单例列表。
     /// </summary>
-    /// <typeparam name="T">The type of list to store.</typeparam>
+    /// <typeparam name="T">要存储的列表类型。</typeparam>
     public class SingletonList<T> : Singleton<IList<T>>
     {
         static SingletonList()
@@ -37,7 +38,9 @@ namespace Nop.Core.Infrastructure
             Singleton<IList<T>>.Instance = new List<T>();
         }
 
-        /// <summary>The singleton instance for the specified type T. Only one instance (at the time) of this list for each type of T.</summary>
+        /// <summary>
+        /// 指定类型T的单例实例。每个类型的T只有一个实例（当时）。
+        /// </summary>
         public new static IList<T> Instance
         {
             get { return Singleton<IList<T>>.Instance; }
@@ -45,10 +48,10 @@ namespace Nop.Core.Infrastructure
     }
 
     /// <summary>
-    /// Provides a singleton dictionary for a certain key and vlaue type.
+    ///为特定的键和值类型提供单例字典。
     /// </summary>
-    /// <typeparam name="TKey">The type of key.</typeparam>
-    /// <typeparam name="TValue">The type of value.</typeparam>
+    /// <typeparam name="TKey">键</typeparam>
+    /// <typeparam name="TValue">值</typeparam>
     public class SingletonDictionary<TKey, TValue> : Singleton<IDictionary<TKey, TValue>>
     {
         static SingletonDictionary()
@@ -56,7 +59,9 @@ namespace Nop.Core.Infrastructure
             Singleton<Dictionary<TKey, TValue>>.Instance = new Dictionary<TKey, TValue>();
         }
 
-        /// <summary>The singleton instance for the specified type T. Only one instance (at the time) of this dictionary for each type of T.</summary>
+        /// <summary>
+        /// 指定类型T的单例实例。对于每种类型的T，此字典只有一个实例（当时）。
+        /// </summary>
         public new static IDictionary<TKey, TValue> Instance
         {
             get { return Singleton<Dictionary<TKey, TValue>>.Instance; }
@@ -64,7 +69,7 @@ namespace Nop.Core.Infrastructure
     }
 
     /// <summary>
-    /// Provides access to all "singletons" stored by <see cref="Singleton{T}"/>.
+    /// 提供对 <see cref="Singleton{T}"/>所存储的所有单利访问
     /// </summary>
     public class Singleton
     {
@@ -75,7 +80,9 @@ namespace Nop.Core.Infrastructure
 
         static readonly IDictionary<Type, object> allSingletons;
 
-        /// <summary>Dictionary of type to singleton instances.</summary>
+        /// <summary>
+        /// 类型到单例实例的字典。
+        /// </summary>
         public static IDictionary<Type, object> AllSingletons
         {
             get { return allSingletons; }

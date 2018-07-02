@@ -11,21 +11,27 @@ using Nop.Core.Infrastructure;
 namespace Nop.Core
 {
     /// <summary>
-    /// Represents a common helper
+    /// 通用帮助类
     /// </summary>
     public partial class WebHelper : IWebHelper
     {
-        #region Fields 
+        #region 字段
+        /// <summary>
+        /// HttpContext
+        /// </summary>
 
         private readonly HttpContextBase _httpContext;
+        /// <summary>
+        /// 静态文件扩展
+        /// </summary>
         private readonly string[] _staticFileExtensions;
 
         #endregion
 
-        #region Constructor
+        #region 构造函数
 
         /// <summary>
-        /// Ctor
+        /// 构造函数
         /// </summary>
         /// <param name="httpContext">HTTP context</param>
         public WebHelper(HttpContextBase httpContext)
@@ -37,7 +43,11 @@ namespace Nop.Core
         #endregion
 
         #region Utilities
-
+        /// <summary>
+        /// 请求是否可用
+        /// </summary>
+        /// <param name="httpContext"></param>
+        /// <returns></returns>
         protected virtual Boolean IsRequestAvailable(HttpContextBase httpContext)
         {
             if (httpContext == null)
@@ -55,6 +65,10 @@ namespace Nop.Core
 
             return true;
         }
+        /// <summary>
+        /// 尝试写入WebConfig
+        /// </summary>
+        /// <returns></returns>
         protected virtual bool TryWriteWebConfig()
         {
             try
@@ -69,7 +83,10 @@ namespace Nop.Core
                 return false;
             }
         }
-
+        /// <summary>
+        /// 尝试写入Global
+        /// </summary>
+        /// <returns></returns>
         protected virtual bool TryWriteGlobalAsax()
         {
             try
@@ -93,12 +110,12 @@ namespace Nop.Core
 
         #endregion
 
-        #region Methods
+        #region 方法
 
         /// <summary>
-        /// Get URL referrer
+        ///获取URL引荐来源
         /// </summary>
-        /// <returns>URL referrer</returns>
+        /// <returns>网址引荐来源</returns>
         public virtual string GetUrlReferrer()
         {
             string referrerUrl = string.Empty;
@@ -111,9 +128,9 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Get context IP address
+        /// 获取上下文IP地址
         /// </summary>
-        /// <returns>URL referrer</returns>
+        /// <returns></returns>
         public virtual string GetCurrentIpAddress()
         {
             if (!IsRequestAvailable(_httpContext))
@@ -176,10 +193,10 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Gets this page name
+        /// 获取此页面名称
         /// </summary>
-        /// <param name="includeQueryString">Value indicating whether to include query strings</param>
-        /// <returns>Page name</returns>
+        /// <param name="includeQueryString">指示是否包含查询字符串的值</param>
+        /// <returns>页面名称</returns>
         public virtual string GetThisPageUrl(bool includeQueryString)
         {
             bool useSsl = IsCurrentConnectionSecured();
@@ -187,11 +204,11 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Gets this page name
+        /// 获取此页面名称
         /// </summary>
-        /// <param name="includeQueryString">Value indicating whether to include query strings</param>
-        /// <param name="useSsl">Value indicating whether to get SSL protected page</param>
-        /// <returns>Page name</returns>
+        /// <param name="includeQueryString">指示是否包含查询字符串的值</param>
+        /// <param name="useSsl">指示是否获得SSL保护页面的值</param>
+        /// <returns>页面名称</returns>
         public virtual string GetThisPageUrl(bool includeQueryString, bool useSsl)
         {
             if (!IsRequestAvailable(_httpContext))
@@ -207,9 +224,9 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Gets a value indicating whether current connection is secured
+        /// 获取一个值，该值指示当前连接是否受保护
         /// </summary>
-        /// <returns>true - secured, false - not secured</returns>
+        /// <returns>true - 安全, false - 不安全</returns>
         public virtual bool IsCurrentConnectionSecured()
         {
             bool useSsl = false;
@@ -239,10 +256,10 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Gets server variable by name
+        /// 按名称获取服务器变量
         /// </summary>
-        /// <param name="name">Name</param>
-        /// <returns>Server variable</returns>
+        /// <param name="name">名称</param>
+        /// <returns>服务器变量</returns>
         public virtual string ServerVariables(string name)
         {
             string result = string.Empty;
@@ -267,10 +284,10 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Gets store host location
+        ///获取商店主机位置
         /// </summary>
-        /// <param name="useSsl">Use SSL</param>
-        /// <returns>Store host location</returns>
+        /// <param name="useSsl">使用SSL</param>
+        /// <returns>主机位置</returns>
         public virtual string GetStoreHost(bool useSsl)
         {
             var result = "";
@@ -345,9 +362,9 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Gets store location
+        /// 获取商店位置
         /// </summary>
-        /// <returns>Store location</returns>
+        /// <returns></returns>
         public virtual string GetStoreLocation()
         {
             bool useSsl = IsCurrentConnectionSecured();
@@ -355,10 +372,10 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Gets store location
+        /// 获取商店位置
         /// </summary>
-        /// <param name="useSsl">Use SSL</param>
-        /// <returns>Store location</returns>
+        /// <param name="useSsl">使用SSL</param>
+        /// <returns></returns>
         public virtual string GetStoreLocation(bool useSsl)
         {
             //return HostingEnvironment.ApplicationVirtualPath;
@@ -375,12 +392,12 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Returns true if the requested resource is one of the typical resources that needn't be processed by the cms engine.
+        ///如果请求的资源是cms引擎无需处理的典型资源之一，则返回true。
         /// </summary>
         /// <param name="request">HTTP Request</param>
-        /// <returns>True if the request targets a static resource file.</returns>
+        /// <returns>如果请求以静态资源文件为目标，则为true。</returns>
         /// <remarks>
-        /// These are the file extensions considered to be static resources:
+        /// 这些是被认为是静态资源的文件扩展名：
         /// .css
         ///	.gif
         /// .png 
@@ -404,7 +421,7 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Modifies query string
+        /// 修改查询字符串
         /// </summary>
         /// <param name="url">Url to modify</param>
         /// <param name="queryStringModification">Query string modification</param>
@@ -509,7 +526,7 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Remove query string from url
+        /// Url中移除指定的查询字符串
         /// </summary>
         /// <param name="url">Url to modify</param>
         /// <param name="queryString">Query string to remove</param>
@@ -574,7 +591,7 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Gets query string value by name
+        /// Url获取参数名称对应的值
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="name">Parameter name</param>
@@ -592,7 +609,8 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Restart application domain
+        ///重启应用程序
+        /// 该方法在商城重启中会用到
         /// </summary>
         /// <param name="makeRedirect">A value indicating whether we should made redirection after restart</param>
         /// <param name="redirectUrl">Redirect URL; empty string if you want to redirect to the current page URL</param>
@@ -639,7 +657,8 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Gets a value that indicates whether the client is being redirected to a new location
+        ///获取指示客户端是否重定向到新位置的值。
+        /// 如果位置响应标头的值与当前位置不同，则为 true；否则为 false。
         /// </summary>
         public virtual bool IsRequestBeingRedirected
         {
@@ -650,8 +669,9 @@ namespace Nop.Core
             }
         }
 
+
         /// <summary>
-        /// Gets or sets a value that indicates whether the client is being redirected to a new location using POST
+        /// Post请求时获取指示客户端是否重定向到新位置的值。
         /// </summary>
         public virtual bool IsPostBeingDone
         {

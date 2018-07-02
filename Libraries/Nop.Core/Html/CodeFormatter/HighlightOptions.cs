@@ -1,7 +1,7 @@
 namespace Nop.Core.Html.CodeFormatter
 {
     /// <summary>
-    /// Handles all of the options for changing the rendered code.
+    /// 处理所有改变渲染代码的选项。
     /// </summary>
     public partial class HighlightOptions
     {

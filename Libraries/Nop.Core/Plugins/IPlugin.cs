@@ -1,23 +1,22 @@
 ﻿namespace Nop.Core.Plugins
 {
     /// <summary>
-    /// Interface denoting plug-in attributes that are displayed throughout 
-    /// the editing interface.
+    /// 插件
     /// </summary>
     public interface IPlugin
     {
         /// <summary>
-        /// Gets or sets the plugin descriptor
+        /// 获取或设置插件描述
         /// </summary>
         PluginDescriptor PluginDescriptor { get; set; }
 
         /// <summary>
-        /// Install plugin
+        /// 安装插件
         /// </summary>
         void Install();
 
         /// <summary>
-        /// Uninstall plugin
+        /// 卸载插件
         /// </summary>
         void Uninstall();
     }

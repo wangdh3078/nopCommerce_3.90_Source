@@ -1,10 +1,13 @@
 ﻿
 namespace Nop.Core
 {
+    /// <summary>
+    /// NOP版本
+    /// </summary>
     public static class NopVersion
     {
         /// <summary>
-        /// Gets or sets the store version
+        /// 获取或设置商店版本
         /// </summary>
         public static string CurrentVersion 
         {

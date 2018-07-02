@@ -1,8 +1,8 @@
 ﻿namespace Nop.Core
 {
     /// <summary>
-    /// Collection of MimeType Constants for using to avoid Typos
-    /// If needed MimeTypes missing feel free to add
+    ///用于避免键入的MIMETYPE常数的集合
+    ///如果需要MIME缺失，请随意添加
     /// </summary>
     public static class MimeTypes
     {

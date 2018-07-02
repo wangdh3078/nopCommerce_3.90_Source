@@ -7,38 +7,38 @@ using Nop.Core.Domain.Vendors;
 namespace Nop.Core
 {
     /// <summary>
-    /// Work context
+    /// 工作上下文
     /// </summary>
     public interface IWorkContext
     {
         /// <summary>
-        /// Gets or sets the current customer
+        /// 获取或设置当前客户
         /// </summary>
         Customer CurrentCustomer { get; set; }
         /// <summary>
-        /// Gets or sets the original customer (in case the current one is impersonated)
+        /// 获取或设置原始客户（如果当前客户被模拟）
         /// </summary>
         Customer OriginalCustomerIfImpersonated { get; }
         /// <summary>
-        /// Gets or sets the current vendor (logged-in manager)
+        /// 获取或设置当前供应商（已登录的经理）
         /// </summary>
         Vendor CurrentVendor { get; }
 
         /// <summary>
-        /// Get or set current user working language
+        /// 获取或设置当前用户的工作语言
         /// </summary>
         Language WorkingLanguage { get; set; }
         /// <summary>
-        /// Get or set current user working currency
+        ///获取或设置当前用户工作货币
         /// </summary>
         Currency WorkingCurrency { get; set; }
         /// <summary>
-        /// Get or set current tax display type
+        /// 获取或设置当前的税务显示类型
         /// </summary>
         TaxDisplayType TaxDisplayType { get; set; }
 
         /// <summary>
-        /// Get or set value indicating whether we're in admin area
+        /// 获取或设置值，指示我们是否在管理区域中
         /// </summary>
         bool IsAdmin { get; set; }
     }

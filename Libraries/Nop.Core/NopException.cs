@@ -4,42 +4,42 @@ using System.Runtime.Serialization;
 namespace Nop.Core
 {
     /// <summary>
-    /// Represents errors that occur during application execution
+    /// 应用程序执行期间发生的错误
     /// </summary>
     [Serializable]
     public class NopException : Exception
     {
         /// <summary>
-        /// Initializes a new instance of the Exception class.
+        /// 初始化Exception类的新实例。
         /// </summary>
         public NopException()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the Exception class with a specified error message.
+        ///使用指定的错误消息初始化Exception类的新实例。
         /// </summary>
-        /// <param name="message">The message that describes the error.</param>
+        /// <param name="message">描述错误的消息。</param>
         public NopException(string message)
             : base(message)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the Exception class with a specified error message.
+        /// 使用指定的错误消息初始化Exception类的新实例。
         /// </summary>
-		/// <param name="messageFormat">The exception message format.</param>
-		/// <param name="args">The exception message arguments.</param>
+		/// <param name="messageFormat">异常消息格式。</param>
+		/// <param name="args">异常消息参数。</param>
         public NopException(string messageFormat, params object[] args)
 			: base(string.Format(messageFormat, args))
 		{
 		}
 
         /// <summary>
-        /// Initializes a new instance of the Exception class with serialized data.
+        /// 使用序列化数据初始化Exception类的新实例。
         /// </summary>
-        /// <param name="info">The SerializationInfo that holds the serialized object data about the exception being thrown.</param>
-        /// <param name="context">The StreamingContext that contains contextual information about the source or destination.</param>
+        /// <param name="info">SerializationInfo，用于保存有关抛出异常的序列化对象数据。</param>
+        /// <param name="context">包含关于源或目标的上下文信息的StreamingContext。</param>
         protected NopException(SerializationInfo
             info, StreamingContext context)
             : base(info, context)
@@ -47,10 +47,10 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Initializes a new instance of the Exception class with a specified error message and a reference to the inner exception that is the cause of this exception.
+        /// 使用指定的错误消息和对作为此异常原因的内部异常的引用初始化Exception类的新实例。
         /// </summary>
-        /// <param name="message">The error message that explains the reason for the exception.</param>
-        /// <param name="innerException">The exception that is the cause of the current exception, or a null reference if no inner exception is specified.</param>
+        /// <param name="message">解释异常原因的错误消息。</param>
+        /// <param name="innerException">异常是当前异常的原因，如果未指定内部异常，则为空引用。</param>
         public NopException(string message, Exception innerException)
             : base(message, innerException)
         {

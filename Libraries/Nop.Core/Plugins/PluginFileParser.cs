@@ -7,10 +7,15 @@ using System.Text;
 namespace Nop.Core.Plugins
 {
     /// <summary>
-    /// Plugin files parser
+    /// 插件文件解析器
     /// </summary>
     public static class PluginFileParser
     {
+        /// <summary>
+        /// 解析安装的插件文件
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
         public static IList<string> ParseInstalledPluginsFile(string filePath)
         {
             //read and parse the file
@@ -38,6 +43,11 @@ namespace Nop.Core.Plugins
             return lines;
         }
 
+        /// <summary>
+        /// 保存安装的插件
+        /// </summary>
+        /// <param name="pluginSystemNames"></param>
+        /// <param name="filePath"></param>
         public static void SaveInstalledPluginsFile(IList<String> pluginSystemNames, string filePath)
         {
             string result = "";
@@ -46,7 +56,11 @@ namespace Nop.Core.Plugins
 
             File.WriteAllText(filePath, result);
         }
-
+        /// <summary>
+        /// 加息插件描述文件
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
         public static PluginDescriptor ParsePluginDescriptionFile(string filePath)
         {
             var descriptor = new PluginDescriptor();
@@ -154,7 +168,10 @@ namespace Nop.Core.Plugins
 
             return descriptor;
         }
-        
+        /// <summary>
+        /// 保存插件描述文件
+        /// </summary>
+        /// <param name="plugin"></param>
         public static void SavePluginDescriptionFile(PluginDescriptor plugin)
         {
             if (plugin == null)

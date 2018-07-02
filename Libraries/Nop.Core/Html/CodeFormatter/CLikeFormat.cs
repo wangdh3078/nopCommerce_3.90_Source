@@ -1,4 +1,4 @@
-#region Copyright © 2001-2003 Jean-Claude Manoli [jc@manoli.net]
+#region Copyright ?2001-2003 Jean-Claude Manoli [jc@manoli.net]
 /*
  * This software is provided 'as-is', without any express or implied warranty.
  * In no event will the author(s) be held liable for any damages arising from
@@ -22,24 +22,23 @@
 
 namespace Nop.Core.Html.CodeFormatter
 {
-	/// <summary>
-	/// Provides a base class for formatting languages similar to C.
-	/// </summary>
+    /// <summary>
+    /// ÎªÀàËÆÓÚCµÄ¸ñÊ½»¯ÓïÑÔÌá¹©»ùÀà
+    /// </summary>
     public abstract partial class CLikeFormat : CodeFormat
 	{
-		/// <summary>
-		/// Regular expression string to match single line and multi-line 
-		/// comments (// and /* */). 
-		/// </summary>
-		protected override string CommentRegex
+        /// <summary>
+        /// ÓÃÓÚÆ¥Åäµ¥ĞĞºÍ¶àĞĞ×¢ÊÍµÄÕıÔò±í´ïÊ½×Ö·û´®£¨//ºÍ/ * * /£©¡£
+        /// </summary>
+        protected override string CommentRegex
 		{
 			get { return @"/\*.*?\*/|//.*?(?=\r|\n)"; }
 		}
 
-		/// <summary>
-		/// Regular expression string to match string and character literals. 
-		/// </summary>
-		protected override string StringRegex
+        /// <summary>
+        /// ÕıÔò±í´ïÊ½×Ö·û´®Æ¥Åä×Ö·û´®ºÍ×Ö·ûÎÄ×Ö¡£
+        /// </summary>
+        protected override string StringRegex
 		{
 			get { return @"@?""""|@?"".*?(?!\\).""|''|'.*?(?!\\).'"; }
 		}

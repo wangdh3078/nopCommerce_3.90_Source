@@ -5,16 +5,26 @@ using System.Linq;
 
 namespace Nop.Core.Plugins
 {
+    /// <summary>
+    /// 插件扩展
+    /// </summary>
     public static class PluginExtensions
     {
-
+        /// <summary>
+        /// 支持的Logo图像扩展
+        /// </summary>
         private static readonly List<string> SupportedLogoImageExtensions = new List<string>
         {
             "jpg",
             "png",
             "gif"
         };
-
+        /// <summary>
+        /// 获取Logo地址
+        /// </summary>
+        /// <param name="pluginDescriptor">插件描述</param>
+        /// <param name="webHelper"></param>
+        /// <returns></returns>
         public static string GetLogoUrl(this PluginDescriptor pluginDescriptor, IWebHelper webHelper)
         {
             if (pluginDescriptor == null)

@@ -1,4 +1,4 @@
-#region Copyright © 2001-2003 Jean-Claude Manoli [jc@manoli.net]
+#region Copyright ?2001-2003 Jean-Claude Manoli [jc@manoli.net]
 /*
  * This software is provided 'as-is', without any express or implied warranty.
  * In no event will the author(s) be held liable for any damages arising from
@@ -23,14 +23,14 @@
 namespace Nop.Core.Html.CodeFormatter
 {
     /// <summary>
-	/// Generates color-coded HTML 4.01 from C# source code.
+	/// ´ÓC££Ô´´úÂëÉú³É²ÊÉ«±àÂëµÄHTML 4.01¡£
 	/// </summary>
     public partial class CSharpFormat : CLikeFormat
 	{
-		/// <summary>
-		/// The list of C# keywords.
-		/// </summary>
-		protected override string Keywords 
+        /// <summary>
+        /// C££¹Ø¼ü×ÖÁÐ±í¡£
+        /// </summary>
+        protected override string Keywords 
 		{
 			get 
 			{ 
@@ -45,10 +45,10 @@ namespace Nop.Core.Html.CodeFormatter
 			}
 		}
 
-		/// <summary>
-		/// The list of C# preprocessors.
-		/// </summary>
-		protected override string Preprocessors
+        /// <summary>
+        /// C££Ô¤´¦ÀíÆ÷ÁÐ±í¡£
+        /// </summary>
+        protected override string Preprocessors
 		{
 			get 
 			{ 

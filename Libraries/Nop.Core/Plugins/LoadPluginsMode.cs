@@ -1,20 +1,20 @@
 namespace Nop.Core.Plugins
 {
     /// <summary>
-    /// Represents a mode to load plugins
+    /// 加载插件的模式
     /// </summary>
     public enum LoadPluginsMode
     {
         /// <summary>
-        /// All (Installed & Not installed)
+        /// 全部（已安装和未安装）
         /// </summary>
         All = 0,
         /// <summary>
-        /// Installed only
+        /// 仅安装
         /// </summary>
         InstalledOnly = 10,
         /// <summary>
-        /// Not installed only
+        ///未安装
         /// </summary>
         NotInstalledOnly = 20
     }

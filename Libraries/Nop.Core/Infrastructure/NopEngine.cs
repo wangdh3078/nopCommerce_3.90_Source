@@ -12,11 +12,14 @@ using Nop.Core.Infrastructure.Mapper;
 namespace Nop.Core.Infrastructure
 {
     /// <summary>
-    /// Engine
+    /// 引擎
     /// </summary>
     public class NopEngine : IEngine
     {
-        #region Fields
+        #region 字段
+        /// <summary>
+        /// 依赖注入容器管理
+        /// </summary>
 
         private ContainerManager _containerManager;
 
@@ -25,7 +28,7 @@ namespace Nop.Core.Infrastructure
         #region Utilities
 
         /// <summary>
-        /// Run startup tasks
+        /// 运行启动任务
         /// </summary>
         protected virtual void RunStartupTasks()
         {
@@ -41,9 +44,9 @@ namespace Nop.Core.Infrastructure
         }
 
         /// <summary>
-        /// Register dependencies
+        /// 注册依赖关系
         /// </summary>
-        /// <param name="config">Config</param>
+        /// <param name="config">配置</param>
         protected virtual void RegisterDependencies(NopConfig config)
         {
             var builder = new ContainerBuilder();
@@ -72,9 +75,9 @@ namespace Nop.Core.Infrastructure
         }
 
         /// <summary>
-        /// Register mapping
+        /// 注册映射
         /// </summary>
-        /// <param name="config">Config</param>
+        /// <param name="config">配置</param>
         protected virtual void RegisterMapperConfiguration(NopConfig config)
         {
             //dependencies
@@ -100,9 +103,9 @@ namespace Nop.Core.Infrastructure
         #region Methods
 
         /// <summary>
-        /// Initialize components and plugins in the nop environment.
+        /// 在nop环境中初始化组件和插件。
         /// </summary>
-        /// <param name="config">Config</param>
+        /// <param name="config">配置</param>
         public void Initialize(NopConfig config)
         {
             //register dependencies
@@ -120,9 +123,9 @@ namespace Nop.Core.Infrastructure
         }
 
         /// <summary>
-        /// Resolve dependency
+        /// 解析依赖关系
         /// </summary>
-        /// <typeparam name="T">T</typeparam>
+        /// <typeparam name="T">要解析类型</typeparam>
         /// <returns></returns>
         public T Resolve<T>() where T : class
 		{
@@ -130,31 +133,31 @@ namespace Nop.Core.Infrastructure
 		}
 
         /// <summary>
-        ///  Resolve dependency
+        ///  解析依赖关系
         /// </summary>
-        /// <param name="type">Type</param>
+        /// <param name="type">要解析类型</param>
         /// <returns></returns>
         public object Resolve(Type type)
         {
             return ContainerManager.Resolve(type);
         }
-        
+
         /// <summary>
-        /// Resolve dependencies
+        /// 解析依赖关系
         /// </summary>
-        /// <typeparam name="T">T</typeparam>
+        /// <typeparam name="T">要解析类型</typeparam>
         /// <returns></returns>
         public T[] ResolveAll<T>()
         {
             return ContainerManager.ResolveAll<T>();
         }
 
-		#endregion
+        #endregion
 
         #region Properties
 
         /// <summary>
-        /// Container manager
+        /// 依赖注入容器管理
         /// </summary>
         public virtual ContainerManager ContainerManager
         {

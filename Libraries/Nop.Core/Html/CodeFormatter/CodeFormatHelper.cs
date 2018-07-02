@@ -4,9 +4,9 @@ using System.Web;
 
 namespace Nop.Core.Html.CodeFormatter
 {
-	/// <summary>
-	/// Represents a code format helper
-	/// </summary>
+    /// <summary>
+    /// 代码格式助手
+    /// </summary>
     public partial class CodeFormatHelper
     {
         #region Fields
@@ -18,7 +18,7 @@ namespace Nop.Core.Html.CodeFormatter
         #region Utilities
 
         /// <summary>
-        /// Code evaluator method
+        ///代码评估方法
         /// </summary>
         /// <param name="match">Match</param>
         /// <returns>Formatted text</returns>
@@ -43,7 +43,7 @@ namespace Nop.Core.Html.CodeFormatter
         }
 
         /// <summary>
-        /// Code evaluator method
+        /// 代码评估方法
         /// </summary>
         /// <param name="match">Match</param>
         /// <returns>Formatted text</returns>
@@ -80,7 +80,7 @@ namespace Nop.Core.Html.CodeFormatter
         }
 
         /// <summary>
-        /// Returns the formatted text.
+        /// 返回格式化文本。
         /// </summary>
         /// <param name="options">Whatever options were set in the regex groups.</param>
         /// <param name="text">Send the e.body so it can get formatted.</param>
@@ -146,7 +146,7 @@ namespace Nop.Core.Html.CodeFormatter
         #region Methods
 
         /// <summary>
-        /// Formats the text
+        /// 格式化文本
         /// </summary>
         /// <param name="text">Text</param>
         /// <returns>Formatted text</returns>

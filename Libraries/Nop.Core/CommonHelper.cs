@@ -15,14 +15,14 @@ using System.Web.Hosting;
 namespace Nop.Core
 {
     /// <summary>
-    /// Represents a common helper
+    ///公共帮助类
     /// </summary>
     public partial class CommonHelper
     {
         /// <summary>
-        /// Ensures the subscriber email or throw.
+        ///确保发送邮件或抛出异常
         /// </summary>
-        /// <param name="email">The email.</param>
+        /// <param name="email">邮件</param>
         /// <returns></returns>
         public static string EnsureSubscriberEmailOrThrow(string email)
         {
@@ -39,10 +39,10 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Verifies that a string is in valid e-mail format
+        /// 验证字符串是否采用有效的邮箱格式
         /// </summary>
-        /// <param name="email">Email to verify</param>
-        /// <returns>true if the string is a valid e-mail address and false if it's not</returns>
+        /// <param name="email">邮箱</param>
+        /// <returns>如果字符串是有效的电子邮件地址，则为true;如果不是，则为false</returns>
         public static bool IsValidEmail(string email)
         {
             if (String.IsNullOrEmpty(email))
@@ -54,10 +54,10 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Verifies that string is an valid IP-Address
+        /// 验证该字符串是否为有效的IP地址
         /// </summary>
-        /// <param name="ipAddress">IPAddress to verify</param>
-        /// <returns>true if the string is a valid IpAddress and false if it's not</returns>
+        /// <param name="ipAddress">要验证的IP</param>
+        /// <returns>如果字符串是有效的Ip，则为true;如果不是，则为false</returns>
         public static bool IsValidIpAddress(string ipAddress)
         {
             IPAddress ip;
@@ -65,10 +65,10 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Generate random digit code
+        /// 生成随机数字代码
         /// </summary>
-        /// <param name="length">Length</param>
-        /// <returns>Result string</returns>
+        /// <param name="length">长度</param>
+        /// <returns></returns>
         public static string GenerateRandomDigitCode(int length)
         {
             var random = new Random();
@@ -79,11 +79,11 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Returns an random interger number within a specified rage
+        ///返回指定范围内的随机整数
         /// </summary>
-        /// <param name="min">Minimum number</param>
-        /// <param name="max">Maximum number</param>
-        /// <returns>Result</returns>
+        /// <param name="min">最小数字</param>
+        /// <param name="max">最大数字</param>
+        /// <returns></returns>
         public static int GenerateRandomInteger(int min = 0, int max = int.MaxValue)
         {
             var randomNumberBuffer = new byte[10];
@@ -92,12 +92,12 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Ensure that a string doesn't exceed maximum allowed length
+        /// 确保一个字符串不超过允许的最大长度
         /// </summary>
-        /// <param name="str">Input string</param>
-        /// <param name="maxLength">Maximum length</param>
-        /// <param name="postfix">A string to add to the end if the original string was shorten</param>
-        /// <returns>Input string if its lengh is OK; otherwise, truncated input string</returns>
+        /// <param name="str">字符串</param>
+        /// <param name="maxLength">最大长度</param>
+        /// <param name="postfix">如果原始字符串缩短，则添加到末尾的字符串</param>
+        /// <returns>输入字符串，如果其长度正确; 否则，截断输入字符串</returns>
         public static string EnsureMaximumLength(string str, int maxLength, string postfix = null)
         {
             if (String.IsNullOrEmpty(str))
@@ -119,42 +119,42 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Ensures that a string only contains numeric values
+        ///确保字符串仅包含数值
         /// </summary>
-        /// <param name="str">Input string</param>
-        /// <returns>Input string with only numeric values, empty string if input is null/empty</returns>
+        /// <param name="str">字符串</param>
+        /// <returns>仅输入数字值的字符串，如果输入为null/empty，则输入空字符串</returns>
         public static string EnsureNumericOnly(string str)
         {
             return string.IsNullOrEmpty(str) ? string.Empty : new string(str.Where(p => char.IsDigit(p)).ToArray());
         }
 
         /// <summary>
-        /// Ensure that a string is not null
+        /// 确保字符串不为空
         /// </summary>
-        /// <param name="str">Input string</param>
-        /// <returns>Result</returns>
+        /// <param name="str">字符串</param>
+        /// <returns></returns>
         public static string EnsureNotNull(string str)
         {
             return str ?? string.Empty;
         }
 
         /// <summary>
-        /// Indicates whether the specified strings are null or empty strings
+        /// 指示指定的字符串是null还是empty
         /// </summary>
-        /// <param name="stringsToValidate">Array of strings to validate</param>
-        /// <returns>Boolean</returns>
+        /// <param name="stringsToValidate">要验证的字符串数组</param>
+        /// <returns></returns>
         public static bool AreNullOrEmpty(params string[] stringsToValidate)
         {
             return stringsToValidate.Any(p => string.IsNullOrEmpty(p));
         }
 
         /// <summary>
-        /// Compare two arrasy
+        ///比较两个数组
         /// </summary>
-        /// <typeparam name="T">Type</typeparam>
-        /// <param name="a1">Array 1</param>
-        /// <param name="a2">Array 2</param>
-        /// <returns>Result</returns>
+        /// <typeparam name="T">类型</typeparam>
+        /// <param name="a1">数组1</param>
+        /// <param name="a2">数组2</param>
+        /// <returns></returns>
         public static bool ArraysEqual<T>(T[] a1, T[] a2)
         {
             //also see Enumerable.SequenceEqual(a1, a2);
@@ -177,9 +177,9 @@ namespace Nop.Core
 
         private static AspNetHostingPermissionLevel? _trustLevel;
         /// <summary>
-        /// Finds the trust level of the running application (http://blogs.msdn.com/dmitryr/archive/2007/01/23/finding-out-the-current-trust-level-in-asp-net.aspx)
+        /// 查找正在运行的应用程序的信任级别 (http://blogs.msdn.com/dmitryr/archive/2007/01/23/finding-out-the-current-trust-level-in-asp-net.aspx)
         /// </summary>
-        /// <returns>The current trust level.</returns>
+        /// <returns>当前的信任级别。</returns>
         public static AspNetHostingPermissionLevel GetTrustLevel()
         {
             if (!_trustLevel.HasValue)
@@ -212,11 +212,11 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Sets a property on an object to a valuae.
+        /// 将对象上的属性赋值
         /// </summary>
-        /// <param name="instance">The object whose property to set.</param>
-        /// <param name="propertyName">The name of the property to set.</param>
-        /// <param name="value">The value to set the property to.</param>
+        /// <param name="instance">要设置其属性的对象。</param>
+        /// <param name="propertyName">要设置的属性的名称。</param>
+        /// <param name="value">将属性设置为的值。</param>
         public static void SetProperty(object instance, string propertyName, object value)
         {
             if (instance == null) throw new ArgumentNullException("instance");
@@ -234,23 +234,23 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Converts a value to a destination type.
+        /// 将值转换为目标类型。
         /// </summary>
-        /// <param name="value">The value to convert.</param>
-        /// <param name="destinationType">The type to convert the value to.</param>
-        /// <returns>The converted value.</returns>
+        /// <param name="value">要转换的值。</param>
+        /// <param name="destinationType">要将值转换为的类型。</param>
+        /// <returns>转换后的值。</returns>
         public static object To(object value, Type destinationType)
         {
             return To(value, destinationType, CultureInfo.InvariantCulture);
         }
 
         /// <summary>
-        /// Converts a value to a destination type.
+        /// 将值转换为目标类型。
         /// </summary>
-        /// <param name="value">The value to convert.</param>
-        /// <param name="destinationType">The type to convert the value to.</param>
-        /// <param name="culture">Culture</param>
-        /// <returns>The converted value.</returns>
+        /// <param name="value">要转换的值。</param>
+        /// <param name="destinationType">要将值转换为的类型。</param>
+        /// <param name="culture">语言文化</param>
+        /// <returns>转换后的值</returns>
         public static object To(object value, Type destinationType, CultureInfo culture)
         {
             if (value != null)
@@ -275,11 +275,11 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Converts a value to a destination type.
+        /// 将值转换为目标类型。
         /// </summary>
-        /// <param name="value">The value to convert.</param>
-        /// <typeparam name="T">The type to convert the value to.</typeparam>
-        /// <returns>The converted value.</returns>
+        /// <param name="value">要转换的值。</param>
+        /// <typeparam name="T">要将值转换为的类型。</typeparam>
+        /// <returns>转换后的值。</returns>
         public static T To<T>(object value)
         {
             //return (T)Convert.ChangeType(value, typeof(T), CultureInfo.InvariantCulture);
@@ -287,10 +287,10 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Convert enum for front-end
+        /// 枚举转换
         /// </summary>
-        /// <param name="str">Input string</param>
-        /// <returns>Converted string</returns>
+        /// <param name="str">输入值</param>
+        /// <returns>转换后的字符串</returns>
         public static string ConvertEnum(string str)
         {
             if (string.IsNullOrEmpty(str)) return string.Empty;
@@ -307,7 +307,7 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Set Telerik (Kendo UI) culture
+        ///设置Telerik（Kendo UI）文化
         /// </summary>
         public static void SetTelerikCulture()
         {
@@ -320,10 +320,10 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Get difference in years
+        /// 获取年份差距
         /// </summary>
-        /// <param name="startDate"></param>
-        /// <param name="endDate"></param>
+        /// <param name="startDate">开始时间</param>
+        /// <param name="endDate">结束时间</param>
         /// <returns></returns>
         public static int GetDifferenceInYears(DateTime startDate, DateTime endDate)
         {
@@ -336,10 +336,10 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Maps a virtual path to a physical disk path.
+        /// 将虚拟路径映射到物理磁盘路径。
         /// </summary>
-        /// <param name="path">The path to map. E.g. "~/bin"</param>
-        /// <returns>The physical path. E.g. "c:\inetpub\wwwroot\bin"</returns>
+        /// <param name="path">映射的路径。 例如。“〜/ BIN”</param>
+        /// <returns>物理路径。 例如。“C\的Inetpub\wwwroot的\BIN”</returns>
         public static string MapPath(string path)
         {
             if (HostingEnvironment.IsHosted)

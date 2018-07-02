@@ -3,12 +3,12 @@
 namespace Nop.Core
 {
     /// <summary>
-    /// Store context
+    /// 商店上下文
     /// </summary>
     public interface IStoreContext
     {
         /// <summary>
-        /// Gets or sets the current store
+        /// 获取或设置当前商店
         /// </summary>
         Store CurrentStore { get; }
     }

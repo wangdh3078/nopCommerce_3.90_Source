@@ -8,17 +8,17 @@ using System.Xml.Serialization;
 namespace Nop.Core
 {
     /// <summary>
-    /// Xml helper class
+    /// Xml帮助类
     /// </summary>
     public partial class XmlHelper
     {
         #region Methods
 
         /// <summary>
-        /// XML Encode
+        /// XML编码
         /// </summary>
-        /// <param name="str">String</param>
-        /// <returns>Encoded string</returns>
+        /// <param name="str">字符串</param>
+        /// <returns>编码字符串</returns>
         public static string XmlEncode(string str)
         {
             if (str == null)
@@ -30,7 +30,7 @@ namespace Nop.Core
         /// <summary>
         /// XML Encode as is
         /// </summary>
-        /// <param name="str">String</param>
+        /// <param name="str">字符串</param>
         /// <returns>Encoded string</returns>
         public static string XmlEncodeAsIs(string str)
         {
@@ -45,9 +45,9 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Encodes an attribute
+        /// 对属性进行编码
         /// </summary>
-        /// <param name="str">Attribute</param>
+        /// <param name="str">属性</param>
         /// <returns>Encoded attribute</returns>
         public static string XmlEncodeAttribute(string str)
         {
@@ -68,7 +68,7 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Decodes an attribute
+        /// 解码属性
         /// </summary>
         /// <param name="str">Attribute</param>
         /// <returns>Decoded attribute</returns>
@@ -79,9 +79,9 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Serializes a datetime
+        /// 序列化日期时间
         /// </summary>
-        /// <param name="dateTime">Datetime</param>
+        /// <param name="dateTime">时间</param>
         /// <returns>Serialized datetime</returns>
         public static string SerializeDateTime(DateTime dateTime)
         {
@@ -95,9 +95,9 @@ namespace Nop.Core
         }
 
         /// <summary>
-        /// Deserializes a datetime
+        /// 反序列化日期时间
         /// </summary>
-        /// <param name="dateTime">Datetime</param>
+        /// <param name="dateTime">时间</param>
         /// <returns>Deserialized datetime</returns>
         public static DateTime DeserializeDateTime(string dateTime)
         {

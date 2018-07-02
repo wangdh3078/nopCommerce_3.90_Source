@@ -11,47 +11,63 @@ using System.Web.Compilation;
 using Nop.Core.ComponentModel;
 using Nop.Core.Plugins;
 
-//Contributor: Umbraco (http://www.umbraco.com). Thanks a lot! 
-//SEE THIS POST for full details of what this does - http://shazwazza.com/post/Developing-a-plugin-framework-in-ASPNET-with-medium-trust.aspx
+//贡献者：Umbraco（http://www.umbraco.com）
+//有关此功能的详细信息，请参阅此帖子 - http://shazwazza.com/post/Developing-a-plugin-framework-in-ASPNET-with-medium-trust.aspx
 
 [assembly: PreApplicationStartMethod(typeof(PluginManager), "Initialize")]
 namespace Nop.Core.Plugins
 {
     /// <summary>
-    /// Sets the application up for the plugin referencing
+    /// 插件管理
     /// </summary>
     public class PluginManager
     {
-        #region Const
-
+        #region 常量
+        /// <summary>
+        /// 已安装的插件文件路径
+        /// </summary>
         private const string InstalledPluginsFilePath = "~/App_Data/InstalledPlugins.txt";
+        /// <summary>
+        /// 插件路径
+        /// </summary>
         private const string PluginsPath = "~/Plugins";
+        /// <summary>
+        /// 镜像复制路径
+        /// </summary>
         private const string ShadowCopyPath = "~/Plugins/bin";
 
         #endregion
 
-        #region Fields
-
+        #region 字段
+        /// <summary>
+        /// 锁
+        /// </summary>
         private static readonly ReaderWriterLockSlim Locker = new ReaderWriterLockSlim();
+        /// <summary>
+        /// 影像复制文件夹
+        /// </summary>
         private static DirectoryInfo _shadowCopyFolder;
+        /// <summary>
+        /// 程序启动时清楚影响文件夹
+        /// </summary>
         private static bool _clearShadowDirectoryOnStartup;
 
         #endregion
 
-        #region Methods
+        #region 方法
 
         /// <summary>
-        /// Returns a collection of all referenced plugin assemblies that have been shadow copied
+        /// 返回已被复制的所有引用的插件程序集的集合
         /// </summary>
         public static IEnumerable<PluginDescriptor> ReferencedPlugins { get; set; }
 
         /// <summary>
-        /// Returns a collection of all plugin which are not compatible with the current version
+        /// 返回与当前版本不兼容的所有插件的集合
         /// </summary>
         public static IEnumerable<string> IncompatiblePlugins { get; set; }
 
         /// <summary>
-        /// Initialize
+        /// 初始化
         /// </summary>
         public static void Initialize()
         {
@@ -194,9 +210,9 @@ namespace Nop.Core.Plugins
         }
 
         /// <summary>
-        /// Mark plugin as installed
+        /// 将插件标记为已安装
         /// </summary>
-        /// <param name="systemName">Plugin system name</param>
+        /// <param name="systemName">插件系统名称</param>
         public static void MarkPluginAsInstalled(string systemName)
         {
             if (String.IsNullOrEmpty(systemName))
@@ -219,9 +235,9 @@ namespace Nop.Core.Plugins
         }
 
         /// <summary>
-        /// Mark plugin as uninstalled
+        /// 将插件标记为已卸载
         /// </summary>
-        /// <param name="systemName">Plugin system name</param>
+        /// <param name="systemName">插件系统名称</param>
         public static void MarkPluginAsUninstalled(string systemName)
         {
             if (String.IsNullOrEmpty(systemName))
@@ -244,7 +260,7 @@ namespace Nop.Core.Plugins
         }
 
         /// <summary>
-        /// Mark plugin as uninstalled
+        /// 将插件标记为已卸载
         /// </summary>
         public static void MarkAllPluginsAsUninstalled()
         {
@@ -258,10 +274,10 @@ namespace Nop.Core.Plugins
         #region Utilities
 
         /// <summary>
-        /// Get description files
+        /// 获取描述文件
         /// </summary>
-        /// <param name="pluginFolder">Plugin directory info</param>
-        /// <returns>Original and parsed description files</returns>
+        /// <param name="pluginFolder">插件文件夹</param>
+        /// <returns>原始和解析的描述文件</returns>
         private static IEnumerable<KeyValuePair<FileInfo, PluginDescriptor>> GetDescriptionFilesAndDescriptors(DirectoryInfo pluginFolder)
         {
             if (pluginFolder == null)
@@ -289,10 +305,10 @@ namespace Nop.Core.Plugins
         }
 
         /// <summary>
-        /// Indicates whether assembly file is already loaded
+        /// 指示程序集文件是否已经加载
         /// </summary>
-        /// <param name="fileInfo">File info</param>
-        /// <returns>Result</returns>
+        /// <param name="fileInfo">文件信息</param>
+        /// <returns></returns>
         private static bool IsAlreadyLoaded(FileInfo fileInfo)
         {
             //compare full assembly name
@@ -325,10 +341,10 @@ namespace Nop.Core.Plugins
         }
 
         /// <summary>
-        /// Perform file deply
+        /// 执行文件部署
         /// </summary>
-        /// <param name="plug">Plugin file info</param>
-        /// <returns>Assembly</returns>
+        /// <param name="plug">插件文件信息</param>
+        /// <returns></returns>
         private static Assembly PerformFileDeploy(FileInfo plug)
         {
             if (plug.Directory == null || plug.Directory.Parent == null)
@@ -364,7 +380,7 @@ namespace Nop.Core.Plugins
         }
 
         /// <summary>
-        /// Used to initialize plugins when running in Full Trust
+        /// 用于在完全信任模式下运行时初始化插件
         /// </summary>
         /// <param name="plug"></param>
         /// <param name="shadowCopyPlugFolder"></param>
@@ -398,7 +414,7 @@ namespace Nop.Core.Plugins
         }
 
         /// <summary>
-        /// Used to initialize plugins when running in Medium Trust
+        /// 用于在Medium Trust中运行时初始化插件
         /// </summary>
         /// <param name="plug"></param>
         /// <param name="shadowCopyPlugFolder"></param>
@@ -457,9 +473,9 @@ namespace Nop.Core.Plugins
 
             return shadowCopiedPlug;
         }
-        
+
         /// <summary>
-        /// Determines if the folder is a bin plugin folder for a package
+        /// 确定文件夹是否为包的bin插件文件夹
         /// </summary>
         /// <param name="folder"></param>
         /// <returns></returns>
@@ -472,7 +488,7 @@ namespace Nop.Core.Plugins
         }
 
         /// <summary>
-        /// Gets the full path of InstalledPlugins.txt file
+        /// 获取InstalledPlugins.txt文件的完整路径
         /// </summary>
         /// <returns></returns>
         private static string GetInstalledPluginsFilePath()

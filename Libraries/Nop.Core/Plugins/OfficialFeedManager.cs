@@ -8,7 +8,7 @@ using System.Xml;
 namespace Nop.Core.Plugins
 {
     /// <summary>
-    /// Official feed manager (official plugins from www.nopCommerce.com site)
+    /// 官方插件管理 （来自www.nopCommerce.com网站的官方插件）
     /// </summary>
     public partial class OfficialFeedManager : IOfficialFeedManager
     {
@@ -38,9 +38,9 @@ namespace Nop.Core.Plugins
         }
 
         /// <summary>
-        /// Get categories
+        /// 获取类别
         /// </summary>
-        /// <returns>Result</returns>
+        /// <returns></returns>
         public virtual IList<OfficialFeedCategory> GetCategories()
         {
             return GetDocument("getCategories=1").SelectNodes(@"//categories/category").Cast<XmlNode>().Select(node => new OfficialFeedCategory
@@ -53,9 +53,9 @@ namespace Nop.Core.Plugins
         }
 
         /// <summary>
-        /// Get versions
+        ///获取版本
         /// </summary>
-        /// <returns>Result</returns>
+        /// <returns></returns>
         public virtual IList<OfficialFeedVersion> GetVersions()
         {
             return GetDocument("getVersions=1").SelectNodes(@"//versions/version").Cast<XmlNode>().Select(node => new OfficialFeedVersion
@@ -66,15 +66,15 @@ namespace Nop.Core.Plugins
         }
 
         /// <summary>
-        /// Get all plugins
+        /// 获取所有插件
         /// </summary>
-        /// <param name="categoryId">Category identifier</param>
-        /// <param name="versionId">Version identifier</param>
-        /// <param name="price">Price; 0 - all, 10 - free, 20 - paid</param>
-        /// <param name="searchTerm">Search term</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
-        /// <returns>Plugins</returns>
+        /// <param name="categoryId">类别标识符</param>
+        /// <param name="versionId">版本标识符</param>
+        /// <param name="price">价钱; 0 - 全部，10 - 免费，20 - 支付</param>
+        /// <param name="searchTerm">搜索词</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
+        /// <returns>插件</returns>
         public virtual IPagedList<OfficialFeedPlugin> GetAllPlugins(int categoryId = 0,
             int versionId = 0, int price = 0,
             string searchTerm = "",

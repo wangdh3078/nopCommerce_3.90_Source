@@ -1,17 +1,17 @@
 ﻿namespace Nop.Core.Plugins
 {
     /// <summary>
-    /// Base plugin
+    /// 基类插件
     /// </summary>
     public abstract class BasePlugin : IPlugin
     {
         /// <summary>
-        /// Gets or sets the plugin descriptor
+        /// 获取或设置插件描述符
         /// </summary>
         public virtual PluginDescriptor PluginDescriptor { get; set; }
 
         /// <summary>
-        /// Install plugin
+        /// 安装插件
         /// </summary>
         public virtual void Install() 
         {
@@ -19,7 +19,7 @@
         }
 
         /// <summary>
-        /// Uninstall plugin
+        /// 卸载插件
         /// </summary>
         public virtual void Uninstall() 
         {
