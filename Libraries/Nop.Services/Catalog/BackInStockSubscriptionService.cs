@@ -15,7 +15,7 @@ namespace Nop.Services.Catalog
     /// </summary>
     public partial class BackInStockSubscriptionService : IBackInStockSubscriptionService
     {
-        #region Fields
+        #region 字段
 
         private readonly IRepository<BackInStockSubscription> _backInStockSubscriptionRepository;
         private readonly IWorkflowMessageService _workflowMessageService;
@@ -64,8 +64,8 @@ namespace Nop.Services.Catalog
         /// </summary>
         /// <param name="customerId">Customer identifier</param>
         /// <param name="storeId">Store identifier; pass 0 to load all records</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>Subscriptions</returns>
         public virtual IPagedList<BackInStockSubscription> GetAllSubscriptionsByCustomerId(int customerId,
             int storeId = 0, int pageIndex = 0, int pageSize = int.MaxValue)
@@ -88,8 +88,8 @@ namespace Nop.Services.Catalog
         /// </summary>
         /// <param name="productId">Product identifier</param>
         /// <param name="storeId">Store identifier; pass 0 to load all records</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>Subscriptions</returns>
         public virtual IPagedList<BackInStockSubscription> GetAllSubscriptionsByProductId(int productId,
             int storeId = 0, int pageIndex = 0, int pageSize = int.MaxValue)

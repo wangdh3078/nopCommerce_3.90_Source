@@ -4,8 +4,14 @@ using Nop.Core.Infrastructure;
 
 namespace Nop.Data
 {
+    /// <summary>
+    /// 启动任务
+    /// </summary>
     public class EfStartUpTask : IStartupTask
     {
+        /// <summary>
+        /// 执行任务
+        /// </summary>
         public void Execute()
         {
             var settings = EngineContext.Current.Resolve<DataSettings>();
@@ -17,7 +23,9 @@ namespace Nop.Data
                 provider.SetDatabaseInitializer();
             }
         }
-
+        /// <summary>
+        /// 排序
+        /// </summary>
         public int Order
         {
             //ensure that this task is run first 

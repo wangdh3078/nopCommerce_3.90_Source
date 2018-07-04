@@ -96,7 +96,7 @@ namespace Nop.Services.Directory
         /// Gets all countries
         /// </summary>
         /// <param name="languageId">Language identifier. It's used to sort countries by localized names (if specified); pass 0 to skip it</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Countries</returns>
         public virtual IList<Country> GetAllCountries(int languageId = 0, bool showHidden = false)
         {
@@ -146,7 +146,7 @@ namespace Nop.Services.Directory
         /// Gets all countries that allow billing
         /// </summary>
         /// <param name="languageId">Language identifier. It's used to sort countries by localized names (if specified); pass 0 to skip it</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Countries</returns>
         public virtual IList<Country> GetAllCountriesForBilling(int languageId = 0, bool showHidden = false)
         {
@@ -157,7 +157,7 @@ namespace Nop.Services.Directory
         /// Gets all countries that allow shipping
         /// </summary>
         /// <param name="languageId">Language identifier. It's used to sort countries by localized names (if specified); pass 0 to skip it</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Countries</returns>
         public virtual IList<Country> GetAllCountriesForShipping(int languageId = 0, bool showHidden = false)
         {

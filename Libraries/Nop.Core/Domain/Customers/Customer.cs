@@ -6,7 +6,7 @@ using Nop.Core.Domain.Orders;
 namespace Nop.Core.Domain.Customers
 {
     /// <summary>
-    /// Represents a customer
+    /// ¿Í»§
     /// </summary>
     public partial class Customer : BaseEntity
     {

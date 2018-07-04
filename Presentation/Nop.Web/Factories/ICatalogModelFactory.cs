@@ -29,7 +29,7 @@ namespace Nop.Web.Factories
         /// <param name="pagingFilteringModel">Catalog paging filtering model</param>
         /// <param name="command">Catalog paging filtering command</param>
         /// <param name="allowCustomersToSelectPageSize">Are customers allowed to select page size?</param>
-        /// <param name="pageSizeOptions">Page size options</param>
+        /// <param name="pageSizeOptions">页面大小 options</param>
         /// <param name="fixedPageSize">Fixed page size</param>
         void PreparePageSizeOptions(CatalogPagingFilteringModel pagingFilteringModel, CatalogPagingFilteringModel command,
             bool allowCustomersToSelectPageSize, string pageSizeOptions, int fixedPageSize);

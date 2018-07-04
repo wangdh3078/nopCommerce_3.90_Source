@@ -20,9 +20,9 @@ namespace Nop.Services.Catalog
         /// </summary>
         /// <param name="categoryName">Category name</param>
         /// <param name="storeId">Store identifier; 0 if you want to get all records</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Categories</returns>
         IPagedList<Category> GetAllCategories(string categoryName = "", int storeId = 0,
             int pageIndex = 0, int pageSize = int.MaxValue, bool showHidden = false);
@@ -31,7 +31,7 @@ namespace Nop.Services.Catalog
         /// Gets all categories filtered by parent category identifier
         /// </summary>
         /// <param name="parentCategoryId">Parent category identifier</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <param name="includeAllLevels">A value indicating whether we should load all child levels</param>
         /// <returns>Categories</returns>
         IList<Category> GetAllCategoriesByParentCategoryId(int parentCategoryId,
@@ -40,7 +40,7 @@ namespace Nop.Services.Catalog
         /// <summary>
         /// Gets all categories displayed on the home page
         /// </summary>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Categories</returns>
         IList<Category> GetAllCategoriesDisplayedOnHomePage(bool showHidden = false);
                 
@@ -73,9 +73,9 @@ namespace Nop.Services.Catalog
         /// Gets product category mapping collection
         /// </summary>
         /// <param name="categoryId">Category identifier</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Product a category mapping collection</returns>
         IPagedList<ProductCategory> GetProductCategoriesByCategoryId(int categoryId,
             int pageIndex = 0, int pageSize = int.MaxValue, bool showHidden = false);
@@ -84,7 +84,7 @@ namespace Nop.Services.Catalog
         /// Gets a product category mapping collection
         /// </summary>
         /// <param name="productId">Product identifier</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Product category mapping collection</returns>
         IList<ProductCategory> GetProductCategoriesByProductId(int productId, bool showHidden = false);
         /// <summary>
@@ -92,7 +92,7 @@ namespace Nop.Services.Catalog
         /// </summary>
         /// <param name="productId">Product identifier</param>
         /// <param name="storeId">Store identifier (used in multi-store environment). "showHidden" parameter should also be "true"</param>
-        /// <param name="showHidden"> A value indicating whether to show hidden records</param>
+        /// <param name="showHidden"> 指示是否显示隐藏记录的值</param>
         /// <returns> Product category mapping collection</returns>
         IList<ProductCategory> GetProductCategoriesByProductId(int productId, int storeId, bool showHidden = false);
 

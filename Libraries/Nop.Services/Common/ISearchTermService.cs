@@ -32,8 +32,8 @@ namespace Nop.Services.Common
         /// <summary>
         /// Gets a search term statistics
         /// </summary>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>A list search term report lines</returns>
         IPagedList<SearchTermReportLine> GetStats(int pageIndex = 0, int pageSize = int.MaxValue);
 

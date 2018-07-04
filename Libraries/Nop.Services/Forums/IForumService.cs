@@ -103,8 +103,8 @@ namespace Nop.Services.Forums
         /// <param name="keywords">Keywords</param>
         /// <param name="searchType">Search type</param>
         /// <param name="limitDays">Limit by the last number days; 0 to load all topics</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>Forum Topics</returns>
         IPagedList<ForumTopic> GetAllTopics(int forumId = 0,
             int customerId = 0, string keywords = "", ForumSearchType searchType = ForumSearchType.All,
@@ -114,8 +114,8 @@ namespace Nop.Services.Forums
         /// Gets active forum topics
         /// </summary>
         /// <param name="forumId">The forum identifier</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>Forum Topics</returns>
         IPagedList<ForumTopic> GetActiveTopics(int forumId = 0, 
             int pageIndex = 0, int pageSize = int.MaxValue);
@@ -160,8 +160,8 @@ namespace Nop.Services.Forums
         /// <param name="forumTopicId">The forum topic identifier</param>
         /// <param name="customerId">The customer identifier</param>
         /// <param name="keywords">Keywords</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>Posts</returns>
         IPagedList<ForumPost> GetAllPosts(int forumTopicId = 0,
             int customerId = 0, string keywords = "", 
@@ -174,8 +174,8 @@ namespace Nop.Services.Forums
         /// <param name="customerId">The customer identifier</param>
         /// <param name="keywords">Keywords</param>
         /// <param name="ascSort">Sort order</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>Forum Posts</returns>
         IPagedList<ForumPost> GetAllPosts(int forumTopicId = 0, int customerId = 0,
             string keywords = "", bool ascSort = false, 
@@ -217,8 +217,8 @@ namespace Nop.Services.Forums
         /// <param name="isDeletedByAuthor">A value indicating whether loaded messages are deleted by author. false - messages are not deleted by author, null to load all messages</param>
         /// <param name="isDeletedByRecipient">A value indicating whether loaded messages are deleted by recipient. false - messages are not deleted by recipient, null to load all messages</param>
         /// <param name="keywords">Keywords</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>Private messages</returns>
         IPagedList<PrivateMessage> GetAllPrivateMessages(int storeId, int fromCustomerId,
             int toCustomerId, bool? isRead, bool? isDeletedByAuthor, bool? isDeletedByRecipient,
@@ -255,8 +255,8 @@ namespace Nop.Services.Forums
         /// <param name="customerId">The customer identifier</param>
         /// <param name="forumId">The forum identifier</param>
         /// <param name="topicId">The topic identifier</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>Forum subscriptions</returns>
         IPagedList<ForumSubscription> GetAllSubscriptions(int customerId = 0, int forumId = 0,
             int topicId = 0, int pageIndex = 0, int pageSize = int.MaxValue);
@@ -347,9 +347,9 @@ namespace Nop.Services.Forums
         /// Calculates topic page index by post identifier
         /// </summary>
         /// <param name="forumTopicId">Topic identifier</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageSize">页面大小</param>
         /// <param name="postId">Post identifier</param>
-        /// <returns>Page index</returns>
+        /// <returns>页面索引</returns>
         int CalculateTopicPageIndex(int forumTopicId, int pageSize, int postId);
 
         /// <summary>

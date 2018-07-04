@@ -19,7 +19,7 @@ namespace Nop.Admin.Helpers
         /// </summary>
         /// <param name="categoryService">Category service</param>
         /// <param name="cacheManager">Cache manager</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Category list</returns>
         public static List<SelectListItem> GetCategoryList(ICategoryService categoryService, ICacheManager cacheManager, bool showHidden = false)
         {
@@ -59,7 +59,7 @@ namespace Nop.Admin.Helpers
         /// </summary>
         /// <param name="manufacturerService">Manufacturer service</param>
         /// <param name="cacheManager">Cache manager</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Manufacturer list</returns>
         public static List<SelectListItem> GetManufacturerList(IManufacturerService manufacturerService, ICacheManager cacheManager, bool showHidden = false)
         {
@@ -99,7 +99,7 @@ namespace Nop.Admin.Helpers
         /// </summary>
         /// <param name="vendorService">Vendor service</param>
         /// <param name="cacheManager">Cache manager</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Vendor list</returns>
         public static List<SelectListItem> GetVendorList(IVendorService vendorService, ICacheManager cacheManager, bool showHidden = false)
         {

@@ -33,14 +33,14 @@ namespace Nop.Services.Directory
         /// </summary>
         /// <param name="countryId">Country identifier</param>
         /// <param name="languageId">Language identifier. It's used to sort states by localized names (if specified); pass 0 to skip it</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>States</returns>
         IList<StateProvince> GetStateProvincesByCountryId(int countryId, int languageId = 0, bool showHidden = false);
 
         /// <summary>
         /// Gets all states/provinces
         /// </summary>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>States</returns>
         IList<StateProvince> GetStateProvinces(bool showHidden = false);
 

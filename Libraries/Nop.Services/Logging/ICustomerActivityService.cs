@@ -74,8 +74,8 @@ namespace Nop.Services.Logging
         /// <param name="createdOnTo">Log item creation to; null to load all customers</param>
         /// <param name="customerId">Customer identifier; null to load all customers</param>
         /// <param name="activityLogTypeId">Activity log type identifier</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <param name="ipAddress">IP address; null or empty to load all customers</param>
         /// <returns>Activity log items</returns>
         IPagedList<ActivityLog> GetAllActivities(DateTime? createdOnFrom = null,

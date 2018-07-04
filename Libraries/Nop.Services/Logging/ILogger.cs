@@ -42,8 +42,8 @@ namespace Nop.Services.Logging
         /// <param name="toUtc">Log item creation to; null to load all records</param>
         /// <param name="message">Message</param>
         /// <param name="logLevel">Log level; null to load all records</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>Log item items</returns>
         IPagedList<Log> GetAllLogs(DateTime? fromUtc = null, DateTime? toUtc = null,
             string message = "", LogLevel? logLevel = null,

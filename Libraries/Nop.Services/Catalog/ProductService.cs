@@ -374,8 +374,8 @@ namespace Nop.Services.Catalog
         /// <summary>
         /// Search products
         /// </summary>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <param name="categoryIds">Category identifiers</param>
         /// <param name="manufacturerId">Manufacturer identifier; 0 to load all records</param>
         /// <param name="storeId">Store identifier; 0 to load all records</param>
@@ -396,7 +396,7 @@ namespace Nop.Services.Catalog
         /// <param name="languageId">Language identifier (search for text searching)</param>
         /// <param name="filteredSpecs">Filtered product specification identifiers</param>
         /// <param name="orderBy">Order by</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <param name="overridePublished">
         /// null - process "Published" property according to "showHidden" parameter
         /// true - load only "Published" products
@@ -444,8 +444,8 @@ namespace Nop.Services.Catalog
         /// </summary>
         /// <param name="filterableSpecificationAttributeOptionIds">The specification attribute option identifiers applied to loaded products (all pages)</param>
         /// <param name="loadFilterableSpecificationAttributeOptionIds">A value indicating whether we should load the specification attribute option identifiers applied to loaded products (all pages)</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <param name="categoryIds">Category identifiers</param>
         /// <param name="manufacturerId">Manufacturer identifier; 0 to load all records</param>
         /// <param name="storeId">Store identifier; 0 to load all records</param>
@@ -466,7 +466,7 @@ namespace Nop.Services.Catalog
         /// <param name="languageId">Language identifier (search for text searching)</param>
         /// <param name="filteredSpecs">Filtered product specification identifiers</param>
         /// <param name="orderBy">Order by</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <param name="overridePublished">
         /// null - process "Published" property according to "showHidden" parameter
         /// true - load only "Published" products
@@ -1022,8 +1022,8 @@ namespace Nop.Services.Catalog
         /// Gets products by product attribute
         /// </summary>
         /// <param name="productAttributeId">Product attribute identifier</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>Products</returns>
         public virtual IPagedList<Product> GetProductsByProductAtributeId(int productAttributeId,
             int pageIndex = 0, int pageSize = int.MaxValue)
@@ -1043,7 +1043,7 @@ namespace Nop.Services.Catalog
         /// <param name="parentGroupedProductId">Parent product identifier (used with grouped products)</param>
         /// <param name="storeId">Store identifier; 0 to load all records</param>
         /// <param name="vendorId">Vendor identifier; 0 to load all records</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Products</returns>
         public virtual IList<Product> GetAssociatedProducts(int parentGroupedProductId,
             int storeId = 0, int vendorId = 0, bool showHidden = false)
@@ -1125,8 +1125,8 @@ namespace Nop.Services.Catalog
         /// Get low stock products
         /// </summary>
         /// <param name="vendorId">Vendor identifier; 0 to load all records</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>Products</returns>
         public virtual IPagedList<Product> GetLowStockProducts(int vendorId = 0,
             int pageIndex = 0, int pageSize = int.MaxValue)
@@ -1152,8 +1152,8 @@ namespace Nop.Services.Catalog
         /// Get low stock product combinations
         /// </summary>
         /// <param name="vendorId">Vendor identifier; 0 to load all records</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>Product combinations</returns>
         public virtual IPagedList<ProductAttributeCombination> GetLowStockProductCombinations(int vendorId = 0,
             int pageIndex = 0, int pageSize = int.MaxValue)
@@ -1585,7 +1585,7 @@ namespace Nop.Services.Catalog
         /// Gets related products by product identifier
         /// </summary>
         /// <param name="productId1">The first product identifier</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Related products</returns>
         public virtual IList<RelatedProduct> GetRelatedProductsByProductId1(int productId1, bool showHidden = false)
         {
@@ -1667,7 +1667,7 @@ namespace Nop.Services.Catalog
         /// Gets cross-sell products by product identifier
         /// </summary>
         /// <param name="productId1">The first product identifier</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Cross-sell products</returns>
         public virtual IList<CrossSellProduct> GetCrossSellProductsByProductId1(int productId1, bool showHidden = false)
         {
@@ -1941,11 +1941,11 @@ namespace Nop.Services.Catalog
         /// <param name="fromUtc">Item creation from; null to load all records</param>
         /// <param name="toUtc">Item item creation to; null to load all records</param>
         /// <param name="message">Search title or review text; null to load all records</param>
-        /// <param name="storeId">The store identifier; pass 0 to load all records</param>
+        /// <param name="storeId">商店标识符; 传递0以加载所有记录</param>
         /// <param name="productId">The product identifier; pass 0 to load all records</param>
         /// <param name="vendorId">The vendor identifier (limit to products of this vendor); pass 0 to load all records</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>Reviews</returns>
         public virtual IPagedList<ProductReview> GetAllProductReviews(int customerId, bool? approved,
             DateTime? fromUtc = null, DateTime? toUtc = null,
@@ -2113,8 +2113,8 @@ namespace Nop.Services.Catalog
         /// <param name="product">Product</param>
         /// <param name="warehouseId">Warehouse identifier; pass 0 to load all entries</param>
         /// <param name="combinationId">Product attribute combination identifier; pass 0 to load all entries</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>List of stock quantity change entries</returns>
         public virtual IPagedList<StockQuantityHistory> GetStockQuantityHistory(Product product, int warehouseId = 0, int combinationId = 0,
             int pageIndex = 0, int pageSize = int.MaxValue)

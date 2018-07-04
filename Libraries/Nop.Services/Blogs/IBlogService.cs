@@ -6,133 +6,133 @@ using Nop.Core.Domain.Blogs;
 namespace Nop.Services.Blogs
 {
     /// <summary>
-    /// Blog service interface
+    /// 博客服务接口
     /// </summary>
     public partial interface IBlogService
     {
-        #region Blog posts
+        #region 博客文章
 
         /// <summary>
-        /// Deletes a blog post
+        /// 删除博客
         /// </summary>
-        /// <param name="blogPost">Blog post</param>
+        /// <param name="blogPost">博客</param>
         void DeleteBlogPost(BlogPost blogPost);
 
         /// <summary>
-        /// Gets a blog post
+        /// 根据ID获取博客
         /// </summary>
-        /// <param name="blogPostId">Blog post identifier</param>
-        /// <returns>Blog post</returns>
+        /// <param name="blogPostId">博客ID</param>
+        /// <returns>博客</returns>
         BlogPost GetBlogPostById(int blogPostId);
 
         /// <summary>
-        /// Gets blog posts
+        /// 获取博客集合
         /// </summary>
-        /// <param name="blogPostIds">Blog post identifiers</param>
-        /// <returns>Blog posts</returns>
+        /// <param name="blogPostIds">博客ID集合</param>
+        /// <returns>博客集合</returns>
         IList<BlogPost> GetBlogPostsByIds(int[] blogPostIds);
 
         /// <summary>
-        /// Gets all blog posts
+        /// 获取所有博客
         /// </summary>
-        /// <param name="storeId">The store identifier; pass 0 to load all records</param>
-        /// <param name="languageId">Language identifier; 0 if you want to get all records</param>
-        /// <param name="dateFrom">Filter by created date; null if you want to get all records</param>
-        /// <param name="dateTo">Filter by created date; null if you want to get all records</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
-        /// <returns>Blog posts</returns>
+        /// <param name="storeId">商店标识符; 传递0以加载所有记录</param>
+        /// <param name="languageId">语言标识符; 0如果你想获得所有记录</param>
+        /// <param name="dateFrom">按创建日期过滤; 如果要获取所有记录，请为null</param>
+        /// <param name="dateTo">按创建日期过滤; 如果要获取所有记录，请为null</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
+        /// <returns></returns>
         IPagedList<BlogPost> GetAllBlogPosts(int storeId = 0, int languageId = 0,
             DateTime? dateFrom = null, DateTime? dateTo = null, 
             int pageIndex = 0, int pageSize = int.MaxValue, bool showHidden = false);
 
         /// <summary>
-        /// Gets all blog posts
+        /// 获取所有博客
         /// </summary>
-        /// <param name="storeId">The store identifier; pass 0 to load all records</param>
-        /// <param name="languageId">Language identifier. 0 if you want to get all blog posts</param>
-        /// <param name="tag">Tag</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
-        /// <returns>Blog posts</returns>
+        /// <param name="storeId">商店标识符; 传递0以加载所有记录</param>
+        /// <param name="languageId">语言标识符。 0如果你想获得所有博客帖子</param>
+        /// <param name="tag">标签</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
+        /// <returns></returns>
         IPagedList<BlogPost> GetAllBlogPostsByTag(int storeId = 0,
             int languageId = 0, string tag = "",
             int pageIndex = 0, int pageSize = int.MaxValue, bool showHidden = false);
 
         /// <summary>
-        /// Gets all blog post tags
+        /// 获取所有博客帖子标签
         /// </summary>
-        /// <param name="storeId">The store identifier; pass 0 to load all records</param>
-        /// <param name="languageId">Language identifier. 0 if you want to get all blog posts</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
-        /// <returns>Blog post tags</returns>
+        /// <param name="storeId">商店标识符; 传递0以加载所有记录</param>
+        /// <param name="languageId">语言标识符。 0如果你想获得所有博客帖子</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
+        /// <returns></returns>
         IList<BlogPostTag> GetAllBlogPostTags(int storeId, int languageId, bool showHidden = false);
 
         /// <summary>
-        /// Inserts an blog post
+        /// 添加博客
         /// </summary>
-        /// <param name="blogPost">Blog post</param>
+        /// <param name="blogPost">博客</param>
         void InsertBlogPost(BlogPost blogPost);
 
         /// <summary>
-        /// Updates the blog post
+        /// 更新博客
         /// </summary>
-        /// <param name="blogPost">Blog post</param>
+        /// <param name="blogPost">博客</param>
         void UpdateBlogPost(BlogPost blogPost);
 
         #endregion
 
-        #region Blog comments
+        #region 博客评论
 
         /// <summary>
-        /// Gets all comments
+        /// 获取所有博客评论
         /// </summary>
-        /// <param name="customerId">Customer identifier; 0 to load all records</param>
-        /// <param name="storeId">Store identifier; pass 0 to load all records</param>
-        /// <param name="blogPostId">Blog post ID; 0 or null to load all records</param>
-        /// <param name="approved">A value indicating whether to content is approved; null to load all records</param> 
-        /// <param name="fromUtc">Item creation from; null to load all records</param>
-        /// <param name="toUtc">Item creation to; null to load all records</param>
-        /// <param name="commentText">Search comment text; null to load all records</param>
-        /// <returns>Comments</returns>
+        /// <param name="customerId">客户标识; 0加载所有记录</param>
+        /// <param name="storeId">商店标识; 传递0以加载所有记录</param>
+        /// <param name="blogPostId">博客帖子ID; 0或null以加载所有记录</param>
+        /// <param name="approved">表示是否批准内容的值; null以加载所有记录</param> 
+        /// <param name="fromUtc">项目创建来自; null以加载所有记录</param>
+        /// <param name="toUtc">项目创建到; null以加载所有记录</param>
+        /// <param name="commentText">搜索评论文字; null以加载所有记录</param>
+        /// <returns></returns>
         IList<BlogComment> GetAllComments(int customerId = 0, int storeId = 0, int? blogPostId = null,
             bool? approved = null, DateTime? fromUtc = null, DateTime? toUtc = null, string commentText = null);
 
         /// <summary>
-        /// Gets a blog comment
+        /// 获取博客评论
         /// </summary>
-        /// <param name="blogCommentId">Blog comment identifier</param>
-        /// <returns>Blog comment</returns>
+        /// <param name="blogCommentId">博客评论标识符</param>
+        /// <returns></returns>
         BlogComment GetBlogCommentById(int blogCommentId);
 
         /// <summary>
-        /// Get blog comments by identifiers
+        /// 按标识符获取博客评论
         /// </summary>
-        /// <param name="commentIds">Blog comment identifiers</param>
-        /// <returns>Blog comments</returns>
+        /// <param name="commentIds">博客评论标识符</param>
+        /// <returns></returns>
         IList<BlogComment> GetBlogCommentsByIds(int[] commentIds);
 
         /// <summary>
-        /// Get the count of blog comments
+        /// 获取博客评论的数量
         /// </summary>
-        /// <param name="blogPost">Blog post</param>
-        /// <param name="storeId">Store identifier; pass 0 to load all records</param>
-        /// <param name="isApproved">A value indicating whether to count only approved or not approved comments; pass null to get number of all comments</param>
-        /// <returns>Number of blog comments</returns>
+        /// <param name="blogPost">博客</param>
+        /// <param name="storeId">商店标识; 传递0以加载所有记录</param>
+        /// <param name="isApproved">表示是否仅计算已批准或未批准的评论的值; 传递null以获取所有注释的数量</param>
+        /// <returns></returns>
         int GetBlogCommentsCount(BlogPost blogPost, int storeId = 0, bool? isApproved = null);
 
         /// <summary>
-        /// Deletes a blog comment
+        /// 删除博客评论
         /// </summary>
-        /// <param name="blogComment">Blog comment</param>
+        /// <param name="blogComment">博客评论</param>
         void DeleteBlogComment(BlogComment blogComment);
 
         /// <summary>
-        /// Deletes blog comments
+        /// 删除博客评论
         /// </summary>
-        /// <param name="blogComments">Blog comments</param>
+        /// <param name="blogComments">博客评论集合</param>
         void DeleteBlogComments(IList<BlogComment> blogComments);
 
         #endregion

@@ -15,11 +15,11 @@ using Nop.Services.Orders;
 namespace Nop.Services.Authentication.External
 {
     /// <summary>
-    /// External authorizer
+    /// 外部授权程序
     /// </summary>
     public partial class ExternalAuthorizer : IExternalAuthorizer
     {
-        #region Fields
+        #region 字段
 
         private readonly IAuthenticationService _authenticationService;
         private readonly IOpenAuthenticationService _openAuthenticationService;
@@ -37,8 +37,24 @@ namespace Nop.Services.Authentication.External
         private readonly LocalizationSettings _localizationSettings;
         #endregion
 
-        #region Ctor
-
+        #region 构造函数
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="authenticationService"></param>
+        /// <param name="openAuthenticationService"></param>
+        /// <param name="genericAttributeService"></param>
+        /// <param name="customerRegistrationService"></param>
+        /// <param name="customerActivityService"></param>
+        /// <param name="localizationService"></param>
+        /// <param name="workContext"></param>
+        /// <param name="storeContext"></param>
+        /// <param name="customerSettings"></param>
+        /// <param name="externalAuthenticationSettings"></param>
+        /// <param name="shoppingCartService"></param>
+        /// <param name="workflowMessageService"></param>
+        /// <param name="eventPublisher"></param>
+        /// <param name="localizationSettings"></param>
         public ExternalAuthorizer(IAuthenticationService authenticationService,
             IOpenAuthenticationService openAuthenticationService,
             IGenericAttributeService genericAttributeService,
@@ -69,31 +85,52 @@ namespace Nop.Services.Authentication.External
             this._eventPublisher = eventPublisher;
             this._localizationSettings = localizationSettings;
         }
-        
+
         #endregion
 
         #region Utilities
-
+        /// <summary>
+        /// 启用注册
+        /// </summary>
+        /// <returns></returns>
         private bool RegistrationIsEnabled()
         {
             return _customerSettings.UserRegistrationType != UserRegistrationType.Disabled && !_externalAuthenticationSettings.AutoRegisterEnabled;
         }
-
+        /// <summary>
+        /// 启用自动注册
+        /// </summary>
+        /// <returns></returns>
         private bool AutoRegistrationIsEnabled()
         {
             return _customerSettings.UserRegistrationType != UserRegistrationType.Disabled && _externalAuthenticationSettings.AutoRegisterEnabled;
         }
-
+        /// <summary>
+        /// 帐户不存在且用户未登录
+        /// </summary>
+        /// <param name="userFound"></param>
+        /// <param name="userLoggedIn"></param>
+        /// <returns></returns>
         private bool AccountDoesNotExistAndUserIsNotLoggedOn(Customer userFound, Customer userLoggedIn)
         {
             return userFound == null && userLoggedIn == null;
         }
-
+        /// <summary>
+        /// 帐户被分配到登录帐户
+        /// </summary>
+        /// <param name="userFound"></param>
+        /// <param name="userLoggedIn"></param>
+        /// <returns></returns>
         private bool AccountIsAssignedToLoggedOnAccount(Customer userFound, Customer userLoggedIn)
         {
             return userFound.Id.Equals(userLoggedIn.Id);
         }
-
+        /// <summary>
+        /// 帐户已经存在
+        /// </summary>
+        /// <param name="userFound"></param>
+        /// <param name="userLoggedIn"></param>
+        /// <returns></returns>
         private bool AccountAlreadyExists(Customer userFound, Customer userLoggedIn)
         {
             return userFound != null && userLoggedIn != null;
@@ -101,8 +138,12 @@ namespace Nop.Services.Authentication.External
 
         #endregion
 
-        #region Methods
-
+        #region 方法
+        /// <summary>
+        /// 授权
+        /// </summary>
+        /// <param name="parameters">外部授权参数</param>
+        /// <returns></returns>
         public virtual AuthorizationResult Authorize(OpenAuthenticationParameters parameters)
         {
             var userFound = _openAuthenticationService.GetUser(parameters);

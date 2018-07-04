@@ -74,7 +74,7 @@ namespace Nop.Services.Tasks
         /// <summary>
         /// Gets all tasks
         /// </summary>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Tasks</returns>
         public virtual IList<ScheduleTask> GetAllTasks(bool showHidden = false)
         {

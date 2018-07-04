@@ -6,17 +6,17 @@ using System.Linq.Expressions;
 namespace Nop.Data 
 {
     /// <summary>
-    /// Queryable extensions
+    /// Queryable扩展
     /// </summary>
     public static class QueryableExtensions
     {
         /// <summary>
-        /// Include
+        /// 包括
         /// </summary>
-        /// <typeparam name="T">Type</typeparam>
+        /// <typeparam name="T">类型</typeparam>
         /// <param name="queryable">Queryable</param>
-        /// <param name="includeProperties">A list of properties to include</param>
-        /// <returns>New queryable</returns>
+        /// <param name="includeProperties">要包含的属性列表</param>
+        /// <returns></returns>
         public static IQueryable<T> IncludeProperties<T>(this IQueryable<T> queryable,
             params Expression<Func<T, object>>[] includeProperties)
         {

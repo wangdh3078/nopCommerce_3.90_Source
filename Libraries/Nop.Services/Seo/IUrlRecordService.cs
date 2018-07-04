@@ -67,8 +67,8 @@ namespace Nop.Services.Seo
         /// Gets all URL records
         /// </summary>
         /// <param name="slug">Slug</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>URL records</returns>
         IPagedList<UrlRecord> GetAllUrlRecords(string slug = "", int pageIndex = 0, int pageSize = int.MaxValue);
 

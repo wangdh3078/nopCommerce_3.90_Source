@@ -5,29 +5,29 @@ using Nop.Core.Plugins;
 namespace Nop.Services.Cms
 {
     /// <summary>
-    /// Provides an interface for creating widgets
+    /// 提供用于创建小部件的接口
     /// </summary>
     public partial interface IWidgetPlugin : IPlugin
     {
         /// <summary>
-        /// Gets widget zones where this widget should be rendered
+        /// 获取应该呈现此小部件的小部件区域。
         /// </summary>
-        /// <returns>Widget zones</returns>
+        /// <returns>控件区域</returns>
         IList<string> GetWidgetZones();
 
         /// <summary>
-        /// Gets a route for plugin configuration
+        /// 获取插件配置的路由
         /// </summary>
         /// <param name="actionName">Action name</param>
         /// <param name="controllerName">Controller name</param>
         /// <param name="routeValues">Route values</param>
         void GetConfigurationRoute(out string actionName, out string controllerName, out RouteValueDictionary routeValues);
-        
+
 
         /// <summary>
-        /// Gets a route for displaying widget
+        /// 获取显示窗口小部件的路径
         /// </summary>
-        /// <param name="widgetZone">Widget zone where it's displayed</param>
+        /// <param name="widgetZone">窗口小部件显示的区域</param>
         /// <param name="actionName">Action name</param>
         /// <param name="controllerName">Controller name</param>
         /// <param name="routeValues">Route values</param>

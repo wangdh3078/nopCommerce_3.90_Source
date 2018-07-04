@@ -29,8 +29,8 @@ namespace Nop.Services.Shipping
         /// <param name="loadNotShipped">A value indicating whether we should load only not shipped shipments</param>
         /// <param name="createdFromUtc">Created date from (UTC); null to load all records</param>
         /// <param name="createdToUtc">Created date to (UTC); null to load all records</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>Shipments</returns>
         IPagedList<Shipment> GetAllShipments(int vendorId = 0, int warehouseId = 0,
             int shippingCountryId = 0,

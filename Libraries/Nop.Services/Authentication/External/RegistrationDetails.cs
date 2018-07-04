@@ -4,10 +4,14 @@
 namespace Nop.Services.Authentication.External
 {
     /// <summary>
-    /// Registration details
+    ///注册详情
     /// </summary>
     public struct RegistrationDetails
     {
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="parameters">开放认证参数</param>
         public RegistrationDetails(OpenAuthenticationParameters parameters)
             : this()
         {
@@ -33,10 +37,21 @@ namespace Nop.Services.Authentication.External
                             LastName = claim.Name.Last;
                 }
         }
-
+        /// <summary>
+        /// 用户名
+        /// </summary>
         public string UserName { get; set; }
+        /// <summary>
+        /// 邮件
+        /// </summary>
         public string EmailAddress { get; set; }
+        /// <summary>
+        /// 姓名
+        /// </summary>
         public string FirstName { get; set; }
+        /// <summary>
+        /// 姓氏
+        /// </summary>
         public string LastName { get; set; }
     }
 }

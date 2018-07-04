@@ -68,9 +68,8 @@ namespace Nop.Data
         #endregion
 
         #region Methods
-
         /// <summary>
-        /// Initialize connection factory
+        /// 初始化连接工厂
         /// </summary>
         public virtual void InitConnectionFactory()
         {
@@ -81,7 +80,7 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Initialize database
+        /// 初始化数据库
         /// </summary>
         public virtual void InitDatabase()
         {
@@ -90,7 +89,7 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Set database initializer
+        /// 设置数据库初始化器
         /// </summary>
         public virtual void SetDatabaseInitializer()
         {
@@ -107,8 +106,9 @@ namespace Nop.Data
             Database.SetInitializer(initializer);
         }
 
+
         /// <summary>
-        /// A value indicating whether this data provider supports stored procedures
+        /// 指示此数据提供程序是否支持存储过程的值。
         /// </summary>
         public virtual bool StoredProceduredSupported
         {
@@ -116,7 +116,7 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// A value indicating whether this data provider supports backup
+        /// 指示此数据提供程序是否支持备份的值。
         /// </summary>
         public virtual bool BackupSupported
         {
@@ -124,22 +124,22 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Gets a support database parameter object (used by stored procedures)
+        /// 获取支持数据库参数对象（由存储过程使用）
         /// </summary>
-        /// <returns>Parameter</returns>
+        /// <returns>参数</returns>
         public virtual DbParameter GetParameter()
         {
             return new SqlParameter();
         }
 
         /// <summary>
-        /// Maximum length of the data for HASHBYTES functions
-        /// returns 0 if HASHBYTES function is not supported
+        /// 如果不支持哈希字节函数
+        /// 哈希字节函数的最大长度返回0。
         /// </summary>
-        /// <returns>Length of the data for HASHBYTES functions</returns>
+        /// <returns>哈希字节函数的数据长度</returns>
         public int SupportedLengthOfBinaryHash()
         {
-            return 8000; //for SQL Server 2008 and above HASHBYTES function has a limit of 8000 characters.
+            return 8000; //对于SQL Server 2008及更高版本，HASHBYTES函数的限制为8000个字符。
         }
 
         #endregion

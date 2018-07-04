@@ -86,8 +86,8 @@ namespace Nop.Services.Catalog
         /// <summary>
         /// Gets specification attributes
         /// </summary>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>Specification attributes</returns>
         public virtual IPagedList<SpecificationAttribute> GetSpecificationAttributes(int pageIndex = 0, int pageSize = int.MaxValue)
         {

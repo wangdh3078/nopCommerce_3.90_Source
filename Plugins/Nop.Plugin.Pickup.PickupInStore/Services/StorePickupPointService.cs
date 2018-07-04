@@ -47,9 +47,9 @@ namespace Nop.Plugin.Pickup.PickupInStore.Services
         /// <summary>
         /// Gets all pickup points
         /// </summary>
-        /// <param name="storeId">The store identifier; pass 0 to load all records</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="storeId">商店标识符; 传递0以加载所有记录</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>Pickup points</returns>
         public virtual IPagedList<StorePickupPoint> GetAllStorePickupPoints(int storeId = 0, int pageIndex = 0, int pageSize = int.MaxValue)
         {

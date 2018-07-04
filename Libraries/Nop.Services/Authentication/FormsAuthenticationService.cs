@@ -7,11 +7,11 @@ using Nop.Services.Customers;
 namespace Nop.Services.Authentication
 {
     /// <summary>
-    /// Authentication service
+    /// 验证服务
     /// </summary>
     public partial class FormsAuthenticationService : IAuthenticationService
     {
-        #region Fields
+        #region 字段
 
         private readonly HttpContextBase _httpContext;
         private readonly ICustomerService _customerService;
@@ -22,10 +22,10 @@ namespace Nop.Services.Authentication
 
         #endregion
 
-        #region Ctor
+        #region 构造函数
 
         /// <summary>
-        /// Ctor
+        /// 构造函数
         /// </summary>
         /// <param name="httpContext">HTTP context</param>
         /// <param name="customerService">Customer service</param>
@@ -44,10 +44,10 @@ namespace Nop.Services.Authentication
         #region Utilities
 
         /// <summary>
-        /// Get authenticated customer
+        ///获得经过身份验证的客
         /// </summary>
-        /// <param name="ticket">Ticket</param>
-        /// <returns>Customer</returns>
+        /// <param name="ticket">票据</param>
+        /// <returns>客户</returns>
         protected virtual Customer GetAuthenticatedCustomerFromTicket(FormsAuthenticationTicket ticket)
         {
             if (ticket == null)
@@ -65,13 +65,13 @@ namespace Nop.Services.Authentication
 
         #endregion
 
-        #region Methods
+        #region 方法
 
         /// <summary>
-        /// Sign in
+        ///登录
         /// </summary>
-        /// <param name="customer">Customer</param>
-        /// <param name="createPersistentCookie">A value indicating whether to create a persistent cookie</param>
+        /// <param name="customer">客户</param>
+        /// <param name="createPersistentCookie">指示是否创建持久性cookie的值。</param>
         public virtual void SignIn(Customer customer, bool createPersistentCookie)
         {
             var now = DateTime.UtcNow.ToLocalTime();
@@ -105,7 +105,7 @@ namespace Nop.Services.Authentication
         }
 
         /// <summary>
-        /// Sign out
+        /// 退出
         /// </summary>
         public virtual void SignOut()
         {
@@ -114,9 +114,9 @@ namespace Nop.Services.Authentication
         }
 
         /// <summary>
-        /// Get authenticated customer
+        /// 获得经过身份验证的客
         /// </summary>
-        /// <returns>Customer</returns>
+        /// <returns>客户</returns>
         public virtual Customer GetAuthenticatedCustomer()
         {
             if (_cachedCustomer != null)

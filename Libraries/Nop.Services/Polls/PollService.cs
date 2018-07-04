@@ -57,9 +57,9 @@ namespace Nop.Services.Polls
         /// <param name="languageId">Language identifier. 0 if you want to get all polls</param>
         /// <param name="loadShownOnHomePageOnly">Retrieve only shown on home page polls</param>
         /// <param name="systemKeyword">The poll system keyword. Pass null if you want to get all polls</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Polls</returns>
         public virtual IPagedList<Poll> GetPolls(int languageId = 0, bool loadShownOnHomePageOnly = false,
             string systemKeyword = null, int pageIndex = 0, int pageSize = int.MaxValue, bool showHidden = false)

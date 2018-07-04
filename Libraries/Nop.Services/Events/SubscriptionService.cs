@@ -4,15 +4,15 @@ using Nop.Core.Infrastructure;
 namespace Nop.Services.Events
 {
     /// <summary>
-    /// Event subscription service
+    /// 活动订阅服务
     /// </summary>
     public class SubscriptionService : ISubscriptionService
     {
         /// <summary>
-        /// Get subscriptions
+        /// 获得订阅
         /// </summary>
-        /// <typeparam name="T">Type</typeparam>
-        /// <returns>Event consumers</returns>
+        /// <typeparam name="T">类型</typeparam>
+        /// <returns>活动消费者</returns>
         public IList<IConsumer<T>> GetSubscriptions<T>()
         {
             return EngineContext.Current.ResolveAll<IConsumer<T>>();

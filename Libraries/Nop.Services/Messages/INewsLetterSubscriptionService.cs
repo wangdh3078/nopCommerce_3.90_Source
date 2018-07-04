@@ -61,8 +61,8 @@ namespace Nop.Services.Messages
         /// <param name="storeId">Store identifier. 0 to load all records.</param>
         /// <param name="isActive">Value indicating whether subscriber record should be active or not; null to load all records</param>
         /// <param name="customerRoleId">Customer role identifier. Used to filter subscribers by customer role. 0 to load all records.</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>NewsLetterSubscription entities</returns>
         IPagedList<NewsLetterSubscription> GetAllNewsLetterSubscriptions(string email = null,
             DateTime? createdFromUtc = null, DateTime? createdToUtc = null,

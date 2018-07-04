@@ -6,12 +6,12 @@ using System.Linq;
 namespace Nop.Services.Authentication.External
 {
     /// <summary>
-    /// Authorization result
+    /// 授权结果
     /// </summary>
     public partial class AuthorizationResult
     {
         /// <summary>
-        /// Ctor
+        /// 构造函数
         /// </summary>
         /// <param name="status"></param>
         public AuthorizationResult(OpenAuthenticationStatus status)
@@ -21,16 +21,16 @@ namespace Nop.Services.Authentication.External
         }
 
         /// <summary>
-        /// Add error
+        /// 添加错误
         /// </summary>
-        /// <param name="error">Error</param>
+        /// <param name="error">错误信息</param>
         public void AddError(string error)
         {
             this.Errors.Add(error);
         }
 
         /// <summary>
-        /// Gets a value indicating whether request has been completed successfully
+        /// 获取一个值，该值指示请求是否已成功完成
         /// </summary>
         public bool Success
         {
@@ -38,12 +38,12 @@ namespace Nop.Services.Authentication.External
         }
 
         /// <summary>
-        /// Status
+        /// 状态
         /// </summary>
         public OpenAuthenticationStatus Status { get; private set; }
 
         /// <summary>
-        /// Errors
+        /// 错误
         /// </summary>
         public IList<string> Errors { get; set; }
     }

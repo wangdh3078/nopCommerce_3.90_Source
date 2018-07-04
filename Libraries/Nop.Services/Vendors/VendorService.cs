@@ -74,9 +74,9 @@ namespace Nop.Services.Vendors
         /// Gets all vendors
         /// </summary>
         /// <param name="name">Vendor name</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Vendors</returns>
         public virtual IPagedList<Vendor> GetAllVendors(string name = "",
             int pageIndex = 0, int pageSize = int.MaxValue, bool showHidden = false)

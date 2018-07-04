@@ -31,7 +31,7 @@ namespace Nop.Services.Discounts
         /// <param name="discountType">Discount type; null to load all discount</param>
         /// <param name="couponCode">Coupon code to find (exact match)</param>
         /// <param name="discountName">Discount name</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Discounts</returns>
         IList<Discount> GetAllDiscounts(DiscountType? discountType = null,
             string couponCode = "", string discountName = "", bool showHidden = false);
@@ -58,7 +58,7 @@ namespace Nop.Services.Discounts
         /// <param name="discountType">Discount type; null to load all discount</param>
         /// <param name="couponCode">Coupon code to find (exact match)</param>
         /// <param name="discountName">Discount name</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Discounts</returns>
         IList<DiscountForCaching> GetAllDiscountsForCaching(DiscountType? discountType = null,
             string couponCode = "", string discountName = "", bool showHidden = false);
@@ -167,8 +167,8 @@ namespace Nop.Services.Discounts
         /// <param name="discountId">Discount identifier; null to load all records</param>
         /// <param name="customerId">Customer identifier; null to load all records</param>
         /// <param name="orderId">Order identifier; null to load all records</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>Discount usage history records</returns>
         IPagedList<DiscountUsageHistory> GetAllDiscountUsageHistory(int? discountId = null,
             int? customerId = null, int? orderId = null, 

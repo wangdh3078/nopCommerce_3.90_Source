@@ -84,8 +84,8 @@ namespace Nop.Services.Orders
         /// <param name="rs">Return request status; null to load all entries</param>
         /// <param name="createdFromUtc">Created date from (UTC); null to load all records</param>
         /// <param name="createdToUtc">Created date to (UTC); null to load all records</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>Return requests</returns>
         public IPagedList<ReturnRequest> SearchReturnRequests(int storeId = 0, int customerId = 0,
             int orderItemId = 0, string customNumber = "", ReturnRequestStatus? rs = null,  DateTime? createdFromUtc = null,

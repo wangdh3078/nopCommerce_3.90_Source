@@ -54,21 +54,21 @@ namespace Nop.Data
         #region Methods
 
         /// <summary>
-        /// Get entity by identifier
+        /// 根据ID获取实体
         /// </summary>
-        /// <param name="id">Identifier</param>
-        /// <returns>Entity</returns>
+        /// <param name="id">ID</param>
+        /// <returns></returns>
         public virtual T GetById(object id)
         {
-            //see some suggested performance optimization (not tested)
+            //参见一些建议的性能优化（未测试）
             //http://stackoverflow.com/questions/11686225/dbset-find-method-ridiculously-slow-compared-to-singleordefault-on-id/11688189#comment34876113_11688189
             return this.Entities.Find(id);
         }
 
         /// <summary>
-        /// Insert entity
+        /// 添加实体
         /// </summary>
-        /// <param name="entity">Entity</param>
+        /// <param name="entity">实体</param>
         public virtual void Insert(T entity)
         {
             try
@@ -87,9 +87,9 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Insert entities
+        /// 添加实体集合
         /// </summary>
-        /// <param name="entities">Entities</param>
+        /// <param name="entities">实体集合</param>
         public virtual void Insert(IEnumerable<T> entities)
         {
             try
@@ -109,9 +109,9 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Update entity
+        /// 更新实体
         /// </summary>
-        /// <param name="entity">Entity</param>
+        /// <param name="entity">实体</param>
         public virtual void Update(T entity)
         {
             try
@@ -128,9 +128,9 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Update entities
+        /// 更新实体集合
         /// </summary>
-        /// <param name="entities">Entities</param>
+        /// <param name="entities">实体集合</param>
         public virtual void Update(IEnumerable<T> entities)
         {
             try
@@ -147,9 +147,9 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Delete entity
+        /// 删除实体
         /// </summary>
-        /// <param name="entity">Entity</param>
+        /// <param name="entity">实体</param>
         public virtual void Delete(T entity)
         {
             try
@@ -168,9 +168,9 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Delete entities
+        /// 删除实体集合
         /// </summary>
-        /// <param name="entities">Entities</param>
+        /// <param name="entities">实体集合</param>
         public virtual void Delete(IEnumerable<T> entities)
         {
             try
@@ -194,7 +194,7 @@ namespace Nop.Data
         #region Properties
 
         /// <summary>
-        /// Gets a table
+        /// 获取整张表
         /// </summary>
         public virtual IQueryable<T> Table
         {
@@ -205,7 +205,7 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Gets a table with "no tracking" enabled (EF feature) Use it only when you load record(s) only for read-only operations
+        /// 获取一个“无跟踪”启用的表（EF特征），仅当您只为只读操作加载记录时才使用它。
         /// </summary>
         public virtual IQueryable<T> TableNoTracking
         {
@@ -216,7 +216,7 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Entities
+        /// 实体集合
         /// </summary>
         protected virtual IDbSet<T> Entities
         {

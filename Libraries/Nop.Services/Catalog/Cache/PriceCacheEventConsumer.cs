@@ -9,45 +9,45 @@ using Nop.Services.Events;
 namespace Nop.Services.Catalog.Cache
 {
     /// <summary>
-    /// Price cache event consumer (used for caching of prices)
+    ///价格缓存事件消费者（用于缓存价格）
     /// </summary>
     public partial class PriceCacheEventConsumer: 
-        //settings
+        //设置
         IConsumer<EntityUpdated<Setting>>,
-        //categories
+        //类别
         IConsumer<EntityInserted<Category>>,
         IConsumer<EntityUpdated<Category>>,
         IConsumer<EntityDeleted<Category>>,
-        //manufacturers
+        //制造商
         IConsumer<EntityInserted<Manufacturer>>,
         IConsumer<EntityUpdated<Manufacturer>>,
         IConsumer<EntityDeleted<Manufacturer>>,
-        //product categories
+        //产品类别
         IConsumer<EntityInserted<ProductCategory>>,
         IConsumer<EntityUpdated<ProductCategory>>,
         IConsumer<EntityDeleted<ProductCategory>>,
-        //product manufacturers
+        //产品制造商
         IConsumer<EntityInserted<ProductManufacturer>>,
         IConsumer<EntityUpdated<ProductManufacturer>>,
         IConsumer<EntityDeleted<ProductManufacturer>>,
-        //products
+        //产品
         IConsumer<EntityInserted<Product>>,
         IConsumer<EntityUpdated<Product>>,
         IConsumer<EntityDeleted<Product>>,
-        //tier prices
+        //价格
         IConsumer<EntityInserted<TierPrice>>,
         IConsumer<EntityUpdated<TierPrice>>,
         IConsumer<EntityDeleted<TierPrice>>,
-        //orders
+        //订单
         IConsumer<EntityInserted<Order>>,
         IConsumer<EntityUpdated<Order>>,
         IConsumer<EntityDeleted<Order>>
     {
         /// <summary>
-        /// Key for product prices
+        /// 产品价格的键
         /// </summary>
         /// <remarks>
-        /// {0} : product id
+        /// {0} : 产品ID
         /// {1} : overridden product price
         /// {2} : additional charge
         /// {3} : include discounts (true, false)

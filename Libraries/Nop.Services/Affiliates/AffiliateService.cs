@@ -9,26 +9,34 @@ using Nop.Services.Events;
 namespace Nop.Services.Affiliates
 {
     /// <summary>
-    /// Affiliate service
+    /// 附属服务
     /// </summary>
     public partial class AffiliateService : IAffiliateService
     {
-        #region Fields
-
+        #region 字段
+        /// <summary>
+        /// 附属仓储
+        /// </summary>
         private readonly IRepository<Affiliate> _affiliateRepository;
+        /// <summary>
+        /// 订单仓储
+        /// </summary>
         private readonly IRepository<Order> _orderRepository;
+        /// <summary>
+        /// 事件发布者
+        /// </summary>
         private readonly IEventPublisher _eventPublisher;
 
         #endregion
 
-        #region Ctor
+        #region 构造函数
 
         /// <summary>
-        /// Ctor
+        /// 构造函数
         /// </summary>
-        /// <param name="affiliateRepository">Affiliate repository</param>
-        /// <param name="orderRepository">Order repository</param>
-        /// <param name="eventPublisher">Event published</param>
+        /// <param name="affiliateRepository">附属信息仓储</param>
+        /// <param name="orderRepository">订单仓储</param>
+        /// <param name="eventPublisher">事件发布者</param>
         public AffiliateService(IRepository<Affiliate> affiliateRepository,
             IRepository<Order> orderRepository,
             IEventPublisher eventPublisher)
@@ -40,13 +48,13 @@ namespace Nop.Services.Affiliates
 
         #endregion
 
-        #region Methods
-        
+        #region 方法
+
         /// <summary>
-        /// Gets an affiliate by affiliate identifier
+        /// 通过附属标识符获取获取附属实体
         /// </summary>
-        /// <param name="affiliateId">Affiliate identifier</param>
-        /// <returns>Affiliate</returns>
+        /// <param name="affiliateId">附属标识符</param>
+        /// <returns>附属信息</returns>
         public virtual Affiliate GetAffiliateById(int affiliateId)
         {
             if (affiliateId == 0)
@@ -54,12 +62,12 @@ namespace Nop.Services.Affiliates
             
             return _affiliateRepository.GetById(affiliateId);
         }
-        
+
         /// <summary>
-        /// Gets an affiliate by friendly url name
+        /// 通过友好的URL名称获取附属信息
         /// </summary>
-        /// <param name="friendlyUrlName">Friendly url name</param>
-        /// <returns>Affiliate</returns>
+        /// <param name="friendlyUrlName">友好的URL名称</param>
+        /// <returns></returns>
         public virtual Affiliate GetAffiliateByFriendlyUrlName(string friendlyUrlName)
         {
             if (String.IsNullOrWhiteSpace(friendlyUrlName))
@@ -74,9 +82,9 @@ namespace Nop.Services.Affiliates
         }
 
         /// <summary>
-        /// Marks affiliate as deleted 
+        /// 删除附属信息
         /// </summary>
-        /// <param name="affiliate">Affiliate</param>
+        /// <param name="affiliate">附属信息</param>
         public virtual void DeleteAffiliate(Affiliate affiliate)
         {
             if (affiliate == null)
@@ -88,20 +96,19 @@ namespace Nop.Services.Affiliates
             //event notification
             _eventPublisher.EntityDeleted(affiliate);
         }
-
         /// <summary>
-        /// Gets all affiliates
+        /// 获取所有附属信息
         /// </summary>
-        /// <param name="friendlyUrlName">Friendly URL name; null to load all records</param>
-        /// <param name="firstName">First name; null to load all records</param>
-        /// <param name="lastName">Last name; null to load all records</param>
-        /// <param name="loadOnlyWithOrders">Value indicating whether to load affiliates only with orders placed (by affiliated customers)</param>
-        /// <param name="ordersCreatedFromUtc">Orders created date from (UTC); null to load all records. It's used only with "loadOnlyWithOrders" parameter st to "true".</param>
-        /// <param name="ordersCreatedToUtc">Orders created date to (UTC); null to load all records. It's used only with "loadOnlyWithOrders" parameter st to "true".</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
-        /// <returns>Affiliates</returns>
+        /// <param name="friendlyUrlName">友好的URL名称; null以加载所有记录</param>
+        /// <param name="firstName">名字; null以加载所有记录</param>
+        /// <param name="lastName">姓; null以加载所有记录</param>
+        /// <param name="loadOnlyWithOrders">表示是否仅通过下订单（由附属客户）加载附属公司的值</param>
+        /// <param name="ordersCreatedFromUtc">订单创建日期（UTC）; null以加载所有记录。 它仅用于“loadOnlyWithOrders”参数st到“true”。</param>
+        /// <param name="ordersCreatedToUtc">订单创建日期为（UTC）; null以加载所有记录。 它仅用于“loadOnlyWithOrders”参数st到“true”。</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
+        /// <returns></returns>
         public virtual IPagedList<Affiliate> GetAllAffiliates(string friendlyUrlName = null,
             string firstName = null, string lastName = null,
             bool loadOnlyWithOrders = false,
@@ -142,9 +149,9 @@ namespace Nop.Services.Affiliates
         }
 
         /// <summary>
-        /// Inserts an affiliate
+        /// 添加附属信息
         /// </summary>
-        /// <param name="affiliate">Affiliate</param>
+        /// <param name="affiliate">附属信息</param>
         public virtual void InsertAffiliate(Affiliate affiliate)
         {
             if (affiliate == null)
@@ -157,9 +164,9 @@ namespace Nop.Services.Affiliates
         }
 
         /// <summary>
-        /// Updates the affiliate
+        /// 更新附属信息
         /// </summary>
-        /// <param name="affiliate">Affiliate</param>
+        /// <param name="affiliate">附属信息</param>
         public virtual void UpdateAffiliate(Affiliate affiliate)
         {
             if (affiliate == null)

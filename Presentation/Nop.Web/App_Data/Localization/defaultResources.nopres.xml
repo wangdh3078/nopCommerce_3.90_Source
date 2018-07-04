@@ -2044,13 +2044,13 @@
     <Value>Please provide a name.</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Categories.Fields.PageSize">
-    <Value>Page size</Value>
+    <Value>页面大小</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Categories.Fields.PageSize.Hint">
     <Value>Set the page size for products in this category e.g. '4' products per page.</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Categories.Fields.PageSize.Positive">
-    <Value>Page size should have a positive value.</Value>
+    <Value>页面大小 should have a positive value.</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Categories.Fields.PageSizeOptions">
     <Value>Page Size options (comma separated)</Value>
@@ -2248,13 +2248,13 @@
     <Value>Please provide a name.</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Manufacturers.Fields.PageSize">
-    <Value>Page size</Value>
+    <Value>页面大小</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Manufacturers.Fields.PageSize.Hint">
     <Value>Set the page size for products in this manufacturer e.g. '4' products per page.</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Manufacturers.Fields.PageSize.Positive">
-    <Value>Page size should have a positive value.</Value>
+    <Value>页面大小 should have a positive value.</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Manufacturers.Fields.PageSizeOptions">
     <Value>Page Size options (comma separated)</Value>
@@ -5335,7 +5335,7 @@
     <Value>Search page. Check to allow customers to select the page size from a predefined list of options.</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Settings.Catalog.SearchPagePageSizeOptions">
-    <Value>Search page. Page size options (comma separated)</Value>
+    <Value>Search page. 页面大小 options (comma separated)</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Settings.Catalog.SearchPagePageSizeOptions.Hint">
     <Value>Search page. Comma separated list of page size options (e.g. 10, 5, 15, 20). First option is the default page size if none are selected.</Value>
@@ -7303,7 +7303,7 @@
     <Value>Customers won't be able to use reward points before they have X amount of points. Set to 0 if you do not want to use this setting.</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Settings.RewardPoints.PageSize">
-    <Value>Page size</Value>
+    <Value>页面大小</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Settings.RewardPoints.PageSize.Hint">
     <Value>Set the page size for history of reward points on 'My account' page.</Value>
@@ -13165,13 +13165,13 @@
     <Value>Please provide a name.</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Vendors.Fields.PageSize">
-    <Value>Page size</Value>
+    <Value>页面大小</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Vendors.Fields.PageSize.Hint">
     <Value>Set the page size for products in this vendor e.g. '4' products per page.</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Vendors.Fields.PageSize.Positive">
-    <Value>Page size should have a positive value.</Value>
+    <Value>页面大小 should have a positive value.</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Vendors.Fields.PageSizeOptions">
     <Value>Page Size options (comma separated)</Value>

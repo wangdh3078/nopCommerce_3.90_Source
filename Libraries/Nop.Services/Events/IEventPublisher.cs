@@ -2,15 +2,15 @@
 namespace Nop.Services.Events
 {
     /// <summary>
-    /// Evnt publisher
+    /// 事件发布者
     /// </summary>
     public interface IEventPublisher
     {
         /// <summary>
-        /// Publish event
+        /// 发布事件
         /// </summary>
-        /// <typeparam name="T">Type</typeparam>
-        /// <param name="eventMessage">Event message</param>
+        /// <typeparam name="T">类型</typeparam>
+        /// <param name="eventMessage">事件消息</param>
         void Publish<T>(T eventMessage);
     }
 }

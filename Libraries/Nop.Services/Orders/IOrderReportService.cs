@@ -72,9 +72,9 @@ namespace Nop.Services.Orders
         /// <param name="ss">Shipping status; null to load all records</param>
         /// <param name="billingCountryId">Billing country identifier; 0 to load all records</param>
         /// <param name="orderBy">1 - order by quantity, 2 - order by total amount</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Result</returns>
         IPagedList<BestsellersReportLine> BestSellersReport(
             int categoryId = 0, int manufacturerId = 0, 
@@ -93,7 +93,7 @@ namespace Nop.Services.Orders
         /// <param name="productId">Product identifier</param>
         /// <param name="recordsToReturn">Records to return</param>
         /// <param name="visibleIndividuallyOnly">A values indicating whether to load only products marked as "visible individually"; "false" to load all records; "true" to load "visible individually" only</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Products</returns>
         int[] GetAlsoPurchasedProductsIds(int storeId, int productId,
             int recordsToReturn = 5, bool visibleIndividuallyOnly = true, bool showHidden = false);
@@ -107,9 +107,9 @@ namespace Nop.Services.Orders
         /// <param name="manufacturerId">Manufacturer identifier; 0 to load all records</param>
         /// <param name="createdFromUtc">Order created date from (UTC); null to load all records</param>
         /// <param name="createdToUtc">Order created date to (UTC); null to load all records</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Products</returns>
         IPagedList<Product> ProductsNeverSold(int vendorId = 0, int storeId = 0,
             int categoryId = 0, int manufacturerId = 0,

@@ -12,7 +12,7 @@ using Nop.Data.Mapping;
 namespace Nop.Data
 {
     /// <summary>
-    /// Object context
+    /// 对象上下文
     /// </summary>
     public class NopObjectContext : DbContext, IDbContext
     {
@@ -52,11 +52,11 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Attach an entity to the context or return an already attached entity (if it was already attached)
+        /// 将实体附加到上下文或返回已附加的实体（如果已附加）
         /// </summary>
-        /// <typeparam name="TEntity">TEntity</typeparam>
-        /// <param name="entity">Entity</param>
-        /// <returns>Attached entity</returns>
+        /// <typeparam name="TEntity">实体类型</typeparam>
+        /// <param name="entity">实体</param>
+        /// <returns>附加实体</returns>
         protected virtual TEntity AttachEntityToContext<TEntity>(TEntity entity) where TEntity : BaseEntity, new()
         {
             //little hack here until Entity Framework really supports stored procedures
@@ -78,31 +78,31 @@ namespace Nop.Data
         #region Methods
 
         /// <summary>
-        /// Create database script
+        /// 创建数据库脚本
         /// </summary>
-        /// <returns>SQL to generate database</returns>
+        /// <returns>SQL生成数据库</returns>
         public string CreateDatabaseScript()
         {
             return ((IObjectContextAdapter)this).ObjectContext.CreateDatabaseScript();
         }
 
         /// <summary>
-        /// Get DbSet
+        /// 获取DbSet
         /// </summary>
-        /// <typeparam name="TEntity">Entity type</typeparam>
+        /// <typeparam name="TEntity">实体类型</typeparam>
         /// <returns>DbSet</returns>
         public new IDbSet<TEntity> Set<TEntity>() where TEntity : BaseEntity
         {
             return base.Set<TEntity>();
         }
-        
+
         /// <summary>
-        /// Execute stores procedure and load a list of entities at the end
+        /// 执行存储过程并在最后加载实体列表
         /// </summary>
-        /// <typeparam name="TEntity">Entity type</typeparam>
-        /// <param name="commandText">Command text</param>
-        /// <param name="parameters">Parameters</param>
-        /// <returns>Entities</returns>
+        /// <typeparam name="TEntity">实体类型</typeparam>
+        /// <param name="commandText">命令文本</param>
+        /// <param name="parameters">参数</param>
+        /// <returns>实体集合</returns>
         public IList<TEntity> ExecuteStoredProcedureList<TEntity>(string commandText, params object[] parameters) where TEntity : BaseEntity, new()
         {
             //add parameters to command
@@ -145,25 +145,28 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Creates a raw SQL query that will return elements of the given generic type.  The type can be any type that has properties that match the names of the columns returned from the query, or can be a simple primitive type. The type does not have to be an entity type. The results of this query are never tracked by the context even if the type of object returned is an entity type.
+        /// 创建将返回给定泛型类型的元素的原始SQL查询。 
+        /// 类型可以是具有与查询返回的列的名称匹配的属性的任何类型，也可以是简单的基本类型。
+        /// 该类型不必是实体类型。
+        /// 即使返回的对象类型是实体类型，上下文也不会跟踪此查询的结果。
         /// </summary>
-        /// <typeparam name="TElement">The type of object returned by the query.</typeparam>
-        /// <param name="sql">The SQL query string.</param>
-        /// <param name="parameters">The parameters to apply to the SQL query string.</param>
-        /// <returns>Result</returns>
+        /// <typeparam name="TElement">查询返回的对象类型。</typeparam>
+        /// <param name="sql">SQL查询字符串。</param>
+        /// <param name="parameters">SQL查询字符串的参数</param>
+        /// <returns></returns>
         public IEnumerable<TElement> SqlQuery<TElement>(string sql, params object[] parameters)
         {
             return this.Database.SqlQuery<TElement>(sql, parameters);
         }
-    
+
         /// <summary>
-        /// Executes the given DDL/DML command against the database.
+        /// 对数据库执行给定的DDL / DML命令。
         /// </summary>
-        /// <param name="sql">The command string</param>
-        /// <param name="doNotEnsureTransaction">false - the transaction creation is not ensured; true - the transaction creation is ensured.</param>
-        /// <param name="timeout">Timeout value, in seconds. A null value indicates that the default value of the underlying provider will be used</param>
-        /// <param name="parameters">The parameters to apply to the command string.</param>
-        /// <returns>The result returned by the database after executing the command.</returns>
+        /// <param name="sql">命令字符串</param>
+        /// <param name="doNotEnsureTransaction">false - 无法确保事务创建; true - 确保事务创建。</param>
+        /// <param name="timeout">超时值，以秒为单位。 空值表示将使用基础提供程序的默认值</param>
+        /// <param name="parameters">要应用于命令字符串的参数。</param>
+        /// <returns>执行命令后数据库返回的结果。</returns>
         public int ExecuteSqlCommand(string sql, bool doNotEnsureTransaction = false, int? timeout = null, params object[] parameters)
         {
             int? previousTimeout = null;
@@ -190,9 +193,9 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Detach an entity
+        ///分离实体
         /// </summary>
-        /// <param name="entity">Entity</param>
+        /// <param name="entity">实体</param>
         public void Detach(object entity)
         {
             if (entity == null)
@@ -206,7 +209,7 @@ namespace Nop.Data
         #region Properties
 
         /// <summary>
-        /// Gets or sets a value indicating whether proxy creation setting is enabled (used in EF)
+        /// 获取或设置一个值，该值指示是否启用了代理创建设置（在EF中使用）
         /// </summary>
         public virtual bool ProxyCreationEnabled
         {
@@ -221,7 +224,7 @@ namespace Nop.Data
         }
 
         /// <summary>
-        /// Gets or sets a value indicating whether auto detect changes setting is enabled (used in EF)
+        /// 获取或设置一个值，该值指示是否启用自动检测更改设置（在EF中使用）
         /// </summary>
         public virtual bool AutoDetectChangesEnabled
         {

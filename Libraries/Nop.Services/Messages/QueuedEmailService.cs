@@ -152,8 +152,8 @@ namespace Nop.Services.Messages
         /// <param name="loadOnlyItemsToBeSent">A value indicating whether to load only emails for ready to be sent</param>
         /// <param name="maxSendTries">Maximum send tries</param>
         /// <param name="loadNewest">A value indicating whether we should sort queued email descending; otherwise, ascending.</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>Email item list</returns>
         public virtual IPagedList<QueuedEmail> SearchEmails(string fromEmail,
             string toEmail, DateTime? createdFromUtc, DateTime? createdToUtc, 

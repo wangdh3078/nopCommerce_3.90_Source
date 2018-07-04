@@ -3,26 +3,26 @@ using Nop.Core.Domain.Customers;
 namespace Nop.Services.Authentication
 {
     /// <summary>
-    /// Authentication service interface
+    ///认证服务接口
     /// </summary>
     public partial interface IAuthenticationService 
     {
         /// <summary>
-        /// Sign in
+        ///登录
         /// </summary>
-        /// <param name="customer">Customer</param>
-        /// <param name="createPersistentCookie">A value indicating whether to create a persistent cookie</param>
+        /// <param name="customer">客户</param>
+        /// <param name="createPersistentCookie">指示是否创建持久性cookie的值。</param>
         void SignIn(Customer customer, bool createPersistentCookie);
 
         /// <summary>
-        /// Sign out
+        /// 退出
         /// </summary>
         void SignOut();
 
         /// <summary>
-        /// Get authenticated customer
+        /// 获得经过身份验证的客
         /// </summary>
-        /// <returns>Customer</returns>
+        /// <returns>客户</returns>
         Customer GetAuthenticatedCustomer();
     }
 }

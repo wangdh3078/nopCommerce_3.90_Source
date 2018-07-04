@@ -346,7 +346,7 @@ namespace Nop.Web.Models.Common
         /// <summary>
         /// Gets first individual page index
         /// </summary>
-        /// <returns>Page index</returns>
+        /// <returns>页面索引</returns>
         public int GetFirstIndividualPageIndex()
         {
             if ((this.TotalPages < this.IndividualPagesDisplayedCount) ||
@@ -364,7 +364,7 @@ namespace Nop.Web.Models.Common
         /// <summary>
         /// Get last individual page index
         /// </summary>
-        /// <returns>Page index</returns>
+        /// <returns>页面索引</returns>
         public int GetLastIndividualPageIndex()
         {
             int num = this.IndividualPagesDisplayedCount / 2;

@@ -5,12 +5,12 @@ using Nop.Services.Tasks;
 namespace Nop.Services.Caching
 {
     /// <summary>
-    /// Clear cache schedueled task implementation
+    /// 清除缓存计划任务实施
     /// </summary>
     public partial class ClearCacheTask : ITask
     {
         /// <summary>
-        /// Executes a task
+        /// 执行任务
         /// </summary>
         public void Execute()
         {

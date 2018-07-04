@@ -6,75 +6,75 @@ using Nop.Core.Domain.Customers;
 namespace Nop.Services.Authentication.External
 {
     /// <summary>
-    /// Open authentication service
+    /// 开放式认证服务
     /// </summary>
     public partial interface IOpenAuthenticationService
     {
-        #region External authentication methods
+        #region 外部认证方法
 
         /// <summary>
-        /// Load active external authentication methods
+        ///加载活动的外部认证方法
         /// </summary>
-        /// <param name="customer">Load records allowed only to a specified customer; pass null to ignore ACL permissions</param>
-        /// <param name="storeId">Load records allowed only in a specified store; pass 0 to load all records</param>
-        /// <returns>Payment methods</returns>
+        /// <param name="customer">仅允许指定客户加载记录; 传递null以忽略ACL权限</param>
+        /// <param name="storeId">仅在指定商店中加载记录; 传递0以加载所有记录</param>
+        /// <returns>支付方式</returns>
         IList<IExternalAuthenticationMethod> LoadActiveExternalAuthenticationMethods(Customer customer = null, int storeId = 0);
 
         /// <summary>
-        /// Load external authentication method by system name
+        /// 按系统名称加载外部认证方法
         /// </summary>
-        /// <param name="systemName">System name</param>
-        /// <returns>Found external authentication method</returns>
+        /// <param name="systemName">系统名称</param>
+        /// <returns>找到的外部认证方法</returns>
         IExternalAuthenticationMethod LoadExternalAuthenticationMethodBySystemName(string systemName);
 
         /// <summary>
-        /// Load all external authentication methods
+        ///加载所有外部验证方法
         /// </summary>
-        /// <param name="customer">Load records allowed only to a specified customer; pass null to ignore ACL permissions</param>
-        /// <param name="storeId">Load records allowed only in a specified store; pass 0 to load all records</param>
-        /// <returns>External authentication methods</returns>
+        /// <param name="customer">仅允许指定客户加载记录; 传递null以忽略ACL权限</param>
+        /// <param name="storeId">仅在指定商店中加载记录; 传递0以加载所有记录</param>
+        /// <returns>外部认证方法</returns>
         IList<IExternalAuthenticationMethod> LoadAllExternalAuthenticationMethods(Customer customer = null, int storeId = 0);
 
         #endregion
 
         /// <summary>
-        /// Accociate external account with customer
+        /// 将外部帐户与客户关联
         /// </summary>
-        /// <param name="customer">Customer</param>
-        /// <param name="parameters">Open authentication parameters</param>
+        /// <param name="customer">客户</param>
+        /// <param name="parameters">开放认证参数</param>
         void AssociateExternalAccountWithUser(Customer customer, OpenAuthenticationParameters parameters);
 
         /// <summary>
-        /// Check that account exists
+        /// 检查帐户是否存在
         /// </summary>
-        /// <param name="parameters">Open authentication parameters</param>
-        /// <returns>True if it exists; otherwise false</returns>
+        /// <param name="parameters">开放认证参数</param>
+        /// <returns>True 存在;  false 不存在</returns>
         bool AccountExists(OpenAuthenticationParameters parameters);
 
         /// <summary>
-        /// Get the particular user with specified parameters
+        /// 使用指定的参数获取特定用户
         /// </summary>
-        /// <param name="parameters">Open authentication parameters</param>
-        /// <returns>Customer</returns>
+        /// <param name="parameters">开放认证参数</param>
+        /// <returns>客户</returns>
         Customer GetUser(OpenAuthenticationParameters parameters);
 
         /// <summary>
-        /// Get external authentication records for the specified customer
+        /// 获取指定客户的外部身份验证记录
         /// </summary>
-        /// <param name="customer">Customer</param>
-        /// <returns>List of external authentication records</returns>
+        /// <param name="customer">客户</param>
+        /// <returns>外部认证记录列表</returns>
         IList<ExternalAuthenticationRecord> GetExternalIdentifiersFor(Customer customer);
 
         /// <summary>
-        /// Delete the external authentication record
+        /// 删除外部认证记录
         /// </summary>
-        /// <param name="externalAuthenticationRecord">External authentication record</param>
+        /// <param name="externalAuthenticationRecord">外部认证记录</param>
         void DeleteExternalAuthenticationRecord(ExternalAuthenticationRecord externalAuthenticationRecord);
 
         /// <summary>
-        /// Remove the association
+        /// 删除关联
         /// </summary>
-        /// <param name="parameters">Open authentication parameters</param>
+        /// <param name="parameters">开放认证参数</param>
         void RemoveAssociation(OpenAuthenticationParameters parameters);
     }
 }

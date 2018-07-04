@@ -14,10 +14,10 @@ namespace Nop.Services.Orders
         /// Load reward point history records
         /// </summary>
         /// <param name="customerId">Customer identifier; 0 to load all records</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records (filter by current store if possible)</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值 (filter by current store if possible)</param>
         /// <param name="showNotActivated">A value indicating whether to show reward points that did not yet activated</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
         /// <returns>Reward point history records</returns>
         IPagedList<RewardPointsHistory> GetRewardPointsHistory(int customerId = 0, bool showHidden = false, 
             bool showNotActivated = false, int pageIndex = 0, int pageSize = int.MaxValue);

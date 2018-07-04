@@ -20,9 +20,9 @@ namespace Nop.Services.Catalog
         /// </summary>
         /// <param name="manufacturerName">Manufacturer name</param>
         /// <param name="storeId">Store identifier; 0 if you want to get all records</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Manufacturers</returns>
         IPagedList<Manufacturer> GetAllManufacturers(string manufacturerName = "",
             int storeId = 0,
@@ -60,9 +60,9 @@ namespace Nop.Services.Catalog
         /// Gets product manufacturer collection
         /// </summary>
         /// <param name="manufacturerId">Manufacturer identifier</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Product manufacturer collection</returns>
         IPagedList<ProductManufacturer> GetProductManufacturersByManufacturerId(int manufacturerId,
             int pageIndex = 0, int pageSize = int.MaxValue, bool showHidden = false);
@@ -71,7 +71,7 @@ namespace Nop.Services.Catalog
         /// Gets a product manufacturer mapping collection
         /// </summary>
         /// <param name="productId">Product identifier</param>
-        /// <param name="showHidden">A value indicating whether to show hidden records</param>
+        /// <param name="showHidden">指示是否显示隐藏记录的值</param>
         /// <returns>Product manufacturer mapping collection</returns>
         IList<ProductManufacturer> GetProductManufacturersByProductId(int productId, bool showHidden = false);
         

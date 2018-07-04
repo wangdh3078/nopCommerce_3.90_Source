@@ -7,14 +7,14 @@ using Nop.Services.Logging;
 namespace Nop.Services.Events
 {
     /// <summary>
-    /// Evnt publisher
+    /// 活动发布者
     /// </summary>
     public class EventPublisher : IEventPublisher
     {
         private readonly ISubscriptionService _subscriptionService;
 
         /// <summary>
-        /// Ctor
+        /// 构造函数
         /// </summary>
         /// <param name="subscriptionService"></param>
         public EventPublisher(ISubscriptionService subscriptionService)
@@ -23,11 +23,11 @@ namespace Nop.Services.Events
         }
 
         /// <summary>
-        /// Publish to cunsumer
+        /// 发布给消费者
         /// </summary>
-        /// <typeparam name="T">Type</typeparam>
-        /// <param name="x">Event consumer</param>
-        /// <param name="eventMessage">Event message</param>
+        /// <typeparam name="T">类型</typeparam>
+        /// <param name="x">事件消费者</param>
+        /// <param name="eventMessage">事件消息</param>
         protected virtual void PublishToConsumer<T>(IConsumer<T> x, T eventMessage)
         {
             //Ignore not installed plugins
@@ -56,10 +56,10 @@ namespace Nop.Services.Events
         }
 
         /// <summary>
-        /// Find a plugin descriptor by some type which is located into its assembly
+        ///通过位于其程序集中的某种类型查找插件描述符
         /// </summary>
-        /// <param name="providerType">Provider type</param>
-        /// <returns>Plugin descriptor</returns>
+        /// <param name="providerType">驱动类型</param>
+        /// <returns>插件描述符</returns>
         protected virtual PluginDescriptor FindPlugin(Type providerType)
         {
             if (providerType == null)
@@ -81,10 +81,10 @@ namespace Nop.Services.Events
         }
 
         /// <summary>
-        /// Publish event
+        /// 发布活动
         /// </summary>
-        /// <typeparam name="T">Type</typeparam>
-        /// <param name="eventMessage">Event message</param>
+        /// <typeparam name="T">类型</typeparam>
+        /// <param name="eventMessage">事件消息</param>
         public virtual void Publish<T>(T eventMessage)
         {
             var subscriptions = _subscriptionService.GetSubscriptions<T>();

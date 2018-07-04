@@ -4,15 +4,15 @@ using Nop.Core.Domain.Customers;
 namespace Nop.Services.Cms
 {
     /// <summary>
-    /// Widget service interface
+    /// 小部件服务接口
     /// </summary>
     public partial interface IWidgetService
     {
         /// <summary>
-        /// Load active widgets
+        /// 加载活动控件
         /// </summary>
-        /// <param name="customer">Load records allowed only to a specified customer; pass null to ignore ACL permissions</param>
-        /// <param name="storeId">Load records allowed only in a specified store; pass 0 to load all records</param>
+        /// <param name="customer">只允许指定客户加载记录；传递NULL忽略ACL权限</param>
+        /// <param name="storeId">只允许在指定的存储中加载记录；通过0加载所有记录</param>
         /// <returns>Widgets</returns>
         IList<IWidgetPlugin> LoadActiveWidgets(Customer customer = null, int storeId = 0);
 
